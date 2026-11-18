@@ -424,6 +424,11 @@ window.SANGGUP_TRACKS = [
       { label: "Kemenkes Pusat Krisis: Tas Siaga Bencana (cites BNPB)", url: "https://pusatkrisis.kemkes.go.id/mari-siapkan-tas-siaga-bencana" },
       { label: "BMKG: Petunjuk keselamatan gempabumi dan tsunami", url: "https://content.bmkg.go.id/wp-content/uploads/Large-Prints-Petunjuk-keselamatan-Gempabumi-Tsunami.pdf" },
       { label: "Ready.gov: Build a kit", url: "https://www.ready.gov/kit" },
+      { label: "Ready.gov: Practice your home fire escape plan", url: "https://www.ready.gov/home-fire-escape-plan" },
+      { label: "Red Cross: 7 ways to prepare for a home fire", url: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/fire/home-fire-preparedness.html" },
+      { label: "US Forest Service: If you get lost", url: "https://www.fs.usda.gov/visit/know-before-you-go/if-you-get-lost" },
+      { label: "Antara: Tersesat di gunung? Ini yang perlu Anda lakukan", url: "https://www.antaranews.com/berita/5846199/tersesat-di-gunung-ini-yang-perlu-anda-lakukan" },
+      { label: "Basarnas: Darurat SAR, hubungi 115 (2022)", url: "https://basarnas.go.id/berita/kabasarnas-darurat-sar-hubungi-115" },
       { label: "Ready.gov: Floods", url: "https://www.ready.gov/floods" },
       { label: "US National Weather Service: Turn Around Don't Drown", url: "https://www.weather.gov/safety/flood-turn-around-dont-drown" },
       { label: "CDC: How to create and store an emergency water supply", url: "https://cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html" },
@@ -522,6 +527,24 @@ window.SANGGUP_TRACKS = [
           "BNPB says landslides come from a mix of heavy rain, steep slopes, loose soil, erosion and lost vegetation, and happen so quickly that time to self-evacuate is short. Be extra alert in heavy rain. If you hear a rumbling or a landslide siren, move away from the sound and the direction the slide is coming from, toward the designated evacuation zone. Stay away from the slide area afterwards, because the ground is unstable and more slides can follow if rain continues.",
         practice:
           "Check whether your home is on or below a steep slope. If it is, learn your local warning arrangement from BPBD and write where you would move to in heavy rain.",
+      },
+      {
+        id: "s12",
+        kind: "practice",
+        title: "Fire at home: prevent and get out",
+        lesson:
+          "Ready.gov and the Red Cross advise a written home fire escape plan: know two ways out of every room, choose a meeting place outside a safe distance from the home, and practice getting out in under 2 minutes at least twice a year. Install smoke alarms (Ready.gov: on every level and in each bedroom) and test them. In smoke, get low and move to the exit. Keep anything that can burn at least three feet (about one metre) from heaters. Once out, stay out and never go back in; call the emergency number from outside. Fighting fires and rescuing people from them is for trained firefighters.",
+        practice:
+          "Draw your home and mark two ways out of each room and a meeting place outside. Check that your smoke alarm works. Walk the plan once with everyone in the home.",
+      },
+      {
+        id: "s13",
+        kind: "practice",
+        title: "Outdoors: plan ahead, and what to do if lost",
+        lesson:
+          "The US Forest Service says the best survival tool is advance planning: carry enough food, water, layers, a light, a map and compass you know how to use, check for local warnings, and tell someone exactly where you are going, your route and when you will return. Do not rely on a phone signal. If you become lost, use STOP (Stop, Think, Observe, Plan): stop, stay calm and, if it is safe, stay put, because walking farther makes you harder to find. Antara's mountain guidance gives the same advice. Basarnas, Indonesia's search and rescue agency, has said search and rescue emergencies can be reported to 115 (a 2022 statement, so check the current number before relying on it).",
+        practice:
+          "Before your next outing, write a plan for a trusted person: where, route, return time and who is going. Pack a small kit of water, light and layers. Save 112 and Basarnas contact in your phone.",
       },
       {
         id: "s5",

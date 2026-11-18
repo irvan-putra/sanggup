@@ -61,7 +61,7 @@ const server = http.createServer((req,res)=>{
  await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),5);
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Prioritizing,/,4,/does not rank/],[/^Deciding,/,4,/does not make decisions/],[/^Habits,/,4,/[Nn]ot an official course/],[/^Focus,/,3,/Pomodoro/],[/^Projects,/,4,/[Nn]ot an official course/],[/^Calm & meditation,/,3,/not medical/],[/^Disaster preparedness,/,11,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Networking,/,5,/does not contact anyone/],[/^Budgeting & personal finance,/,7,/not personal financial/],[/^FIRE,/,3,/no withdrawal rate is safe/],[/^Writing a book,/,5,/does not write your book/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Prioritizing,/,4,/does not rank/],[/^Deciding,/,4,/does not make decisions/],[/^Habits,/,4,/[Nn]ot an official course/],[/^Focus,/,3,/Pomodoro/],[/^Projects,/,4,/[Nn]ot an official course/],[/^Calm & meditation,/,3,/not medical/],[/^Disaster preparedness,/,13,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Networking,/,5,/does not contact anyone/],[/^Budgeting & personal finance,/,7,/not personal financial/],[/^FIRE,/,3,/no withdrawal rate is safe/],[/^Writing a book,/,5,/does not write your book/]]) {
   await page.reload();
   await page.getByRole('button',{name}).click();
   assert.match(await page.locator('#path-note').innerText(),noteRe);
