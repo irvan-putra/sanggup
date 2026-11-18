@@ -13,7 +13,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Set up before you cook",
         lesson:
-          "Mise en place: read the whole recipe first, then put every ingredient and tool on the counter before any heat goes on. Most cooking disasters are setup problems, not cooking problems.",
+          "Mise en place: read the whole recipe first, then put every ingredient and tool on the counter before any heat goes on. For this demo, choose a familiar recipe and get hands-on help if the tools or heat are new to you.",
         practice:
           "Cook one simple dish end to end: a fried egg, tumis kangkung, or aglio e olio. Clean up as you go.",
       },
@@ -22,7 +22,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Knife and heat basics",
         lesson:
-          "Claw grip for the guiding hand, tip of the knife stays on the board. Even pieces cook evenly. Medium heat is the default; high heat is for boiling water and searing, not for everything.",
+          "Ask an experienced cook to demonstrate safe knife handling and stove use in person before trying them. Follow your recipe and equipment instructions; a short lesson is not a substitute for supervision.",
         practice:
           "Cut an onion and two vegetables into even pieces, then cook them and notice the difference even sizing makes.",
       },
@@ -40,9 +40,9 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Seasoning and a protein",
         lesson:
-          "Salt early, taste often, acid at the end. Protein wants dryness on the surface and patience in the pan: put it down, leave it alone, let it brown.",
+          "Try a tofu or tempeh recipe with an experienced cook. Follow its cooking instructions, check ingredient labels and dietary needs, and taste only food that is safe to eat.",
         practice:
-          "Cook one protein (chicken, tofu, tempeh, fish) with a marinade or dry seasoning you mixed yourself.",
+          "With help if needed, cook tofu or tempeh using a familiar recipe and seasoning you mixed yourself.",
       },
       {
         id: "c5",

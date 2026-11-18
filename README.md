@@ -8,7 +8,7 @@ Live prototype: https://vanipy.com/sanggup/
 
 ## What this is
 
-A first prototype (0.1.0) with one working path, **Cooking: from your first
+A first prototype (0.1.1) with one working path, **Cooking: from your first
 dish to a full meal**, and two roles:
 
 - **Learner**: works through stages in order. Practice stages are self-logged.
@@ -49,3 +49,14 @@ AGPL-3.0. See [LICENSE](LICENSE).
   guilt trips about broken streaks.
 
 Original SVG artwork: [mascot.svg](mascot.svg), app icon: [icon.svg](icon.svg).
+
+Sign-off in this demo is not authenticated and is not proof of competency.
+Use synthetic practice notes only. No real learner records are required.
+
+## Tests
+
+Run `npm ci`, `npx playwright install chromium`, then `npm test`.
+For a system Chrome install, set `CHROME_PATH` to its executable.
+Regression checks cover the complete five-stage path, same-device review,
+more-practice retries, safe rendering of notes, persistence and mobile widths.
+GitHub Actions runs the same checks before deploying. Runtime has no dependencies.

@@ -8,7 +8,11 @@ const STORE_KEY = "sanggup-demo-v1";
 function loadState() {
   try {
     const raw = localStorage.getItem(STORE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && parsed.done && typeof parsed.done === "object" &&
+          Array.isArray(parsed.archive) && Array.isArray(parsed.requests)) return parsed;
+    }
   } catch (e) { /* corrupted state falls through to fresh */ }
   return { done: {}, archive: [], requests: [] };
 }
@@ -25,6 +29,12 @@ function makeCode() {
 }
 
 let state = loadState();
+let currentTrack = null;
+function escapeText(value) {
+  return String(value).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
 
 const $ = (id) => document.getElementById(id);
 const learnerView = $("learner-view");
@@ -36,6 +46,7 @@ function setRole(role) {
   $("role-learner").classList.toggle("active", role === "learner");
   $("role-teacher").classList.toggle("active", role === "teacher");
   if (role === "teacher") renderTeacher();
+  else if (currentTrack) renderPath(currentTrack);
 }
 
 $("role-learner").addEventListener("click", () => setRole("learner"));
@@ -44,6 +55,7 @@ $("role-teacher").addEventListener("click", () => setRole("teacher"));
 // ---------- learner: track list ----------
 
 function renderTracks() {
+  currentTrack = null;
   const wrap = $("track-list");
   wrap.innerHTML = "";
   $("path-view").hidden = true;
@@ -83,6 +95,7 @@ function stageState(track, stage) {
 }
 
 function renderPath(track) {
+  currentTrack = track;
   $("track-list").innerHTML = "";
   $("path-view").hidden = false;
   $("path-title").textContent = track.title;
@@ -118,8 +131,8 @@ function renderPath(track) {
       );
       html +=
         `<div class="code-box">Show this code to your instructor: ` +
-        `<strong>${req.code}</strong><br><span class="muted">They can also open ` +
-        `the teaching view on this device.</span></div>`;
+        `<strong>${req.code}</strong><br><span class="muted">In this same-device demo, open ` +
+        `the teaching view here. This code does not work on another device.</span></div>`;
     } else if (st === "done") {
       html += `<p class="done-label">done</p>`;
     } else {
@@ -146,6 +159,7 @@ function renderPath(track) {
 }
 
 function completeStage(track, stage, how, extra) {
+  if (stage.kind !== "practice" || stageState(track, stage) !== "open") return;
   state.done[stage.id] = true;
   state.archive.push({
     stageId: stage.id,
@@ -160,6 +174,7 @@ function completeStage(track, stage, how, extra) {
 }
 
 function requestSignOff(track, stage) {
+  if (stageState(track, stage) !== "open") return;
   const req = {
     code: makeCode(),
     trackId: track.id,
@@ -190,7 +205,7 @@ function renderArchive() {
     row.innerHTML =
       `<span>${item.title}</span><span class="badge">${badge}</span>` +
       `<span class="muted">${when}</span>` +
-      (item.note ? `<span class="muted">“${item.note}”</span>` : "");
+      (item.note ? `<span class="muted">“${escapeText(item.note)}”</span>` : "");
     wrap.appendChild(row);
   }
 }
@@ -224,7 +239,7 @@ function renderTeacher() {
     row.innerHTML =
       `<span>${req.stageTitle}</span>` +
       `<span class="badge">${req.status === "signed" ? "signed off" : "more practice"}</span>` +
-      (req.instructorNote ? `<span class="muted">“${req.instructorNote}”</span>` : "");
+      (req.instructorNote ? `<span class="muted">“${escapeText(req.instructorNote)}”</span>` : "");
     signedWrap.appendChild(row);
   }
 }
@@ -251,6 +266,7 @@ function renderRequestDetail(req) {
 }
 
 function decide(req, verdict) {
+  if (req.status !== "pending") return;
   req.status = verdict;
   req.instructorNote = $("instructor-note").value.trim();
   req.decidedAt = new Date().toISOString();
