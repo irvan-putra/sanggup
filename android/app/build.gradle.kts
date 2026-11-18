@@ -38,7 +38,7 @@ val copyWeb = tasks.register<Copy>("copyWeb") {
     }
     into(layout.buildDirectory.dir("webAssets/web"))
 }
-tasks.matching { it.name.endsWith("Assets") && it.name.startsWith("merge") }.configureEach {
+tasks.matching { (it.name.endsWith("Assets") && it.name.startsWith("merge")) || it.name.contains("Lint") || it.name.startsWith("lint") }.configureEach {
     dependsOn(copyWeb)
 }
 
