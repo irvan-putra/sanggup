@@ -36,3 +36,16 @@ instruction. No quiz will ever claim someone is safe to swim or drive.
 ## License
 
 AGPL-3.0. See [LICENSE](LICENSE).
+
+## Mascot
+
+**Sang** is a gecko. Deliberately nothing like a certain green owl:
+
+- **Family**: reptile, not a bird.
+- **Colors**: violet with a warm amber belly and toe pads, not green.
+- **Shape**: low, wide and soft, with a curled tail and sticky toes.
+- **Personality**: a patient wall-climber. Sang shows up steadily and cheers
+  real-world doing, one small step up the wall at a time. No nagging, no
+  guilt trips about broken streaks.
+
+Original SVG artwork: [mascot.svg](mascot.svg), app icon: [icon.svg](icon.svg).
