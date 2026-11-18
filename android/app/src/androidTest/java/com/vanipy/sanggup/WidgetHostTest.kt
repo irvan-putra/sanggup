@@ -23,7 +23,7 @@ import java.io.FileOutputStream
  * Hosts the real widget through AppWidgetHost/AppWidgetHostView and samples the
  * ViewFlipper. This proves RemoteViews flipping inside a widget host. It is NOT
  * a test of any particular launcher (Pixel Launcher, One UI, etc.).
- * CI grants the bind permission with: cmd appwidget grantbind
+ * The test borrows the shell's BIND_APPWIDGET permission to bind (no launcher UI).
  */
 class WidgetHostTest {
     private val tag = "SANGGUP"
@@ -42,7 +42,10 @@ class WidgetHostTest {
         val provider = ComponentName(ctx, StreakWidgetProvider::class.java)
         val host = AppWidgetHost(ctx, 4242)
         val id = host.allocateAppWidgetId()
-        assertTrue("bind refused (grantbind missing?)", mgr.bindAppWidgetIdIfAllowed(id, provider))
+        val ua = InstrumentationRegistry.getInstrumentation().uiAutomation
+        ua.adoptShellPermissionIdentity("android.permission.BIND_APPWIDGET")
+        val bound = try { mgr.bindAppWidgetIdIfAllowed(id, provider) } finally { ua.dropShellPermissionIdentity() }
+        assertTrue("bind refused even with shell BIND_APPWIDGET", bound)
         host.startListening()
         mgr.updateAppWidget(id, StreakWidgetProvider.build(ctx))
 
