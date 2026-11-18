@@ -29,10 +29,10 @@ Finance, health and safety paths are general education only. The first aid
 path is awareness plus how to ask for hands-on training; it does not qualify
 anyone. No path gives personal advice or makes decisions for you.
 
-Swimming, driving, languages, music, math and chess are shown as planned
-tracks so the shape of the idea is visible. They are not built, and nothing
-in the app pretends otherwise. For skills like swimming and driving the model
-is: preparation and reflection in the app, practical milestones with real
+Swimming, driving, languages, music, math and chess now have starter paths
+too, so all 20 skills are open. Swimming and driving cover water safety, the
+Indonesian licence path and how to find proper instruction only. For skills
+like swimming and driving the model is: preparation and reflection in the app, practical milestones with real
 instruction. No quiz will ever claim someone is safe to swim or drive.
 
 ## Prototype scope

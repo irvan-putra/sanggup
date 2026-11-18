@@ -1,6 +1,5 @@
 // Skill content for the sanggup prototype.
-// Cooking, cleaning and tidying, prioritizing and deciding are built. The other tracks are visible so the idea's
-// breadth is clear, but they are marked as planned and cannot be started.
+// All 20 tracks have starter paths. Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -855,10 +854,335 @@ window.SANGGUP_TRACKS = [
       },
     ],
   },
-  { id: "swimming", short: "Swimming", icon: '<circle cx="16" cy="6" r="2"/><path d="M3 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0 M6 12l5-3 4 3"/>', title: "Swimming", tagline: "Water confidence with certified instruction", status: "planned" },
-  { id: "driving", short: "Driving", icon: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M3 12h7 M14 12h7 M12 14v7"/>', title: "Driving", tagline: "Theory in the app, hours behind the wheel with an instructor", status: "planned" },
-  { id: "language", short: "Languages", icon: '<path d="M4 5h16v11H9l-5 4z"/>', title: "Languages", tagline: "Speak early, drill daily", status: "planned" },
-  { id: "music", short: "Music", icon: '<path d="M9 18V5l11-2v13 M9 18a3 3 0 1 1-3-3 M20 16a3 3 0 1 1-3-3"/>', title: "Music", tagline: "Play something real every week", status: "planned" },
-  { id: "math", short: "Math", icon: '<path d="M5 7h6 M8 4v6 M14 7h6 M5 17h6 M14 14l6 6 M20 14l-6 6"/>', title: "Math", tagline: "Problems you can check yourself", status: "planned" },
-  { id: "chess", short: "Chess", icon: '<circle cx="12" cy="6" r="3"/><path d="M9 20h6 M10 9l-1 11 M14 9l1 11 M8 14h8"/>', title: "Chess", tagline: "Patterns, then games", status: "planned" },
+  {
+    id: "swimming", short: "Swimming", icon: '<circle cx="16" cy="6" r="2"/><path d="M3 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0 M6 12l5-3 4 3"/>',
+    title: "Swimming",
+    tagline: "Water safety first, then lessons with a qualified instructor",
+    status: "prototype",
+    note:
+      "No app can teach you to swim. Swimming must be learned in the water with a qualified instructor, and children always need close, constant adult supervision. These stages cover water safety and how to find and prepare for proper lessons. Finishing them is self-logged and shows nothing about your swimming ability or safety in water.",
+    sources: [
+      { label: "WHO: Drowning fact sheet", url: "https://www.who.int/en/news-room/fact-sheets/detail/drowning" },
+      { label: "CDC: Preventing drowning", url: "https://www.cdc.gov/Drowning/Prevention/" },
+      { label: "Red Cross: Summer safety, drowning and reach or throw", url: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/summer-safety.html" },
+    ],
+    stages: [
+      {
+        id: "w_1",
+        kind: "practice",
+        title: "Why water safety comes first",
+        lesson:
+          "The CDC says drowning happens in seconds and is often silent, and can happen to anyone with access to water. WHO notes young children are at particular risk and that risk rises when they are in water without adult supervision. Basic swimming and water safety skills are one of several protections, not a guarantee.",
+        practice:
+          "Write down the water places you or your family use: pool, beach, river, bathtub, well. Mark which have fences, covers or a lifeguard.",
+      },
+      {
+        id: "w_2",
+        kind: "practice",
+        title: "Supervise and stay safe",
+        lesson:
+          "CDC advice: designate a responsible adult to watch children closely and constantly near water, without phone, reading or alcohol as distractions, and keep supervising even after a child has had swim lessons or when a lifeguard is present. Fence pools on all four sides and lock access doors. Wear a life jacket on boats. WHO also notes swimming alone and drinking alcohol before swimming raise risk.",
+        practice:
+          "Write three personal water rules, such as never swim alone, no alcohol before swimming, life jacket on boats, and share them with the people you swim with.",
+      },
+      {
+        id: "w_3",
+        kind: "practice",
+        title: "Find proper lessons",
+        lesson:
+          "Formal swimming lessons can reduce drowning risk, according to the CDC. WHO says programs should have safety-tested teaching, a safe training area, and safe student-instructor ratios. Look for an instructor or club with recognized qualifications.",
+        practice:
+          "Contact a local pool or swim school and ask: Who are your instructors and what qualifications do they hold? What is the student-instructor ratio? Is there a lifeguard on duty? What level am I placed in? Book a first lesson.",
+      },
+      {
+        id: "w_4",
+        kind: "practice",
+        title: "If someone is in trouble",
+        lesson:
+          "The Red Cross rule for bystanders is: reach or throw, don't go. Drowning is fast and often silent. Call for help, reach with an object or throw something that floats, and stay on dry ground. Rescue and resuscitation techniques must be learned in training.",
+        practice:
+          "At your usual water place, find where a rescue ring, pole or floating object is, and where the emergency numbers are posted. If there is none, note that.",
+      },
+    ],
+  },
+  {
+    id: "driving", short: "Driving", icon: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M3 12h7 M14 12h7 M12 14v7"/>',
+    title: "Driving",
+    tagline: "Rules and licence steps in the app, driving with a real instructor",
+    status: "prototype",
+    note:
+      "Reading cannot make you able to drive or ride. Safe driving needs supervised practice with a qualified instructor and passing the official tests. Rules and fees change; the Korlantas page is the source of truth. Finishing a stage here is self-logged and proves nothing about your driving ability.",
+    sources: [
+      { label: "Korlantas Polri: Panduan SIM (Indonesia)", url: "https://korlantas.polri.go.id/panduan-sim/" },
+    ],
+    stages: [
+      {
+        id: "v_1",
+        kind: "practice",
+        title: "The licence path in Indonesia",
+        lesson:
+          "According to Korlantas Polri's SIM guide, the minimum age is 17 for SIM A (private car) and SIM C (motorbike under 250cc), 18 for SIM CI and 19 for SIM CII. A new SIM requires your KTP, a physical health certificate, a psychological test, and, under the guide's current rules, active BPJS Kesehatan membership. You apply online or at the Satpas but must go in person for identification and the exams. The guide lists the official fee as Rp 120,000 for SIM A and Rp 100,000 for SIM C, excluding health and psychology tests. Check the guide for current rules.",
+        practice:
+          "Open the Korlantas guide and write down which SIM you need, the documents you must prepare and the nearest Satpas.",
+      },
+      {
+        id: "v_2",
+        kind: "practice",
+        title: "Theory and signs",
+        lesson:
+          "The theory exam is computer-based and covers road safety and traffic signs. Korlantas points to the e-book on traffic rules in its app and to online simulations. Learn what each sign means, and the rules on priority, speed and parking where you drive.",
+        practice:
+          "Study a set of traffic signs and take a practice simulation. Write down the three you got wrong and what they mean.",
+      },
+      {
+        id: "v_3",
+        kind: "practice",
+        title: "Learn with a qualified instructor",
+        lesson:
+          "Vehicle control, observation and hazard judgment are learned by driving with an experienced instructor in a safe place, and never alone while you are still learning. Korlantas says the practical exam includes braking and balance, U-turn, S-track and emergency braking tests, and offers a coaching clinic at Satpas to try the S-track.",
+        practice:
+          "Find a licensed driving instructor or school, or a Satpas coaching clinic, and book a first supervised session.",
+      },
+      {
+        id: "v_4",
+        kind: "practice",
+        title: "Safe habits",
+        lesson:
+          "Plan every trip so you are rested, sober and unhurried, with your phone out of use. Wear a helmet on a motorbike and a seatbelt in a car. These are basic habits that instructors teach and reinforce.",
+        practice:
+          "Write your personal driving rules and check that you follow them on your next five trips as a passenger or driver.",
+      },
+    ],
+  },
+  {
+    id: "language", short: "Languages", icon: '<path d="M4 5h16v11H9l-5 4z"/>',
+    title: "Languages",
+    tagline: "Speak early, practice daily, check your level",
+    status: "prototype",
+    note:
+      "General method for learning any language. It does not teach a particular language and a milestone here is a conversation review by a person, not an official exam or certificate.",
+    sources: [
+      { label: "Council of Europe: CEFR levels", url: "https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions" },
+      { label: "Kim 2022: Effects of spaced practice on second language learning (meta-analysis)", url: "https://onlinelibrary.wiley.com/doi/10.1111/lang.12479" },
+      { label: "Nature Reviews Psychology: Spacing and retrieval practice", url: "https://www.nature.com/articles/s44159-022-00089-1" },
+    ],
+    stages: [
+      {
+        id: "l_1",
+        kind: "practice",
+        title: "Set a goal and know the levels",
+        lesson:
+          "The Council of Europe's CEFR describes six levels, A1 to C2, grouped as Basic User, Independent User and Proficient User. It is a common way to describe what you can do in a language. Pick a goal in those terms, such as holding a simple conversation, not just 'become fluent'.",
+        practice:
+          "Pick a language and write a goal for three months, like introducing yourself and ordering food. Say which CEFR level that is closest to.",
+      },
+      {
+        id: "l_2",
+        kind: "practice",
+        title: "Learn with spacing and recall",
+        lesson:
+          "Research reviews of learning find that spacing study over time and practicing retrieving words from memory work better than cramming or only re-reading. A 2022 meta-analysis of second-language studies found benefits from spaced practice.",
+        practice:
+          "Pick ten useful words or phrases. Test yourself without looking today, tomorrow, in three days and in a week, and note which you forget.",
+      },
+      {
+        id: "l_3",
+        kind: "practice",
+        title: "Speak from the start",
+        lesson:
+          "Speaking is a skill you only build by speaking. Start with a few sentences you will actually use and say them aloud, even if they are wrong. Listening daily, even a few minutes, trains your ear.",
+        practice:
+          "Say five sentences about yourself aloud in your target language, record or write them, and listen back for mistakes. Listen to ten minutes of real speech today.",
+      },
+      {
+        id: "l_4",
+        kind: "practice",
+        title: "Find a conversation partner",
+        lesson:
+          "Conversation with a teacher, tutor or friend gives feedback an app cannot. Be honest that you are a beginner and ask them to correct you gently.",
+        practice:
+          "Arrange a short conversation with a person who speaks the language. Prepare three questions to ask them.",
+      },
+      {
+        id: "l_5",
+        kind: "milestone",
+        title: "Milestone: a five-minute conversation",
+        lesson:
+          "A real conversation shows you more than a quiz. It is a check of your own progress, not an official level.",
+        milestone:
+          "Have a five-minute conversation in your target language on a topic you chose. A fluent speaker or teacher who listened signs off.",
+      },
+    ],
+  },
+  {
+    id: "music", short: "Music", icon: '<path d="M9 18V5l11-2v13 M9 18a3 3 0 1 1-3-3 M20 16a3 3 0 1 1-3-3"/>',
+    title: "Music",
+    tagline: "Play something real, a little every day",
+    status: "prototype",
+    note:
+      "Instrument-neutral practice habits from music educators. It does not teach a specific instrument; a teacher is the best way to learn technique. Sign-off is a friend's or teacher's listen in this same-device demo, not an exam.",
+    sources: [
+      { label: "Berklee: Practice tips and techniques", url: "https://pulse.berklee.edu/content/practicepalooza/journal/PracticeTips.pdf" },
+      { label: "UT Austin Center for Music Learning: 10 tips for effective practice", url: "https://cml.music.utexas.edu/online-resources/intelligent-music-practice/10-tips-for-effective-practice" },
+      { label: "Yamaha: Practice effectively, go slow to go fast", url: "https://hub.yamaha.com/music-educators/prof-dev/teaching-tips/practice-effectively/" },
+    ],
+    stages: [
+      {
+        id: "u_1",
+        kind: "practice",
+        title: "Choose an instrument and a piece",
+        lesson:
+          "Pick one instrument, including your voice, and one short piece you love and can reach. Berklee's practice tips stress setting realistic short and long goals, so choose something small enough to finish.",
+        practice:
+          "Pick the instrument and a piece of 8 to 16 bars. Find a recording and a score, tab or teacher for it.",
+      },
+      {
+        id: "u_2",
+        kind: "practice",
+        title: "Short sessions, every day",
+        lesson:
+          "Berklee advises practicing every day, because short daily sessions beat long ones once or twice a week. Start with 10 to 15 minutes at the same time each day.",
+        practice:
+          "Practice 10 to 15 minutes a day for five days and mark each day.",
+      },
+      {
+        id: "u_3",
+        kind: "practice",
+        title: "Slow down",
+        lesson:
+          "Yamaha's educator advice is that you can play almost anything if you take it slow enough, often at half tempo or slower, so you understand the rhythms and pitches before speeding up.",
+        practice:
+          "Play your hardest four bars at half speed until they are clean three times in a row, then speed up a little.",
+      },
+      {
+        id: "u_4",
+        kind: "practice",
+        title: "Make one small thing great",
+        lesson:
+          "UT's Center for Music Learning suggests that rather than improving many things at once, you pick one small thing and make it great, like how a single note starts.",
+        practice:
+          "Pick one small detail in your piece, and spend one session only on it. Record before and after and compare.",
+      },
+      {
+        id: "u_5",
+        kind: "milestone",
+        title: "Milestone: play it for someone",
+        lesson:
+          "Playing for another person is a different skill from practicing alone. It is okay to make mistakes; keep going.",
+        milestone:
+          "Play your piece from start to finish for a friend or teacher, who signs off.",
+      },
+    ],
+  },
+  {
+    id: "math", short: "Math", icon: '<path d="M5 7h6 M8 4v6 M14 7h6 M5 17h6 M14 14l6 6 M20 14l-6 6"/>',
+    title: "Math",
+    tagline: "Problems you can check yourself",
+    status: "prototype",
+    note:
+      "A problem-solving method with small worked examples you can verify yourself. It is not a school curriculum.",
+    sources: [
+      { label: "Pólya's four phases, How to Solve It (overview)", url: "https://en.wikipedia.org/wiki/How_to_Solve_It" },
+      { label: "University of Toronto Scarborough: Polya's problem solving", url: "https://www.utsc.utoronto.ca/learningstrategies/polyas-problem-solving" },
+    ],
+    stages: [
+      {
+        id: "a_1",
+        kind: "practice",
+        title: "Understand the problem",
+        lesson:
+          "George Pólya's classic checklist has four phases: understand the problem, make a plan, carry out the plan, look back. Start by saying what is asked, what you know and what is unknown. Example: Rina buys 3 notebooks at Rp 12,500 each and pays Rp 50,000. How much change does she get?",
+        practice:
+          "For the example, write what is known and what is asked, in your own words, before calculating.",
+      },
+      {
+        id: "a_2",
+        kind: "practice",
+        title: "Make a plan and do it",
+        lesson:
+          "A plan is the steps you will take. Here: multiply price by number, then subtract from the payment. Carry it out one step at a time and write each step.",
+        practice:
+          "Solve the notebook example. Then check: the answer is Rp 12,500 in change (3 x 12,500 = 37,500, and 50,000 - 37,500 = 12,500).",
+      },
+      {
+        id: "a_3",
+        kind: "practice",
+        title: "Look back and check",
+        lesson:
+          "Look back means testing whether the answer makes sense and whether you can check it another way. Example: after a 20 percent discount a shirt costs Rp 120,000. What was the original price? Plan: the price is 80 percent of the original, so divide by 0.8.",
+        practice:
+          "Solve it, then check by applying a 20 percent discount to your answer. The original price is Rp 150,000, because 150,000 x 0.8 = 120,000.",
+      },
+      {
+        id: "a_4",
+        kind: "practice",
+        title: "Make your own problems",
+        lesson:
+          "Writing a problem forces you to understand its structure. If you cannot solve a problem, try an easier related one, or draw a picture, as Pólya suggests.",
+        practice:
+          "Write one problem from your own life (prices, distance, time) with an answer you can check, and solve it with the four phases.",
+      },
+    ],
+  },
+  {
+    id: "chess", short: "Chess", icon: '<circle cx="12" cy="6" r="3"/><path d="M9 20h6 M10 9l-1 11 M14 9l1 11 M8 14h8"/>',
+    title: "Chess",
+    tagline: "Patterns first, then games",
+    status: "prototype",
+    note:
+      "Beginner chess basics. This does not replace playing and reviewing real games or learning from a coach.",
+    sources: [
+      { label: "FIDE Laws of Chess", url: "https://handbook.fide.com/chapter/LawsOfChess" },
+      { label: "FIDE Arbiters' Manual (stalemate)", url: "https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf" },
+      { label: "Chess.com: Opening principles", url: "https://www.chess.com/article/view/learn-chess-opening-principles" },
+      { label: "Silver Knights: Opening principles", url: "https://chessacademy.com/blogs/chess-lessons/beginner-1-lesson-7-opening-principles" },
+    ],
+    stages: [
+      {
+        id: "x_1",
+        kind: "practice",
+        title: "Board, pieces and moves",
+        lesson:
+          "Chess is played between two players who move alternately on a square board, and White moves first (FIDE Laws). Each piece type moves in its own way: king, queen, rook, bishop, knight and pawn. Learn them one piece at a time.",
+        practice:
+          "Set up a board and move each piece type around it until you can say where it can go without looking it up.",
+      },
+      {
+        id: "x_2",
+        kind: "practice",
+        title: "Checkmate and stalemate",
+        lesson:
+          "The goal is checkmate: the opponent's king is attacked and cannot escape. If the player to move has no legal move and the king is not in check, the game is a stalemate and is drawn, per the FIDE Arbiters' Manual. A common beginner mistake is stalemating an opponent you are winning against.",
+        practice:
+          "Set up king and queen against a lone king and practice trapping it. Notice the positions where you would accidentally cause stalemate.",
+      },
+      {
+        id: "x_3",
+        kind: "practice",
+        title: "Opening principles",
+        lesson:
+          "Three goals for the first 10 to 15 moves: control the center, develop your pieces from the back rank, and castle to make your king safer.",
+        practice:
+          "Play the first ten moves of a game aiming only at those three goals. Write down which you did.",
+      },
+      {
+        id: "x_4",
+        kind: "practice",
+        title: "Check for threats",
+        lesson:
+          "Before every move ask: what is my opponent threatening now, and does my move leave a piece unprotected? Most beginner games are decided by pieces left hanging.",
+        practice:
+          "In your next game, before each move say aloud what the opponent threatens. Count how often it changed your move.",
+      },
+      {
+        id: "x_5",
+        kind: "practice",
+        title: "Play and review",
+        lesson:
+          "Play whole games, then review the moment it went wrong. Even a quick look at where you lost a piece teaches more than another game right away.",
+        practice:
+          "Play three games. For each, write down the move where the game turned and what you would do differently.",
+      },
+    ],
+  },
 ];
