@@ -27,7 +27,7 @@ The observations below distinguish inspected pictures from descriptions that wer
 | [LibreLingo mascot discussion](https://github.com/kantord/LibreLingo/issues/90) | Turtle A/B proposals and a pose sheet | Flat-vector turtles with blue shells and orange skin. The animal and upright silhouette differ from Sang. This review does not establish which artwork, if any, is the project's current adopted mascot. |
 | [LibreLingoRelive logo discussion](https://codeberg.org/LibreLingoRelive/LibreLingoRelive/issues/64) | Butterfly artwork in the fork's logo discussion | Yellow/black butterfly with lettering, not a reptile. The discussion documents a change of visual identity; it should not be treated as proof of deployment everywhere. |
 | [LangQuest repository](https://github.com/LangQuest-App/LangQuest) | Front and side frog images in `public/images/` | Green cartoon frog with a red-brown outline. Different colour, species and stance from Sang. |
-| [Lingonaut crew page](https://lingonaut.app/meet-the-crew) | Accessible astronaut/crew artwork | White/blue astronaut figures and a dark round-faced figure. These are crew images, not a verified view of Speck. Speck remains visually unchecked in this review. |
+| [Lingonaut crew page](https://lingonaut.app/meet-the-crew), [Speck image](https://lingonaut.app/images/crew/lingonauts-8th-2048-1024x1024.png) | Follow-up inspection of all five current crew characters, including Speck | Speck is a blue round alien with purple nose, antenna details and feet, rather than a gecko body or curled tail. The other crew are human/cat/dog/robot characters. No close Sang match was identified in these inspected current crew images; this does not cover every historical or unpublished design. |
 | [tama repository](https://github.com/tamnd/tama) | README description only | Described as a cat mascot. No visual comparison is claimed. |
 | [Freelingo repository](https://github.com/Blueturboguy07/freelingo) | Text only | No usable mascot image was inspected. No visual conclusion is claimed. |
 
@@ -58,7 +58,7 @@ Purple reptiles, friendly grins, flat-vector lizards and curled tails already ap
 - Reverse-image matching and a wider image search.
 - Trademark databases, registered designs and jurisdiction-specific conflicts.
 - Similar names, commercial categories and likelihood of consumer confusion.
-- Unviewed mascot artwork, including Speck and the text-only entries above.
+- Unviewed mascot artwork, including the text-only entries above. Speck was checked in a follow-up inspection of the current Lingonaut crew.
 - Historical variants, less-indexed apps and regional projects, including a dedicated Indonesian search.
 
 Before relying on the mascot for registration, licensing or substantial commercial distribution, obtain a scoped professional assessment covering the intended territories and uses. Registration, ownership documentation and clearance are different questions. This note makes no claim that professional clearance has been obtained.
