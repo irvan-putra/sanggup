@@ -497,6 +497,33 @@ window.SANGGUP_TRACKS = [
           "Look around your home or a nearby pool, river or beach. Note where you could reach or throw something that floats from dry ground, and where to call for help from.",
       },
       {
+        id: "s9",
+        kind: "practice",
+        title: "Tsunami",
+        lesson:
+          "BNPB's pocket guide says nobody can predict exactly when a tsunami will come, and BMKG is the authority that issues warnings. Warning signs after an earthquake include strong or long shaking, the sea suddenly receding, a roar from the sea and fish stranded on the exposed seabed. Go quickly to high ground and stay away from the beach; do not stay to watch or collect fish. Not every earthquake causes a tsunami, so follow sirens and official instructions. Stay at the high place: tsunami come as several waves, later ones often larger, until authorities say it is safe.",
+        practice:
+          "If you live or work near the coast, find the nearest evacuation signs and high ground and write the route and walking time. If you are not near the coast, note which places you visit that are.",
+      },
+      {
+        id: "s10",
+        kind: "practice",
+        title: "Volcanic eruption",
+        lesson:
+          "BNPB advises following PVMBG instructions, knowing the volcano's alert level and hazard zone, and the evacuation routes and shelters set by authorities. Prepare masks, protective glasses, closed clothing, a flashlight, cash and medicines. During volcanic ash: cover your nose and mouth with a mask or wet cloth, wear protective glasses and avoid contact lenses, stay out of open areas, valleys and river channels, and leave areas authorities ask to be evacuated.",
+        practice:
+          "Check whether you live or travel near an active volcano. If so, find its current level on PVMBG's MAGMA Indonesia and note the nearest shelter. Add a mask and glasses to your go-bag.",
+      },
+      {
+        id: "s11",
+        kind: "practice",
+        title: "Landslides",
+        lesson:
+          "BNPB says landslides come from a mix of heavy rain, steep slopes, loose soil, erosion and lost vegetation, and happen so quickly that time to self-evacuate is short. Be extra alert in heavy rain. If you hear a rumbling or a landslide siren, move away from the sound and the direction the slide is coming from, toward the designated evacuation zone. Stay away from the slide area afterwards, because the ground is unstable and more slides can follow if rain continues.",
+        practice:
+          "Check whether your home is on or below a steep slope. If it is, learn your local warning arrangement from BPBD and write where you would move to in heavy rain.",
+      },
+      {
         id: "s5",
         kind: "practice",
         title: "Rescue and survival: get trained",
