@@ -419,11 +419,16 @@ window.SANGGUP_TRACKS = [
     tagline: "Get ready before an emergency, Indonesia focus",
     status: "prototype",
     note:
-      "Preparedness basics from Indonesian authorities and Ready.gov. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. This path does not make you a trained rescuer.",
+      "Preparedness basics from Indonesian authorities and Ready.gov. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. This path teaches preparedness basics and the safe-rescue principle only; it does not make you a trained rescuer or survival expert.",
     sources: [
       { label: "Kemenkes Pusat Krisis: Tas Siaga Bencana (cites BNPB)", url: "https://pusatkrisis.kemkes.go.id/mari-siapkan-tas-siaga-bencana" },
       { label: "BMKG: Petunjuk keselamatan gempabumi dan tsunami", url: "https://content.bmkg.go.id/wp-content/uploads/Large-Prints-Petunjuk-keselamatan-Gempabumi-Tsunami.pdf" },
       { label: "Ready.gov: Build a kit", url: "https://www.ready.gov/kit" },
+      { label: "Ready.gov: Floods", url: "https://www.ready.gov/floods" },
+      { label: "US National Weather Service: Turn Around Don't Drown", url: "https://www.weather.gov/safety/flood-turn-around-dont-drown" },
+      { label: "CDC: How to create and store an emergency water supply", url: "https://cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html" },
+      { label: "Red Cross: Summer safety, drowning and reach or throw", url: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/summer-safety.html" },
+      { label: "BNPB: Buku saku bencana", url: "https://www.bnpb.go.id/storage/app/media/uploads/24/buku-data-bencana/6-buku-saku-cetakan-4-2019.pdf" },
       { label: "PMI: Pelatihan relawan", url: "https://pmipusat.org/pelatihan-relawan/" },
       { label: "PSC 119 Kemenkes", url: "https://psc.kemkes.go.id/web/tentang-psc-119" },
     ],
@@ -463,6 +468,33 @@ window.SANGGUP_TRACKS = [
           "BMKG's instruction for during an earthquake is: stay calm, Drop, Cover under something sturdy such as a table, and Hold On until shaking stops. Stay away from glass and things that can fall. After the shaking stops, evacuate calmly and follow official information. If a tsunami is possible, go to the nearest evacuation place. Other disasters have different instructions, so learn those from BPBD.",
         practice:
           "Rehearse Drop, Cover, Hold On in your home. Look for what could fall near you and fix or move it.",
+      },
+      {
+        id: "s6",
+        kind: "practice",
+        title: "Floods",
+        lesson:
+          "US weather and emergency agencies report that over half of flood-related drownings happen when a vehicle is driven into floodwater, so the rule is Turn Around, Don't Drown. Ready.gov advises following local officials' instructions, being ready both to evacuate and to shelter in place, and staying off bridges over fast-moving water. Indonesian flood guidance comes from your BPBD; learn your local evacuation routes and warning signals.",
+        practice:
+          "Find out whether your home or route to work floods. Write your evacuation route and a second route, and where you would move valuables and documents.",
+      },
+      {
+        id: "s7",
+        kind: "practice",
+        title: "Water and staying fed",
+        lesson:
+          "After a disaster clean drinking water may not be available. The CDC advises preparing a 3-day supply, at least 1 gallon (about 3.8 litres) per person per day, including for sanitation and for pets or people with special needs. Store it in clean, sealed containers away from heat, and replace it on a schedule. This matches BNPB's 3x24 hour planning window.",
+        practice:
+          "Calculate how much water your household needs for three days. Store at least part of it now and write the date to check it.",
+      },
+      {
+        id: "s8",
+        kind: "practice",
+        title: "Rescue: reach or throw, don't go",
+        lesson:
+          "The first rule of rescue is to avoid becoming a second victim. The Red Cross says drowning is fast and often silent, and a person may last only 20 to 60 seconds before going under. Its advice for bystanders is: call for help, then reach with something or throw something that floats, and do not go into the water yourself. The same thinking applies to collapsed buildings, fire and floods: call 112 or 119 and the authorities, and help from a safe position. Actual rescue techniques need training.",
+        practice:
+          "Look around your home or a nearby pool, river or beach. Note where you could reach or throw something that floats from dry ground, and where to call for help from.",
       },
       {
         id: "s5",
@@ -639,6 +671,15 @@ window.SANGGUP_TRACKS = [
           "Accounting rests on three elements: assets (what you own), liabilities (what you owe) and equity (what is left, your net worth). Assets equal liabilities plus equity. Double-entry bookkeeping records every transaction in two accounts, so the sides always balance. An income statement shows money in and out over a period; a balance sheet shows what you own and owe at one moment.",
         practice:
           "Write a personal balance sheet with example round numbers: list assets, list debts, subtract. Then write a one-month income statement: income minus spending.",
+      },
+      {
+        id: "b7",
+        kind: "practice",
+        title: "Bookkeeping practice: record transactions",
+        lesson:
+          "Bookkeeping is the routine recording of transactions; accounting classifies, summarizes and analyzes them into statements: the balance sheet, income statement and statement of cash flows. To keep the equation balanced every transaction is recorded in two accounts. Example from OpenStax with made-up rupiah: you start a small business with Rp 10,000,000 cash, so assets are 10,000,000 = liabilities 0 + owner's equity 10,000,000. You then borrow Rp 10,000,000 from a bank: assets become 20,000,000 = liabilities 10,000,000 + equity 10,000,000. Both sides rose, so it still balances.",
+        practice:
+          "Make a simple ledger with columns date, what happened, account 1, account 2, amount. Record five made-up transactions, such as a sale, buying supplies and a loan payment, and check after each that assets equal liabilities plus equity.",
       },
       {
         id: "b5",
