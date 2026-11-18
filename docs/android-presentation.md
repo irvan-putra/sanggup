@@ -1,6 +1,6 @@
 # Android presentation correction
 
-Source-only correction after 0.1.0. No new signed APK is published by this change.
+Prepared for the approved0.1.1/code2 test release. Publication requires the final checks and signed workflow to succeed.
 
 - Launcher label is lowercase `sanggup`, matching the app family. In-app Sang identity and web title are unchanged.
 - Legacy, adaptive and themed launcher resources use the family version strip: full width, starting at 76% of the visible face, centred numbers at 88%, DejaVu Sans Bold at 11.5% of the face. These match the Tuju generator. Existing Sang head/eye/crest/neck SVG paths and amber background are reused. The adaptive 72dp face sits inside the 108dp layer with 18dp overscan, so both picture and strip match the legacy icon. Themed numbers are cut out of the strip for contrast.

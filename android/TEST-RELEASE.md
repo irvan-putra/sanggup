@@ -1,4 +1,4 @@
-# Sanggup 0.1.0 test APK
+# Sanggup 0.1.1 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
@@ -7,6 +7,12 @@ Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or 
 - Local practice logging counts at most one streak day per local calendar day. It does not prove skill competency.
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
+
+## Changes since 0.1.0
+
+Lowercase launcher name, shared bottom version-strip style in legacy/adaptive/themed icons, and a compact horizontal2x1 widget target. The six Sang frames, local streak and tap-to-open remain; resizing taller retains the larger presentation. Actual grid size depends on the launcher. Existing widgets may keep their allocated space until resized or re-added; removing a widget is not uninstalling the app.
+
+Update over0.1.0 with the same package and release key. Do not uninstall or clear storage, which would remove local progress. The user reported0.1.0 home-screen animation working on their phone. That is user-reported evidence, not a screen recording or proof of the new compact size on that phone.
 
 ## Verification and limits
 
