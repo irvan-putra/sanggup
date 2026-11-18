@@ -32,13 +32,16 @@
     <TextView
         android:id="@+id/streak_count"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:includeFontPadding="false"
         android:text="0"
         android:textColor="#241a33"
         android:textSize="22sp"
         android:maxLines="1"
         android:autoSizeTextType="uniform"
-        android:autoSizeMinTextSize="14sp"
+        android:autoSizeMinTextSize="10sp"
         android:autoSizeMaxTextSize="22sp"
         android:autoSizeStepGranularity="1sp"
         android:textStyle="bold" />
@@ -47,9 +50,10 @@
         android:id="@+id/streak_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:includeFontPadding="false"
         android:text="day streak"
         android:textColor="#5c4a78"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:maxLines="1" />
     </LinearLayout>
 </LinearLayout>

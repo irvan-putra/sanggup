@@ -66,7 +66,15 @@ class WidgetHostTest {
         val id = host.allocateAppWidgetId()
         val ua = InstrumentationRegistry.getInstrumentation().uiAutomation
         ua.adoptShellPermissionIdentity("android.permission.BIND_APPWIDGET")
-        val bound = try { mgr.bindAppWidgetIdIfAllowed(id, provider) } finally { ua.dropShellPermissionIdentity() }
+        val bound = try {
+            // Package installation can return before widget-provider discovery finishes.
+            var ready = false
+            for (attempt in 0 until 40) {
+                if (mgr.bindAppWidgetIdIfAllowed(id, provider)) { ready = true; break }
+                Thread.sleep(250)
+            }
+            ready
+        } finally { ua.dropShellPermissionIdentity() }
         assertTrue("bind refused even with shell BIND_APPWIDGET", bound)
         host.startListening()
         mgr.updateAppWidget(id, StreakWidgetProvider.build(ctx))
