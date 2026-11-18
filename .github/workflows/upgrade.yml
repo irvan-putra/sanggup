@@ -1,0 +1,37 @@
+name: Signed upgrade data retention
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  upgrade:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch unchanged signed releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v0.1.0 --pattern '*.apk' --dir /tmp/old
+          gh release download v0.1.1 --pattern '*.apk' --dir /tmp/new
+          cp /tmp/old/*.apk old.apk
+          cp /tmp/new/*.apk new.apk
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          disable-animations: false
+          script: |
+            python3 android/ci/upgrade.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: signed-upgrade-evidence
+          path: upgrade-evidence/
