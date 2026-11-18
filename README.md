@@ -71,3 +71,13 @@ For a system Chrome install, set `CHROME_PATH` to its executable.
 Regression checks cover the complete five-stage path, same-device review,
 more-practice retries, safe rendering of notes, persistence and mobile widths.
 GitHub Actions runs the same checks before deploying. Runtime has no dependencies.
+
+## Android (prototype)
+
+`android/` holds a native Android app, package `com.vanipy.sanggup`. It
+bundles this web app offline in a WebView, shows an animated Sang (original
+frame animation from the mascot) and keeps a local learning streak that the
+web app reports when a practice stage is logged. A home-screen widget shows
+Sang and the streak. The app has no internet permission. Debug builds only;
+nothing is signed or released from this repo yet. The widget uses a
+`ViewFlipper` for its animation, and launcher support for that is being tested.

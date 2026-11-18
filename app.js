@@ -189,6 +189,7 @@ function completeStage(track, stage, how, extra) {
     when: new Date().toISOString(),
   });
   saveState(state);
+  if (window.SanggupAndroid && typeof window.SanggupAndroid.stageDone === "function") window.SanggupAndroid.stageDone();
   renderPath(track);
 }
 
