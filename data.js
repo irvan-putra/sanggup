@@ -428,6 +428,7 @@ window.SANGGUP_TRACKS = [
       { label: "US Forest Service: If you get lost", url: "https://www.fs.usda.gov/visit/know-before-you-go/if-you-get-lost" },
       { label: "Antara: Tersesat di gunung? Ini yang perlu Anda lakukan", url: "https://www.antaranews.com/berita/5846199/tersesat-di-gunung-ini-yang-perlu-anda-lakukan" },
       { label: "Basarnas: Darurat SAR, hubungi 115 (2022)", url: "https://basarnas.go.id/berita/kabasarnas-darurat-sar-hubungi-115" },
+      { label: "Basarnas: official site contact (115)", url: "https://www.basarnas.go.id/hubungi-kami" },
       { label: "Ready.gov: Floods", url: "https://www.ready.gov/floods" },
       { label: "US National Weather Service: Turn Around Don't Drown", url: "https://www.weather.gov/safety/flood-turn-around-dont-drown" },
       { label: "CDC: How to create and store an emergency water supply", url: "https://cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html" },
@@ -541,7 +542,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Outdoors: plan ahead, and what to do if lost",
         lesson:
-          "The US Forest Service says the best survival tool is advance planning: carry enough food, water, layers, a light, a map and compass you know how to use, check for local warnings, and tell someone exactly where you are going, your route and when you will return. Do not rely on a phone signal. If you become lost, use STOP (Stop, Think, Observe, Plan): stop, stay calm and, if it is safe, stay put, because walking farther makes you harder to find. Antara's mountain guidance gives the same advice. Basarnas, Indonesia's search and rescue agency, has said search and rescue emergencies can be reported to 115 (a 2022 statement, so check the current number before relying on it).",
+          "The US Forest Service says the best survival tool is advance planning: carry enough food, water, layers, a light, a map and compass you know how to use, check for local warnings, and tell someone exactly where you are going, your route and when you will return. Do not rely on a phone signal. If you become lost, use STOP (Stop, Think, Observe, Plan): stop, stay calm and, if it is safe, stay put, because walking farther makes you harder to find. Antara's mountain guidance gives the same advice. Basarnas, Indonesia's search and rescue agency, has said search and rescue emergencies can be reported to 115 (a 2022 statement; Basarnas's own website currently lists 115 and a WhatsApp Rescue 115 chat).",
         practice:
           "Before your next outing, write a plan for a trusted person: where, route, return time and who is going. Pack a small kit of water, light and layers. Save 112 and Basarnas contact in your phone.",
       },
@@ -921,7 +922,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "The licence path in Indonesia",
         lesson:
-          "According to Korlantas Polri's SIM guide, the minimum age is 17 for SIM A (private car) and SIM C (motorbike under 250cc), 18 for SIM CI and 19 for SIM CII. A new SIM requires your KTP, a physical health certificate, a psychological test, and, under the guide's current rules, active BPJS Kesehatan membership. You apply online or at the Satpas but must go in person for identification and the exams. The guide lists the official fee as Rp 120,000 for SIM A and Rp 100,000 for SIM C, excluding health and psychology tests. Check the guide for current rules.",
+          "According to Korlantas Polri's SIM guide, the minimum age is 17 for SIM A (private car) and SIM C (motorbike under 250cc), 18 for SIM CI and 19 for SIM CII. A new SIM requires your KTP, a physical health certificate, a psychological test, and, under the guide's current rules, active BPJS Kesehatan membership. For a new SIM you go to a Satpas in person for photo and fingerprints and the exams; the guide describes online steps for renewal. The guide lists the official fee as Rp 120,000 for SIM A and Rp 100,000 for SIM C, excluding health and psychology tests. Check the guide for current rules.",
         practice:
           "Open the Korlantas guide and write down which SIM you need, the documents you must prepare and the nearest Satpas.",
       },
