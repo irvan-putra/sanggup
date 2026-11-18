@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sanggup — learn by doing</title>
+<meta name="description" content="sanggup: short lessons for real-life skills. Progress means doing the thing, not finishing a quiz.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+  <h1>sanggup</h1>
+  <p class="tagline">learn by doing</p>
+  <nav class="roles" aria-label="Choose your role">
+    <button id="role-learner" class="role-btn">I'm learning</button>
+    <button id="role-teacher" class="role-btn">I'm teaching</button>
+  </nav>
+</header>
+
+<main>
+  <section id="learner-view" hidden>
+    <div id="track-list"></div>
+    <div id="path-view" hidden>
+      <button id="back-to-tracks" class="link-btn">&larr; all skills</button>
+      <h2 id="path-title"></h2>
+      <p id="path-tagline" class="muted"></p>
+      <div class="honesty-note">
+        Lessons show you the steps. They don't show you can do it safely on
+        your own. Practical milestones only count when a real person signs off.
+      </div>
+      <div id="stage-list"></div>
+      <h3>Done</h3>
+      <div id="archive-list"></div>
+    </div>
+  </section>
+
+  <section id="teacher-view" hidden>
+    <h2>Instructor sign-off</h2>
+    <p class="muted">
+      Learners ask you to sign off practical milestones: things they have to
+      actually do, not quiz questions. Watch or check the result, then decide.
+    </p>
+    <label for="code-input">Sign-off code from the learner</label>
+    <div class="code-row">
+      <input id="code-input" inputmode="latin" maxlength="6" placeholder="e.g. K7M2QP" autocomplete="off">
+      <button id="code-lookup">Find request</button>
+    </div>
+    <div id="request-detail"></div>
+    <h3>Pending on this device</h3>
+    <div id="pending-list"></div>
+    <h3>Signed off</h3>
+    <div id="signed-list"></div>
+  </section>
+</main>
+
+<footer>
+  <p>sanggup prototype 0.1.0 · demo data stays on this device, nothing is sent anywhere.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
