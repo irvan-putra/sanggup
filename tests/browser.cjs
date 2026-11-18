@@ -18,7 +18,8 @@ const server = http.createServer((req,res)=>{
  const url=process.env.TEST_URL||`http://127.0.0.1:${server.address().port}`;
  await page.goto(url);
  assert.equal(await page.locator('.track-card:disabled').count(),6);
- await page.getByRole('button',{name:/Cooking From/}).click();
+ assert.equal(await page.locator('.track-card:not(:disabled)').count(),14);
+ await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.locked').count(),4);
  await page.getByRole('button',{name:'I did it',exact:true}).click();
  await page.getByRole('button',{name:'I did it',exact:true}).click();
@@ -57,8 +58,26 @@ const server = http.createServer((req,res)=>{
  assert.equal(await page.locator('.stage-card.done').count(),5);
  assert.equal(await page.locator('#archive-list .archive-row').count(),5);
  await page.reload();
- await page.getByRole('button',{name:/Cooking From/}).click();
+ await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),5);
+ // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Prioritizing,/,4,/does not rank/],[/^Deciding,/,4,/does not make decisions/],[/^Habits,/,4,/[Nn]ot an official course/],[/^Focus,/,3,/Pomodoro/],[/^Projects,/,4,/[Nn]ot an official course/],[/^Calm & meditation,/,3,/not medical/],[/^Disaster preparedness,/,5,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Networking,/,5,/does not contact anyone/],[/^Budgeting & personal finance,/,6,/not personal financial/],[/^FIRE,/,3,/no withdrawal rate is safe/],[/^Writing a book,/,5,/does not write your book/]]) {
+  await page.reload();
+  await page.getByRole('button',{name}).click();
+  assert.match(await page.locator('#path-note').innerText(),noteRe);
+  assert.ok(await page.locator('#path-sources a').count()>=2);
+  for(let i=0;i<count;i++) await page.getByRole('button',{name:'I did it',exact:true}).click();
+  assert.equal(await page.locator('.stage-card.done').count(),count);
+ }
+ await page.reload();
+ await page.getByRole('button',{name:/^Cleaning & tidying,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),5);
+ assert.equal(await page.getByRole('button',{name:'Request sign-off',exact:true}).count(),1);
+ // older saved progress (0.1.x shape) still loads and keeps cooking progress
+ await page.evaluate(()=>localStorage.setItem('sanggup-demo-v1',JSON.stringify({done:{c1:true},archive:[{stageId:'c1',track:'Cooking',title:'Set up before you cook',how:'self',note:'',when:new Date().toISOString()}],requests:[]})));
+ await page.reload();
+ await page.getByRole('button',{name:/^Cooking,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),1);
  for(const width of [320,390,1280]){
  await page.setViewportSize({width,height:900});
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

@@ -8,8 +8,13 @@ Live prototype: https://vanipy.com/sanggup/
 
 ## What this is
 
-A first prototype (0.1.1) with one working path, **Cooking: from your first
-dish to a full meal**, and two roles:
+A prototype (0.2.0) with working paths and two roles. The paths are Cooking
+(five stages, with practical milestones), Cleaning & tidying (including KonMari
+and other approaches), Prioritizing, Deciding, Habits, Focus, Projects (Kanban
+and sprints), Calm & meditation, Disaster preparedness (Indonesia focus), First
+aid awareness, Networking, Budgeting & personal finance (Indonesia focus), FIRE
+and Writing a book. Each path lists its public sources and states its limits.
+The roles:
 
 - **Learner**: works through stages in order. Practice stages are self-logged.
   Practical milestones generate a sign-off code and stay open until an
@@ -17,6 +22,12 @@ dish to a full meal**, and two roles:
 - **Instructor**: looks up a sign-off code (or sees pending requests on the
   same device), checks the learner actually did the thing, then signs off or
   asks for more practice.
+
+The new paths are short, independently written practice exercises, not copies
+of any book or course, and are not endorsed by any author or organization.
+Finance, health and safety paths are general education only. The first aid
+path is awareness plus how to ask for hands-on training; it does not qualify
+anyone. No path gives personal advice or makes decisions for you.
 
 Swimming, driving, languages, music, math and chess are shown as planned
 tracks so the shape of the idea is visible. They are not built, and nothing
@@ -31,7 +42,7 @@ instruction. No quiz will ever claim someone is safe to swim or drive.
   anywhere. Both roles share one device in this prototype; syncing sign-off
   requests between devices is future work.
 - Not built yet: accounts, instructor dashboards across students, streaks,
-  content for the other tracks.
+  content for the planned tracks.
 
 ## License
 

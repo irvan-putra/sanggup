@@ -60,14 +60,19 @@ function renderTracks() {
   wrap.innerHTML = "";
   $("path-view").hidden = true;
   for (const track of window.SANGGUP_TRACKS) {
+    const planned = track.status === "planned";
     const card = document.createElement("button");
-    card.className = "track-card" + (track.status === "planned" ? " planned" : "");
+    card.className = "track-card" + (planned ? " planned" : "");
+    card.title = track.title + ": " + track.tagline;
+    card.setAttribute(
+      "aria-label",
+      track.title + ", " + track.tagline + (planned ? ", planned, not available yet" : ", prototype path")
+    );
     card.innerHTML =
-      `<strong>${track.title}</strong><span>${track.tagline}</span>` +
-      (track.status === "planned"
-        ? `<em>path coming soon</em>`
-        : `<em>start the prototype path</em>`);
-    if (track.status !== "planned") {
+      `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${track.icon}</svg>` +
+      `<span class="tt">${track.short || track.title}</span>` +
+      (planned ? `<em>soon</em>` : "");
+    if (!planned) {
       card.addEventListener("click", () => renderPath(track));
     } else {
       card.disabled = true;
@@ -100,6 +105,20 @@ function renderPath(track) {
   $("path-view").hidden = false;
   $("path-title").textContent = track.title;
   $("path-tagline").textContent = track.tagline;
+  $("path-note").textContent = track.note || "";
+  $("path-note").hidden = !track.note;
+  const src = $("path-sources");
+  src.innerHTML = "";
+  for (const s of track.sources || []) {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = s.url;
+    a.textContent = s.label;
+    a.rel = "noopener noreferrer";
+    li.appendChild(a);
+    src.appendChild(li);
+  }
+  $("path-sources-wrap").hidden = !(track.sources && track.sources.length);
 
   const list = $("stage-list");
   list.innerHTML = "";

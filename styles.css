@@ -19,14 +19,16 @@ body {
 }
 
 header {
-  padding: 1.5rem 1rem 1rem;
+  padding: 0.7rem 1rem 0.6rem;
   text-align: center;
   border-bottom: 1px solid var(--line);
   background: var(--card);
 }
 
-h1 { margin: 0; font-size: 1.8rem; letter-spacing: 0.02em; }
-.tagline { margin: 0.15rem 0 0.9rem; color: var(--muted); }
+h1 { margin: 0; font-size: 1.5rem; letter-spacing: 0.02em; line-height: 1.1; }
+.tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.brand { display: flex; align-items: center; justify-content: center; gap: 0.7rem; margin-bottom: 0.5rem; text-align: left; }
+.mascot { height: 4.2rem; width: auto; }
 
 .roles { display: flex; gap: 0.5rem; justify-content: center; }
 .role-btn {
@@ -41,29 +43,43 @@ h1 { margin: 0; font-size: 1.8rem; letter-spacing: 0.02em; }
 
 main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
 
+#track-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
 .track-card {
-  display: block;
-  width: 100%;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 4.6rem;
+  min-width: 0;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 0.9rem 1rem;
-  margin-bottom: 0.6rem;
+  padding: 0.5rem 0.2rem;
   cursor: pointer;
-  font-size: 1rem;
+  font: inherit;
+  color: var(--ink);
 }
-.track-card strong { display: block; font-size: 1.1rem; }
-.track-card span { display: block; color: var(--muted); }
-.track-card em {
-  display: inline-block;
-  margin-top: 0.3rem;
-  font-size: 0.8rem;
-  font-style: normal;
-  color: var(--accent-dark);
+.track-card svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-.track-card.planned { opacity: 0.65; cursor: default; }
-.track-card.planned em { color: var(--muted); }
+.track-card .tt { font-size: 0.74rem; font-weight: 600; line-height: 1.1; text-align: center; }
+@media (max-width: 360px) { .track-card .tt { font-size: 0.66rem; } .track-card { padding: 0.5rem 0.1rem; } }
+.track-card em { font-size: 0.62rem; font-style: normal; color: var(--muted); line-height: 1; }
+.track-card.planned { opacity: 0.6; cursor: default; }
+.track-card.planned svg { stroke: var(--muted); }
+.track-card:focus-visible, .role-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (min-width: 560px) { #track-list { grid-template-columns: repeat(8, 1fr); } }
 
 .honesty-note {
   background: #fdf3e0;
@@ -197,4 +213,14 @@ footer {
   padding: 1.5rem 1rem 2rem;
 }
 
-.mascot { width: 72px; height: 72px; }
+
+.path-note {
+  margin: 0.6rem 0 1rem;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--muted);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.sources { margin: 1rem 0; font-size: 0.92rem; }
+.sources summary { cursor: pointer; }
+.sources a { overflow-wrap: anywhere; }
