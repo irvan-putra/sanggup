@@ -62,3 +62,7 @@ Purple reptiles, friendly grins, flat-vector lizards and curled tails already ap
 - Historical variants, less-indexed apps and regional projects, including a dedicated Indonesian search.
 
 Before relying on the mascot for registration, licensing or substantial commercial distribution, obtain a scoped professional assessment covering the intended territories and uses. Registration, ownership documentation and clearance are different questions. This note makes no claim that professional clearance has been obtained.
+
+## Further reading
+
+[Kaji: mascot legal process and costs](https://github.com/irvan-putra/kaji/blob/main/docs/mascot-legal-clearance.md) separates research, professional advice and registration fees. It is research, not clearance or a filing instruction. A final total depends on territory, scope and a professional quote.
