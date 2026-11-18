@@ -71,7 +71,12 @@ class WidgetHostTest {
                         seen.add(flipper.displayedChild)
                         Log.i(tag, "t=$i flipper child=${flipper.displayedChild} running=${flipper.isFlipping} children=${flipper.childCount}")
                     }
-                    if (i == 0 || i == 3 || i == 6) save(hostView!!, "widget_$i.png")
+                    if (i == 0 || i == 3 || i == 6) {
+                        save(hostView!!, "widget_$i.png")
+                        val ctx2 = InstrumentationRegistry.getInstrumentation().targetContext
+                        val full = InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()
+                        FileOutputStream(File(ctx2.filesDir, "host_$i.png")).use { full.compress(Bitmap.CompressFormat.PNG, 100, it) }
+                    }
                 }
                 Thread.sleep(250)
             }
