@@ -11,7 +11,7 @@ import PIL,cairosvg
 from PIL import Image,ImageDraw,ImageFont,ImageChops
 ROOT=Path(__file__).resolve().parents[2]
 RES=ROOT/'android/app/src/main/res'
-FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+FONT=str(ROOT/'tools/fonts/DejaVuSans-Bold.ttf')
 assert PIL.__version__=='12.3.0'
 assert cairosvg.__version__=='2.8.2'
 assert hashlib.sha256(Path(FONT).read_bytes()).hexdigest()=='d1c3ff99f1e1ce1827a33efd4dad81f40babda06bff9e43bd7591c86662a287b'

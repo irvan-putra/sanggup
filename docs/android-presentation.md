@@ -11,3 +11,5 @@ Source-only correction after 0.1.0. No new signed APK is published by this chang
 Official sizing reference: https://developer.android.com/develop/ui/views/appwidgets/layouts
 
 A future installable correction needs a new approved signed release with incremented version/code, same package and signer. Do not uninstall or clear storage: progress stays local. No permission, account, learning-path, streak-day or signing behavior is changed here.
+
+The exact DejaVu font file is vendored with its license in `tools/fonts/` and its SHA-256 is checked. This prevents runner distribution font differences from changing the badge.
