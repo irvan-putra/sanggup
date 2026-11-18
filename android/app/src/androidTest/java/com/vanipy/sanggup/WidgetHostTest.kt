@@ -126,6 +126,8 @@ class WidgetHostTest {
                         val label = hostView!!.findViewById<android.widget.TextView>(R.id.streak_label)
                         assertEquals("1", count.text.toString())
                         assertTrue("streak label clipped vertically", label.bottom <= label.parent.let { (it as View).height })
+                        assertTrue("streak count has no height", count.height > 0)
+                        assertTrue("streak label text clipped", label.layout.getLineBottom(0) <= label.height)
                         seen.add(flipper.displayedChild)
                         Log.i(tag, "t=$i flipper child=${flipper.displayedChild} running=${flipper.isFlipping} children=${flipper.childCount}")
                     }
@@ -141,6 +143,21 @@ class WidgetHostTest {
             assertTrue("ViewFlipper not found in hosted widget", found)
             Log.i(tag, "distinct displayed children: $seen")
             assertTrue("flipper never advanced: $seen", seen.size > 1)
+            // Exercise the advertised dp minimum, including host padding.
+            scenario.onActivity { a ->
+                val hv = hostView as android.appwidget.AppWidgetHostView
+                val dp = a.resources.displayMetrics.density
+                hv.updateAppWidgetSize(android.os.Bundle(), 110, 48, 110, 48)
+                hv.layoutParams = FrameLayout.LayoutParams((110 * dp).toInt(), (48 * dp).toInt())
+            }
+            Thread.sleep(1000)
+            scenario.onActivity {
+                val count = hostView!!.findViewById<android.widget.TextView>(R.id.streak_count)
+                val label = hostView!!.findViewById<android.widget.TextView>(R.id.streak_label)
+                assertTrue("minimum count clipped", count.layout.getLineBottom(0) <= count.height)
+                assertTrue("minimum label clipped", label.layout.getLineBottom(0) <= label.height)
+                save(hostView!!, "widget_minimum.png")
+            }
             // Retain the larger presentation when the user expands the widget.
             scenario.onActivity { a ->
                 val hv = hostView as android.appwidget.AppWidgetHostView
