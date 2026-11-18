@@ -14,6 +14,7 @@ def tap(pattern,name):
    if re.search(pattern,(n.get('text','')+' '+n.get('content-desc','')),re.I):
     b=list(map(int,re.findall(r'\d+',n.get('bounds',''))))
     if len(b)==4 and b[2]>b[0]and b[3]>b[1]:adb('shell','input','tap',str((b[0]+b[2])//2),str((b[1]+b[3])//2));time.sleep(2);return
+  if name == "log-practice": adb("shell","input","swipe","160","560","160","300","350")
   time.sleep(1)
  shot(name+'-missing');raise AssertionError('UI target missing: '+pattern)
 def text(root):return ' '.join(n.get('text','')+' '+n.get('content-desc','')for n in root.iter('node'))
