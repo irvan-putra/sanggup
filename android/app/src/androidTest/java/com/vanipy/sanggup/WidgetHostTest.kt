@@ -8,6 +8,9 @@ import android.graphics.Canvas
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
 import android.widget.FrameLayout
 import android.widget.ViewFlipper
 import androidx.test.core.app.ActivityScenario
@@ -35,6 +38,25 @@ class WidgetHostTest {
         FileOutputStream(File(ctx.filesDir, name)).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
+    private fun findWeb(v: View): WebView? {
+        if (v is WebView) return v
+        if (v is ViewGroup) for (i in 0 until v.childCount) {
+            val found = findWeb(v.getChildAt(i))
+            if (found != null) return found
+        }
+        return null
+    }
+
+    private fun js(scenario: ActivityScenario<MainActivity>, script: String): String {
+        val latch = CountDownLatch(1)
+        var result = ""
+        scenario.onActivity { a ->
+            findWeb(a.window.decorView)!!.evaluateJavascript(script) { value -> result = value; latch.countDown() }
+        }
+        assertTrue("JavaScript callback timed out", latch.await(10, TimeUnit.SECONDS))
+        return result
+    }
+
     @Test
     fun widgetFlipperAdvances() {
         val ctx = InstrumentationRegistry.getInstrumentation().targetContext
@@ -50,6 +72,25 @@ class WidgetHostTest {
         mgr.updateAppWidget(id, StreakWidgetProvider.build(ctx))
 
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+            var ready = false
+            for (attempt in 0 until 40) {
+                if (js(scenario, "document.querySelectorAll('.track-card').length") == "20") { ready = true; break }
+                Thread.sleep(500)
+            }
+            assertTrue("Offline learning grid never loaded", ready)
+            scenario.onActivity { a ->
+                val bmp = InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()
+                FileOutputStream(File(ctx.filesDir, "app_ready.png")).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            }
+            // Exercise the real learning-path button and its native bridge using test data.
+            js(scenario, "document.querySelector('.track-card').click(); document.querySelector('button[data-act=finish]').click(); true")
+            for (attempt in 0 until 20) {
+                if (StreakStore.visible(ctx) == 1) break
+                Thread.sleep(100)
+            }
+            assertEquals("Practice log did not reach native streak", 1, StreakStore.visible(ctx))
+            js(scenario, "document.getElementById('back-to-tracks').click(); true")
+            mgr.updateAppWidget(id, StreakWidgetProvider.build(ctx))
             var hostView: View? = null
             scenario.onActivity { a ->
                 val info = mgr.getAppWidgetInfo(id)
