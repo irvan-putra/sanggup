@@ -38,6 +38,15 @@ class WidgetHostTest {
         FileOutputStream(File(ctx.filesDir, name)).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
+    private fun assertSafeText(host: View, text: android.widget.TextView) {
+        val root = host.findViewById<View>(R.id.widget_root)
+        val rootAt = IntArray(2); val textAt = IntArray(2)
+        root.getLocationOnScreen(rootAt); text.getLocationOnScreen(textAt)
+        val dp = root.resources.displayMetrics.density
+        val rightInset = root.width - (textAt[0] - rootAt[0] + text.width)
+        assertTrue("text too near rounded right edge: $rightInset", rightInset >= (12 * dp).toInt())
+    }
+
     private fun findWeb(v: View): WebView? {
         if (v is WebView) return v
         if (v is ViewGroup) for (i in 0 until v.childCount) {
@@ -128,6 +137,7 @@ class WidgetHostTest {
                         assertTrue("streak label clipped vertically", label.bottom <= label.parent.let { (it as View).height })
                         assertTrue("streak count has no height", count.height > 0)
                         assertTrue("streak label text clipped", label.layout.getLineBottom(0) <= label.height)
+                        assertSafeText(hostView!!, label)
                         seen.add(flipper.displayedChild)
                         Log.i(tag, "t=$i flipper child=${flipper.displayedChild} running=${flipper.isFlipping} children=${flipper.childCount}")
                     }
@@ -156,6 +166,7 @@ class WidgetHostTest {
                 val label = hostView!!.findViewById<android.widget.TextView>(R.id.streak_label)
                 assertTrue("minimum count clipped", count.layout.getLineBottom(0) <= count.height)
                 assertTrue("minimum label clipped", label.layout.getLineBottom(0) <= label.height)
+                assertSafeText(hostView!!, label)
                 save(hostView!!, "widget_minimum.png")
             }
             // Retain the larger presentation when the user expands the widget.

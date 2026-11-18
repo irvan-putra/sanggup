@@ -13,3 +13,5 @@ Official sizing reference: https://developer.android.com/develop/ui/views/appwid
 A future installable correction needs a new approved signed release with incremented version/code, same package and signer. Do not uninstall or clear storage: progress stays local. No permission, account, learning-path, streak-day or signing behavior is changed here.
 
 The exact DejaVu font file is vendored with its license in `tools/fonts/` and its SHA-256 is checked. This prevents runner distribution font differences from changing the badge.
+
+Compact text uses12dp horizontal safe insets, not only rectangular text bounds. The first host preview was rejected because the label met the rounded corner; inspect actual corner clearance at both advertised minimum and nominal sizes before release.
