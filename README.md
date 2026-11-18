@@ -81,3 +81,7 @@ web app reports when a practice stage is logged. A home-screen widget shows
 Sang and the streak. The app has no internet permission. Debug builds only;
 nothing is signed or released from this repo yet. The widget uses a
 `ViewFlipper` for its animation, and launcher support for that is being tested.
+
+## Design notes
+
+- [Sang mascot similarity review](docs/mascot-similarity.md): limited visual comparisons, source links, provenance and open questions. Not legal clearance.
