@@ -12,7 +12,7 @@ RC=0
 grep -q 'OK (1 test)' /tmp/instrumentation.txt || RC=1
 mkdir -p ../emu-out
 adb logcat -d -s SANGGUP > ../emu-out/logcat-sanggup.txt
-for f in widget_0 widget_3 widget_6 app_ready host_0 host_3 host_6; do adb exec-out run-as com.vanipy.sanggup cat files/$f.png > ../emu-out/$f.png; done
+for f in widget_0 widget_3 widget_6 widget_tall app_ready host_0 host_3 host_6; do adb exec-out run-as com.vanipy.sanggup cat files/$f.png > ../emu-out/$f.png; done
 adb exec-out screencap -p > ../emu-out/screen.png
 adb shell am start -W -n com.vanipy.sanggup/.MainActivity
 sleep 3

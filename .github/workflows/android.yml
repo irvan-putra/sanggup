@@ -12,6 +12,14 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify deterministic launcher resources
+        run: |
+          pip install Pillow==12.3.0 CairoSVG==2.8.2
+          python android/tools/badge_icon.py
+          git diff --exit-code -- android/app/src/main/res
       - uses: actions/setup-java@v4
         with:
           distribution: temurin

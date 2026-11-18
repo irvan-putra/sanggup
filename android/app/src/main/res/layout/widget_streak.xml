@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/widget_bg"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:orientation="horizontal"
+    android:padding="4dp">
 
     <ViewFlipper
         android:id="@+id/sang_flipper"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:autoStart="true"
         android:flipInterval="350">
@@ -23,13 +23,24 @@
         <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" android:scaleType="fitCenter" android:src="@drawable/sang_5" />
     </ViewFlipper>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="46dp"
+        android:gravity="center"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/streak_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="#241a33"
-        android:textSize="26sp"
+        android:textSize="22sp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeStepGranularity="1sp"
         android:textStyle="bold" />
 
     <TextView
@@ -38,5 +49,7 @@
         android:layout_height="wrap_content"
         android:text="day streak"
         android:textColor="#5c4a78"
-        android:textSize="12sp" />
+        android:textSize="11sp"
+        android:maxLines="1" />
+    </LinearLayout>
 </LinearLayout>

@@ -95,10 +95,13 @@ class WidgetHostTest {
             scenario.onActivity { a ->
                 val info = mgr.getAppWidgetInfo(id)
                 assertNotNull(info)
+                assertEquals("default width must target two cells", 2, info.targetCellWidth)
+                assertEquals("default height must target one cell", 1, info.targetCellHeight)
                 val hv = host.createView(ctx, id, info)
                 val dp = a.resources.displayMetrics.density
                 hv.setAppWidget(id, info)
-                a.addContentView(hv, FrameLayout.LayoutParams((160 * dp).toInt(), (160 * dp).toInt()))
+                hv.updateAppWidgetSize(android.os.Bundle(), 160, 64, 160, 64)
+                a.addContentView(hv, FrameLayout.LayoutParams((160 * dp).toInt(), (64 * dp).toInt()))
                 hostView = hv
             }
             Thread.sleep(1500)
@@ -109,6 +112,12 @@ class WidgetHostTest {
                     val flipper = hostView!!.findViewById<ViewFlipper>(R.id.sang_flipper)
                     if (flipper != null) {
                         found = true
+                        assertEquals("all animation frames retained", 6, flipper.childCount)
+                        assertTrue("Sang has no height", flipper.height > 0)
+                        val count = hostView!!.findViewById<android.widget.TextView>(R.id.streak_count)
+                        val label = hostView!!.findViewById<android.widget.TextView>(R.id.streak_label)
+                        assertEquals("1", count.text.toString())
+                        assertTrue("streak label clipped vertically", label.bottom <= label.parent.let { (it as View).height })
                         seen.add(flipper.displayedChild)
                         Log.i(tag, "t=$i flipper child=${flipper.displayedChild} running=${flipper.isFlipping} children=${flipper.childCount}")
                     }
@@ -124,6 +133,15 @@ class WidgetHostTest {
             assertTrue("ViewFlipper not found in hosted widget", found)
             Log.i(tag, "distinct displayed children: $seen")
             assertTrue("flipper never advanced: $seen", seen.size > 1)
+            // Retain the larger presentation when the user expands the widget.
+            scenario.onActivity { a ->
+                val hv = hostView as android.appwidget.AppWidgetHostView
+                val dp = a.resources.displayMetrics.density
+                hv.updateAppWidgetSize(android.os.Bundle(), 160, 160, 160, 160)
+                hv.layoutParams = FrameLayout.LayoutParams((160 * dp).toInt(), (160 * dp).toInt())
+            }
+            Thread.sleep(1000)
+            scenario.onActivity { save(hostView!!, "widget_tall.png") }
         }
         host.deleteAppWidgetId(id)
     }

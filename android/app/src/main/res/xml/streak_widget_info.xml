@@ -3,7 +3,11 @@
     android:description="@string/widget_description"
     android:initialLayout="@layout/widget_streak"
     android:minWidth="110dp"
-    android:minHeight="110dp"
+    android:minHeight="48dp"
+    android:minResizeWidth="110dp"
+    android:minResizeHeight="48dp"
+    android:targetCellWidth="2"
+    android:targetCellHeight="1"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="1800000"
     android:widgetCategory="home_screen" />
