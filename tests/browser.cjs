@@ -67,7 +67,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),5);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,7,/does not apply for jobs/],[/^Coding,/,3,/does not run your code/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,7,/does not apply for jobs/],[/^Coding,/,4,/does not run your code/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
@@ -79,6 +79,14 @@ async function openTile(page,name){
  await page.getByRole('button',{name:/^Cleaning & tidying,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),5);
  assert.equal(await page.getByRole('button',{name:'Request sign-off',exact:true}).count(),1);
+ // every stage card on every path renders real content, never schema gaps like "undefined"
+ for (const name of [/^Cooking,/,/^Cleaning & tidying,/,/^Decisions and priorities,/,/^Focus and habits,/,/^Projects and business,/,/^Disaster preparedness,/,/^First aid awareness,/,/^Network and community,/,/^Money and FIRE,/,/^Writing and journalism,/,/^Swimming,/,/^Driving,/,/^Languages,/,/^Music,/,/^Math,/,/^Chess,/,/^Branding and creator,/,/^Self care and calm,/,/^Public speaking,/,/^Presentation,/,/^Surveying people,/,/^Teaching and mentoring,/,/^Negotiation,/,/^Coding,/,/^Career moves,/,/^Client work,/]) {
+  await page.goto(url);
+  await openTile(page,name);
+  const cards=await page.locator('.stage-card').allInnerTexts();
+  assert.ok(cards.length>=1);
+  for (const c of cards) { assert.ok(!/undefined/.test(c), 'undefined text in stage card'); }
+ }
  // direct skill links: fresh load on #branding opens that path, back returns to grid, tile click sets hash, unknown hash falls back to grid
  await page.goto(url+'/#branding');
  assert.match(await page.locator('#path-title').innerText(),/Branding and creator/);

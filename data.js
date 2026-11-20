@@ -2077,6 +2077,7 @@ window.SANGGUP_TRACKS = [
       { label: "Falsehoods programmers believe about time (Noah Sussman)", url: "https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" },
       { label: "Falsehoods Programmers Believe About Geography", url: "https://ctemm.me/falsehoods/geography/" },
       { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
+      { label: "Falsehoods Programmers Believe About Names (Patrick McKenzie)", url: "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" },
     ],
     stages: [
       {
@@ -2107,10 +2108,22 @@ window.SANGGUP_TRACKS = [
           "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
       },
       {
+        id: "cd5",
+        kind: "practice",
+        title: "Break a person with names",
+        lesson:
+          "The original falsehoods list was about people's names: everyone has exactly one canonical full name, names fit in ASCII, a name is a first name plus a last name, names never change. All wrong. Systems that assume them reject real people at the form field, and anything someone tells you is their name is, by definition, an appropriate identifier for them.",
+        practice:
+          "Invent three fictional people whose names break the usual assumptions, such as one name only, a name with characters outside ASCII, or a name that changed last year. For each, write which common form field would reject them and what the field should accept instead.",
+      },
+      {
         id: "cd4",
         kind: "milestone",
         title: "Milestone: catch one real assumption bug",
-        task: "In real code, yours or a public project, find one place that relies on a false assumption about time or location. Write it up as assumption, failing case, fix, and have your instructor check the reasoning.",
+        lesson:
+          "Paper exercises prove you can spot the pattern. Real code proves you can find it where it hides, in a form field, a date comparison or an address parser that was never questioned.",
+        milestone:
+          "In real code, yours or a public project, find one place that relies on a false assumption about time, location or names. Write it up as assumption, failing case and fix, and have your instructor check the reasoning.",
       },
     ],
   },
