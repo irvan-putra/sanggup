@@ -1656,7 +1656,10 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Search engine marketing", url: "https://en.wikipedia.org/wiki/Search_engine_marketing" },
       { label: "US FTC: Disclosures 101 for Social Media Influencers", url: "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" },
       { label: "Wikipedia: Trade show", url: "https://en.wikipedia.org/wiki/Trade_fair" },
-      { label: "Wikipedia: Advertising", url: "https://en.wikipedia.org/wiki/Advertising" },
+      { label: "Wikipedia: Advertising", url: "https://en.wikipedia.org/wiki/Advertising" },      { label: "Wikipedia: Marketing for Deadpool (film)", url: "https://en.wikipedia.org/wiki/Marketing_for_Deadpool_(film)" },
+      { label: "Wikipedia: Among Us", url: "https://en.wikipedia.org/wiki/Among_Us" },
+      { label: "CNBC: How Among Us became a mega hit thanks to Twitch", url: "https://www.cnbc.com/2020/10/14/how-among-us-became-a-mega-hit-thanks-to-amazon-twitch.html" },
+
     ],
     stages: [
       {
@@ -1820,6 +1823,42 @@ window.SANGGUP_TRACKS = [
           "AI can draft posts, taglines and campaign copy in bulk, which makes checking more important, not less. Verify every claim a draft makes about your product, watch for copied or generic phrasing, and keep the disclosures your channels require. Volume is cheap; a false claim in fifty posts is fifty problems.",
         practice:
           "A fictional AI draft for a coffee shop says: 'Voted the best coffee in Jakarta, our beans add years to your life.' Mark every claim that needs evidence or removal, then rewrite the post with only claims the shop could actually stand behind.",
+      },
+      {
+        id: "mk11",
+        kind: "practice",
+        title: "Write the shouted headline",
+        lesson:
+          "Street newspaper vendors sell the paper with one shouted line: honest, sharp, and enough to make you want the story. A teaser works the same way. It raises a question the launch answers, and every word in it must be true, because a teaser that overpromises spends the trust you need at launch. Deadpool's marketing played this well with in-character teasers that told you exactly what kind of film was coming.",
+        practice:
+          "Take a fictional product launch. Write three one-line shouted headlines for it, then check each: is it literally true, and does the product keep the promise? Cut or fix any line that fails, and keep the strongest honest one.",
+      },
+      {
+        id: "mk12",
+        kind: "practice",
+        title: "Give a real freebie",
+        lesson:
+          "A freebie earns attention by being genuinely useful on its own: a template, a sample chapter, a small tool, a first lesson. It lets people feel your value with almost no friction before they decide anything. A crippled demo or a bait PDF does the opposite, because the free thing is your proof of quality, not a trap.",
+        practice:
+          "Design a freebie for a fictional project: what it is, why a stranger would keep it even if they never pay, and what it quietly demonstrates about the paid work. Then write the one-sentence honest description you would publish with it.",
+      },
+      {
+        id: "mk13",
+        kind: "practice",
+        title: "Keep a devlog",
+        lesson:
+          "Game developers post development logs: short, regular notes on what they built, decided and learned. A devlog keeps a project visible between launches and gives other people material to share. Among Us shipped in 2018 to modest numbers, its developers kept updating it, and in 2020 it surged after Twitch streamers picked it up; the devlog did not cause that surge, but the game was still alive and improving when the moment came.",
+        practice:
+          "Draft two devlog entries for a fictional week of work on a project: each with one decision, one lesson and one screenshot-worthy moment described in words. Keep them short enough to actually publish weekly.",
+      },
+      {
+        id: "mk14",
+        kind: "practice",
+        title: "Design so it can spread",
+        lesson:
+          "Some products are built to be shared. Among Us is played in groups, so every session naturally brings in new players; Deadpool's campaign used an in-character voice people wanted to quote. You control the shareable design: the moment worth screenshotting, the invite that is easy to send. You do not control timing, creators or luck, and no design guarantees a hit. Use only media you have rights to, and treat case-study stories as reported accounts, not recipes.",
+        practice:
+          "Sketch one shareable moment for a fictional product: what a user would screenshot or send to a friend, and what makes it easy to share. Then list two things in your control and two that are not, to keep the plan honest.",
       },
       {
         id: "cr5",
