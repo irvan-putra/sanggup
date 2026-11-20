@@ -18,7 +18,7 @@ const server = http.createServer((req,res)=>{
  const url=process.env.TEST_URL||`http://127.0.0.1:${server.address().port}`;
  await page.goto(url);
  assert.equal(await page.locator('.track-card:disabled').count(),0);
- assert.equal(await page.locator('.track-card:not(:disabled)').count(),24);
+ assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);
  await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.locked').count(),4);
  await page.getByRole('button',{name:'I did it',exact:true}).click();
@@ -61,7 +61,7 @@ const server = http.createServer((req,res)=>{
  await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),5);
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Prioritizing,/,4,/does not rank/],[/^Deciding,/,4,/does not make decisions/],[/^Habits,/,4,/[Nn]ot an official course/],[/^Focus,/,3,/Pomodoro/],[/^Projects,/,4,/[Nn]ot an official course/],[/^Calm & meditation,/,3,/not medical/],[/^Disaster preparedness,/,13,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Networking,/,5,/does not contact anyone/],[/^Budgeting & personal finance,/,7,/not personal financial/],[/^FIRE,/,3,/no withdrawal rate is safe/],[/^Writing a book,/,5,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,4,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Personal branding,/,3,/does not write your profiles/],[/^Consulting,/,3,/does not find clients/],[/^Freelancing,/,3,/not tax, legal or financial advice/],[/^Community building,/,4,/does not run your community/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Prioritizing,/,4,/does not rank/],[/^Deciding,/,4,/does not make decisions/],[/^Habits,/,4,/[Nn]ot an official course/],[/^Focus,/,3,/Pomodoro/],[/^Projects,/,4,/[Nn]ot an official course/],[/^Calm & meditation,/,3,/not medical/],[/^Disaster preparedness,/,13,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Networking,/,5,/does not contact anyone/],[/^Budgeting & personal finance,/,7,/not personal financial/],[/^FIRE,/,3,/no withdrawal rate is safe/],[/^Writing a book,/,5,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,4,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Personal branding,/,3,/does not write your profiles/],[/^Consulting,/,3,/does not find clients/],[/^Freelancing,/,3,/not tax, legal or financial advice/],[/^Community building,/,8,/does not run your community/],[/^Content creator,/,4,/does not create content/]]) {
   await page.reload();
   await page.getByRole('button',{name}).click();
   assert.match(await page.locator('#path-note').innerText(),noteRe);

@@ -45,7 +45,7 @@ main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
 
 #track-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.5rem;
 }
 .track-card {
@@ -79,7 +79,7 @@ main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
 .track-card.planned { opacity: 0.6; cursor: default; }
 .track-card.planned svg { stroke: var(--muted); }
 .track-card:focus-visible, .role-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-@media (min-width: 560px) { #track-list { grid-template-columns: repeat(8, 1fr); } }
+@media (min-width: 560px) { #track-list { grid-template-columns: repeat(5, 1fr); } }
 
 .honesty-note {
   background: #fdf3e0;

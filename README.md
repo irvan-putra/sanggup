@@ -14,7 +14,8 @@ and other approaches), Prioritizing, Deciding, Habits, Focus, Projects (Kanban
 and sprints), Calm & meditation, Disaster preparedness (Indonesia focus), First
 aid awareness, Networking, Budgeting & personal finance (Indonesia focus), FIRE
 and Writing a book, plus Personal
-branding, Consulting, Freelancing and Community building. Each path lists its public sources and states its limits.
+branding, Consulting, Freelancing, Community building (including
+sponsorship and delegation) and Content creator. Each path lists its public sources and states its limits.
 The roles:
 
 - **Learner**: works through stages in order. Practice stages are self-logged.
@@ -31,7 +32,7 @@ path is awareness plus how to ask for hands-on training; it does not qualify
 anyone. No path gives personal advice or makes decisions for you.
 
 Swimming, driving, languages, music, math and chess now have starter paths
-too, so all 24 skills are open. Swimming and driving cover water safety, the
+too, so all 25 skills are open. Swimming and driving cover water safety, the
 Indonesian licence path and how to find proper instruction only. For skills
 like swimming and driving the model is: preparation and reflection in the app, practical milestones with real
 instruction. No quiz will ever claim someone is safe to swim or drive.

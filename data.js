@@ -1,5 +1,5 @@
 // Skill content for the sanggup prototype.
-// All 24 tracks have starter paths. Each path states its own limits.
+// All 25 tracks have starter paths. Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -1346,11 +1346,12 @@ window.SANGGUP_TRACKS = [
     tagline: "Gather people around an interest, then make it outlast you",
     status: "prototype",
     note:
-      "sanggup does not run your community, message members or organize events for you. Communities are real people; growth, conflict and burnout need judgment, not scripts. These exercises are general education drawn from published community-organizing guidance.",
+      "sanggup does not run your community, message members, organize events or negotiate with sponsors for you. Communities are real people; growth, conflict and burnout need judgment, not scripts. These exercises are general education drawn from published community-organizing guidance.",
     sources: [
       { label: "Open Source Guides: Building Welcoming Communities", url: "https://opensource.guide/building-community/" },
       { label: "Open Source Guides: Leadership and Governance", url: "https://opensource.guide/leadership-and-governance/" },
       { label: "The Community Canvas", url: "https://community-canvas.org/" },
+      { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
     ],
     stages: [
       {
@@ -1383,6 +1384,15 @@ window.SANGGUP_TRACKS = [
       {
         id: "cb4",
         kind: "practice",
+        title: "Activate and engage members",
+        lesson:
+          "Joining is not participating. New members need a first action within days: a welcome, an introduction round, one small job. Keeping members engaged is rhythm plus roles: a predictable schedule of things worth showing up for, and small responsibilities that make members feel the community is partly theirs.",
+        practice:
+          "Write your welcome for a new member: the first thing they see and the first small thing you ask them to do. Then give one quiet member a small real role and check back on them.",
+      },
+      {
+        id: "cb5",
+        kind: "practice",
         title: "Revitalize and delegate",
         lesson:
           "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head.",
@@ -1390,13 +1400,100 @@ window.SANGGUP_TRACKS = [
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
       },
       {
-        id: "cb5",
+        id: "cb6",
+        kind: "practice",
+        title: "Find sponsors and partners",
+        lesson:
+          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes.",
+        practice:
+          "List five local businesses or organizations whose audience overlaps yours. For each, write one thing you could offer: a logo on materials, a talk slot, a workshop, a product trial or a booth.",
+      },
+      {
+        id: "cb7",
+        kind: "practice",
+        title: "Negotiate and work together",
+        lesson:
+          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
+        practice:
+          "Draft a one-page sponsorship or partnership offer for one candidate from cb6: what you ask for, what they get in return, the dates, and a named contact on both sides.",
+      },
+      {
+        id: "cb8",
+        kind: "practice",
+        title: "Benefits for each group, with proof",
+        lesson:
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for.",
+        practice:
+          "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
+      },
+      {
+        id: "cb9",
         kind: "milestone",
         title: "Milestone: the community runs without you",
         lesson:
           "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help.",
         milestone:
           "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
+      },
+    ],
+  },
+  {
+    id: "creator", short: "Creator", icon: '<path d="m16 10 6-4v12l-6-4z"/><rect x="2" y="6" width="14" height="12" rx="2"/>',
+    title: "Content creator",
+    tagline: "Become a blogger, newsletter writer or video creator",
+    status: "prototype",
+    note:
+      "sanggup does not create content, run your channels or promise an audience or income. Growth is slow and uneven, and platform rules and algorithms change without notice. These exercises are general education about the craft and the routine, not growth hacks.",
+    sources: [
+      { label: "Substack: How to start a newsletter and blog", url: "https://on.substack.com/p/start-a-substack-newsletter" },
+      { label: "YouTube for Creators: Start and manage your channel", url: "https://www.youtube.com/creators/get-started/" },
+      { label: "Medium Help Center: Write and publish a story", url: "https://help.medium.com/hc/en-us/articles/225168028-Write-and-publish-a-story" },
+    ],
+    stages: [
+      {
+        id: "cr1",
+        kind: "practice",
+        title: "Pick a topic and one main format",
+        lesson:
+          "Creators grow by being reliably about something. Choose a topic you can sustain for a year and one primary format: writing (a blog, or a newsletter on Substack, Medium or dev.to), video (YouTube or TikTok) or photos (Instagram). One main channel first; repurpose to others later.",
+        practice:
+          "Write your topic sentence: 'I make ___ for ___.' Pick one primary platform and list ten piece ideas you could actually finish.",
+      },
+      {
+        id: "cr2",
+        kind: "practice",
+        title: "Set up a home you own",
+        lesson:
+          "Platforms rent you reach and can change their rules or shut down; a blog or a newsletter list is yours. Substack's own starting guide begins with claiming your home base and a clear promise to readers.",
+        practice:
+          "Create your base: a blog or newsletter on the platform you picked. Write a short welcome post saying what people will get and how often.",
+      },
+      {
+        id: "cr3",
+        kind: "practice",
+        title: "Publish on a schedule you can keep",
+        lesson:
+          "Consistency beats bursts. YouTube's creator guidance emphasizes a sustainable cadence over daily uploads; the same holds for writing. A schedule you can keep for a year beats an intense month followed by silence.",
+        practice:
+          "Publish one piece per week for four weeks on your platform. Keep a simple log: date, topic and link.",
+      },
+      {
+        id: "cr4",
+        kind: "practice",
+        title: "Read feedback, ignore vanity",
+        lesson:
+          "Early numbers are small and noisy. Watch signals that show real attention: replies, watch time, returning readers. Ask your first readers what helped them. Likes alone tell you almost nothing.",
+        practice:
+          "After your fourth piece, write down the three most useful signals you saw and one change you will test next month.",
+      },
+      {
+        id: "cr5",
+        kind: "milestone",
+        title: "Milestone: one month, four pieces",
+        lesson:
+          "The first month is the filter most people fail. Finishing it, with an honest review of what worked, is the real beginning of being a creator.",
+        milestone:
+          "Complete four weeks of scheduled publishing plus a written review of what worked. A fellow creator or mentor checks your log and signs off.",
       },
     ],
   },
