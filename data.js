@@ -361,7 +361,7 @@ window.SANGGUP_TRACKS = [
           "Do a ten-minute capture: write down everything on your mind, real or fictional, without organizing. Then take three items and write the next concrete action for each, starting with a verb. Finish by scheduling one weekly review moment.",
         tools: [
           { label: "tindak web", url: "https://vanipy.com/tindak/", note: "tasks stay in this browser: no Android or DeltaChat sync, no alerts" },
-          { label: "tindak", url: "https://github.com/irvan-putra/intodo/releases/download/v0.5.18/intodo-v0.5.18.apk", note: "Android test build v0.5.18 (APK): todos and reminders on your home screen" },
+          { label: "tindak", url: "https://github.com/irvan-putra/tindak/releases/download/v0.5.20/tindak-v0.5.20.apk", note: "Android test build v0.5.20 (APK): todos and reminders on your home screen; installs separately from intodo, not an in-place update" },
         ],
       },
       {
