@@ -382,7 +382,7 @@ function applyRoute() {
     renderTracks();
     return;
   }
-  const alias = { career: "work", clientwork: "work", firstaid: "disaster" };
+  const alias = { career: "work", clientwork: "work", firstaid: "disaster", languages: "language" };
   const track = (window.SANGGUP_TRACKS || []).find(
     (t) => t.id === (alias[id] || id) && t.status !== "planned"
   );

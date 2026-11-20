@@ -102,6 +102,9 @@ async function openTile(page,name){
  await page.goto(url+'/#career');
  await page.locator('#path-title').waitFor();
  assert.match(await page.locator('#path-title').innerText(),/^Career/);
+ await page.goto(url+'/#languages');
+ await page.locator('#path-title').waitFor();
+ assert.match(await page.locator('#path-title').innerText(),/^Languages/);
  await page.goto(url+'/#nope');
  await page.locator('.track-card:not(:disabled)').nth(24).waitFor();
  assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);
