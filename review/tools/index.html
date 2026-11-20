@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools to try: placement review</title>
+<style>
+  :root { --ink:#241a33; --muted:#6b6480; --paper:#f5f1ea; --accent:#6d3fc0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 44rem; margin: 0 auto; padding: 1rem; }
+  h1 { font-size: 1.4rem; margin: 0.5rem 0 0.25rem; }
+  h2 { font-size: 1.05rem; margin: 1.6rem 0 0.4rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.2rem; }
+  .muted { color: var(--muted); }
+  .card { background: var(--paper); border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.55rem 0; }
+  .card label { display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; }
+  .card input[type=checkbox] { margin-top: 0.3rem; width: 1.1rem; height: 1.1rem; accent-color: var(--accent); flex: none; }
+  .where { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  ul.apps { margin: 0.35rem 0 0 1.6rem; padding: 0; }
+  ul.apps li { margin: 0.2rem 0; }
+  a { color: var(--accent); }
+  .tag { font-size: 0.78rem; border: 1px solid var(--muted); border-radius: 99px; padding: 0 0.45rem; color: var(--muted); white-space: nowrap; }
+  button.copy { margin-top: 1.4rem; background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 0.6rem 1.1rem; font-size: 1rem; cursor: pointer; }
+  #copy-note { margin-left: 0.6rem; color: var(--muted); }
+  footer { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tools to try: placement review</h1>
+  <p class="muted">Where your apps were placed in sanggup, 20 November 2026. Every line is optional inside the app and says so; every stage still works with pen and paper. Tick what looks right; your ticks stay in this browser. Use the button at the end to copy your review as text.</p>
+
+  <h2>Current placements</h2>
+
+  <div class="card"><label><input type="checkbox" data-k="p1"><span>
+    <span class="where">Focus &rarr; Capture everything, clarify next actions</span><br>
+    <ul class="apps">
+      <li><a href="https://vanipy.com/intodo/tasks/">tindak web</a> <span class="tag">browser-local: no Android/DeltaChat sync, no alerts</span></li>
+      <li><a href="https://github.com/irvan-putra/intodo/releases/download/v0.5.18/intodo-v0.5.18.apk">tindak</a> <span class="tag">Android test build v0.5.18 (APK)</span></li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p2"><span>
+    <span class="where">Focus &rarr; Notice when AI does your thinking</span><br>
+    <ul class="apps">
+      <li><a href="https://github.com/irvan-putra/menit/releases/download/v0.2.2/menit-v0.2.2.apk">menit</a> <span class="tag">Android test build v0.2.2 (APK)</span> needs Usage Access, a capability ordinary web pages do not have</li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p3"><span>
+    <span class="where">Network &rarr; Start a conversation</span><br>
+    <ul class="apps">
+      <li><a href="https://vanipy.com/kapan/">kapan</a> <span class="tag">web</span> developer events in Jakarta and Jogja, a way to find real rooms to practice in</li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p4"><span>
+    <span class="where">Music &rarr; Choose an instrument and a piece</span><br>
+    <ul class="apps">
+      <li><a href="https://vanipy.com/nada/">nada</a> <span class="tag">web</span> turns a small JSON recipe into a .mid to practice along with</li>
+      <li><a href="https://vanipy.com/denting/">denting</a> <span class="tag">web, draft</span> direct a piece with everyday words, export a real .mid</li>
+      <li><a href="https://github.com/irvan-putra/tengok/releases/download/v0.3.2/tengok-v0.3.2.apk">tengok</a> <span class="tag">Android test build v0.3.2 (APK)</span> opens .mid and other files offline</li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p5"><span>
+    <span class="where">Coding &rarr; Break a date with timezones</span><br>
+    <ul class="apps">
+      <li><a href="https://vanipy.com/daya/">daya</a> <span class="tag">web, prototype</span> generates a small app from a recipe, ready-made material to practice breaking</li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p6"><span>
+    <span class="where">Coding &rarr; Get your code reviewed by a person</span><br>
+    <ul class="apps">
+      <li><a href="https://vanipy.com/bedah/">bedah</a> <span class="tag">web, prototype</span> lays a change out on a review canvas to walk through with your reviewer</li>
+    </ul>
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="p7"><span>
+    <span class="where">Self care &rarr; Protect sleep and movement</span><br>
+    <ul class="apps">
+      <li><a href="https://github.com/irvan-putra/kokok/releases/download/v0.2.1/kokok-v0.2.1.apk">kokok</a> <span class="tag">Android test build v0.2.1 (APK)</span> alarms ring fully offline once set; OS alarm scheduling is a capability ordinary web pages do not have</li>
+    </ul>
+  </span></label></div>
+
+  <h2>New since the placements were set</h2>
+
+  <div class="card"><label><input type="checkbox" data-k="n1"><span>
+    <strong>tengok web viewer is now live</strong> at <a href="https://vanipy.com/tengok/">vanipy.com/tengok/</a> (files stay in the browser; a first checkpoint, not the full Android tengok). Tick if you want it added to the Music line next to the Android APK.
+  </span></label></div>
+
+  <div class="card"><label><input type="checkbox" data-k="n2"><span>
+    <strong>intodo is now tindak.</strong> The labels in sanggup already say tindak; the links still use the working /intodo/ addresses until the new /tindak/ address is verified live. A renamed Android test build (0.5.19) is being prepared; the linked v0.5.18 APK still works. Tick if this is fine as-is.
+  </span></label></div>
+
+  <h2>Skipped, with the reason</h2>
+
+  <div class="card"><label><input type="checkbox" data-k="s1"><span><strong>tumbuh</strong> &mdash; its own repo says no model or live offer is selected yet, so there is nothing usable to point learners at. Tick to revisit.</span></label></div>
+  <div class="card"><label><input type="checkbox" data-k="s2"><span><strong>bidik</strong> &mdash; an Instinct-facing capture tool, not a learner tool. Tick to revisit.</span></label></div>
+  <div class="card"><label><input type="checkbox" data-k="s3"><span><strong>unggun</strong> &mdash; an updater utility, not a learning tool. Tick to revisit.</span></label></div>
+  <div class="card"><label><input type="checkbox" data-k="s4"><span><strong>tuju</strong> &mdash; route maps; no sanggup path matches it today. Tick to revisit.</span></label></div>
+  <div class="card"><label><input type="checkbox" data-k="s5"><span><strong>tampung, suaka</strong> &mdash; research/parked. Tick to revisit.</span></label></div>
+
+  <h2>Good to know</h2>
+  <p class="muted">The web version of sanggup always carries the latest lessons. The Android test build v0.2.0 was bundled just before two additions (the tindak web link and the lost-wallet stage), so those two are web-only until the next APK. Your progress in the app is kept when you update in place; an automated upgrade check for exactly that is running.</p>
+
+  <button class="copy" id="copy-btn">Copy my review as text</button><span id="copy-note"></span>
+
+  <footer>
+    Page source: <a href="https://github.com/irvan-putra/sanggup">github.com/irvan-putra/sanggup</a> under review/tools/. Ticks are stored only in this browser (localStorage), nothing is sent anywhere.
+  </footer>
+</main>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('input[type=checkbox][data-k]');
+  boxes.forEach(function (b) {
+    b.checked = localStorage.getItem('tools-review-' + b.dataset.k) === '1';
+    b.addEventListener('change', function () {
+      localStorage.setItem('tools-review-' + b.dataset.k, b.checked ? '1' : '0');
+    });
+  });
+  document.getElementById('copy-btn').addEventListener('click', function () {
+    var lines = [];
+    boxes.forEach(function (b) {
+      var card = b.closest('.card');
+      var text = card.innerText.replace(/\s+/g, ' ').trim();
+      lines.push((b.checked ? '[x] ' : '[ ] ') + text);
+    });
+    var out = 'Tools-to-try placement review:\n' + lines.join('\n');
+    navigator.clipboard.writeText(out).then(function () {
+      document.getElementById('copy-note').textContent = 'Copied.';
+    }, function () {
+      document.getElementById('copy-note').textContent = 'Copy failed; select the text manually.';
+    });
+  });
+})();
+</script>
+</body>
+</html>
