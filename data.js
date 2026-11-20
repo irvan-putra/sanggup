@@ -365,6 +365,33 @@ window.SANGGUP_TRACKS = [
         practice:
           "Pick a familiar route, real or imagined, with six spots in a fixed order. Place six fictional shopping items along it as vivid images, then write the list from memory by walking the route. Check what you missed and make those images stranger.",
       },
+      {
+        id: "h10",
+        kind: "practice",
+        title: "Keep your manual routes working",
+        lesson:
+          "Every AI-assisted habit in this app has a manual route, and it is worth keeping that route in shape: a paper list still plans a day, a cookbook still feeds you, asking a person still answers a question, and doing arithmetic by hand still catches a wrong total. Tools fail, accounts lock, connections drop. Managing without AI is not rejecting it; it is knowing you can still function when it is not there.",
+        practice:
+          "Pick one thing you usually do with an app or AI, real or imagined, and do it fully by hand once: plan tomorrow on paper, cook from a written recipe, or work out a budget with a calculator. Write what was slower, what was actually fine, and which manual route you want to keep practiced.",
+      },
+      {
+        id: "h11",
+        kind: "practice",
+        title: "Get back on track after a break",
+        lesson:
+          "Routines break: illness, travel, a busy month, or plain lost motivation. Getting back on track starts with taking stock without beating yourself up: what was working, what slipped, what is still true. Then restart smaller than your old peak. One easy session done today rebuilds more trust in yourself than a heroic plan abandoned by Friday. The streak is not the habit; returning is the habit.",
+        practice:
+          "Pick one lapsed routine, real or fictional. Write what it looked like at its best, then design a restart at half that size or less, scheduled for a specific day this week. Add one line about what you will tell yourself on the first day you slip again.",
+      },
+      {
+        id: "h12",
+        kind: "practice",
+        title: "Notice when AI does your thinking",
+        lesson:
+          "Relying on a chatbot for every answer can quietly become a habit: asking before trying, accepting the first answer, being unable to explain it afterward. The check is simple: try first without AI, write your own judgment before asking, and make sure you can explain any answer with the chat closed. Setting boundaries, like AI-free tasks or hours, keeps the tool serving your thinking instead of replacing it. This is about habits, not a medical diagnosis: if use feels compulsive and distressing, that deserves the same care as any other stubborn habit, including professional support.",
+        practice:
+          "Pick one question you would normally ask a chatbot today, real or fictional. Write your own answer or judgment first, in full sentences. Only then compare with the AI answer, note where yours held up and where it did not, and practice explaining the final answer out loud without looking.",
+      },
     ],
   },
   {
@@ -735,6 +762,7 @@ window.SANGGUP_TRACKS = [
       { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
       { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
       { label: "Wikipedia: Mentorship", url: "https://en.wikipedia.org/wiki/Mentorship" },      { label: "Wikipedia: Fiscal sponsorship", url: "https://en.wikipedia.org/wiki/Fiscal_sponsorship" },
+      { label: "Liang et al. (Stanford): GPT detectors are biased against non-native English writers", url: "https://arxiv.org/abs/2304.02819" },
 
     ],
     stages: [
@@ -872,6 +900,15 @@ window.SANGGUP_TRACKS = [
           "A community project that wants to receive grants or donations sometimes lacks its own legal entity. Fiscal sponsorship is a fee-based arrangement where an established nonprofit lends its legal and tax status to a project that fits its mission, often with administrative help like payroll and bookkeeping. The trade-offs are real: the sponsor keeps legal control of the project and charges a fee, and both sides can face liability if the arrangement is just a money conduit. The concept comes from the US nonprofit system; Indonesia has its own legal forms and tax rules for community organizations, so the local details need local advice.",
         practice:
           "Take a fictional running club that wants a 50,000,000 rupiah grant. Write two plans: one where the club registers its own entity, one where it works under a fiscal sponsor. List what the club gives up and gains in each, and three questions to ask a sponsor before signing.",
+      },
+      {
+        id: "nt16",
+        kind: "practice",
+        title: "Talk about AI use with care",
+        lesson:
+          "Sometimes you suspect a post, application or message was AI-generated, or a community fills up with repetitive AI replies. Handle it with care. Detection is unreliable: research from Stanford found GPT detectors flag non-native English writing as AI-generated far too often, so a style hunch or a detector score is a clue, never evidence, and accusing someone on that basis can harm an innocent person. Better moves: judge the work on quality, ask questions only the author could answer, raise concerns privately and specifically, and set clear community rules about AI use so moderation is about consent and shared expectations, not about catching people.",
+        practice:
+          "A fictional community group gets ten near-identical generic comments from one account. Write the private, specific message a moderator could send that names the behavior and asks for a change without accusing or attacking the person, plus one community rule that would make the boundary clear for everyone.",
       },
       {
         id: "cb9",
@@ -1018,7 +1055,8 @@ window.SANGGUP_TRACKS = [
       { label: "Writers Club of America: Steps for drafting your first version", url: "https://writersclubofamerica.com/2025/08/11/steps-for-drafting-your-first-version/" },
       { label: "Society of Professional Journalists: Code of Ethics", url: "https://www.spj.org/spj-code-of-ethics/" },
       { label: "Reuters: Journalistic Standards handbook", url: "https://handbook.reuters.com/" },
-      { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },
+      { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },      { label: "Chatham House: the Chatham House Rule", url: "https://www.chathamhouse.org/about-us/chatham-house-rule" },
+
     ],
     stages: [
       {
@@ -1119,6 +1157,15 @@ window.SANGGUP_TRACKS = [
           "Writing improves through review: share a specific piece, ask a reader what confused them and what they remember, then revise and share again. A chatbot can also critique a draft and is always available, but it reads differently from your real audience, so use its notes as a complement, not a verdict. The milestone sign-off in this path still comes from a person.",
         practice:
           "Pick a short piece you wrote, real or fictional. Ask one person to read it and answer two questions: where did you stop understanding, and what do you remember? Optionally compare with a chatbot's critique. Revise one section based on the feedback.",
+      },
+      {
+        id: "w8",
+        kind: "practice",
+        title: "Know the Chatham House Rule",
+        lesson:
+          "Some meetings run under the Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speakers may be revealed. It exists so people can speak openly. If you write about or share what was discussed, you can use the substance but never name or hint at who said it. When you organize a discussion, say up front which rule applies; when you attend one, ask if it is unclear. Shared skill: the same respect for a room applies in the Network and community path.",
+        practice:
+          "A fictional meetup under the Chatham House Rule discussed salaries, and one speaker admitted their company missed payroll twice. Write two shareable sentences about the discussion that use the information without identifying anyone, then one sentence that would break the rule, marked as the violation.",
       },
       {
         id: "jr5",
@@ -2468,6 +2515,15 @@ window.SANGGUP_TRACKS = [
           "Equity deals have traps that only show up later. Dilution shrinks your ownership percentage whenever new shares are issued, and control dilution can cost you the company even while you keep shares. Term sheets carry more than valuation: board seats, veto rights and anti-dilution clauses shift power. Vesting, where founders earn their shares back over years, protects the company but surprises founders who skip the fine print. This is education, not legal advice; a startup lawyer earns their fee before you sign anything.",
         practice:
           "A fictional offer: 3 billion rupiah for 25 percent of the company, a board seat for the investor, and four-year founder vesting. List what the founders give up now, what they could give up later, and three questions to ask a lawyer before signing.",
+      },
+      {
+        id: "ca15",
+        kind: "practice",
+        title: "Test a new direction before leaping",
+        lesson:
+          "Reinventing yourself works best as a series of small tests, not one dramatic leap. Changing direction starts with inventory: what you can do, what you want more of, and what you want to leave behind. Then probe the new direction cheaply, a side project, a course, a conversation with someone doing it, before committing money or quitting anything. Each test answers a real question, and several small yeses beat one big maybe.",
+        practice:
+          "Take a fictional professional curious about moving from administration into data work. Write their inventory in three lines, then design two cheap tests they could run this month, each with the question it answers and what result would count as a yes.",
       },
       {
         id: "cs4",
