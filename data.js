@@ -155,7 +155,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Urgent versus important",
         lesson:
-          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest.",
+          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest. Shared skill: the same 4D sort is also practiced in Focus, for triaging interruptions.",
         practice:
           "Sort your brain dump into the four groups. Notice how many items felt urgent but did not matter much.",
       },
@@ -291,7 +291,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Handle interruptions",
         lesson:
-          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break.",
+          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break. When a request interrupts you, triage it with the 4D sort: Do, Delegate, Delay, Delete. Shared skill: the 4D mnemonic has its home in Decisions and priorities.",
         practice:
           "Do another block with your phone out of reach. Keep a paper list of every urge to switch and what it was about.",
       },
@@ -1231,7 +1231,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Interviewers and readers both follow that shape.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in Client work, as case studies for winning work.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
@@ -1276,7 +1276,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Assemble proof",
         lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive.",
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure has its home in Personal branding.",
         practice:
           "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
@@ -1294,7 +1294,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Set expectations in writing",
         lesson:
-          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad.",
+          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in Community building.",
         practice:
           "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
       },
@@ -1366,7 +1366,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work, for client engagements.",
         practice:
           "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
@@ -1384,7 +1384,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Revitalize and delegate",
         lesson:
-          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you.",
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in Teaching and mentoring.",
         practice:
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
       },
@@ -1402,7 +1402,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Negotiate and work together",
         lesson:
-          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
+          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Shared skill: negotiation preparation, including knowing your walk-away alternative, has its home in the Negotiation path. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
         practice:
           "Draft a one-page sponsorship or partnership offer for one candidate from cb6: what you ask for, what they get in return, the dates, and a named contact on both sides.",
       },
@@ -1411,7 +1411,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs are also practiced in Client work, as agreed success measures.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1772,7 +1772,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show, then let them do",
         lesson:
-          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens.",
+          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens. If you write your steps down, that note doubles as a small standard operating procedure the learner can follow without you. Shared skill: SOPs are also practiced in Community building.",
         practice:
           "Demonstrate your skill once, narrating your steps. Then have the learner do it while you watch. Give one correction at a time and let them retry between corrections.",
       },
@@ -1813,7 +1813,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Know your walk-away",
         lesson:
-          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers.",
+          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers. Shared skill: sponsorship negotiation is also practiced in Community building, with its own stage.",
         practice:
           "Pick one real negotiation ahead of you, small is fine. Write your best alternative if no deal happens, the worst outcome you would accept, and one step that would improve your alternative.",
       },

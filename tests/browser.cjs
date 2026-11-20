@@ -95,6 +95,12 @@ const server = http.createServer((req,res)=>{
  await page.reload();
  await page.getByRole('button',{name:/^Client work,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),3);
+ // shared subskills are labeled in both directions on the paths that practice them
+ for (const [name,labelRe] of [[/^Decisions and priorities,/,/also practiced in Focus/],[/^Focus,/,/home in Decisions and priorities/],[/^Personal branding,/,/also practiced in Client work/],[/^Client work,/,/also practiced in Community building/],[/^Community building,/,/also practiced in Client work/],[/^Community building,/,/also practiced in Teaching and mentoring/],[/^Teaching and mentoring,/,/also practiced in Community building/],[/^Negotiation,/,/also practiced in Community building/],[/^Community building,/,/home in the Negotiation path/]]) {
+  await page.reload();
+  await page.getByRole('button',{name}).click();
+  assert.match(await page.locator('#path-detail, #track-detail, main, body').first().innerText(),labelRe);
+ }
  for(const width of [320,390,1280]){
  await page.setViewportSize({width,height:900});
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
