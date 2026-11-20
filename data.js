@@ -209,7 +209,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Urgent versus important",
         lesson:
-          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest. Shared skill: the same 4D sort is also practiced in <a href='#focus'>Focus and habits</a>, for triaging interruptions.",
+          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest. Shared skill: the same 4D sort is also practiced in <a href='#focus/f2'>Focus and habits</a>, for triaging interruptions.",
         practice:
           "Sort your brain dump into the four groups. Notice how many items felt urgent but did not matter much.",
       },
@@ -302,7 +302,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Handle interruptions",
         lesson:
-          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break. When a request interrupts you, triage it with the 4D sort: Do, Delegate, Delay, Delete. Shared skill: the 4D mnemonic has its home in <a href='#decisions'>Decisions and priorities</a>.",
+          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break. When a request interrupts you, triage it with the 4D sort: Do, Delegate, Delay, Delete. Shared skill: the 4D mnemonic has its home in <a href='#decisions/p2'>Decisions and priorities</a>.",
         practice:
           "Do another block with your phone out of reach. Keep a paper list of every urge to switch and what it was about.",
       },
@@ -496,7 +496,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Set goals people can measure",
         lesson:
-          "An OKR pairs an Objective, a qualitative goal worth chasing, with a few Key Results, numbers that show whether you got there. The format came out of Intel and spread through Google. Vague goals drift; measurable key results force the conversation about what done means. Shared skill: OKRs are also practiced in <a href='#network'>Network and community</a>, for member and sponsor benefits.",
+          "An OKR pairs an Objective, a qualitative goal worth chasing, with a few Key Results, numbers that show whether you got there. The format came out of Intel and spread through Google. Vague goals drift; measurable key results force the conversation about what done means. Shared skill: OKRs are also practiced in <a href='#network/cb8'>Network and community</a>, for member and sponsor benefits.",
         practice:
           "Write one objective for your work, business or community for the next three months, with three key results you can actually measure. Check each: could a stranger tell whether it happened?",
       },
@@ -505,7 +505,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Watch the numbers that matter",
         lesson:
-          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in <a href='#network'>Network and community</a> and the Career path. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in <a href='#network/cb8'>Network and community</a> and the Career path. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
         practice:
           "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
       },
@@ -514,7 +514,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Write it once, run it many times",
         lesson:
-          "A standard operating procedure is the written version of a repeated task: steps clear enough that someone else gets the same result without asking you. Start with the tasks you repeat most or hand off first; the test of an SOP is whether it works without its author in the room. Shared skill: SOPs are also practiced in <a href='#network'>Network and community</a> and Teaching and mentoring.",
+          "A standard operating procedure is the written version of a repeated task: steps clear enough that someone else gets the same result without asking you. Start with the tasks you repeat most or hand off first; the test of an SOP is whether it works without its author in the room. Shared skill: SOPs are also practiced in <a href='#network/cb5'>Network and community</a> and Teaching and mentoring.",
         practice:
           "Write a one-page SOP for one task you repeat. Hand it to someone and watch them run it from the note alone. Fix the two places they stumbled.",
       },
@@ -523,7 +523,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Who does what",
         lesson:
-          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in <a href='#network'>Network and community</a> and the Career path.",
+          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in <a href='#network/cb3'>Network and community</a> and the Career path.",
         practice:
           "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
       },
@@ -532,7 +532,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Start with what you have",
         lesson:
-          "Bootstrapping in business means starting without external capital: founders survive on internal cash flow and stay very cautious with expenses. Funding typically moves from personal savings, to customer revenue keeping the business afloat, to reinvesting profits for growth, which keeps control with you. Shared skill: the household budgeting that frees money to start is the <a href='#money'>Money and FIRE</a> path.",
+          "Bootstrapping in business means starting without external capital: founders survive on internal cash flow and stay very cautious with expenses. Funding typically moves from personal savings, to customer revenue keeping the business afloat, to reinvesting profits for growth, which keeps control with you. Shared skill: the household budgeting that frees money to start is the <a href='#money/b2'>Money and FIRE</a> path.",
         practice:
           "List what you could start this month with only what you already have: skills, tools, contacts and a small amount of savings. Write down the smallest version that a real customer could pay for.",
       },
@@ -541,7 +541,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Cash flow decides",
         lesson:
-          "A bootstrapped venture lives or dies on cash flow: money from customers must cover day-to-day expenses before anything else. Know your monthly costs, get paid promptly, and treat every expense as a choice against survival; a project that looks profitable on paper can still sink if the money arrives late. Shared skill: winning the first customers is the marketing stages in <a href='#branding'>Branding and creator</a>; watching the numbers that matter is the KPI stage in this path.",
+          "A bootstrapped venture lives or dies on cash flow: money from customers must cover day-to-day expenses before anything else. Know your monthly costs, get paid promptly, and treat every expense as a choice against survival; a project that looks profitable on paper can still sink if the money arrives late. Shared skill: winning the first customers is the marketing stages in <a href='#branding/mk1'>Branding and creator</a>; watching the numbers that matter is the KPI stage in this path.",
         practice:
           "Sketch one month of cash flow for your smallest offer: money in, when; money out, when. Mark the tightest week and write one thing you would cut or delay if it came true.",
       },
@@ -550,7 +550,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Keep people, tasks and updates in sync",
         lesson:
-          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in <a href='#work'>the Career path</a>.",
+          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in <a href='#work/ca5'>the Career path</a>.",
         practice:
           "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
       },
@@ -577,7 +577,7 @@ window.SANGGUP_TRACKS = [
         kind: "milestone",
         title: "Milestone: keep it running",
         lesson:
-          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the <a href='#disaster'>Safety and emergencies</a> path.",
+          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the <a href='#disaster/s3'>Safety and emergencies</a> path.",
         milestone:
           "Draft a one-page continuity plan for a real activity you are responsible for: critical functions, one backup each, and a date to rehearse it. Someone who would have to execute it reviews the plan and signs off.",
       },
@@ -631,7 +631,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Pack a go-bag",
         lesson:
-          "BNPB describes a Tas Siaga Bencana as a bag with basic needs for the first 3x24 hours when help may not have arrived. Contents listed by Kemenkes include copies of important documents in waterproof cover, first-aid supplies and personal medicines, a whistle, flashlight and batteries, some cash, phone charger, power bank and radio, spare clothes, long-life food and drinking water. Keep it to what you need; don't overload it. Ready.gov likewise says to prepare for several days on your own. Documents and cards can also go missing through theft rather than disaster; the <a href='#security'>Security basics path's lost-wallet stage</a> covers what to block first and how reporting a loss differs from replacing a document.",
+          "BNPB describes a Tas Siaga Bencana as a bag with basic needs for the first 3x24 hours when help may not have arrived. Contents listed by Kemenkes include copies of important documents in waterproof cover, first-aid supplies and personal medicines, a whistle, flashlight and batteries, some cash, phone charger, power bank and radio, spare clothes, long-life food and drinking water. Keep it to what you need; don't overload it. Ready.gov likewise says to prepare for several days on your own. Documents and cards can also go missing through theft rather than disaster; the <a href='#security/sec9'>Security basics path's lost-wallet stage</a> covers what to block first and how reporting a loss differs from replacing a document.",
         practice:
           "Assemble a go-bag with what you can. Put in your personal medicines, check expiry dates, and store it where you can grab it quickly.",
       },
@@ -730,7 +730,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Continuity beyond your household",
         lesson:
-          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it. Shared skill: continuity planning is also practiced in <a href='#projects'>Projects and business</a>.",
+          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it. Shared skill: continuity planning is also practiced in <a href='#projects/bu5'>Projects and business</a>.",
         practice:
           "Pick one activity you are responsible for, at work or in a community. Write its three most critical functions and one backup for each: another person, another place or another way.",
       },
@@ -998,7 +998,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in the Career path and in <a href='#projects'>Projects and business</a>.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in the Career path and in <a href='#projects/bu4'>Projects and business</a>.",
         practice:
           "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
@@ -1016,7 +1016,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Revitalize and delegate",
         lesson:
-          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in <a href='#teaching'>Teaching and mentoring</a> and Projects and business.",
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in <a href='#teaching/tm2'>Teaching and mentoring</a> and Projects and business.",
         practice:
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
       },
@@ -1025,7 +1025,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Find sponsors and partners",
         lesson:
-          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes. Shared skill: offering ad and sponsor slots in your own work is also practiced in <a href='#branding'>Branding and creator</a>.",
+          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes. Shared skill: offering ad and sponsor slots in your own work is also practiced in <a href='#branding/mk9'>Branding and creator</a>.",
         practice:
           "List five local businesses or organizations whose audience overlaps yours. For each, write one thing you could offer: a logo on materials, a talk slot, a workshop, a product trial or a booth.",
       },
@@ -1034,7 +1034,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Negotiate and work together",
         lesson:
-          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Shared skill: negotiation preparation, including knowing your walk-away alternative, has its home in <a href='#negotiation'>the Negotiation path</a>. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
+          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Shared skill: negotiation preparation, including knowing your walk-away alternative, has its home in <a href='#negotiation/ng1'>the Negotiation path</a>. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
         practice:
           "Draft a one-page sponsorship or partnership offer for one candidate from cb6: what you ask for, what they get in return, the dates, and a named contact on both sides.",
       },
@@ -1043,7 +1043,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Career path and in <a href='#projects'>Projects and business</a>.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Career path and in <a href='#projects/bu2'>Projects and business</a>.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1154,7 +1154,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "See where money goes",
         lesson:
-          "A budget starts with facts. Example: someone earns Rp 8,000,000 a month and spends Rp 7,200,000, but could only name Rp 5,000,000 of it. The missing Rp 2,200,000 is where the budget starts. Tracking is not judging; it is collecting data. Shared skill: freeing savings to start a venture is bootstrapping, in <a href='#projects'>Projects and business</a>.",
+          "A budget starts with facts. Example: someone earns Rp 8,000,000 a month and spends Rp 7,200,000, but could only name Rp 5,000,000 of it. The missing Rp 2,200,000 is where the budget starts. Tracking is not judging; it is collecting data. Shared skill: freeing savings to start a venture is bootstrapping, in <a href='#projects/bs1'>Projects and business</a>.",
         practice:
           "For one month write down every spend by category on paper or a notes app on your own device. sanggup will not ask for amounts or connect to accounts.",
       },
@@ -1373,7 +1373,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Know the Chatham House Rule",
         lesson:
-          "Some meetings run under the Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speakers may be revealed. It exists so people can speak openly. If you write about or share what was discussed, you can use the substance but never name or hint at who said it. When you organize a discussion, say up front which rule applies; when you attend one, ask if it is unclear. Shared skill: the same respect for a room applies in the <a href='#network'>Network and community</a> path.",
+          "Some meetings run under the Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speakers may be revealed. It exists so people can speak openly. If you write about or share what was discussed, you can use the substance but never name or hint at who said it. When you organize a discussion, say up front which rule applies; when you attend one, ask if it is unclear. Shared skill: the same respect for a room applies in the <a href='#network/cb2'>Network and community</a> path.",
         practice:
           "A fictional meetup under the Chatham House Rule discussed salaries, and one speaker admitted their company missed payroll twice. Write two shareable sentences about the discussion that use the information without identifying anyone, then one sentence that would break the rule, marked as the violation.",
       },
@@ -1866,7 +1866,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in <a href='#work'>the Career path</a>, as case studies and for CVs and interviews.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in <a href='#work/ca2'>the Career path</a>, as case studies and for CVs and interviews.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
@@ -1911,7 +1911,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Segment, then choose a target",
         lesson:
-          "Marketing guidance describes the STP approach: divide a broad market into meaningful sub-groups, called segments, of people with shared needs, then target the segment you can serve best with a tailored strategy. Trying to reach everyone usually reaches no one in particular. Shared skill: asking people in your target group directly is <a href='#surveying'>the Surveying people path</a>.",
+          "Marketing guidance describes the STP approach: divide a broad market into meaningful sub-groups, called segments, of people with shared needs, then target the segment you can serve best with a tailored strategy. Trying to reach everyone usually reaches no one in particular. Shared skill: asking people in your target group directly is <a href='#surveying/sv3'>the Surveying people path</a>.",
         practice:
           "Write down two or three segments for something you offer, with the need that defines each. Pick one target and describe one real person in it: their situation, their need and where they spend their attention.",
       },
@@ -1929,7 +1929,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Choose channels and one simple message",
         lesson:
-          "The marketing mix sorts what you control into product, price, place and promotion. For a personal brand, place and promotion mean choosing the few channels your target actually uses instead of posting everywhere. Shared skill: publishing on a cadence is the creator stages in this path; measuring which channel works, with the numbers that matter, is the KPI stage in <a href='#projects'>Projects and business</a>.",
+          "The marketing mix sorts what you control into product, price, place and promotion. For a personal brand, place and promotion mean choosing the few channels your target actually uses instead of posting everywhere. Shared skill: publishing on a cadence is the creator stages in this path; measuring which channel works, with the numbers that matter, is the KPI stage in <a href='#projects/bu2'>Projects and business</a>.",
         practice:
           "Pick two channels your target already uses. Write one short message for each, in the words your target uses, and say where each reader should go next.",
       },
@@ -1965,7 +1965,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show up in person: booths and trade shows",
         lesson:
-          "A trade show is an organized event where companies in an industry showcase and demonstrate what they offer, meet customers and partners, and watch competitors and market trends. A booth is a cost, not a guarantee: it pays off only when the show’s visitors are your target segment and you know what one conversation should lead to. Shared skill: starting and keeping those conversations is the <a href='#network'>Network and community</a> path; weighing the cost against results is the KPI stage in Projects and business.",
+          "A trade show is an organized event where companies in an industry showcase and demonstrate what they offer, meet customers and partners, and watch competitors and market trends. A booth is a cost, not a guarantee: it pays off only when the show’s visitors are your target segment and you know what one conversation should lead to. Shared skill: starting and keeping those conversations is the <a href='#network/n3'>Network and community</a> path; weighing the cost against results is the KPI stage in Projects and business.",
         practice:
           "Pick one real event your target visits. On paper, plan a booth: the one thing visitors should remember, a two-sentence demo, how you would collect contacts, and a mock budget with the cost per useful conversation. No booking, no spend.",
       },
@@ -1983,7 +1983,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Sell space in what you make",
         lesson:
-          "The other side of advertising: if people pay attention to your work, you can offer space in it - a sponsor slot at an event, a logo on a T-shirt, a mention in a project or product. Sponsors pay for access to your audience, so the offer only makes sense once you can say who that audience is. Selling space spends a piece of your audience's trust, so keep what you show them honest. Shared skill: finding sponsors and partners, and negotiating with them, is the <a href='#network'>Network and community</a> path.",
+          "The other side of advertising: if people pay attention to your work, you can offer space in it - a sponsor slot at an event, a logo on a T-shirt, a mention in a project or product. Sponsors pay for access to your audience, so the offer only makes sense once you can say who that audience is. Selling space spends a piece of your audience's trust, so keep what you show them honest. Shared skill: finding sponsors and partners, and negotiating with them, is the <a href='#network/cb6'>Network and community</a> path.",
         practice:
           "List what you make that people pay attention to. For one item, draft an offer on paper: the slot, who it would suit, the price you would ask and what you would not allow. No real outreach.",
       },
@@ -2310,7 +2310,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Start from a decision",
         lesson:
-          "A survey exists to inform a decision: what you will do differently depending on the answers. If no answer would change anything, the survey is decoration. Define the decision, then what you need to learn, then who can tell you. Shared skill: surveying an audience for marketing is also practiced in <a href='#branding'>Branding and creator</a>.",
+          "A survey exists to inform a decision: what you will do differently depending on the answers. If no answer would change anything, the survey is decoration. Define the decision, then what you need to learn, then who can tell you. Shared skill: surveying an audience for marketing is also practiced in <a href='#branding/mk1'>Branding and creator</a>.",
         practice:
           "Pick a real question from your work or community. Write the decision it informs, the one thing you need to learn, and the group of people whose answers would settle it.",
       },
@@ -2387,7 +2387,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show, then let them do",
         lesson:
-          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens. If you write your steps down, that note doubles as a small standard operating procedure the learner can follow without you. Shared skill: SOPs are also practiced in <a href='#network'>Network and community</a>.",
+          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens. If you write your steps down, that note doubles as a small standard operating procedure the learner can follow without you. Shared skill: SOPs are also practiced in <a href='#network/cb5'>Network and community</a>.",
         practice:
           "Demonstrate your skill once, narrating your steps. Then have the learner do it while you watch. Give one correction at a time and let them retry between corrections.",
       },
@@ -2444,7 +2444,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Reach agreements both sides can keep",
     status: "prototype",
     note:
-      "sanggup does not negotiate for you or advise on specific deals. Real negotiations involve money, jobs and relationships; for legal or high-stakes matters, get professional advice. Sponsor and partner negotiation has its own stage in the <a href='#network'>Network and community</a> path; this path is the general skill.",
+      "sanggup does not negotiate for you or advise on specific deals. Real negotiations involve money, jobs and relationships; for legal or high-stakes matters, get professional advice. Sponsor and partner negotiation has its own stage in the <a href='#network/cb7'>Network and community</a> path; this path is the general skill.",
     sources: [
       { label: "Program on Negotiation at Harvard Law School: What is BATNA?", url: "https://www.pon.harvard.edu/daily/batna/translate-your-batna-to-the-current-deal/" },
       { label: "Program on Negotiation at Harvard Law School: Bargaining with Your BATNA in Mind", url: "https://www.pon.harvard.edu/daily/batna/negotiation-and-bargaining-with-your-batna-in-mind/" },
@@ -2456,7 +2456,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Know your walk-away",
         lesson:
-          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers. Shared skill: sponsorship negotiation is also practiced in <a href='#network'>Network and community</a>, with its own stage.",
+          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers. Shared skill: sponsorship negotiation is also practiced in <a href='#network/cb7'>Network and community</a>, with its own stage.",
         practice:
           "Pick one real negotiation ahead of you, small is fine. Write your best alternative if no deal happens, the worst outcome you would accept, and one step that would improve your alternative.",
       },
@@ -2652,7 +2652,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Tell achievement stories",
         lesson:
-          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in <a href='#branding'>Branding and creator</a> and in this Career path, as case studies.",
+          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in <a href='#branding/br4'>Branding and creator</a> and in this Career path, as case studies.",
         practice:
           "Write three STAR stories from your ca1 list: one about delivering, one about a problem you fixed, one about working with people. Say each aloud in under two minutes.",
       },
@@ -2670,7 +2670,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Assemble proof",
         lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in <a href='#branding'>Branding and creator</a> and elsewhere in this Career path.",
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in <a href='#branding/br4'>Branding and creator</a> and elsewhere in this Career path.",
         practice:
           "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
@@ -2697,7 +2697,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Set expectations in writing",
         lesson:
-          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in <a href='#network'>Network and community</a>.",
+          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in <a href='#network/cb3'>Network and community</a>.",
         practice:
           "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
       },
@@ -2715,7 +2715,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Find clients: cold outreach, warmed up",
         lesson:
-          "Cold calling means approaching potential clients who have had no prior contact with you. It reaches new people at low cost, but it is intrusive, has a high rejection rate, and many countries restrict it, for example with Do Not Call registries. Modern practice warms it up: work from a list of people who fit your service and dig to understand their situation before any contact. Shared skill: describing exactly who you serve is the segment stage in Branding and creator; first conversations are the <a href='#network'>Network and community</a> path.",
+          "Cold calling means approaching potential clients who have had no prior contact with you. It reaches new people at low cost, but it is intrusive, has a high rejection rate, and many countries restrict it, for example with Do Not Call registries. Modern practice warms it up: work from a list of people who fit your service and dig to understand their situation before any contact. Shared skill: describing exactly who you serve is the segment stage in Branding and creator; first conversations are the <a href='#network/nt14'>Network and community</a> path.",
         practice:
           "Write a list of ten imaginary potential clients who fit your service. For one of them, draft a four-sentence first contact that shows you understand their situation and asks one small question. Do not send anything.",
       },
@@ -2760,7 +2760,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Manage up on purpose",
         lesson:
-          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job. Keep your progress visible so they never have to guess what you are doing or chase you for it. Tell them important news yourself, early, before they hear it from someone else; bad news travels and the source matters. And do not sit waiting for instructions: show initiative by picking the next useful step inside your authority and doing it, and when a decision needs their approval, bring a recommendation with your reasoning, not an unfiltered choice for them to solve. Flag risks early, while there is still time to act. Make your contribution tangible: what you moved forward, why it matters, and what is next, so your employer never wonders what they are paying for. Visible results and useful initiative, not looking busy. Shared skill: the update rhythm is the sync stage in <a href='#projects'>Projects and business</a>.",
+          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job. Keep your progress visible so they never have to guess what you are doing or chase you for it. Tell them important news yourself, early, before they hear it from someone else; bad news travels and the source matters. And do not sit waiting for instructions: show initiative by picking the next useful step inside your authority and doing it, and when a decision needs their approval, bring a recommendation with your reasoning, not an unfiltered choice for them to solve. Flag risks early, while there is still time to act. Make your contribution tangible: what you moved forward, why it matters, and what is next, so your employer never wonders what they are paying for. Visible results and useful initiative, not looking busy. Shared skill: the update rhythm is the sync stage in <a href='#projects/pb9'>Projects and business</a>.",
         practice:
           "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it. Then add two lines: one piece of news you would deliver yourself before it reaches them another way, and one decision where you write your recommendation and reasoning first and ask only for approval.",
       },

@@ -105,6 +105,19 @@ async function openTile(page,name){
  await page.goto(url+'/#languages');
  await page.locator('#path-title').waitFor();
  assert.match(await page.locator('#path-title').innerText(),/^Languages/);
+ // section deep links: fresh load on #track/stage opens the track and scrolls the stage into view, in-page anchors do the same
+ await page.goto(url+'/#network/cb6');
+ await page.locator('#path-title').waitFor();
+ assert.match(await page.locator('#path-title').innerText(),/^Network/);
+ const jump = page.locator('#stage-cb6');
+ await jump.waitFor();
+ assert.ok(await jump.evaluate(el=>el.classList.contains('jump-target')));
+ const jbox = await jump.boundingBox();
+ assert.ok(jbox && jbox.y >= 0 && jbox.y < page.viewportSize().height, 'jump target scrolled into view');
+ await page.goto(url+'/#branding');
+ await page.locator('#stage-mk7 a[href="#network/n3"]').click();
+ await page.locator('#stage-n3.jump-target').waitFor();
+ assert.equal(new URL(page.url()).hash,'#network/n3');
  await page.goto(url+'/#nope');
  await page.locator('.track-card:not(:disabled)').nth(24).waitFor();
  assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);

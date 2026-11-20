@@ -161,6 +161,7 @@ function renderPath(track) {
     const st = stageState(track, stage);
     const card = document.createElement("article");
     card.className = "stage-card " + st;
+    card.id = "stage-" + stage.id;
 
     const kindLabel = stage.kind === "milestone" ? "practical milestone" : "practice";
     let html =
@@ -377,7 +378,10 @@ $("code-lookup").addEventListener("click", () => {
 // ---------- hash routing: shareable direct links, e.g. #branding ----------
 
 function applyRoute() {
-  const id = location.hash.replace(/^#/, "");
+  const raw = location.hash.replace(/^#/, "");
+  const slash = raw.indexOf("/");
+  const id = slash === -1 ? raw : raw.slice(0, slash);
+  const stageId = slash === -1 ? "" : raw.slice(slash + 1);
   if (!id) {
     renderTracks();
     return;
@@ -392,6 +396,13 @@ function applyRoute() {
     renderPath(track);
   } else {
     renderTracks();
+  }
+  if (track && stageId) {
+    const el = document.getElementById("stage-" + stageId);
+    if (el) {
+      el.classList.add("jump-target");
+      el.scrollIntoView({ block: "center" });
+    }
   }
 }
 

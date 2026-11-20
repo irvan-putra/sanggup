@@ -98,6 +98,7 @@ main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
   margin-bottom: 0.7rem;
 }
 .stage-card.locked { opacity: 0.6; }
+.stage-card.jump-target { outline: 2px solid var(--accent); outline-offset: 2px; }
 .stage-card header { display: flex; align-items: baseline; gap: 0.5rem; border: 0; padding: 0; background: none; text-align: left; }
 .stage-card h3 { margin: 0; font-size: 1.05rem; flex: 1; }
 .stage-num {
