@@ -412,6 +412,6 @@ window.addEventListener("hashchange", applyRoute);
 
 // ---------- boot ----------
 
-applyRoute();
 setRole("learner");
+applyRoute();
 

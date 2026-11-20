@@ -106,7 +106,8 @@ async function openTile(page,name){
  await page.locator('#path-title').waitFor();
  assert.match(await page.locator('#path-title').innerText(),/^Languages/);
  // section deep links: fresh load on #track/stage opens the track and scrolls the stage into view, in-page anchors do the same
- await page.goto(url+'/#network/cb6');
+ // (the query forces a real document load; same-URL hash changes only fire hashchange and would miss boot-order bugs)
+ await page.goto(url+'/?cold=1#network/cb6');
  await page.locator('#path-title').waitFor();
  assert.match(await page.locator('#path-title').innerText(),/^Network/);
  const jump = page.locator('#stage-cb6');
