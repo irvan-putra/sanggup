@@ -1108,6 +1108,7 @@ window.SANGGUP_TRACKS = [
       { label: "Society of Professional Journalists: Code of Ethics", url: "https://www.spj.org/spj-code-of-ethics/" },
       { label: "Reuters: Journalistic Standards handbook", url: "https://handbook.reuters.com/" },
       { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },      { label: "Chatham House: the Chatham House Rule", url: "https://www.chathamhouse.org/about-us/chatham-house-rule" },
+      { label: "University of Wisconsin Writing Center: Using interview data", url: "https://writing.wisc.edu/handbook/academicwriting/interviewdata/" },
 
     ],
     stages: [
@@ -1218,6 +1219,15 @@ window.SANGGUP_TRACKS = [
           "Some meetings run under the Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speakers may be revealed. It exists so people can speak openly. If you write about or share what was discussed, you can use the substance but never name or hint at who said it. When you organize a discussion, say up front which rule applies; when you attend one, ask if it is unclear. Shared skill: the same respect for a room applies in the Network and community path.",
         practice:
           "A fictional meetup under the Chatham House Rule discussed salaries, and one speaker admitted their company missed payroll twice. Write two shareable sentences about the discussion that use the information without identifying anyone, then one sentence that would break the rule, marked as the violation.",
+      },
+      {
+        id: "w9",
+        kind: "practice",
+        title: "Interview people for a book",
+        lesson:
+          "For nonfiction, interviews bring firsthand stories and perspectives that desk research cannot. Prepare open questions about real experiences, including what went wrong, not only general advice. Agree up front on recording, attribution and what may be published; an interview is not automatically off the record or under any rule you did not agree on. Talk to people with different experiences of the topic, so the book tests its assumptions instead of only illustrating them, and fact-check claims from interviews like any other source. Shared skill: the consent habit is the same one as in the survey stages of the Surveying people path.",
+        practice:
+          "Plan a fictional interview for a book chapter: five open questions about one person's real experience of the topic, including one about a failure. Then write the consent sentence you would actually say before pressing record, covering recording, attribution and what may be published.",
       },
       {
         id: "jr5",
