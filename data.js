@@ -9,7 +9,8 @@ window.SANGGUP_TRACKS = [
     note:
       "General home-cooking education, not professional culinary or food-safety training. It does not certify anything. Follow official food-safety guidance such as WHO's Five keys to safer food, and get hands-on help whenever tools or heat are new to you.",
     sources: [
-      { label: "WHO: Five keys to safer food", url: "https://www.who.int/activities/promoting-safe-food-handling" },
+      { label: "WHO: Five keys to safer food", url: "https://www.who.int/activities/promoting-safe-food-handling" },      { label: "USDA FSIS: Leftovers and food safety", url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety" },
+
     ],
     stages: [
       {
@@ -60,11 +61,11 @@ window.SANGGUP_TRACKS = [
       {
         id: "c7",
         kind: "practice",
-        title: "Cook for yourself for a week",
+        title: "Food prep for a week alone",
         lesson:
-          "Cooking for one for a week is a planning skill more than a recipe skill: a short list of simple meals you already know, ingredients that overlap so nothing spoils, and one bigger batch that becomes tomorrow's lunch. Keep the food-safety habits from earlier stages: leftovers cool fast, go in the fridge, and get eaten within a few days. The goal is seven days without panic-buying or wasting food, not seven new recipes.",
+          "Food preparation, or meal prep, for a week alone is a planning skill more than a recipe skill: a short list of simple meals you already know, ingredients that overlap so nothing spoils, and one bigger batch that becomes the next day or two. Cooked food has limits, so prep covers a few days at a time, not seven: the USDA's guidance is to refrigerate leftovers promptly and reheat them hot. The goal is a week without panic-buying or wasting food, not seven new recipes.",
         practice:
-          "Plan seven days of dinners for one, real or on paper: pick four simple meals you can already make, note which ingredients repeat across them, and mark which meal is a batch that covers two days. Then write your shopping list from the plan, grouped by how soon each item spoils.",
+          "Plan a week of dinners for one, real or on paper: pick four simple meals you can already make, note which ingredients repeat, and choose one batch-cook meal to prep ahead for two days. Write how you will store and reheat that batch safely. Then write your shopping list from the plan, grouped by how soon each item spoils.",
       },
       {
         id: "c5",
