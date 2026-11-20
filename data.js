@@ -1,5 +1,5 @@
 // Skill content for the sanggup prototype.
-// All 30 tracks have starter paths (merges applied). Each path states its own limits.
+// All 32 tracks have starter paths (merges applied). Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -540,7 +540,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Continuity beyond your household",
         lesson:
-          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it.",
+          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it. Shared skill: continuity planning is also practiced in Business operations.",
         practice:
           "Pick one activity you are responsible for, at work or in a community. Write its three most critical functions and one backup for each: another person, another place or another way.",
       },
@@ -1231,7 +1231,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in Client work, as case studies for winning work.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in Client work, as case studies, and in Career moves, for CVs and interviews.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
@@ -1276,7 +1276,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Assemble proof",
         lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure has its home in Personal branding.",
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Personal branding and Career moves.",
         practice:
           "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
@@ -1366,7 +1366,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work, for client engagements.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work and Business operations.",
         practice:
           "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
@@ -1384,7 +1384,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Revitalize and delegate",
         lesson:
-          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in Teaching and mentoring.",
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in Teaching and mentoring and Business operations.",
         practice:
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
       },
@@ -1411,7 +1411,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs are also practiced in Client work, as agreed success measures.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in Client work and Business operations.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1845,5 +1845,118 @@ window.SANGGUP_TRACKS = [
           "Complete one real negotiation, from preparation to a written agreement both sides accept: a price, terms, a split of work or a commitment. Your counterpart or a mentor confirms the agreement and signs off.",
       },
     ],
-  }
+  },
+  {
+    id: "business", short: "Business", icon: '<path d="M3 3v18h18 M7 14l4-4 4 3 5-6"/>',
+    title: "Business operations",
+    tagline: "Goals, numbers, procedures and roles that keep work running",
+    status: "prototype",
+    note:
+      "sanggup does not run your business or give business, tax or legal advice. These are general-purpose organizing tools; how you apply them depends on your actual situation. For regulated decisions, talk to a qualified professional.",
+    sources: [
+      { label: "Objectives and key results (OKR), overview", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results" },
+      { label: "Performance indicator (KPI), overview", url: "https://en.wikipedia.org/wiki/Performance_indicator" },
+      { label: "Standard operating procedure (SOP), overview", url: "https://en.wikipedia.org/wiki/Standard_operating_procedure" },
+      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
+      { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
+    ],
+    stages: [
+      {
+        id: "bu1",
+        kind: "practice",
+        title: "Set goals people can measure",
+        lesson:
+          "An OKR pairs an Objective, a qualitative goal worth chasing, with a few Key Results, numbers that show whether you got there. The format came out of Intel and spread through Google. Vague goals drift; measurable key results force the conversation about what done means. Shared skill: OKRs are also practiced in Community building, for member and sponsor benefits.",
+        practice:
+          "Write one objective for your work, business or community for the next three months, with three key results you can actually measure. Check each: could a stranger tell whether it happened?",
+      },
+      {
+        id: "bu2",
+        kind: "practice",
+        title: "Watch the numbers that matter",
+        lesson:
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Community building and Client work.",
+        practice:
+          "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
+      },
+      {
+        id: "bu3",
+        kind: "practice",
+        title: "Write it once, run it many times",
+        lesson:
+          "A standard operating procedure is the written version of a repeated task: steps clear enough that someone else gets the same result without asking you. Start with the tasks you repeat most or hand off first; the test of an SOP is whether it works without its author in the room. Shared skill: SOPs are also practiced in Community building and Teaching and mentoring.",
+        practice:
+          "Write a one-page SOP for one task you repeat. Hand it to someone and watch them run it from the note alone. Fix the two places they stumbled.",
+      },
+      {
+        id: "bu4",
+        kind: "practice",
+        title: "Who does what",
+        lesson:
+          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Community building and Client work.",
+        practice:
+          "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
+      },
+      {
+        id: "bu5",
+        kind: "milestone",
+        title: "Milestone: keep it running",
+        lesson:
+          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the Disaster preparedness path.",
+        milestone:
+          "Draft a one-page continuity plan for a real activity you are responsible for: critical functions, one backup each, and a date to rehearse it. Someone who would have to execute it reviews the plan and signs off.",
+      },
+    ],
+  },
+  {
+    id: "career", short: "Career", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 17c.6-1.8 1.9-3 3.5-3s2.9 1.2 3.5 3 M15 9h4 M15 13h4"/>',
+    title: "Career moves",
+    tagline: "Present your work, interview well, choose your next step",
+    status: "prototype",
+    note:
+      "sanggup does not apply for jobs, write your CV for you or guarantee interviews or offers. Hiring practices vary by field and country; treat these exercises as general preparation, and get advice from people in your target field.",
+    sources: [
+      { label: "University of Pennsylvania Career Services: Write a Resume/CV", url: "https://careerservices.upenn.edu/channels/resume/" },
+      { label: "University of Pennsylvania Career Services: Interview", url: "https://careerservices.upenn.edu/channels/interview/" },
+      { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
+    ],
+    stages: [
+      {
+        id: "ca1",
+        kind: "practice",
+        title: "Inventory your evidence",
+        lesson:
+          "University career-center guidance starts with evidence: a CV or resume is a tailored summary of what you have done and achieved, not a list of duties. Before any formatting, gather the raw material: real work, outcomes and numbers.",
+        practice:
+          "List your five most convincing pieces of work with the outcome of each. Then draft or update a one-page CV or profile from that list, cutting anything it does not support.",
+      },
+      {
+        id: "ca2",
+        kind: "practice",
+        title: "Tell achievement stories",
+        lesson:
+          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Personal branding and Client work.",
+        practice:
+          "Write three STAR stories from your ca1 list: one about delivering, one about a problem you fixed, one about working with people. Say each aloud in under two minutes.",
+      },
+      {
+        id: "ca3",
+        kind: "practice",
+        title: "Practice the interview",
+        lesson:
+          "Career centers treat interviews as a skill you rehearse: research the organization, answer aloud rather than in your head, and bring your own questions, since you are choosing them too. A mock run with a friend catches the rambling your inner voice forgives.",
+        practice:
+          "Do one mock interview with a friend playing the interviewer, using your STAR stories. Write down their two sharpest questions and your five questions for a real interviewer.",
+      },
+      {
+        id: "ca4",
+        kind: "milestone",
+        title: "Milestone: run one real loop",
+        lesson:
+          "Preparation counts when it meets a real process: an application, a pitch or an interview for an actual opportunity, finished with a follow-up and your own notes on what to improve.",
+        milestone:
+          "Complete one real application, proposal or interview loop end to end. A mentor or trusted reviewer looks at your materials and debriefs the outcome with you, then signs off.",
+      },
+    ],
+  },
 ];
