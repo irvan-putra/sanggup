@@ -64,6 +64,22 @@ node_present() {
   python3 ci/tap_text.py "$1" upgrade-evidence/probe.xml > /dev/null 2>&1
 }
 
+# scroll until the target text has real bounds, without tapping; used to
+# bring retained-progress evidence into the viewport for screenshots
+focus_text() {
+  local tries=0
+  while [ "$tries" -lt 8 ]; do
+    dump "last-tap"
+    if python3 ci/tap_text.py "$1" upgrade-evidence/last-tap.xml > /tmp/tapxy; then
+      read X Y < /tmp/tapxy
+      if [ "$X" != "0" ] || [ "$Y" != "0" ]; then return 0; fi
+    fi
+    scroll_down
+    tries=$((tries + 1))
+  done
+  return 1
+}
+
 echo "== 1. seed synthetic progress on the OLD published build"
 adb install -r "$OLD"
 launch
@@ -95,6 +111,10 @@ dump upgraded-cooking
 shot upgraded-cooking
 python3 ci/upgrade_checks.py cooking upgrade-evidence/upgraded-cooking.xml
 scroll_top
+focus_text "done" && shot upgraded-cooking-done
+scroll_top
+focus_text "Show this code to your instructor" && shot upgraded-cooking-request
+scroll_top
 tap_text "all skills"
 
 echo "== 4. first-aid progress rides the Safety merge"
@@ -103,6 +123,8 @@ dump upgraded-safety
 shot upgraded-safety
 python3 ci/upgrade_checks.py safety upgrade-evidence/upgraded-safety.xml
 scroll_top
+focus_text "done" && shot upgraded-safety-done
+scroll_top
 tap_text "all skills"
 
 echo "== 5. pending request still resolves in the teaching view"
@@ -110,5 +132,7 @@ tap_text "I'm teaching"
 dump upgraded-teacher
 shot upgraded-teacher
 python3 ci/upgrade_checks.py teacher upgrade-evidence/upgraded-teacher.xml
+scroll_top
+focus_text "Milestone: rice and a stir-fry" && shot upgraded-teacher-request
 
 echo UPGRADE-PROOF-PASS
