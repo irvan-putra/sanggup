@@ -78,6 +78,23 @@ const server = http.createServer((req,res)=>{
  await page.reload();
  await page.getByRole('button',{name:/^Cooking,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),1);
+ // pre-merge (25-path) progress and requests survive the merges: stage ids carry done state, old pending sign-off requests resolve and can be signed by code
+ await page.evaluate(()=>localStorage.setItem('sanggup-demo-v1',JSON.stringify({done:{p1:true,p2:true,d1:true,cs1:true,fr1:true,c1:true},archive:[{stageId:'cs1',track:'Consulting',title:'Name the problem you solve',how:'self',note:'',when:new Date().toISOString()}],requests:[{code:'MERGE4',trackId:'consulting',trackTitle:'Consulting',stageId:'cs4',stageTitle:'Milestone: run one real consultation',task:'Run a consultation.',status:'pending',requestedAt:new Date().toISOString()}]})));
+ await page.reload();
+ await page.getByRole('button',{name:/^Decisions and priorities,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),3);
+ await page.locator('#back-to-tracks').click();
+ await page.getByRole('button',{name:/^Client work,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),2);
+ assert.match(await page.locator('.code-box').innerText(),/MERGE4/);
+ await page.getByRole('button',{name:"I'm teaching"}).click();
+ await page.locator('#code-input').fill('MERGE4');
+ await page.getByRole('button',{name:'Find request'}).click();
+ await page.getByRole('button',{name:'Sign off',exact:true}).click();
+ await page.getByRole('button',{name:"I'm learning"}).click();
+ await page.reload();
+ await page.getByRole('button',{name:/^Client work,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),3);
  for(const width of [320,390,1280]){
  await page.setViewportSize({width,height:900});
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

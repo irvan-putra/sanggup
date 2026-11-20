@@ -291,7 +291,14 @@ function decide(req, verdict) {
   req.instructorNote = $("instructor-note").value.trim();
   req.decidedAt = new Date().toISOString();
   if (verdict === "signed") {
-    const track = window.SANGGUP_TRACKS.find((t) => t.id === req.trackId);
+    // Paths can be merged between versions, so an older request's trackId may
+    // no longer exist; fall back to locating the stage across current tracks.
+    let track = window.SANGGUP_TRACKS.find((t) => t.id === req.trackId);
+    if (!track) {
+      track = window.SANGGUP_TRACKS.find((t) =>
+        t.stages.some((s) => s.id === req.stageId)
+      );
+    }
     const stage = track.stages.find((s) => s.id === req.stageId);
     state.done[stage.id] = true;
     state.archive.push({

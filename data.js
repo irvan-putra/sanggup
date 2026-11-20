@@ -1420,7 +1420,7 @@ window.SANGGUP_TRACKS = [
         kind: "milestone",
         title: "Milestone: the community runs without you",
         lesson:
-          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help. A much-retold heuristic attributed to German general Kurt von Hammerstein-Equord sorts officers by bright or dull, lazy or diligent, and calls the dull-and-diligent combination dangerous. Treat it as folklore, not a rule: sorting people into smart and stupid is not how you choose leaders. The kernel worth keeping is to match responsibility to a person's judgment and energy, and not to mistake busyness for contribution.",
+          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help. A much-retold heuristic, commonly attributed to German general Kurt von Hammerstein-Equord though its exact origin is unverified, sorts officers by bright or dull, lazy or diligent, and calls the dull-and-diligent combination dangerous. Treat it as folklore, not a rule: sorting people into smart and stupid is not how you choose leaders. The kernel worth keeping is to match responsibility to a person's judgment and energy, and not to mistake busyness for contribution.",
         milestone:
           "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
       },
