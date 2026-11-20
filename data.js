@@ -94,6 +94,7 @@ window.SANGGUP_TRACKS = [
       { label: "KonMari: Rule 6, sparks joy", url: "https://konmari.com/marie-kondo-rules-of-tidying-sparks-joy/" },
       { label: "Swedish death cleaning (döstädning), overview", url: "https://en.wikipedia.org/wiki/Swedish_death_cleaning" },      { label: "Wikipedia: Sewing", url: "https://en.wikipedia.org/wiki/Sewing" },
       { label: "Wikipedia: Houseplant", url: "https://en.wikipedia.org/wiki/Houseplant" },
+      { label: "RHS: How to grow houseplants", url: "https://www.rhs.org.uk/plants/types/houseplants/growing-guide" },
 
     ],
     stages: [
@@ -149,23 +150,23 @@ window.SANGGUP_TRACKS = [
         lesson:
           "Hand sewing has kept clothes alive for thousands of years and needs almost no equipment: a needle, thread and a few basic stitches fix most everyday damage. Sewing a button back, closing a split seam and hemming an edge cover most repairs, and the same stitches let you make simple accessories like pouches or scrunchies. Mending one thing teaches more than reading about ten.",
         practice:
-          "Take one item with a small defect, real or fictional: a loose button, a split seam or a fraying hem. Write which repair it needs and the three steps to do it by hand. If you have the item and a needle, do the repair and note what you would do differently next time.",
+          "Do one repair and one creation, real or on paper. Repair: take an item with a small defect, such as a loose button, a split seam or a fraying hem, and write the three hand-sewing steps to fix it. Create: plan one simple handmade accessory, such as a fabric pouch or scrunchie, listing the material, the stitches and the first seam. If you have a needle and fabric, do one of the two for real.",
       },
       {
         id: "hm2",
         kind: "practice",
         title: "Handle small apartment repairs",
         lesson:
-          "Many apartment annoyances are safe beginner fixes: reattaching peeling wallpaper with paste, patching a nail hole, tightening a loose handle or hinge, and clearing a slow drain with basic tools. The boundary is clear: anything electrical, plumbing inside walls, gas or structural belongs to building maintenance or a licensed professional, and renters should check their lease before changing anything permanent. Knowing where DIY ends is part of the skill.",
+          "Many apartment annoyances are safe beginner fixes, such as reattaching peeling wallpaper, patching a nail hole or tightening a loose hinge, but the first step is always the same: check the material you are working on and follow the product's own instructions, because the wrong adhesive or filler damages the surface. Renters also check the lease before changing anything permanent. The boundary is clear: anything electrical, plumbing inside walls, gas or structural belongs to building maintenance or a licensed professional. Knowing where DIY ends is part of the skill.",
         practice:
-          "List three small issues in a home, real or imagined, such as peeling wallpaper, a wobbly hinge and a nail hole. For each, write whether it is a safe DIY fix or a call-maintenance case, and for the DIY ones note the tool and the first step.",
+          "List three small issues in a home, real or imagined, such as peeling wallpaper, a wobbly hinge and a nail hole. For each, write whether it is a safe DIY fix or a call-maintenance case. For one DIY case, note the material involved, which product instructions you would read first, and the first step.",
       },
       {
         id: "hm3",
         kind: "practice",
         title: "Keep apartment plants alive",
         lesson:
-          "Houseplants have different needs from outdoor plants, and the most common killer is kindness: overwatering causes root rot, the most common cause of houseplant death. Pots need drainage holes, light matters more than most people think, and many popular houseplants tolerate shade and irregular watering because they evolved as understory plants or succulents. Match the plant to the room, not the other way around.",
+          "Houseplants have different needs from outdoor plants, and each species has its own requirements for light, water and soil. Two habits prevent most trouble. The RHS watering guidance: do not water on a routine; check first, and water when the surface of the compost is dry. And use a pot with drainage holes, because roots sitting in water rot. Many popular houseplants tolerate shade and irregular watering because they evolved as understory plants or succulents. Match the plant to the room, not the other way around.",
         practice:
           "Pick one spot in a home, real or imagined, and note its light: bright window, indirect, or dim corner. Choose one plant type suited to that light, write its watering rule of thumb and its drainage setup, and add one sign that would tell you it is being overwatered.",
       },
@@ -444,6 +445,7 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Bootstrapping (business)", url: "https://en.wikipedia.org/wiki/Bootstrapping" },
       { label: "Wikipedia: Project management", url: "https://en.wikipedia.org/wiki/Project_management" },      { label: "Wikipedia: 3D printing", url: "https://en.wikipedia.org/wiki/3D_printing" },
       { label: "Precious Plastic: open-source plastic recycling machines and community", url: "https://preciousplastic.com/" },
+      { label: "NIOSH: Safe 3D printing is for everyone, everywhere", url: "https://www.cdc.gov/niosh/bulletin/2024/safe-3d-printing.html" },
 
     ],
     stages: [
@@ -551,7 +553,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Understand 3D printing",
         lesson:
-          "3D printing builds an object layer by layer from a digital model, most commonly by melting plastic filament (FDM). It shines at prototypes, replacement parts and shapes that are hard to make by hand. The practical route for a beginner is usually a makerspace, library or print service rather than buying a machine. Respect the safety basics: the nozzle and bed get hot, some filaments release fumes so ventilation matters, and printed plastic is not automatically food-safe.",
+          "3D printing builds an object layer by layer from a digital model, most commonly by melting plastic filament (FDM). It shines at prototypes, replacement parts and shapes that are hard to make by hand. The practical route for a beginner is usually a makerspace, library or print service rather than buying a machine. NIOSH safety guidance: heated filaments release ultrafine particles and volatile compounds, so print in a ventilated space; the nozzle and bed cause burns, so let them cool; and check the material's own safety notes before printing anything that will touch food.",
         practice:
           "Pick one object around your home, real or imagined, that could break or go missing, such as a drawer handle or cable clip. Write whether a 3D-printed replacement makes sense, what material you would choose, and where you could get it printed without owning a printer.",
       },
