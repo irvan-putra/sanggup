@@ -1,0 +1,155 @@
+name: Sanggup upgrade progress-retention proof
+
+# Scoped synthetic upgrade test: install the actual published OLD test APK,
+# seed synthetic learner progress through the real UI (done stages across a
+# merged path plus a pending sign-off request), update in place to the actual
+# published NEW APK under the same signer, then verify the seeded progress and
+# the pending request survive. Artifacts carry screenshots and UI dumps for
+# visual inspection. This proves in-place-update retention for the seeded
+# shape; it does not exercise every path or a physical phone.
+
+on:
+  workflow_dispatch:
+    inputs:
+      old_tag:
+        description: Published tag to upgrade from
+        default: v0.1.4
+        required: true
+      new_tag:
+        description: Published tag to upgrade to
+        default: v0.2.0
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  upgrade-proof:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download both published test APKs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release download "${{ inputs.old_tag }}" --repo "${{ github.repository }}" --pattern "sanggup-${{ inputs.old_tag }}.apk" --dir dist
+          gh release download "${{ inputs.new_tag }}" --repo "${{ github.repository }}" --pattern "sanggup-${{ inputs.new_tag }}.apk" --dir dist
+          ls -la dist
+      - name: Both APKs carry the same signing certificate
+        run: |
+          set -euo pipefail
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          OLD_CERT=$("$BT/apksigner" verify --print-certs "dist/sanggup-${{ inputs.old_tag }}.apk" | grep -m1 'certificate SHA-256 digest' | awk '{print toupper($NF)}')
+          NEW_CERT=$("$BT/apksigner" verify --print-certs "dist/sanggup-${{ inputs.new_tag }}.apk" | grep -m1 'certificate SHA-256 digest' | awk '{print toupper($NF)}')
+          echo "old: $OLD_CERT"
+          echo "new: $NEW_CERT"
+          test "$OLD_CERT" = "$NEW_CERT"
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Seed progress on old APK, update in place, verify retention
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          script: |
+            set -euo pipefail
+            mkdir -p upgrade-evidence
+            OLD="dist/sanggup-${{ inputs.old_tag }}.apk"
+            NEW="dist/sanggup-${{ inputs.new_tag }}.apk"
+
+            shot() { adb exec-out screencap -p > "upgrade-evidence/$1.png"; }
+            dump() { adb shell uiautomator dump /sdcard/uidump.xml >/dev/null && adb exec-out cat /sdcard/uidump.xml > "upgrade-evidence/$1.xml"; }
+            tap_text() {
+              dump "last-tap"
+              python3 - "$1" <<'PY' > /tmp/tapxy
+            import sys, re
+            target = sys.argv[1]
+            xml = open('upgrade-evidence/last-tap.xml', encoding='utf-8', errors='replace').read()
+            best = None
+            for m in re.finditer(r'<node[^>]*>', xml):
+                tag = m.group(0)
+                def attr(name):
+                    a = re.search(name + r'="([^"]*)"', tag)
+                    return a.group(1) if a else ''
+                t, d = attr('text'), attr('content-desc')
+                if t == target or d == target:
+                    best = tag; break
+                if best is None and (t.startswith(target) or d.startswith(target) or (target in t) or (target in d)):
+                    best = tag
+            if not best:
+                sys.exit('no node matching: ' + target)
+            b = re.search(r'bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', best)
+            x1, y1, x2, y2 = map(int, b.groups())
+            print((x1 + x2) // 2, (y1 + y2) // 2)
+            PY
+              read X Y < /tmp/tapxy
+              adb shell input tap "$X" "$Y"
+              sleep 3
+            }
+            launch() {
+              adb shell am start -W -n com.vanipy.sanggup/.MainActivity >/dev/null
+              sleep 12
+            }
+
+            # 1. seed synthetic progress on the OLD published build
+            adb install -r "$OLD"
+            launch
+            tap_text "Cooking"
+            tap_text "I did it"
+            tap_text "I did it"
+            tap_text "Request sign-off"
+            shot seeded-cooking
+            tap_text "all skills"
+            tap_text "First aid"
+            tap_text "I did it"
+            shot seeded-firstaid
+            dump seeded-firstaid
+
+            # 2. in-place update to the NEW published build, same signer
+            adb install -r "$NEW"
+            launch
+
+            # 3. verify: Cooking keeps both done stages and the pending request
+            tap_text "Cooking"
+            dump upgraded-cooking
+            shot upgraded-cooking
+            python3 - <<'PY'
+            xml = open('upgrade-evidence/upgraded-cooking.xml', encoding='utf-8', errors='replace').read()
+            assert xml.count('text="done"') >= 2, 'done labels lost after upgrade'
+            assert 'Show this code to your instructor' in xml, 'pending sign-off request lost after upgrade'
+            PY
+            tap_text "all skills"
+
+            # 4. verify: first-aid progress rides the Safety merge
+            tap_text "Safety"
+            dump upgraded-safety
+            shot upgraded-safety
+            python3 - <<'PY'
+            xml = open('upgrade-evidence/upgraded-safety.xml', encoding='utf-8', errors='replace').read()
+            assert 'Why training matters' in xml, 'merged first-aid stage missing'
+            assert xml.count('text="done"') >= 1, 'first-aid done state lost in merge'
+            PY
+            tap_text "all skills"
+
+            # 5. verify: the pending request still resolves in the teaching view
+            tap_text "I'm teaching"
+            dump upgraded-teacher
+            shot upgraded-teacher
+            python3 - <<'PY'
+            import re
+            xml = open('upgrade-evidence/upgraded-teacher.xml', encoding='utf-8', errors='replace').read()
+            assert 'Milestone: rice and a stir-fry' in xml, 'pending request title missing in teacher view'
+            assert re.search(r'[A-Z2-9]{6}', xml), 'sign-off code missing in teacher view'
+            PY
+            echo UPGRADE-PROOF-PASS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: upgrade-evidence
+          path: upgrade-evidence/
