@@ -1844,7 +1844,10 @@ window.SANGGUP_TRACKS = [
       { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
       { label: "NCCIH: Meditation and mindfulness, effectiveness and safety", url: "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
       { label: "NCCIH: 8 things to know about meditation and mindfulness", url: "https://www.nccih.nih.gov/health/tips/8-things-to-know-about-meditation-and-mindfulness" },
-      { label: "Layanan 112, Indonesia emergency call", url: "https://layanan112.komdigi.go.id/tentang" },
+      { label: "Layanan 112, Indonesia emergency call", url: "https://layanan112.komdigi.go.id/tentang" },      { label: "NHS: Get running with Couch to 5K", url: "https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/" },
+      { label: "NHS: Sitting exercises", url: "https://www.nhs.uk/live-well/exercise/sitting-exercises/" },
+      { label: "Torbay and South Devon NHS: Tai chi", url: "https://www.torbayandsouthdevon.nhs.uk/services/pain-service/reconnect2life/improving-health-and-fitness/tai-chi/" },
+
     ],
     stages: [
       {
@@ -1909,6 +1912,33 @@ window.SANGGUP_TRACKS = [
           "In a real emergency, the first job is safety and calling for help, not meditating. A rehearsed reset can help you think. If the emergency is medical or dangerous, call emergency services. In Indonesia 112 is the national emergency number and 119 is for medical emergencies.",
         practice:
           "Write a three-line personal crisis card: your reset, the numbers you would call, and one person you would contact.",
+      },
+      {
+        id: "ex1",
+        kind: "practice",
+        title: "Start running gently",
+        lesson:
+          "The NHS Couch to 5K model works because it starts absurdly small: one minute of easy jogging alternating with walking, three times a week with rest days between, adding a little each week. Pace does not matter at the start; showing up does. This is general education, not a personal plan: anyone with a health condition or long inactivity checks with a professional first, and pain is a stop signal, not a challenge.",
+        practice:
+          "Plan one week of beginner walk-run sessions, real or on paper: three outings on non-consecutive days, each with a five-minute warm-up walk, then short easy jog intervals mixed with walking. After each outing, note how it felt and whether the next one should repeat or build.",
+      },
+      {
+        id: "ex2",
+        kind: "practice",
+        title: "Build strength without equipment",
+        lesson:
+          "A squat, a push-up and a plank cover the basics, and all three scale: wall push-ups before floor push-ups, a chair squat before a deep one, a short plank before a long one. Form beats count every time; ten careful repetitions help, thirty sloppy ones mostly teach your joints a bad habit. Rest days are when muscles actually rebuild, so alternate days rather than daily maxing.",
+        practice:
+          "Design a ten-minute no-equipment routine, real or on paper: one leg move, one push move and one hold, each at the easiest honest version, two rounds with rest between. Try it once and write which version of each move was right for you, and what you would adjust.",
+      },
+      {
+        id: "ex3",
+        kind: "practice",
+        title: "Try gentle movement: tai chi and chair exercise",
+        lesson:
+          "Not all exercise needs sweat or a gym. Tai chi is slow, controlled movement that NHS guidance links to better balance and flexibility, and it suits beginners because it is low impact. Chair-based exercise goes further: the NHS sitting exercises are done seated on a stable chair without wheels, for people who are less mobile or returning after a long break, with a GP check advised if unsure. The ads promising transformation oversell them; the real value is gentle, repeatable movement almost anyone can start.",
+        practice:
+          "Pick one gentle option, real or imagined: a ten-minute beginner tai chi follow-along, or a short set of NHS sitting exercises. Write which one fits you or someone you know, when in the day it would happen, and one thing that would tell you it is working after two weeks.",
       },
     ],
   },
