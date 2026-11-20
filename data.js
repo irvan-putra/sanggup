@@ -571,21 +571,27 @@ window.SANGGUP_TRACKS = [
         kind: "milestone",
         title: "Milestone: keep it running",
         lesson:
-          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the Disaster preparedness path.",
+          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the Safety and emergencies path.",
         milestone:
           "Draft a one-page continuity plan for a real activity you are responsible for: critical functions, one backup each, and a date to rehearse it. Someone who would have to execute it reviews the plan and signs off.",
       },
     ],
   },
   {
-    id: "disaster", short: "Disasters", icon: '<path d="M12 3l10 18H2z M12 10v5 M12 18h.01"/>',
-    title: "Disaster preparedness",
-    tagline: "Get ready before an emergency, Indonesia focus",
+    id: "disaster", short: "Safety", icon: '<path d="M12 3l10 18H2z M12 10v5 M12 18h.01"/>',
+    title: "Safety and emergencies",
+    tagline: "Prepare, respond safely, know when to call",
     status: "prototype",
     note:
-      "Preparedness basics from Indonesian authorities and Ready.gov. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. This path teaches preparedness basics and the safe-rescue principle only; it does not make you a trained rescuer or survival expert. In a disaster, follow official agencies and responders, not a chatbot.",
+      "Preparedness and awareness basics from Indonesian authorities, Ready.gov and the Red Cross. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. In a real emergency call 112, or 119 for medical, in Indonesia, or your local number elsewhere. This path does not make you a trained rescuer or survival expert, and reading it does not train or qualify you in first aid: CPR and choking response must be learned hands-on from a qualified instructor. A chatbot is not a responder: in an emergency, call professionals first, not AI.",
     sources: [
       { label: "Kemenkes Pusat Krisis: Tas Siaga Bencana (cites BNPB)", url: "https://pusatkrisis.kemkes.go.id/mari-siapkan-tas-siaga-bencana" },
+      { label: "Red Cross: Adult and child choking", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/adult-child-choking" },
+      { label: "Red Cross: Management of foreign body airway obstruction (guidelines)", url: "https://guidelines.redcross.org/guidelines-database/foreign-body-airway-obstruction/" },
+      { label: "Red Cross: CPR training formats", url: "https://www.redcross.org/take-a-class/cpr" },
+      { label: "MedlinePlus: Abdominal thrusts", url: "https://medlineplus.gov/ency/article/000047.htm" },
+      { label: "PMI: Pelatihan relawan (first aid, CPR and AED)", url: "https://pmipusat.org/pelatihan-relawan/" },
+      { label: "Kemenkes PSC 119: how to make an emergency call", url: "https://psc.kemkes.go.id/web/cara-melakukan-panggilan-emergency-call-119" },
       { label: "BMKG: Petunjuk keselamatan gempabumi dan tsunami", url: "https://content.bmkg.go.id/wp-content/uploads/Large-Prints-Petunjuk-keselamatan-Gempabumi-Tsunami.pdf" },
       { label: "Ready.gov: Build a kit", url: "https://www.ready.gov/kit" },
       { label: "Ready.gov: Practice your home fire escape plan", url: "https://www.ready.gov/home-fire-escape-plan" },
@@ -730,24 +736,6 @@ window.SANGGUP_TRACKS = [
         practice:
           "Look up your nearest PMI branch or BPBD and ask how to join a first aid or disaster preparedness training.",
       },
-    ],
-  },
-  {
-    id: "firstaid", short: "First aid", icon: '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>',
-    title: "First aid awareness",
-    tagline: "Theory, plus how to get real training",
-    status: "prototype",
-    note:
-      "Awareness only. Reading this does not train or qualify you, and finishing a stage here is not a certificate. CPR and choking response must be learned hands-on from a qualified instructor. In a real emergency call 119 (medical) or 112 in Indonesia, or your local number elsewhere. A chatbot is not a responder: in an emergency, call professionals first, not AI.",
-    sources: [
-      { label: "Red Cross: Adult and child choking", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/adult-child-choking" },
-      { label: "Red Cross: Management of foreign body airway obstruction (guidelines)", url: "https://guidelines.redcross.org/guidelines-database/foreign-body-airway-obstruction/" },
-      { label: "Red Cross: CPR training formats", url: "https://www.redcross.org/take-a-class/cpr" },
-      { label: "MedlinePlus: Abdominal thrusts", url: "https://medlineplus.gov/ency/article/000047.htm" },
-      { label: "PMI: Pelatihan relawan (first aid, CPR and AED)", url: "https://pmipusat.org/pelatihan-relawan/" },
-      { label: "Kemenkes PSC 119: how to make an emergency call", url: "https://psc.kemkes.go.id/web/cara-melakukan-panggilan-emergency-call-119" },
-    ],
-    stages: [
       {
         id: "a1",
         kind: "practice",
@@ -796,6 +784,98 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
+    id: "security", short: "Security", icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    title: "Security basics",
+    tagline: "Protect what matters, in layers",
+    status: "prototype",
+    note:
+      "Defensive basics only. This path does not teach security testing or anything offensive, and finishing it does not make you a security professional. No single lock, alarm or app guarantees protection: visible protection discourages opportunists, while a determined attacker plans around a single barrier, so protection comes in layers. If something happens, contact your bank, provider or local police through their official channels, not a chatbot.",
+    sources: [
+      { label: "askthe.police.uk: How can I protect my home from burglary?", url: "https://www.askthe.police.uk/faq/?id=bb3d1fc7-11db-eb11-bacb-0022483f5223" },
+      { label: "police.uk: Keep burglars out of your property", url: "https://www.police.uk/cp/crime-prevention/protect-home-crime/keep-burglars-out-property" },
+      { label: "police.uk: Checklist for securing your home when you leave it", url: "https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/" },
+      { label: "CISA: Secure Our World, four core steps", url: "https://www.cisa.gov/secure-our-world" },
+      { label: "FTC: How to recognize and avoid phishing scams", url: "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams" },
+      { label: "LockPickingLawyer: $329 smart lock opened in seconds (video)", url: "https://www.youtube.com/watch?v=m_MX96MVD00" },
+      { label: "CISA: Recognize and report phishing", url: "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing" },
+      { label: "Krebs on Security: Legal threats make powerful phishing lures (2019 case)", url: "https://krebsonsecurity.com/2019/05/legal-threats-make-powerful-phishing-lures/" },
+    ],
+    stages: [
+      {
+        id: "sec1",
+        kind: "practice",
+        title: "Think about threats before tools",
+        lesson:
+          "Security starts with two questions: what are you protecting, and who is likely to bother it? UK police note that many domestic burglaries are committed by opportunists who look for homes with little or no obvious security. Visible protection mainly discourages that opportunist; a determined attacker plans around any single barrier. The LockPickingLawyer's videos make the same point from the other side: even an expensive consumer lock can be opened in seconds by someone skilled, so a lock buys time and discourages rather than guarantees. That is why protection works in layers, and why no one product makes you safe.",
+        practice:
+          "Pick one thing you care about, at home or online. Write down what could realistically go wrong and who would bother, then list the layers of protection that already exist around it.",
+      },
+      {
+        id: "sec2",
+        kind: "practice",
+        title: "Layer protection at home",
+        lesson:
+          "Police advice starts with basics that cost little: lock doors and windows every time you leave, double-lock the door, keep valuables and keys out of sight and away from the letterbox, light the entrances, and avoid giving anyone cover, such as high front hedges to hide behind. An exit routine makes this automatic. Cameras and alarms can help, but police stress that CCTV is no substitute for secure doors and windows.",
+        practice:
+          "Walk around your home once as if you were a stranger: what looks easy or inviting? Fix one small thing today, such as a lock you usually skip or a valuable visible from outside.",
+      },
+      {
+        id: "sec3",
+        kind: "practice",
+        title: "Use strong, unique passwords",
+        lesson:
+          "CISA lists four core steps for everyone, and two of them are strong passwords and a password manager. A unique password per account means one leak does not open everything, and a password manager makes unique passwords practical to live with.",
+        practice:
+          "List your three most important accounts, such as email and banking. Check that each has its own strong password, and change any that are reused.",
+      },
+      {
+        id: "sec4",
+        kind: "practice",
+        title: "Turn on multi-factor authentication",
+        lesson:
+          "Multi-factor authentication asks for a second proof when you log in: something you know, something you have, or something you are, as the US FTC explains it. CISA includes it in its four core steps because a stolen password alone is then no longer enough to get in.",
+        practice:
+          "Turn on multi-factor authentication for your main email account today, since email resets every other password. Then add it to one money-related account.",
+      },
+      {
+        id: "sec5",
+        kind: "practice",
+        title: "Spot phishing before it hooks you",
+        lesson:
+          "The FTC describes the pattern: an unexpected message that looks like a company you know, tells a story such as a suspicious login, a payment problem or a refund, and pushes you to click a link or share information. Real companies do not email or text you a link to update your payment details. Check by contacting the company through a number or website you already know is real, never the one in the message.",
+        practice:
+          "Open your inbox or messages and find one message that asks you to click or confirm something. Check it against these signs before deciding whether it is real.",
+      },
+      {
+        id: "sec6",
+        kind: "practice",
+        title: "Pause when a message pressures you",
+        lesson:
+          "Pressure is the tell. CISA's signs of phishing start with urgent or emotionally appealing language and threats of dire consequences, and Krebs on Security documented a real campaign where fake lawsuits were the bait that made people open booby-trapped files. Fraud works the same way: a family emergency, a prize, a police or bank call that demands action now. The defense is a pause, then verification through a separate route you already trust: the number on the back of your card or the official website, never the contact details in the message. If you already clicked or paid, speed matters more than embarrassment: call your bank's official line, change the affected passwords, and report it.",
+        practice:
+          "Write your own pause rule, one sentence you will follow when any message demands urgent action or payment. Then save the official fraud contact for your bank, taken from its own website or your card.",
+      },
+      {
+        id: "sec7",
+        kind: "practice",
+        title: "Update, and know who to call",
+        lesson:
+          "CISA's fourth core step is updating software, because updates close the holes attackers use. Plan the bad day before it happens as well: know your bank's official fraud contact, your local emergency number, and where to report. If you suspect a scammer has your details, act quickly through those official channels.",
+        practice:
+          "Turn on automatic updates on your phone, and save your bank's official contact details taken from its own website or the back of your card.",
+      },
+      {
+        id: "sec8",
+        kind: "milestone",
+        title: "Milestone: review your security with someone you trust",
+        lesson:
+          "A second pair of eyes catches what you have stopped noticing. Walk through your layers with someone you trust: the home entry routine, passwords, multi-factor authentication, and what you would do first if an account were breached.",
+        milestone:
+          "Do the review together and improve one weak layer you find. The other person signs off in the app. This records that a review happened; it is not a security audit.",
+      },
+    ],
+  },
+  {
     id: "network", short: "Network", icon: '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19a6 6 0 0 1 12 0 M15 15a5 5 0 0 1 6 4"/>',
     title: "Network and community",
     tagline: "Build and keep personal and professional relationships",
@@ -816,6 +896,12 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Mentorship", url: "https://en.wikipedia.org/wiki/Mentorship" },      { label: "Wikipedia: Fiscal sponsorship", url: "https://en.wikipedia.org/wiki/Fiscal_sponsorship" },
       { label: "Liang et al. (Stanford): GPT detectors are biased against non-native English writers", url: "https://arxiv.org/abs/2304.02819" },
 
+      { label: "City of Orlando: Cultivating New Neighborhood Leadership", url: "https://www.orlando.gov/Our-Government/Get-Involved/iLead-Neighborhood-Leadership-Training/iLead-Guides/Cultivating-New-Neighborhood-Leadership" },
+      { label: "Community Tool Box (University of Kansas): Increasing Participation and Membership", url: "https://ctb.ku.edu/en/increasing-participation-and-membership" },
+      { label: "National Council of Nonprofits: Succession Planning for Nonprofits", url: "https://www.councilofnonprofits.org/running-nonprofit/governance-leadership/succession-planning-nonprofits-managing-leadership" },
+      { label: "TidyHQ: Succession Planning Guide for Clubs and Associations", url: "https://tidyhq.com/guides/succession-planning-for-community-organisations" },
+      { label: "Ditjen AHU (Kemenkumham): Perkumpulan", url: "https://ahu.go.id/perkumpulan" },
+      { label: "Klinik Hukumonline: Apa Perbedaan Perkumpulan dan Yayasan?", url: "https://www.hukumonline.com/klinik/a/apa-perbedaan-perkumpulan-dan-yayasan-cl2755/" },
     ],
     stages: [
       {
@@ -961,6 +1047,42 @@ window.SANGGUP_TRACKS = [
           "Sometimes you suspect a post, application or message was AI-generated, or a community fills up with repetitive AI replies. Handle it with care. Detection is unreliable: research from Stanford found GPT detectors flag non-native English writing as AI-generated far too often, so a style hunch or a detector score is a clue, never evidence, and accusing someone on that basis can harm an innocent person. Better moves: judge the work on quality, ask questions only the author could answer, raise concerns privately and specifically, and set clear community rules about AI use so moderation is about consent and shared expectations, not about catching people.",
         practice:
           "A fictional community group gets ten near-identical generic comments from one account. Write the private, specific message a moderator could send that names the behavior and asks for a change without accusing or attacking the person, plus one community rule that would make the boundary clear for everyone.",
+      },
+      {
+        id: "nt17",
+        kind: "practice",
+        title: "Notice when a community stops renewing",
+        lesson:
+          "A community fades quietly: the same longtime members hold every role for years, new and younger people visit once and drift away, and activity slowly shrinks to meetups with no shared project. Guides for neighborhood organizations call out exactly this trap and treat rotation of roles as healthy. Renewal is about the circulation of people, roles and knowledge, not about anyone's age: longtime members carry the community's memory, and the goal is to add new energy alongside them, not push anyone out.",
+        practice:
+          "For a community you belong to, write down: how many different people held a role in the last two years, how many first-time visitors came back, and what the group does together besides meet.",
+      },
+      {
+        id: "nt18",
+        kind: "practice",
+        title: "Welcome new people onto a path",
+        lesson:
+          "The Community Tool Box advises groups to make special efforts to welcome new members and to remove the barriers that keep people from participating. A newcomer stays when three things happen quickly: someone greets them by name, they get a small real task they can finish, and they can see a path from attendee to contributor to organizer.",
+        practice:
+          "Design the first month for a fictional new member of a community you know: who greets them, which small task they get in week one, and how they would see the next step.",
+      },
+      {
+        id: "nt19",
+        kind: "practice",
+        title: "Pass on knowledge and responsibility",
+        lesson:
+          "Longtime members hold knowledge that exists nowhere in writing. Nonprofit succession guides recommend building a deeper bench before you need it, cross-training, and treating handover as a scheduled, repeatable event: the new person shadows the outgoing one for one full cycle of the role, and meeting minutes keep the reasons behind past decisions alive after people move on.",
+        practice:
+          "Pick one role in a group you know. Write what a shadow would need to see in one full cycle of that role, and name one person who could shadow it next.",
+      },
+      {
+        id: "nt20",
+        kind: "practice",
+        title: "Keep the community's paperwork alive",
+        lesson:
+          "Good paperwork is a habit, not a legal project: minutes that record what was decided, and simple money records a treasurer reports regularly, keep a group trustworthy and make handovers possible. In Indonesia, a community can exist informally; Kemenkumham's Ditjen AHU explains that a perkumpulan needs ministerial ratification as a badan hukum to perform civil legal acts as an entity. Whether your group needs that, and what it would change for taxes, bank accounts or contracts, is exactly what to ask a notaris or accountant, because the answer depends on your situation.",
+        practice:
+          "Write the questions your community would bring to a notaris or accountant: for example whether to register as a badan hukum, what records to keep, and how money should be held and reported.",
       },
       {
         id: "cb9",

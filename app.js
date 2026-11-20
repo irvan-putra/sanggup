@@ -368,7 +368,7 @@ function applyRoute() {
     renderTracks();
     return;
   }
-  const alias = { career: "work", clientwork: "work" };
+  const alias = { career: "work", clientwork: "work", firstaid: "disaster" };
   const track = (window.SANGGUP_TRACKS || []).find(
     (t) => t.id === (alias[id] || id) && t.status !== "planned"
   );
