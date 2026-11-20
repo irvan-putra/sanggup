@@ -16,7 +16,7 @@ Update over 0.1.2 with the same package and release key. Do not uninstall or cle
 
 ## Verification and limits
 
-The debug build loaded all 30 skill tiles on an Android 14 emulator. A test clicked the actual web practice-log button and checked that the native streak and hosted widget became 1 day. A real AppWidgetHostView test observed all six animation frames advancing and saved inspected screenshots. A signed 0.1.2-to-0.1.3 in-place upgrade retained a synthetic 1-day practice streak with no uninstall or data clear.
+The debug build loaded all 30 skill tiles on an Android 14 emulator. A test clicked the actual web practice-log button and checked that the native streak and hosted widget became 1 day. A real AppWidgetHostView test observed all six animation frames advancing and saved inspected screenshots. A signed 0.1.2-to-0.1.3 in-place upgrade check runs after publication via the Signed upgrade data retention workflow. Result for this release: passed, retaining a synthetic 1-day practice streak with no uninstall or data clear (workflow run 44693769238, 2026-11-20 07:19 UTC). This note previously asserted that result before the check had completed; it is corrected here. Future releases must state the result only after the run completes and must not deliver the APK to people before it passes.
 
 This hosted-widget test is not proof of placement or animation on Pixel Launcher, Samsung One UI or every launcher. Widget resizing, long-running power behaviour and different Android versions remain untested. Widget refresh is OS-scheduled, so the displayed streak can lag a date change until its next refresh or app interaction.
 
