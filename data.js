@@ -370,7 +370,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Watch the numbers that matter",
         lesson:
-          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and Client work. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and the Work path. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
         practice:
           "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
       },
@@ -388,7 +388,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Who does what",
         lesson:
-          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and Client work.",
+          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and the Work path.",
         practice:
           "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
       },
@@ -415,7 +415,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Keep people, tasks and updates in sync",
         lesson:
-          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in Career moves.",
+          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in the Work path.",
         practice:
           "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
       },
@@ -737,7 +737,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work and in Projects and business.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in the Work path and in Projects and business.",
         practice:
           "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
@@ -782,7 +782,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in Client work and in Projects and business.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Work path and in Projects and business.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1450,7 +1450,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in Client work, as case studies, and in Career moves, for CVs and interviews.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in the Work path, as case studies and for CVs and interviews.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
@@ -1579,116 +1579,6 @@ window.SANGGUP_TRACKS = [
           "The first month is the filter most people fail. Finishing it, with an honest review of what worked, is the real beginning of being a creator.",
         milestone:
           "Complete four weeks of scheduled publishing plus a written review of what worked. A fellow creator or mentor checks your log and signs off.",
-      },
-    ],
-  },
-  {
-    id: "clientwork", parent: "work", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
-    title: "Client work",
-    tagline: "Sell what you know as advice or as delivered work",
-    status: "prototype",
-    note:
-      "sanggup does not find clients, set your prices, take payments or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences, and Indonesian freelancers have tax duties as pekerja bebas under DJP rules. This path covers the working method only and is general education.",
-    sources: [
-      { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
-      { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
-      { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
-      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
-      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
-      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
-      { label: "Wikipedia: Cold calling", url: "https://en.wikipedia.org/wiki/Cold_calling" },
-      { label: "VanillaSoft: lead conversion study on follow-up persistency", url: "https://vanillasoft.com/resources/lead-conversion-study-telfer" },
-    ],
-    stages: [
-      {
-        id: "cs1",
-        kind: "practice",
-        title: "Name the problem you solve",
-        lesson:
-          "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
-        practice:
-          "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
-      },
-      {
-        id: "fr1",
-        kind: "practice",
-        title: "Pick one sellable service",
-        lesson:
-          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
-        practice:
-          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
-      },
-      {
-        id: "fr2",
-        kind: "practice",
-        title: "Assemble proof",
-        lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Branding and creator and Career moves.",
-        practice:
-          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
-      },
-      {
-        id: "cs2",
-        kind: "practice",
-        title: "Design one consultation",
-        lesson:
-          "A consultation is a working session with a shape: understand the client's situation, give a recommendation, agree on next steps. Preparing your questions in advance is what separates advice from chat.",
-        practice:
-          "Write a one-page plan for a 60-minute consultation on your cs1 problem: five diagnostic questions, what the client leaves with (verbal advice, a short written summary or a plan), and how you will follow up.",
-      },
-      {
-        id: "cs3",
-        kind: "practice",
-        title: "Set expectations in writing",
-        lesson:
-          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in Network and community.",
-        practice:
-          "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
-      },
-      {
-        id: "fr3",
-        kind: "practice",
-        title: "Decide price and terms before you are asked",
-        lesson:
-          "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
-        practice:
-          "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
-      },
-      {
-        id: "fr5",
-        kind: "practice",
-        title: "Find clients: cold outreach, warmed up",
-        lesson:
-          "Cold calling means approaching potential clients who have had no prior contact with you. It reaches new people at low cost, but it is intrusive, has a high rejection rate, and many countries restrict it, for example with Do Not Call registries. Modern practice warms it up: work from a list of people who fit your service and dig to understand their situation before any contact. Shared skill: describing exactly who you serve is the segment stage in Branding and creator; first conversations are the Network and community path.",
-        practice:
-          "Write a list of ten imaginary potential clients who fit your service. For one of them, draft a four-sentence first contact that shows you understand their situation and asks one small question. Do not send anything.",
-      },
-      {
-        id: "fr6",
-        kind: "practice",
-        title: "Follow up without nagging",
-        lesson:
-          "A large study of sales interactions found persistency, structured follow-up, among the strongest predictors of a win, with the best outcomes when the first response came within about an hour and attempts were spaced across the first days. Following up is giving the decision another chance, not repeating the ask: each touch should add something useful. Decide your stop rule before you start.",
-        practice:
-          "Draft a three-touch follow-up plan for your draft contact: what each message adds, when you would send it, and after which attempt you stop and move on.",
-      },
-      {
-        id: "cs4",
-        kind: "milestone",
-        title: "Milestone: run one real consultation",
-        lesson:
-          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
-        milestone:
-          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
-      },
-      {
-        id: "fr4",
-        kind: "milestone",
-        title: "Milestone: deliver one real job",
-        lesson:
-          "A first real job, even a small or free one, teaches what no reading does: quoting, scope creep, delivery and asking to be paid. Indonesian freelancers should also learn their tax duties early; DJP publishes the rules for pekerja bebas.",
-        milestone:
-          "Complete one real freelance job from first message to delivery and payment, or agreed free delivery. The client or a mentor confirms the delivery and signs off.",
       },
     ],
   },
@@ -2078,6 +1968,9 @@ window.SANGGUP_TRACKS = [
       { label: "Falsehoods Programmers Believe About Geography", url: "https://ctemm.me/falsehoods/geography/" },
       { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
       { label: "Falsehoods Programmers Believe About Names (Patrick McKenzie)", url: "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" },
+      { label: "How to deal with money in software (cs-syd.eu)", url: "https://cs-syd.eu/posts/2022-08-22-how-to-deal-with-money-in-software" },
+      { label: "Wikipedia: Mars Climate Orbiter", url: "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" },
+      { label: "Awesome Falsehood: the curated falsehoods list", url: "https://github.com/kdeldycke/awesome-falsehood" },
     ],
     stages: [
       {
@@ -2099,22 +1992,40 @@ window.SANGGUP_TRACKS = [
           "Write three assumptions about places or addresses that feel obviously true. For each, find the breaking case, such as a place with no street address or two towns sharing a name in one country. Sketch the smallest example that shows the break and what data you would store instead.",
       },
       {
-        id: "cd3",
-        kind: "practice",
-        title: "Write your own failing example",
-        lesson:
-          "The skill under both lists is the same: state the assumption out loud, build the smallest case that falsifies it, and only then fix it. The failing example is the proof you understood the bug; skipping it is how fixes create the next falsehood.",
-        practice:
-          "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
-      },
-      {
         id: "cd5",
         kind: "practice",
-        title: "Break a person with names",
+        title: "Break a form with names",
         lesson:
           "The original falsehoods list was about people's names: everyone has exactly one canonical full name, names fit in ASCII, a name is a first name plus a last name, names never change. All wrong. Systems that assume them reject real people at the form field, and anything someone tells you is their name is, by definition, an appropriate identifier for them.",
         practice:
           "Invent three fictional people whose names break the usual assumptions, such as one name only, a name with characters outside ASCII, or a name that changed last year. For each, write which common form field would reject them and what the field should accept instead.",
+      },
+      {
+        id: "cd6",
+        kind: "practice",
+        title: "Break a price with money",
+        lesson:
+          "Money looks like a number and is not one. Floating-point types cannot even hold 0.1 exactly, so 0.1 + 0.1 + 0.1 silently becomes 0.30000000000000004; currencies have different smallest units, symbols repeat across countries, and rounding rules differ by context. Software that treats a price as an ordinary decimal creates or destroys real money in rounding errors. Store minor units as integers, and decide the rounding rule before you calculate.",
+        practice:
+          "Take a fictional price of 0.1 in any currency. Write what 0.1 + 0.1 + 0.1 gives in floating point, then rewrite the calculation in integer minor units. Finish with one line: which rounding rule applies when you split a bill three ways.",
+      },
+      {
+        id: "cd7",
+        kind: "practice",
+        title: "Break a measurement with units",
+        lesson:
+          "Numbers in code carry invisible units, and mixing them is catastrophic: NASA lost the Mars Climate Orbiter in 1999 because one team used pound-force seconds where another used newton seconds. The falsehoods are familiar: every length is in meters, every weight in kilograms, every rate per the same hour. The fix is boring and absolute: name the unit everywhere the number lives.",
+        practice:
+          "Invent a fictional sensor that reports a speed. Write three ways its number could be misread, such as km per hour versus meters per second. Then rewrite the variable name and the comment so the mistake is impossible.",
+      },
+      {
+        id: "cd3",
+        kind: "practice",
+        title: "Write your own failing example",
+        lesson:
+          "The skill under these lists is the same: state the assumption out loud, build the smallest case that falsifies it, and only then fix it. The failing example is the proof you understood the bug; skipping it is how fixes create the next falsehood.",
+        practice:
+          "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
       },
       {
         id: "cd4",
@@ -2130,25 +2041,22 @@ window.SANGGUP_TRACKS = [
   {
     id: "work", short: "Work", icon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2 M3 13h18"/>',
     title: "Work",
-    tagline: "Career moves and client work",
-    note: "Two paths: Career moves for employed work, Client work for independent consulting and freelancing.",
-    sources: [],
-    children: ["career", "clientwork"],
-    stages: [],
-  },
-  {
-    id: "career", parent: "work", short: "Career", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 17c.6-1.8 1.9-3 3.5-3s2.9 1.2 3.5 3 M15 9h4 M15 13h4"/>',
-    title: "Career moves",
-    tagline: "Present your work, interview well, choose your next step",
-    status: "prototype",
-    note:
-      "sanggup does not apply for jobs, write your CV for you or guarantee interviews or offers. Hiring practices vary by field and country; treat these exercises as general preparation, and get advice from people in your target field.",
+    tagline: "Career moves and client work in one path",
+    note: "Sanggup does not apply for jobs, find clients or do the work for you. Every application, client and decision is yours.",
     sources: [
       { label: "University of Pennsylvania Career Services: Write a Resume/CV", url: "https://careerservices.upenn.edu/channels/resume/" },
       { label: "University of Pennsylvania Career Services: Interview", url: "https://careerservices.upenn.edu/channels/interview/" },
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
       { label: "Yale Office of Career Strategy: Using AI in your job search", url: "https://ocs.yale.edu/channels/using-ai-job-search/" },
+      { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
+      { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
+      { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
+      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
+      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
+      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
+      { label: "Wikipedia: Cold calling", url: "https://en.wikipedia.org/wiki/Cold_calling" },
+      { label: "VanillaSoft: lead conversion study on follow-up persistency", url: "https://vanillasoft.com/resources/lead-conversion-study-telfer" },
     ],
     stages: [
       {
@@ -2161,13 +2069,40 @@ window.SANGGUP_TRACKS = [
           "List your five most convincing pieces of work with the outcome of each. Then draft or update a one-page CV or profile from that list, cutting anything it does not support.",
       },
       {
+        id: "cs1",
+        kind: "practice",
+        title: "Name the problem you solve",
+        lesson:
+          "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
+        practice:
+          "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
+      },
+      {
         id: "ca2",
         kind: "practice",
         title: "Tell achievement stories",
         lesson:
-          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Branding and creator and Client work.",
+          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Branding and creator and in this Work path, as case studies.",
         practice:
           "Write three STAR stories from your ca1 list: one about delivering, one about a problem you fixed, one about working with people. Say each aloud in under two minutes.",
+      },
+      {
+        id: "fr1",
+        kind: "practice",
+        title: "Pick one sellable service",
+        lesson:
+          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
+        practice:
+          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
+      },
+      {
+        id: "fr2",
+        kind: "practice",
+        title: "Assemble proof",
+        lesson:
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Branding and creator and elsewhere in this Work path.",
+        practice:
+          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
       {
         id: "ca3",
@@ -2179,13 +2114,49 @@ window.SANGGUP_TRACKS = [
           "Do one mock interview with a friend playing the interviewer, using your STAR stories. Write down their two sharpest questions and your five questions for a real interviewer.",
       },
       {
-        id: "ca5",
+        id: "cs2",
         kind: "practice",
-        title: "Manage up on purpose",
+        title: "Design one consultation",
         lesson:
-          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
+          "A consultation is a working session with a shape: understand the client's situation, give a recommendation, agree on next steps. Preparing your questions in advance is what separates advice from chat.",
         practice:
-          "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
+          "Write a one-page plan for a 60-minute consultation on your cs1 problem: five diagnostic questions, what the client leaves with (verbal advice, a short written summary or a plan), and how you will follow up.",
+      },
+      {
+        id: "cs3",
+        kind: "practice",
+        title: "Set expectations in writing",
+        lesson:
+          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in Network and community.",
+        practice:
+          "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
+      },
+      {
+        id: "fr3",
+        kind: "practice",
+        title: "Decide price and terms before you are asked",
+        lesson:
+          "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
+        practice:
+          "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
+      },
+      {
+        id: "fr5",
+        kind: "practice",
+        title: "Find clients: cold outreach, warmed up",
+        lesson:
+          "Cold calling means approaching potential clients who have had no prior contact with you. It reaches new people at low cost, but it is intrusive, has a high rejection rate, and many countries restrict it, for example with Do Not Call registries. Modern practice warms it up: work from a list of people who fit your service and dig to understand their situation before any contact. Shared skill: describing exactly who you serve is the segment stage in Branding and creator; first conversations are the Network and community path.",
+        practice:
+          "Write a list of ten imaginary potential clients who fit your service. For one of them, draft a four-sentence first contact that shows you understand their situation and asks one small question. Do not send anything.",
+      },
+      {
+        id: "fr6",
+        kind: "practice",
+        title: "Follow up without nagging",
+        lesson:
+          "A large study of sales interactions found persistency, structured follow-up, among the strongest predictors of a win, with the best outcomes when the first response came within about an hour and attempts were spaced across the first days. Following up is giving the decision another chance, not repeating the ask: each touch should add something useful. Decide your stop rule before you start.",
+        practice:
+          "Draft a three-touch follow-up plan for your draft contact: what each message adds, when you would send it, and after which attempt you stop and move on.",
       },
       {
         id: "ca6",
@@ -2215,6 +2186,33 @@ window.SANGGUP_TRACKS = [
           "List one task in your field that AI tools already do well and one judgment you would not hand to a tool. Then write one concrete learning step that moves you toward the judgment side, with a date.",
       },
       {
+        id: "ca5",
+        kind: "practice",
+        title: "Manage up on purpose",
+        lesson:
+          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
+        practice:
+          "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
+      },
+      {
+        id: "cs4",
+        kind: "milestone",
+        title: "Milestone: run one real consultation",
+        lesson:
+          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
+        milestone:
+          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
+      },
+      {
+        id: "fr4",
+        kind: "milestone",
+        title: "Milestone: deliver one real job",
+        lesson:
+          "A first real job, even a small or free one, teaches what no reading does: quoting, scope creep, delivery and asking to be paid. Indonesian freelancers should also learn their tax duties early; DJP publishes the rules for pekerja bebas.",
+        milestone:
+          "Complete one real freelance job from first message to delivery and payment, or agreed free delivery. The client or a mentor confirms the delivery and signs off.",
+      },
+      {
         id: "ca4",
         kind: "milestone",
         title: "Milestone: run one real loop",
@@ -2225,4 +2223,5 @@ window.SANGGUP_TRACKS = [
       },
     ],
   },
+
 ];

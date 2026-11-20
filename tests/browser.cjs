@@ -67,7 +67,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),5);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,7,/does not apply for jobs/],[/^Coding,/,4,/does not run your code/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Coding,/,6,/does not run your code/],[/^Work,/,15,/does not apply for jobs/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
@@ -80,7 +80,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),5);
  assert.equal(await page.getByRole('button',{name:'Request sign-off',exact:true}).count(),1);
  // every stage card on every path renders real content, never schema gaps like "undefined"
- for (const name of [/^Cooking,/,/^Cleaning & tidying,/,/^Decisions and priorities,/,/^Focus and habits,/,/^Projects and business,/,/^Disaster preparedness,/,/^First aid awareness,/,/^Network and community,/,/^Money and FIRE,/,/^Writing and journalism,/,/^Swimming,/,/^Driving,/,/^Languages,/,/^Music,/,/^Math,/,/^Chess,/,/^Branding and creator,/,/^Self care and calm,/,/^Public speaking,/,/^Presentation,/,/^Surveying people,/,/^Teaching and mentoring,/,/^Negotiation,/,/^Coding,/,/^Career moves,/,/^Client work,/]) {
+ for (const name of [/^Cooking,/,/^Cleaning & tidying,/,/^Decisions and priorities,/,/^Focus and habits,/,/^Projects and business,/,/^Disaster preparedness,/,/^First aid awareness,/,/^Network and community,/,/^Money and FIRE,/,/^Writing and journalism,/,/^Swimming,/,/^Driving,/,/^Languages,/,/^Music,/,/^Math,/,/^Chess,/,/^Branding and creator,/,/^Self care and calm,/,/^Public speaking,/,/^Presentation,/,/^Surveying people,/,/^Teaching and mentoring,/,/^Negotiation,/,/^Coding,/,/^Work,/]) {
   await page.goto(url);
   await openTile(page,name);
   const cards=await page.locator('.stage-card').allInnerTexts();
@@ -97,6 +97,9 @@ async function openTile(page,name){
  await page.getByRole('button',{name:/^Money and FIRE,/}).click();
  await page.locator('#path-title').waitFor();
  assert.equal(new URL(page.url()).hash,'#money');
+ await page.goto(url+'/#career');
+ await page.locator('#path-title').waitFor();
+ assert.match(await page.locator('#path-title').innerText(),/^Work/);
  await page.goto(url+'/#nope');
  await page.locator('.track-card:not(:disabled)').nth(24).waitFor();
  assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);
@@ -113,24 +116,19 @@ async function openTile(page,name){
  await page.getByRole('button',{name:/^Decisions and priorities,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),3);
  await page.locator('#back-to-tracks').click();
- await openTile(page,/^Client work,/);
- assert.equal(await page.locator('.stage-card.done').count(),2);
+ await openTile(page,/^Work,/);
+ assert.equal(await page.locator('.stage-card.done').count(),3);
  assert.match(await page.locator('.code-box').innerText(),/MERGE4/);
- await page.goto(url);
- await openTile(page,/^Career moves,/);
- assert.equal(await page.locator('.stage-card.done').count(),1);
- await page.goto(url);
- await openTile(page,/^Client work,/);
  await page.getByRole('button',{name:"I'm teaching"}).click();
  await page.locator('#code-input').fill('MERGE4');
  await page.getByRole('button',{name:'Find request'}).click();
  await page.getByRole('button',{name:'Sign off',exact:true}).click();
  await page.getByRole('button',{name:"I'm learning"}).click();
  await page.goto(url);
- await openTile(page,/^Client work,/);
- assert.equal(await page.locator('.stage-card.done').count(),3);
+ await openTile(page,/^Work,/);
+ assert.equal(await page.locator('.stage-card.done').count(),4);
  // shared subskills are labeled in both directions on the paths that practice them
- for (const [name,labelRe] of [[/^Decisions and priorities,/,/also practiced in Focus/],[/^Surveying people,/,/also practiced in Branding and creator/],[/^Client work,/,/segment stage in Branding and creator/],[/^Branding and creator,/,/Surveying people path/],[/^Projects and business,/,/Branding and creator, for marketing/],[/^Branding and creator,/,/KPI stage in Projects and business/],[/^Focus and habits,/,/home in Decisions and priorities/],[/^Branding and creator,/,/also practiced in Client work/],[/^Client work,/,/also practiced in Network and community/],[/^Network and community,/,/also practiced in Client work/],[/^Network and community,/,/also practiced in Teaching and mentoring/],[/^Teaching and mentoring,/,/also practiced in Network and community/],[/^Negotiation,/,/also practiced in Network and community/],[/^Network and community,/,/home in the Negotiation path/]]) {
+ for (const [name,labelRe] of [[/^Decisions and priorities,/,/also practiced in Focus/],[/^Surveying people,/,/also practiced in Branding and creator/],[/^Work,/,/segment stage in Branding and creator/],[/^Branding and creator,/,/Surveying people path/],[/^Projects and business,/,/Branding and creator, for marketing/],[/^Branding and creator,/,/KPI stage in Projects and business/],[/^Focus and habits,/,/home in Decisions and priorities/],[/^Branding and creator,/,/also practiced in the Work path|also practiced in Work/],[/^Work,/,/also practiced in Network and community/],[/^Network and community,/,/also practiced in the Work path/],[/^Network and community,/,/also practiced in Teaching and mentoring/],[/^Teaching and mentoring,/,/also practiced in Network and community/],[/^Negotiation,/,/also practiced in Network and community/],[/^Network and community,/,/home in the Negotiation path/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-detail, #track-detail, main, body').first().innerText(),labelRe);
