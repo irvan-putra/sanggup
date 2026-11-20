@@ -23,4 +23,8 @@ if not best:
     sys.exit("no node matching: " + target)
 b = re.search(r'bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', best)
 x1, y1, x2, y2 = map(int, b.groups())
-print((x1 + x2) // 2, (y1 + y2) // 2)
+if x2 <= x1 or y2 <= y1:
+    # off-screen WebView nodes report zero or inverted garbage bounds
+    print("0 0")
+else:
+    print((x1 + x2) // 2, (y1 + y2) // 2)
