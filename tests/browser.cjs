@@ -25,7 +25,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.track-card:disabled').count(),0);
  assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);
  await page.getByRole('button',{name:/^Cooking,/}).click();
- assert.equal(await page.locator('.stage-card.locked').count(),5);
+ assert.equal(await page.locator('.stage-card.locked').count(),6);
  await page.getByRole('button',{name:'I did it',exact:true}).click();
  await page.getByRole('button',{name:'I did it',exact:true}).click();
  await page.getByRole('button',{name:'Request sign-off',exact:true}).click();
@@ -41,7 +41,7 @@ async function openTile(page,name){
  await page.getByRole('button',{name:'Ask for more practice'}).click();
  await page.getByRole('button',{name:"I'm learning"}).click();
  assert.equal(await page.getByRole('button',{name:'Request sign-off',exact:true}).count(),1);
- assert.equal(await page.locator('.stage-card.locked').count(),3);
+ assert.equal(await page.locator('.stage-card.locked').count(),4);
  await page.getByRole('button',{name:'Request sign-off',exact:true}).click();
  await page.getByRole('button',{name:"I'm teaching"}).click();
  await page.locator('.request-row').click();
@@ -56,19 +56,20 @@ async function openTile(page,name){
  assert.ok((await page.locator('#archive-list').innerText()).includes(note));
  await page.getByRole('button',{name:'I did it',exact:true}).click();
  await page.getByRole('button',{name:'I did it',exact:true}).click();
+ await page.getByRole('button',{name:'I did it',exact:true}).click();
  await page.getByRole('button',{name:'Request sign-off',exact:true}).click();
  await page.getByRole('button',{name:"I'm teaching"}).click();
  await page.locator('.request-row').click();
  await page.getByRole('button',{name:'Sign off',exact:true}).click();
  await page.getByRole('button',{name:"I'm learning"}).click();
- assert.equal(await page.locator('.stage-card.done').count(),6);
- assert.equal(await page.locator('#archive-list .archive-row').count(),6);
+ assert.equal(await page.locator('.stage-card.done').count(),7);
+ assert.equal(await page.locator('#archive-list .archive-row').count(),7);
  await page.reload();
  assert.match(await page.locator('#path-title').innerText(),/Cooking/);
- assert.equal(await page.locator('.stage-card.done').count(),6);
+ assert.equal(await page.locator('.stage-card.done').count(),7);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,15,/does not contact anyone/],[/^Money and FIRE,/,11,/not personal financial/],[/^Writing and journalism,/,11,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,5,/General method/],[/^Music,/,5,/Instrument-neutral/],[/^Math,/,6,/problem-solving method/],[/^Chess,/,6,/Beginner chess/],[/^Branding and creator,/,17,/does not write your profiles/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,5,/cannot listen to your talk/],[/^Presentation,/,5,/does not make your slides/],[/^Surveying people,/,5,/does not run surveys/],[/^Teaching and mentoring,/,6,/does not teach for you/],[/^Negotiation,/,5,/does not negotiate for you/],[/^Coding,/,7,/does not run your code/],[/^Career,/,21,/does not apply for jobs/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,12,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,15,/does not contact anyone/],[/^Money and FIRE,/,11,/not personal financial/],[/^Writing and journalism,/,11,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,5,/General method/],[/^Music,/,5,/Instrument-neutral/],[/^Math,/,6,/problem-solving method/],[/^Chess,/,6,/Beginner chess/],[/^Branding and creator,/,17,/does not write your profiles/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,5,/cannot listen to your talk/],[/^Presentation,/,5,/does not make your slides/],[/^Surveying people,/,5,/does not run surveys/],[/^Teaching and mentoring,/,6,/does not teach for you/],[/^Negotiation,/,5,/does not negotiate for you/],[/^Coding,/,7,/does not run your code/],[/^Career,/,21,/does not apply for jobs/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);

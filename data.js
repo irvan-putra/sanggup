@@ -58,6 +58,15 @@ window.SANGGUP_TRACKS = [
           "A fictional AI recipe for fried rice says to cook 500 grams of rice in 200 milliliters of water for 5 minutes. Write what looks wrong, what you would compare it against, and the corrected quantities you would actually try first.",
       },
       {
+        id: "c7",
+        kind: "practice",
+        title: "Cook for yourself for a week",
+        lesson:
+          "Cooking for one for a week is a planning skill more than a recipe skill: a short list of simple meals you already know, ingredients that overlap so nothing spoils, and one bigger batch that becomes tomorrow's lunch. Keep the food-safety habits from earlier stages: leftovers cool fast, go in the fridge, and get eaten within a few days. The goal is seven days without panic-buying or wasting food, not seven new recipes.",
+        practice:
+          "Plan seven days of dinners for one, real or on paper: pick four simple meals you can already make, note which ingredients repeat across them, and mark which meal is a batch that covers two days. Then write your shopping list from the plan, grouped by how soon each item spoils.",
+      },
+      {
         id: "c5",
         kind: "milestone",
         title: "Milestone: cook a full meal",
@@ -240,7 +249,12 @@ window.SANGGUP_TRACKS = [
       { label: "Pomodoro Technique: what it is", url: "https://www.pomodorotechnique.com/what-is-the-pomodoro-technique/" },
       { label: "NIH NICHD: The Pomodoro Technique", url: "https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique:+An+Effective+Time+Management+Tool" },
       { label: "James Clear: Atomic Habits summary", url: "https://jamesclear.com/atomic-habits-summary" },
-      { label: "James Clear: How to start new habits that stick", url: "https://jamesclear.com/three-steps-habit-change" },
+      { label: "James Clear: How to start new habits that stick", url: "https://jamesclear.com/three-steps-habit-change" },      { label: "Getting Things Done: the method", url: "https://gettingthingsdone.com/what-is-gtd/" },
+      { label: "Building a Second Brain", url: "https://www.buildingasecondbrain.com/" },
+      { label: "Wikipedia: Zettelkasten", url: "https://en.wikipedia.org/wiki/Zettelkasten" },
+      { label: "Wikipedia: Spaced repetition", url: "https://en.wikipedia.org/wiki/Spaced_repetition" },
+      { label: "Wikipedia: Method of loci", url: "https://en.wikipedia.org/wiki/Method_of_loci" },
+
     ],
     stages: [
       {
@@ -305,6 +319,51 @@ window.SANGGUP_TRACKS = [
           "If the habit is not sticking, change the cue, the size or the place before blaming yourself. Clear's point is that the system matters more than a one-time goal.",
         practice:
           "Look at your three days. Change one thing about the cue, the size or the reward, and keep going for another three days.",
+      },
+      {
+        id: "h5",
+        kind: "practice",
+        title: "Capture everything, clarify next actions",
+        lesson:
+          "Getting Things Done is a method for clearing your head: capture every open loop into a trusted list instead of holding it in memory, then clarify each item into the very next physical action. A weekly review keeps the lists current. The method works on paper; no app is required.",
+        practice:
+          "Do a ten-minute capture: write down everything on your mind, real or fictional, without organizing. Then take three items and write the next concrete action for each, starting with a verb. Finish by scheduling one weekly review moment.",
+      },
+      {
+        id: "h6",
+        kind: "practice",
+        title: "Keep a second brain of notes",
+        lesson:
+          "Building a Second Brain, Tiago Forte's method, treats notes as a system outside your head: capture what resonates, organize by actionability, distill to the essentials, and express by reusing notes in real output. The point is not hoarding information but having your past thinking available when you make things.",
+        practice:
+          "Take one article or idea you found interesting recently, real or imagined. Write a note in your own words: the core idea in two sentences, why it matters to you, and one place you could use it. Then write a two-line distilled version you could find useful a year from now.",
+      },
+      {
+        id: "h7",
+        kind: "practice",
+        title: "Link small notes, Zettelkasten style",
+        lesson:
+          "A Zettelkasten is a card file of small notes, each holding one idea, linked to related notes by references or tags. The links are the value: new ideas connect to old ones, and clusters of linked notes become material for writing. Paper cards work fine; the method predates computers.",
+        practice:
+          "Write three small notes, real or fictional, each with one idea and a title. For each note, add one link to another note with a line about why they connect. Then write one sentence about the idea that only became visible because of the links.",
+      },
+      {
+        id: "h8",
+        kind: "practice",
+        title: "Remember with spaced repetition",
+        lesson:
+          "Spaced repetition means reviewing information at increasing intervals, just before you would forget it, which beats cramming for long-term memory. Flashcards are the classic tool: a question on one side, an answer on the other, reviewed on a schedule. Paper cards and a box work as well as any app.",
+        practice:
+          "Make five paper flashcards for something you want to remember, real or fictional: a question or prompt on the front, a short answer on the back. Review them today, then plan reviews for tomorrow, three days, and a week, and note which cards were hardest.",
+      },
+      {
+        id: "h9",
+        kind: "practice",
+        title: "Build a small mind palace",
+        lesson:
+          "The method of loci, the mind palace, is an ancient memory technique: place the things you want to remember at spots along a route you know well, like the rooms of your home, then walk the route in your mind to recall them. Vivid, unusual images stick better than plain ones.",
+        practice:
+          "Pick a familiar route, real or imagined, with six spots in a fixed order. Place six fictional shopping items along it as vivid images, then write the list from memory by walking the route. Check what you missed and make those images stranger.",
       },
     ],
   },
