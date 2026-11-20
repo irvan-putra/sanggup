@@ -359,6 +359,9 @@ window.SANGGUP_TRACKS = [
           "Getting Things Done is a method for clearing your head: capture every open loop into a trusted list instead of holding it in memory, then clarify each item into the very next physical action. A weekly review keeps the lists current. The method works on paper; no app is required.",
         practice:
           "Do a ten-minute capture: write down everything on your mind, real or fictional, without organizing. Then take three items and write the next concrete action for each, starting with a verb. Finish by scheduling one weekly review moment.",
+        tools: [
+          { label: "intodo", url: "https://github.com/irvan-putra/intodo", note: "Android widget, test build: todos and reminders on your home screen" },
+        ],
       },
       {
         id: "h6",
@@ -422,6 +425,9 @@ window.SANGGUP_TRACKS = [
           "Relying on a chatbot for every answer can quietly become a habit: asking before trying, accepting the first answer, being unable to explain it afterward. The check is simple: try first without AI, write your own judgment before asking, and make sure you can explain any answer with the chat closed. Setting boundaries, like AI-free tasks or hours, keeps the tool serving your thinking instead of replacing it. This is about habits, not a medical diagnosis: if use feels compulsive and distressing, that deserves the same care as any other stubborn habit, including professional support.",
         practice:
           "Pick one question you would normally ask a chatbot today, real or fictional. Write your own answer or judgment first, in full sentences. Only then compare with the AI answer, note where yours held up and where it did not, and practice explaining the final answer out loud without looking.",
+        tools: [
+          { label: "menit", url: "https://github.com/irvan-putra/menit", note: "Android: estimates your time in AI apps; needs Usage Access, a capability ordinary web pages do not have" },
+        ],
       },
     ],
   },
@@ -936,6 +942,9 @@ window.SANGGUP_TRACKS = [
           "Put yourself in different settings: events, communities, online groups. Ask questions about the other person, listen, and follow up afterwards. Quality of conversations matters more than the number of people you meet.",
         practice:
           "Have one real conversation with someone new or someone you barely know. Afterward write one thing you learned about them and one follow-up you can offer.",
+        tools: [
+          { label: "kapan", url: "https://vanipy.com/kapan/", note: "web: developer events in Jakarta and Jogja, a way to find real rooms to practice in" },
+        ],
       },
       {
         id: "n4",
@@ -1585,6 +1594,11 @@ window.SANGGUP_TRACKS = [
           "Pick one instrument, including your voice, and one short piece you love and can reach. Berklee's practice tips stress setting realistic short and long goals, so choose something small enough to finish.",
         practice:
           "Pick the instrument and a piece of 8 to 16 bars. Find a recording and a score, tab or teacher for it.",
+        tools: [
+          { label: "nada", url: "https://vanipy.com/nada/", note: "web: turns a small JSON recipe into a .mid you can practice along with" },
+          { label: "denting", url: "https://vanipy.com/denting/", note: "web, draft: direct a piece with everyday words, export a real .mid" },
+          { label: "tengok", url: "https://github.com/irvan-putra/tengok", note: "Android: opens .mid and other files offline" },
+        ],
       },
       {
         id: "u_2",
@@ -2053,6 +2067,9 @@ window.SANGGUP_TRACKS = [
           "Sleep and movement are the two levers with the largest everyday effect on mood and focus. Regular hours beat occasional long sleeps; a daily walk beats a weekly heroic workout you skip.",
         practice:
           "For three days, keep a fixed wake-up time and take one 20-minute walk. Note your energy at midday each day.",
+        tools: [
+          { label: "kokok", url: "https://github.com/irvan-putra/kokok", note: "Android: alarms that ring fully offline once set; OS alarm scheduling is a capability ordinary web pages do not have" },
+        ],
       },
       {
         id: "sc3",
@@ -2502,6 +2519,9 @@ window.SANGGUP_TRACKS = [
           "Programmers keep a famous list of falsehoods about time: days always have 24 hours, timezones never change, a minute is always 60 seconds. Real calendars violate all of these, through daylight-saving switches, leap seconds and governments moving offsets. Code that assumes the falsehood works for months, then breaks for one user in one week of the year.",
         practice:
           "Write three assumptions about time that feel obviously true. For each, describe a concrete case that breaks it, such as a meeting at 02:30 on the night clocks spring forward. Then write the smallest code sketch that would show the break, and what you would use instead.",
+        tools: [
+          { label: "daya", url: "https://vanipy.com/daya/", note: "web, prototype: generates a small app from a recipe, ready-made material to practice breaking" },
+        ],
       },
       {
         id: "cd2",
@@ -2556,6 +2576,9 @@ window.SANGGUP_TRACKS = [
           "Code review is the profession's feedback loop: another developer reads your change and questions what you stopped seeing. AI review tools catch mechanical issues quickly, but a human reviewer judges whether the code solves the right problem in a way the team can maintain. Ask for review on a specific change, apply the feedback, and expect the exchange to be normal, not personal.",
         practice:
           "Take a small piece of code you wrote, real or a fifty-line fictional script. Ask a person who codes to review that specific piece, or compare against a chatbot's review if nobody is available. List the comments, apply one, and write what the reviewer saw that you had missed.",
+        tools: [
+          { label: "bedah", url: "https://vanipy.com/bedah/", note: "web, prototype: lays a change out on a review canvas you can walk through with your reviewer" },
+        ],
       },
       {
         id: "cd4",

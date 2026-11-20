@@ -114,6 +114,7 @@ main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
 .stage-card.locked .stage-num { background: var(--muted); }
 .kind { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .task { background: var(--paper); border-radius: 8px; padding: 0.55rem 0.7rem; }
+.tools-line { font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.6rem; }
 
 button.primary {
   background: var(--accent);

@@ -174,6 +174,20 @@ function renderPath(track) {
       html += `<p class="task"><strong>Do it:</strong> ${stage.milestone}</p>`;
     }
 
+    if (Array.isArray(stage.tools) && stage.tools.length) {
+      const items = stage.tools
+        .map((t) => {
+          const name = t.url
+            ? `<a href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`
+            : t.label;
+          return t.note ? `${name} <span class="muted">(${t.note})</span>` : name;
+        })
+        .join(" · ");
+      html +=
+        `<p class="tools-line"><strong>Tools to try, optional:</strong> ${items}. ` +
+        `Never required: the exercise above works with pen and paper.</p>`;
+    }
+
     if (st === "open" && stage.kind === "practice") {
       html += `<button class="primary" data-act="finish" data-id="${stage.id}">I did it</button>`;
     } else if (st === "open" && stage.kind === "milestone") {
