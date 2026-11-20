@@ -1,26 +1,26 @@
-# Sanggup 0.1.3 test APK
+# Sanggup 0.1.4 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
-- All 30 starter learning paths are bundled offline. The app requests no Android permissions.
+- All 25 learning paths are bundled offline, on a 5x5 grid. The app requests no Android permissions.
 - Original Sang frame animation in the native header, plus a home-screen learning-streak widget using native ViewFlipper frames.
 - Local practice logging counts at most one streak day per local calendar day. It does not prove skill competency.
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
 
-## Changes since 0.1.2
+## Changes since 0.1.3
 
-The bundled paths go from 25 to 30 with the same five-column grid, now six rows. New paths: Self care, Public speaking, Presentation, Journalism and reporting (one combined path), Surveying people, Teaching and mentoring, and Negotiation. Consulting and Freelancing are merged into Client work, and Prioritizing and Deciding into Decisions and priorities; existing stage progress is preserved because progress is keyed by stage id. Common working frameworks (the 4D mnemonic, RACI, STAR, KPI/OKR, SOP and continuity planning) are folded into the relevant existing paths' lessons rather than added as separate paths. Each path follows the existing model: ordered practice stages, a stated limits note, public sources, and practical milestones that need instructor sign-off. No feature, permission or signing changes; the widget, streak and animation are unchanged from 0.1.2.
+The grid goes from 30 tiles to 25 by merging overlapping paths, with no content cut: FIRE moves into Money; Content creator into Branding; Journalism and reporting into Writing; Community building into Network; Habits into Focus; Calm into Self care; Business operations into Projects. Every stage keeps its id, so existing stage progress and pending sign-off requests carry over. Each merged path keeps both paths' limits notes. A new Career moves path (evidence-based CV, STAR stories, interview practice, a real application loop) and the business frameworks (OKR, KPI, SOP, RACI, continuity) are included for the first time in the APK, as are the bidirectional "Shared skill" labels that name where else a skill is practiced. Nine paths gain deeper stages, including closing hands-on milestones for First aid, Swimming and Driving that record attendance or practice only, never qualification. Cooking gains the limits note and source it lacked. No feature, permission or signing changes; the widget, streak and animation are unchanged from 0.1.3.
 
-Update over 0.1.2 with the same package and release key. Do not uninstall or clear storage, which would remove local progress.
+Update over 0.1.3 with the same package and release key. Do not uninstall or clear storage, which would remove local progress.
 
 ## Verification and limits
 
-The debug build loaded all 30 skill tiles on an Android 14 emulator. A test clicked the actual web practice-log button and checked that the native streak and hosted widget became 1 day. A real AppWidgetHostView test observed all six animation frames advancing and saved inspected screenshots. A signed 0.1.2-to-0.1.3 in-place upgrade check runs after publication via the Signed upgrade data retention workflow. Result for this release: passed, retaining a synthetic 1-day practice streak with no uninstall or data clear (workflow run 44693769238, 2026-11-20 07:19 UTC). This note previously asserted that result before the check had completed; it is corrected here. Future releases must state the result only after the run completes and must not deliver the APK to people before it passes.
+The debug build loaded all 25 skill tiles on an Android 14 emulator. A real AppWidgetHostView test observed all 25 tiles and the animation frames advancing. The release workflow checks the package, version, lack of permissions, signing certificate and checksum, and attempts a launch smoke of the signed asset. A successful process launch alone does not prove the complete app or widget flow on a physical phone.
 
-This hosted-widget test is not proof of placement or animation on Pixel Launcher, Samsung One UI or every launcher. Widget resizing, long-running power behaviour and different Android versions remain untested. Widget refresh is OS-scheduled, so the displayed streak can lag a date change until its next refresh or app interaction.
+A signed 0.1.3-to-0.1.4 in-place upgrade check runs after publication via the Signed upgrade data retention workflow. Its result is stated here only after the run completes; do not deliver this APK to people before it passes. Result: pending at publication time.
 
-The release workflow checks the package, version, lack of permissions, signing certificate and checksum, and attempts a launch smoke of the signed asset. A successful process launch alone does not prove the complete app or widget flow on a physical phone.
+This hosted-widget test is not proof of placement or animation on Pixel Launcher, Samsung One UI or every launcher. Widget resizing, long-running power behaviour and different Android versions remain untested. Widget refresh is OS-scheduled, so the displayed streak can lag a date change until its next refresh or app interaction. The widget emulator test has failed intermittently in CI with two distinct one-off environment errors and passed on a single rerun each time; the cause is unproven.
 
 The learning paths are general education. Swimming, driving, first aid and rescue require appropriate hands-on instruction and supervision. Completing or signing off a demo stage is not a qualification.
 
