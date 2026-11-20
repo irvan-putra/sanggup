@@ -8,17 +8,18 @@ Live prototype: https://vanipy.com/sanggup/
 
 ## What this is
 
-A prototype (0.2.0) with working paths and two roles. The paths are Cooking
-(five stages, with practical milestones), Cleaning & tidying (including KonMari
-and other approaches), Decisions and priorities, Habits, Focus, Projects
-(Kanban and sprints), Calm & meditation, Disaster preparedness (Indonesia
-focus, including continuity basics), First aid awareness, Networking,
-Budgeting & personal finance (Indonesia focus), FIRE and Writing a book, plus
-Personal branding, Client work (consulting and freelancing), Community
-building (including sponsorship, delegation and common organizing tools),
-Content creator, Self care, Public speaking, Presentation, Journalism and
-reporting, Surveying people, Teaching and mentoring, Negotiation,
-Business operations and Career moves. Each path lists its public sources and
+A prototype (0.2.0) with working paths and two roles, on a 5x5 grid of 25
+paths. The paths are Cooking (five stages, with practical milestones),
+Cleaning & tidying (including KonMari and other approaches), Decisions and
+priorities, Focus and habits, Projects and business (Kanban and sprints,
+plus OKR, KPI, SOP, RACI and continuity basics), Self care and calm,
+Disaster preparedness (Indonesia focus, including continuity basics),
+First aid awareness, Network and community (including sponsorship,
+delegation and common organizing tools), Money and FIRE (Indonesia focus),
+Writing and journalism, Swimming, Driving, Languages, Music, Math, Chess,
+Branding and creator, Client work (consulting and freelancing),
+Public speaking, Presentation, Surveying people, Teaching and mentoring,
+Negotiation and Career moves. Each path lists its public sources and
 states its limits.
 The roles:
 
@@ -36,7 +37,7 @@ path is awareness plus how to ask for hands-on training; it does not qualify
 anyone. No path gives personal advice or makes decisions for you.
 
 Swimming, driving, languages, music, math and chess now have starter paths
-too, so all 32 skills are open. Swimming and driving cover water safety, the
+too, so all 25 skills are open. Swimming and driving cover water safety, the
 Indonesian licence path and how to find proper instruction only. For skills
 like swimming and driving the model is: preparation and reflection in the app, practical milestones with real
 instruction. No quiz will ever claim someone is safe to swim or drive.

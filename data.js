@@ -1,5 +1,5 @@
 // Skill content for the sanggup prototype.
-// All 32 tracks have starter paths (merges applied). Each path states its own limits.
+// All 25 tracks have starter paths (merges applied). Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -155,7 +155,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Urgent versus important",
         lesson:
-          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest. Shared skill: the same 4D sort is also practiced in Focus, for triaging interruptions.",
+          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest. Shared skill: the same 4D sort is also practiced in Focus and habits, for triaging interruptions.",
         practice:
           "Sort your brain dump into the four groups. Notice how many items felt urgent but did not matter much.",
       },
@@ -216,17 +216,46 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "habits", short: "Habits", icon: '<path d="M4 12a8 8 0 0 1 14-5 M18 3v4h-4 M20 12a8 8 0 0 1-14 5 M6 21v-4h4"/>',
-    title: "Habits",
-    tagline: "Build small habits that last",
+    id: "focus", short: "Focus", icon: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12h.01"/>',
+    title: "Focus and habits",
+    tagline: "Work in short, protected blocks",
     status: "prototype",
     note:
-      "Independent exercises inspired by ideas in James Clear's book Atomic Habits. This is not an official course and is not endorsed by the author or publisher. Summaries are written in our own words from his public summary page.",
+      "Independent practice based on the publicly described Pomodoro Technique by Francesco Cirillo. Not an official course; Pomodoro is a registered mark of its owner. General time-management practice, not advice for attention or health conditions.",
     sources: [
+      { label: "Pomodoro Technique: what it is", url: "https://www.pomodorotechnique.com/what-is-the-pomodoro-technique/" },
+      { label: "NIH NICHD: The Pomodoro Technique", url: "https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique:+An+Effective+Time+Management+Tool" },
       { label: "James Clear: Atomic Habits summary", url: "https://jamesclear.com/atomic-habits-summary" },
       { label: "James Clear: How to start new habits that stick", url: "https://jamesclear.com/three-steps-habit-change" },
     ],
     stages: [
+      {
+        id: "f1",
+        kind: "practice",
+        title: "One task, one block",
+        lesson:
+          "The Pomodoro Technique, developed by Francesco Cirillo in the late 1980s, uses a kitchen timer to split work into intervals, typically 25 minutes, with short breaks. Pick one task, set the timer, and work only on that task until it rings.",
+        practice:
+          "Choose one task. Set a timer for 25 minutes, work only on it, then take a short break away from your screen.",
+      },
+      {
+        id: "f2",
+        kind: "practice",
+        title: "Handle interruptions",
+        lesson:
+          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break. When a request interrupts you, triage it with the 4D sort: Do, Delegate, Delay, Delete. Shared skill: the 4D mnemonic has its home in Decisions and priorities.",
+        practice:
+          "Do another block with your phone out of reach. Keep a paper list of every urge to switch and what it was about.",
+      },
+      {
+        id: "f3",
+        kind: "practice",
+        title: "Fit the block to you",
+        lesson:
+          "25 minutes is a starting point, not a law. Longer or shorter blocks may suit your task or energy. Track how many blocks a task actually takes so your plans get more realistic.",
+        practice:
+          "Try one block with a different length. Write which length felt right and how many blocks your task took.",
+      },
       {
         id: "h1",
         kind: "practice",
@@ -266,49 +295,8 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "focus", short: "Focus", icon: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12h.01"/>',
-    title: "Focus",
-    tagline: "Work in short, protected blocks",
-    status: "prototype",
-    note:
-      "Independent practice based on the publicly described Pomodoro Technique by Francesco Cirillo. Not an official course; Pomodoro is a registered mark of its owner. General time-management practice, not advice for attention or health conditions.",
-    sources: [
-      { label: "Pomodoro Technique: what it is", url: "https://www.pomodorotechnique.com/what-is-the-pomodoro-technique/" },
-      { label: "NIH NICHD: The Pomodoro Technique", url: "https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique:+An+Effective+Time+Management+Tool" },
-    ],
-    stages: [
-      {
-        id: "f1",
-        kind: "practice",
-        title: "One task, one block",
-        lesson:
-          "The Pomodoro Technique, developed by Francesco Cirillo in the late 1980s, uses a kitchen timer to split work into intervals, typically 25 minutes, with short breaks. Pick one task, set the timer, and work only on that task until it rings.",
-        practice:
-          "Choose one task. Set a timer for 25 minutes, work only on it, then take a short break away from your screen.",
-      },
-      {
-        id: "f2",
-        kind: "practice",
-        title: "Handle interruptions",
-        lesson:
-          "Distractions will come, from your phone and from your own mind. Write the interruption down on a scrap of paper and go back to the task, then deal with it during a break. When a request interrupts you, triage it with the 4D sort: Do, Delegate, Delay, Delete. Shared skill: the 4D mnemonic has its home in Decisions and priorities.",
-        practice:
-          "Do another block with your phone out of reach. Keep a paper list of every urge to switch and what it was about.",
-      },
-      {
-        id: "f3",
-        kind: "practice",
-        title: "Fit the block to you",
-        lesson:
-          "25 minutes is a starting point, not a law. Longer or shorter blocks may suit your task or energy. Track how many blocks a task actually takes so your plans get more realistic.",
-        practice:
-          "Try one block with a different length. Write which length felt right and how many blocks your task took.",
-      },
-    ],
-  },
-  {
     id: "projects", short: "Projects", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16 M15 4v16"/>',
-    title: "Projects",
+    title: "Projects and business",
     tagline: "Kanban boards and sprints",
     status: "prototype",
     note:
@@ -318,6 +306,11 @@ window.SANGGUP_TRACKS = [
       { label: "Atlassian: What is Kanban", url: "https://www.atlassian.com/agile/kanban" },
       { label: "The Scrum Guide", url: "https://scrumguides.org/scrum-guide.html" },
       { label: "Scrum.org: The Scrum events", url: "https://www.scrum.org/learning-series/scrum-events/" },
+      { label: "Objectives and key results (OKR), overview", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results" },
+      { label: "Performance indicator (KPI), overview", url: "https://en.wikipedia.org/wiki/Performance_indicator" },
+      { label: "Standard operating procedure (SOP), overview", url: "https://en.wikipedia.org/wiki/Standard_operating_procedure" },
+      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
+      { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
     ],
     stages: [
       {
@@ -356,47 +349,50 @@ window.SANGGUP_TRACKS = [
         practice:
           "At the end of the week write what got done, what blocked you, and one change for the next sprint.",
       },
-    ],
-  },
-  {
-    id: "calm", short: "Calm", icon: '<path d="M3 14c3-4 6-4 9 0s6 4 9 0 M3 9c3-4 6-4 9 0s6 4 9 0"/>',
-    title: "Calm & meditation",
-    tagline: "Practice staying steady under stress",
-    status: "prototype",
-    note:
-      "General wellbeing practice, not medical or mental health treatment. If you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (112 or 119 in Indonesia).",
-    sources: [
-      { label: "NCCIH: Meditation and mindfulness, effectiveness and safety", url: "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
-      { label: "NCCIH: 8 things to know about meditation and mindfulness", url: "https://www.nccih.nih.gov/health/tips/8-things-to-know-about-meditation-and-mindfulness" },
-      { label: "Layanan 112, Indonesia emergency call", url: "https://layanan112.komdigi.go.id/tentang" },
-    ],
-    stages: [
       {
-        id: "m1",
+        id: "bu1",
         kind: "practice",
-        title: "Sit and notice",
+        title: "Set goals people can measure",
         lesson:
-          "Mindfulness means keeping your attention on the present moment without judging it. A simple form is to focus on your breathing. NCCIH says meditation is usually considered low risk, though about 8 percent of participants in one review reported a negative effect, most often anxiety or depression, so stop if it makes you feel worse.",
+          "An OKR pairs an Objective, a qualitative goal worth chasing, with a few Key Results, numbers that show whether you got there. The format came out of Intel and spread through Google. Vague goals drift; measurable key results force the conversation about what done means. Shared skill: OKRs are also practiced in Network and community, for member and sponsor benefits.",
         practice:
-          "Sit comfortably for three minutes and follow your breath. When your mind wanders, notice it and return. Stop if it feels bad.",
+          "Write one objective for your work, business or community for the next three months, with three key results you can actually measure. Check each: could a stranger tell whether it happened?",
       },
       {
-        id: "m2",
+        id: "bu2",
         kind: "practice",
-        title: "A small reset for stress",
+        title: "Watch the numbers that matter",
         lesson:
-          "Calm is easier to practice before a crisis than during one. Choose one short reset you can do anywhere, like slowing your breathing for a minute or naming five things you can see, and rehearse it when you are only mildly stressed.",
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and Client work.",
         practice:
-          "Use your chosen reset three times this week at small stress moments, like a long queue. Note whether it helped.",
+          "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
       },
       {
-        id: "m3",
+        id: "bu3",
         kind: "practice",
-        title: "Calm when it matters",
+        title: "Write it once, run it many times",
         lesson:
-          "In a real emergency, the first job is safety and calling for help, not meditating. A rehearsed reset can help you think. If the emergency is medical or dangerous, call emergency services. In Indonesia 112 is the national emergency number and 119 is for medical emergencies.",
+          "A standard operating procedure is the written version of a repeated task: steps clear enough that someone else gets the same result without asking you. Start with the tasks you repeat most or hand off first; the test of an SOP is whether it works without its author in the room. Shared skill: SOPs are also practiced in Network and community and Teaching and mentoring.",
         practice:
-          "Write a three-line personal crisis card: your reset, the numbers you would call, and one person you would contact.",
+          "Write a one-page SOP for one task you repeat. Hand it to someone and watch them run it from the note alone. Fix the two places they stumbled.",
+      },
+      {
+        id: "bu4",
+        kind: "practice",
+        title: "Who does what",
+        lesson:
+          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and Client work.",
+        practice:
+          "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
+      },
+      {
+        id: "bu5",
+        kind: "milestone",
+        title: "Milestone: keep it running",
+        lesson:
+          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the Disaster preparedness path.",
+        milestone:
+          "Draft a one-page continuity plan for a real activity you are responsible for: critical functions, one backup each, and a date to rehearse it. Someone who would have to execute it reviews the plan and signs off.",
       },
     ],
   },
@@ -540,7 +536,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Continuity beyond your household",
         lesson:
-          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it. Shared skill: continuity planning is also practiced in Business operations.",
+          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it. Shared skill: continuity planning is also practiced in Projects and business.",
         practice:
           "Pick one activity you are responsible for, at work or in a community. Write its three most critical functions and one backup for each: another person, another place or another way.",
       },
@@ -620,7 +616,7 @@ window.SANGGUP_TRACKS = [
   },
   {
     id: "network", short: "Network", icon: '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19a6 6 0 0 1 12 0 M15 15a5 5 0 0 1 6 4"/>',
-    title: "Networking",
+    title: "Network and community",
     tagline: "Build and keep personal and professional relationships",
     status: "prototype",
     note:
@@ -630,6 +626,12 @@ window.SANGGUP_TRACKS = [
       { label: "80,000 Hours: How to network, weak ties and a giving mindset", url: "https://80000hours.org/2015/03/how-to-network/" },
       { label: "Kellogg Insight: How to keep your network warm", url: "https://insight.kellogg.northwestern.edu/article/how-to-keep-your-network-warm" },
       { label: "ASU Thunderbird: Networking 101", url: "https://thunderbird.asu.edu/thought-leadership/insights/networking-101" },
+      { label: "Open Source Guides: Building Welcoming Communities", url: "https://opensource.guide/building-community/" },
+      { label: "Open Source Guides: Leadership and Governance", url: "https://opensource.guide/leadership-and-governance/" },
+      { label: "The Community Canvas", url: "https://community-canvas.org/" },
+      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
+      { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
+      { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
     ],
     stages: [
       {
@@ -677,11 +679,92 @@ window.SANGGUP_TRACKS = [
         practice:
           "Write a specific, polite ask you might make of someone you know well enough. Include an easy way for them to decline.",
       },
+      {
+        id: "cb1",
+        kind: "practice",
+        title: "Gather the interest",
+        lesson:
+          "A community starts from a shared interest, not from a platform or a chat group. The Community Canvas begins with identity: who the community is for and why they would gather. Find where those people already are before creating anything new.",
+        practice:
+          "Name the interest in one sentence. List 5 to 10 real people who care about it and one place they already gather, online or offline. Talk to three of them about what they would want from a community.",
+      },
+      {
+        id: "cb2",
+        kind: "practice",
+        title: "Run a first small event",
+        lesson:
+          "An event is a promise: a time, a place and a reason to come. Small and regular beats big and rare. A first meetup with three people who talk to each other is a success; a big event where nobody talks is not.",
+        practice:
+          "Organize one small gathering, even three people: pick the date, place and a simple format, invite people personally, and afterwards note who came, what worked and what to repeat.",
+      },
+      {
+        id: "cb3",
+        kind: "practice",
+        title: "Do a project together",
+        lesson:
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work and in Projects and business.",
+        practice:
+          "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
+      },
+      {
+        id: "cb4",
+        kind: "practice",
+        title: "Activate and engage members",
+        lesson:
+          "Joining is not participating. New members need a first action within days: a welcome, an introduction round, one small job. Keeping members engaged is rhythm plus roles: a predictable schedule of things worth showing up for, and small responsibilities that make members feel the community is partly theirs.",
+        practice:
+          "Write your welcome for a new member: the first thing they see and the first small thing you ask them to do. Then give one quiet member a small real role and check back on them.",
+      },
+      {
+        id: "cb5",
+        kind: "practice",
+        title: "Revitalize and delegate",
+        lesson:
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in Teaching and mentoring and Projects and business.",
+        practice:
+          "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
+      },
+      {
+        id: "cb6",
+        kind: "practice",
+        title: "Find sponsors and partners",
+        lesson:
+          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes.",
+        practice:
+          "List five local businesses or organizations whose audience overlaps yours. For each, write one thing you could offer: a logo on materials, a talk slot, a workshop, a product trial or a booth.",
+      },
+      {
+        id: "cb7",
+        kind: "practice",
+        title: "Negotiate and work together",
+        lesson:
+          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Shared skill: negotiation preparation, including knowing your walk-away alternative, has its home in the Negotiation path. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
+        practice:
+          "Draft a one-page sponsorship or partnership offer for one candidate from cb6: what you ask for, what they get in return, the dates, and a named contact on both sides.",
+      },
+      {
+        id: "cb8",
+        kind: "practice",
+        title: "Benefits for each group, with proof",
+        lesson:
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in Client work and in Projects and business.",
+        practice:
+          "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
+      },
+      {
+        id: "cb9",
+        kind: "milestone",
+        title: "Milestone: the community runs without you",
+        lesson:
+          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help. A much-retold heuristic, commonly attributed to German general Kurt von Hammerstein-Equord though its exact origin is unverified, sorts officers by bright or dull, lazy or diligent, and calls the dull-and-diligent combination dangerous. Treat it as folklore, not a rule: sorting people into smart and stupid is not how you choose leaders. The kernel worth keeping is to match responsibility to a person's judgment and energy, and not to mistake busyness for contribution.",
+        milestone:
+          "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
+      },
     ],
   },
   {
     id: "money", short: "Money", icon: '<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18 M16 14h2"/>',
-    title: "Budgeting & personal finance",
+    title: "Money and FIRE",
     tagline: "Budgeting, basic accounting and money habits, Indonesia focus",
     status: "prototype",
     note:
@@ -691,6 +774,10 @@ window.SANGGUP_TRACKS = [
       { label: "LPS FAQ: deposit guarantee (Indonesia)", url: "https://lps.go.id/faq/" },
       { label: "DJP: Panduan SPT Tahunan orang pribadi karyawan (Indonesia tax)", url: "https://pajak.go.id/sites/default/files/2026-09/Panduan%20Lengkap%20-%20SPT%20Tahunan%20Orang%20Pribadi%20Karyawan%20v24082026.pdf" },
       { label: "OpenStax: Basic accounting procedures", url: "https://openstax.org/books/introduction-business/pages/14-3-basic-accounting-procedures" },
+      { label: "Financial Planning Association: Updating the Trinity study", url: "https://www.financialplanningassociation.org/article/journal/AUG15-sustainable-retirement-spending-low-interest-rates-updating-trinity-study" },
+      { label: "Vanguard: FIRE investing and the 4% rule", url: "https://investor.vanguard.com/investor-resources-education/retirement/early-retirement" },
+      { label: "Saxo: FIRE, key considerations and risks", url: "https://www.home.saxo/learn/guides/trading-strategies/financial-independence-retire-early-fire-a-guide" },
+      { label: "Investor.gov: Early retirement seminars and scams", url: "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/early" },
     ],
     stages: [
       {
@@ -756,22 +843,6 @@ window.SANGGUP_TRACKS = [
         practice:
           "Open the DJP guide for your income type and list the documents you would need, such as your employer's withholding slip.",
       },
-    ],
-  },
-  {
-    id: "fire", short: "FIRE", icon: '<path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z"/>',
-    title: "FIRE",
-    tagline: "Financial independence, retire early: ideas and risks",
-    status: "prototype",
-    note:
-      "Education about an idea, not a plan for you. Outcomes are uncertain, past returns do not guarantee future ones, and no withdrawal rate is safe for everyone. It does not recommend investments or providers. For real decisions, talk to a licensed financial planner; check any adviser is licensed with OJK.",
-    sources: [
-      { label: "Financial Planning Association: Updating the Trinity study", url: "https://www.financialplanningassociation.org/article/journal/AUG15-sustainable-retirement-spending-low-interest-rates-updating-trinity-study" },
-      { label: "Vanguard: FIRE investing and the 4% rule", url: "https://investor.vanguard.com/investor-resources-education/retirement/early-retirement" },
-      { label: "Saxo: FIRE, key considerations and risks", url: "https://www.home.saxo/learn/guides/trading-strategies/financial-independence-retire-early-fire-a-guide" },
-      { label: "Investor.gov: Early retirement seminars and scams", url: "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/early" },
-    ],
-    stages: [
       {
         id: "r1",
         kind: "practice",
@@ -803,7 +874,7 @@ window.SANGGUP_TRACKS = [
   },
   {
     id: "write", short: "Writing", icon: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z M4 21V5 M8 7h7"/>',
-    title: "Writing a book",
+    title: "Writing and journalism",
     tagline: "From idea to finished first draft",
     status: "prototype",
     note:
@@ -813,6 +884,9 @@ window.SANGGUP_TRACKS = [
       { label: "Writer by Nature: How to write a book, steps and outline", url: "https://writerbynature.com/how-to-write-a-book/" },
       { label: "Literary Hub: David Yoon on creative endurance", url: "https://lithub.com/david-yoon-on-how-to-cultivate-creative-endurance/" },
       { label: "Writers Club of America: Steps for drafting your first version", url: "https://writersclubofamerica.com/2025/08/11/steps-for-drafting-your-first-version/" },
+      { label: "Society of Professional Journalists: Code of Ethics", url: "https://www.spj.org/spj-code-of-ethics/" },
+      { label: "Reuters: Journalistic Standards handbook", url: "https://handbook.reuters.com/" },
+      { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },
     ],
     stages: [
       {
@@ -859,6 +933,51 @@ window.SANGGUP_TRACKS = [
           "Revision comes after a full draft. Read it aloud, cut what does not serve the reader, then ask a trusted reader specific questions, such as where they got bored or confused.",
         practice:
           "Pick one chapter, revise it once, and give it to one trusted reader with two specific questions.",
+      },
+      {
+        id: "jr1",
+        kind: "practice",
+        title: "Truth and verification first",
+        lesson:
+          "The SPJ code opens with seeking truth and reporting it: accuracy over speed, verification over assumption. UNESCO's handbook treats disinformation as the core challenge of the craft. Journalism begins when you check something others only repeat.",
+        practice:
+          "Take one claim circulating in your feeds today. Trace it to its original source. Write down whether the original actually says what the claim says.",
+      },
+      {
+        id: "jr2",
+        kind: "practice",
+        title: "Independence and minimizing harm",
+        lesson:
+          "Journalists act independently: first loyalty to the public, conflicts of interest disclosed. They also minimize harm: reporting affects real people, so the public's need to know is weighed against the impact on sources and subjects, especially private and vulnerable people.",
+        practice:
+          "Write your own conflicts list: employers, communities, sponsors, friendships that could bias what you cover. Then take one story idea and note who could be harmed by it and one choice that reduces the harm without hiding the truth.",
+      },
+      {
+        id: "jr3",
+        kind: "practice",
+        title: "Gather from people and documents",
+        lesson:
+          "Reporting starts from a question, not a conclusion, and works from primary material: interviews, documents, data, your own observation. Reuters' standards stress accurate quotes and sourcing. One source is a claim; two independent sources start to be a fact.",
+        practice:
+          "Pick a real question near you. List two people you could interview and two documents or data sources you could read. Do one interview or read one primary document, take dated notes, and verify three facts against independent sources.",
+      },
+      {
+        id: "jr4",
+        kind: "practice",
+        title: "Structure the report and stand behind it",
+        lesson:
+          "A report is structured for the reader: most important facts first, attribution for every claim, context for why it matters. Accountability separates journalism from content: show your evidence where you can and correct errors quickly and visibly.",
+        practice:
+          "Write your own corrections policy in three sentences: how people can report an error to you, what you will do, and how fast.",
+      },
+      {
+        id: "jr5",
+        kind: "milestone",
+        title: "Milestone: file one report",
+        lesson:
+          "A finished piece carries verified facts, named sources and a structure a reader can follow. Short and accurate beats long and impressive.",
+        milestone:
+          "Write and share one short report, 300 to 500 words, answering a real question, with sources named. An editor, mentor or informed reader checks the facts and signs off.",
       },
     ],
   },
@@ -1231,7 +1350,7 @@ window.SANGGUP_TRACKS = [
   },
   {
     id: "branding", short: "Branding", icon: '<path d="m3 11 18-5v12L3 14v-3z M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
-    title: "Personal branding",
+    title: "Branding and creator",
     tagline: "Decide what you want to be known for, then show it",
     status: "prototype",
     note:
@@ -1242,6 +1361,9 @@ window.SANGGUP_TRACKS = [
       { label: "WVU Eberly career center: Personal Branding", url: "https://eberly.wvu.edu/career-center-new/resources/personal-branding" },
       { label: "Indeed: What Is Personal Branding?", url: "https://www.indeed.com/career-advice/career-development/what-is-personal-branding" },
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
+      { label: "Substack: How to start a newsletter and blog", url: "https://on.substack.com/p/start-a-substack-newsletter" },
+      { label: "YouTube for Creators: Start and manage your channel", url: "https://www.youtube.com/creators/get-started/" },
+      { label: "Medium Help Center: Write and publish a story", url: "https://help.medium.com/hc/en-us/articles/225168028-Write-and-publish-a-story" },
     ],
     stages: [
       {
@@ -1280,210 +1402,6 @@ window.SANGGUP_TRACKS = [
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
-    ],
-  },
-  {
-    id: "clientwork", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
-    title: "Client work",
-    tagline: "Sell what you know as advice or as delivered work",
-    status: "prototype",
-    note:
-      "sanggup does not find clients, set your prices, take payments or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences, and Indonesian freelancers have tax duties as pekerja bebas under DJP rules. This path covers the working method only and is general education.",
-    sources: [
-      { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
-      { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
-      { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
-      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
-      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
-      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
-    ],
-    stages: [
-      {
-        id: "cs1",
-        kind: "practice",
-        title: "Name the problem you solve",
-        lesson:
-          "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
-        practice:
-          "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
-      },
-      {
-        id: "fr1",
-        kind: "practice",
-        title: "Pick one sellable service",
-        lesson:
-          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
-        practice:
-          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
-      },
-      {
-        id: "fr2",
-        kind: "practice",
-        title: "Assemble proof",
-        lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Personal branding and Career moves.",
-        practice:
-          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
-      },
-      {
-        id: "cs2",
-        kind: "practice",
-        title: "Design one consultation",
-        lesson:
-          "A consultation is a working session with a shape: understand the client's situation, give a recommendation, agree on next steps. Preparing your questions in advance is what separates advice from chat.",
-        practice:
-          "Write a one-page plan for a 60-minute consultation on your cs1 problem: five diagnostic questions, what the client leaves with (verbal advice, a short written summary or a plan), and how you will follow up.",
-      },
-      {
-        id: "cs3",
-        kind: "practice",
-        title: "Set expectations in writing",
-        lesson:
-          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in Community building.",
-        practice:
-          "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
-      },
-      {
-        id: "fr3",
-        kind: "practice",
-        title: "Decide price and terms before you are asked",
-        lesson:
-          "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
-        practice:
-          "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
-      },
-      {
-        id: "cs4",
-        kind: "milestone",
-        title: "Milestone: run one real consultation",
-        lesson:
-          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
-        milestone:
-          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
-      },
-      {
-        id: "fr4",
-        kind: "milestone",
-        title: "Milestone: deliver one real job",
-        lesson:
-          "A first real job, even a small or free one, teaches what no reading does: quoting, scope creep, delivery and asking to be paid. Indonesian freelancers should also learn their tax duties early; DJP publishes the rules for pekerja bebas.",
-        milestone:
-          "Complete one real freelance job from first message to delivery and payment, or agreed free delivery. The client or a mentor confirms the delivery and signs off.",
-      },
-    ],
-  },
-  {
-    id: "community", short: "Community", icon: '<circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/><path d="M9.3 8.5l1.5 6 M14.7 8.5l-1.5 6 M9.5 7h5"/>',
-    title: "Community building",
-    tagline: "Gather people around an interest, then make it outlast you",
-    status: "prototype",
-    note:
-      "sanggup does not run your community, message members, organize events or negotiate with sponsors for you. Communities are real people; growth, conflict and burnout need judgment, not scripts. These exercises are general education drawn from published community-organizing guidance.",
-    sources: [
-      { label: "Open Source Guides: Building Welcoming Communities", url: "https://opensource.guide/building-community/" },
-      { label: "Open Source Guides: Leadership and Governance", url: "https://opensource.guide/leadership-and-governance/" },
-      { label: "The Community Canvas", url: "https://community-canvas.org/" },
-      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
-      { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
-      { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
-    ],
-    stages: [
-      {
-        id: "cb1",
-        kind: "practice",
-        title: "Gather the interest",
-        lesson:
-          "A community starts from a shared interest, not from a platform or a chat group. The Community Canvas begins with identity: who the community is for and why they would gather. Find where those people already are before creating anything new.",
-        practice:
-          "Name the interest in one sentence. List 5 to 10 real people who care about it and one place they already gather, online or offline. Talk to three of them about what they would want from a community.",
-      },
-      {
-        id: "cb2",
-        kind: "practice",
-        title: "Run a first small event",
-        lesson:
-          "An event is a promise: a time, a place and a reason to come. Small and regular beats big and rare. A first meetup with three people who talk to each other is a success; a big event where nobody talks is not.",
-        practice:
-          "Organize one small gathering, even three people: pick the date, place and a simple format, invite people personally, and afterwards note who came, what worked and what to repeat.",
-      },
-      {
-        id: "cb3",
-        kind: "practice",
-        title: "Do a project together",
-        lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in Client work and Business operations.",
-        practice:
-          "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
-      },
-      {
-        id: "cb4",
-        kind: "practice",
-        title: "Activate and engage members",
-        lesson:
-          "Joining is not participating. New members need a first action within days: a welcome, an introduction round, one small job. Keeping members engaged is rhythm plus roles: a predictable schedule of things worth showing up for, and small responsibilities that make members feel the community is partly theirs.",
-        practice:
-          "Write your welcome for a new member: the first thing they see and the first small thing you ask them to do. Then give one quiet member a small real role and check back on them.",
-      },
-      {
-        id: "cb5",
-        kind: "practice",
-        title: "Revitalize and delegate",
-        lesson:
-          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in Teaching and mentoring and Business operations.",
-        practice:
-          "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
-      },
-      {
-        id: "cb6",
-        kind: "practice",
-        title: "Find sponsors and partners",
-        lesson:
-          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes.",
-        practice:
-          "List five local businesses or organizations whose audience overlaps yours. For each, write one thing you could offer: a logo on materials, a talk slot, a workshop, a product trial or a booth.",
-      },
-      {
-        id: "cb7",
-        kind: "practice",
-        title: "Negotiate and work together",
-        lesson:
-          "Sponsorship is an exchange, so negotiate the exchange, not just the money: what they give, what you deliver, by when. Shared skill: negotiation preparation, including knowing your walk-away alternative, has its home in the Negotiation path. Put the agreement in writing, even one page, and name a contact on both sides. Deliver what you promised before asking for more; reliability is what renews a sponsor next year.",
-        practice:
-          "Draft a one-page sponsorship or partnership offer for one candidate from cb6: what you ask for, what they get in return, the dates, and a named contact on both sides.",
-      },
-      {
-        id: "cb8",
-        kind: "practice",
-        title: "Benefits for each group, with proof",
-        lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in Client work and Business operations.",
-        practice:
-          "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
-      },
-      {
-        id: "cb9",
-        kind: "milestone",
-        title: "Milestone: the community runs without you",
-        lesson:
-          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help. A much-retold heuristic, commonly attributed to German general Kurt von Hammerstein-Equord though its exact origin is unverified, sorts officers by bright or dull, lazy or diligent, and calls the dull-and-diligent combination dangerous. Treat it as folklore, not a rule: sorting people into smart and stupid is not how you choose leaders. The kernel worth keeping is to match responsibility to a person's judgment and energy, and not to mistake busyness for contribution.",
-        milestone:
-          "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
-      },
-    ],
-  },
-  {
-    id: "creator", short: "Creator", icon: '<path d="m16 10 6-4v12l-6-4z"/><rect x="2" y="6" width="14" height="12" rx="2"/>',
-    title: "Content creator",
-    tagline: "Become a blogger, newsletter writer or video creator",
-    status: "prototype",
-    note:
-      "sanggup does not create content, run your channels or promise an audience or income. Growth is slow and uneven, and platform rules and algorithms change without notice. These exercises are general education about the craft and the routine, not growth hacks.",
-    sources: [
-      { label: "Substack: How to start a newsletter and blog", url: "https://on.substack.com/p/start-a-substack-newsletter" },
-      { label: "YouTube for Creators: Start and manage your channel", url: "https://www.youtube.com/creators/get-started/" },
-      { label: "Medium Help Center: Write and publish a story", url: "https://help.medium.com/hc/en-us/articles/225168028-Write-and-publish-a-story" },
-    ],
-    stages: [
       {
         id: "cr1",
         kind: "practice",
@@ -1532,8 +1450,98 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
+    id: "clientwork", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    title: "Client work",
+    tagline: "Sell what you know as advice or as delivered work",
+    status: "prototype",
+    note:
+      "sanggup does not find clients, set your prices, take payments or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences, and Indonesian freelancers have tax duties as pekerja bebas under DJP rules. This path covers the working method only and is general education.",
+    sources: [
+      { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
+      { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
+      { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
+      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
+      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
+      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
+    ],
+    stages: [
+      {
+        id: "cs1",
+        kind: "practice",
+        title: "Name the problem you solve",
+        lesson:
+          "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
+        practice:
+          "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
+      },
+      {
+        id: "fr1",
+        kind: "practice",
+        title: "Pick one sellable service",
+        lesson:
+          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
+        practice:
+          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
+      },
+      {
+        id: "fr2",
+        kind: "practice",
+        title: "Assemble proof",
+        lesson:
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Branding and creator and Career moves.",
+        practice:
+          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
+      },
+      {
+        id: "cs2",
+        kind: "practice",
+        title: "Design one consultation",
+        lesson:
+          "A consultation is a working session with a shape: understand the client's situation, give a recommendation, agree on next steps. Preparing your questions in advance is what separates advice from chat.",
+        practice:
+          "Write a one-page plan for a 60-minute consultation on your cs1 problem: five diagnostic questions, what the client leaves with (verbal advice, a short written summary or a plan), and how you will follow up.",
+      },
+      {
+        id: "cs3",
+        kind: "practice",
+        title: "Set expectations in writing",
+        lesson:
+          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad. For anything bigger than a one-person job, also name the roles with RACI (Responsible, Accountable, Consulted, Informed) and agree one measurable outcome, a KPI, for what success means. Shared skills: RACI and KPIs are also practiced in Network and community.",
+        practice:
+          "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
+      },
+      {
+        id: "fr3",
+        kind: "practice",
+        title: "Decide price and terms before you are asked",
+        lesson:
+          "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
+        practice:
+          "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
+      },
+      {
+        id: "cs4",
+        kind: "milestone",
+        title: "Milestone: run one real consultation",
+        lesson:
+          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
+        milestone:
+          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
+      },
+      {
+        id: "fr4",
+        kind: "milestone",
+        title: "Milestone: deliver one real job",
+        lesson:
+          "A first real job, even a small or free one, teaches what no reading does: quoting, scope creep, delivery and asking to be paid. Indonesian freelancers should also learn their tax duties early; DJP publishes the rules for pekerja bebas.",
+        milestone:
+          "Complete one real freelance job from first message to delivery and payment, or agreed free delivery. The client or a mentor confirms the delivery and signs off.",
+      },
+    ],
+  },
+  {
     id: "selfcare", short: "Self care", icon: '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/>',
-    title: "Self care",
+    title: "Self care and calm",
     tagline: "Look after your body and mind on purpose",
     status: "prototype",
     note:
@@ -1541,6 +1549,9 @@ window.SANGGUP_TRACKS = [
     sources: [
       { label: "WHO: Self-care for health and well-being (fact sheet)", url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions" },
       { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
+      { label: "NCCIH: Meditation and mindfulness, effectiveness and safety", url: "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+      { label: "NCCIH: 8 things to know about meditation and mindfulness", url: "https://www.nccih.nih.gov/health/tips/8-things-to-know-about-meditation-and-mindfulness" },
+      { label: "Layanan 112, Indonesia emergency call", url: "https://layanan112.komdigi.go.id/tentang" },
     ],
     stages: [
       {
@@ -1578,6 +1589,33 @@ window.SANGGUP_TRACKS = [
           "Self care includes knowing its limit. Talking to a friend, a counselor or a doctor early is strength, not failure. The WHO frames seeking appropriate care as part of self care itself.",
         practice:
           "Save the contact of one person and one professional service you would reach out to if things got heavy. Put them somewhere you can find in ten seconds.",
+      },
+      {
+        id: "m1",
+        kind: "practice",
+        title: "Sit and notice",
+        lesson:
+          "Mindfulness means keeping your attention on the present moment without judging it. A simple form is to focus on your breathing. NCCIH says meditation is usually considered low risk, though about 8 percent of participants in one review reported a negative effect, most often anxiety or depression, so stop if it makes you feel worse.",
+        practice:
+          "Sit comfortably for three minutes and follow your breath. When your mind wanders, notice it and return. Stop if it feels bad.",
+      },
+      {
+        id: "m2",
+        kind: "practice",
+        title: "A small reset for stress",
+        lesson:
+          "Calm is easier to practice before a crisis than during one. Choose one short reset you can do anywhere, like slowing your breathing for a minute or naming five things you can see, and rehearse it when you are only mildly stressed.",
+        practice:
+          "Use your chosen reset three times this week at small stress moments, like a long queue. Note whether it helped.",
+      },
+      {
+        id: "m3",
+        kind: "practice",
+        title: "Calm when it matters",
+        lesson:
+          "In a real emergency, the first job is safety and calling for help, not meditating. A rehearsed reset can help you think. If the emergency is medical or dangerous, call emergency services. In Indonesia 112 is the national emergency number and 119 is for medical emergencies.",
+        practice:
+          "Write a three-line personal crisis card: your reset, the numbers you would call, and one person you would contact.",
       },
     ],
   },
@@ -1700,66 +1738,6 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "journalism", short: "Journalism", icon: '<path d="M4 4h14v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z M18 8h2v10a2 2 0 0 1-2 2 M8 8h6 M8 12h6 M8 16h6"/>',
-    title: "Journalism and reporting",
-    tagline: "Verify, gather, and write what actually happened",
-    status: "prototype",
-    note:
-      "sanggup does not verify facts, contact sources or review your stories. Publishing carries real legal and ethical duties that vary by country, including defamation and privacy law, and field reporting has safety considerations. These stages are general education drawn from published ethics codes and newsroom standards.",
-    sources: [
-      { label: "Society of Professional Journalists: Code of Ethics", url: "https://www.spj.org/spj-code-of-ethics/" },
-      { label: "Reuters: Journalistic Standards handbook", url: "https://handbook.reuters.com/" },
-      { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },
-    ],
-    stages: [
-      {
-        id: "jr1",
-        kind: "practice",
-        title: "Truth and verification first",
-        lesson:
-          "The SPJ code opens with seeking truth and reporting it: accuracy over speed, verification over assumption. UNESCO's handbook treats disinformation as the core challenge of the craft. Journalism begins when you check something others only repeat.",
-        practice:
-          "Take one claim circulating in your feeds today. Trace it to its original source. Write down whether the original actually says what the claim says.",
-      },
-      {
-        id: "jr2",
-        kind: "practice",
-        title: "Independence and minimizing harm",
-        lesson:
-          "Journalists act independently: first loyalty to the public, conflicts of interest disclosed. They also minimize harm: reporting affects real people, so the public's need to know is weighed against the impact on sources and subjects, especially private and vulnerable people.",
-        practice:
-          "Write your own conflicts list: employers, communities, sponsors, friendships that could bias what you cover. Then take one story idea and note who could be harmed by it and one choice that reduces the harm without hiding the truth.",
-      },
-      {
-        id: "jr3",
-        kind: "practice",
-        title: "Gather from people and documents",
-        lesson:
-          "Reporting starts from a question, not a conclusion, and works from primary material: interviews, documents, data, your own observation. Reuters' standards stress accurate quotes and sourcing. One source is a claim; two independent sources start to be a fact.",
-        practice:
-          "Pick a real question near you. List two people you could interview and two documents or data sources you could read. Do one interview or read one primary document, take dated notes, and verify three facts against independent sources.",
-      },
-      {
-        id: "jr4",
-        kind: "practice",
-        title: "Structure the report and stand behind it",
-        lesson:
-          "A report is structured for the reader: most important facts first, attribution for every claim, context for why it matters. Accountability separates journalism from content: show your evidence where you can and correct errors quickly and visibly.",
-        practice:
-          "Write your own corrections policy in three sentences: how people can report an error to you, what you will do, and how fast.",
-      },
-      {
-        id: "jr5",
-        kind: "milestone",
-        title: "Milestone: file one report",
-        lesson:
-          "A finished piece carries verified facts, named sources and a structure a reader can follow. Short and accurate beats long and impressive.",
-        milestone:
-          "Write and share one short report, 300 to 500 words, answering a real question, with sources named. An editor, mentor or informed reader checks the facts and signs off.",
-      },
-    ],
-  },
-  {
     id: "surveying", short: "Surveying", icon: '<path d="M9 11l3 3 8-8 M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>',
     title: "Surveying people",
     tagline: "Ask questions well and learn what people actually think",
@@ -1844,7 +1822,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show, then let them do",
         lesson:
-          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens. If you write your steps down, that note doubles as a small standard operating procedure the learner can follow without you. Shared skill: SOPs are also practiced in Community building.",
+          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens. If you write your steps down, that note doubles as a small standard operating procedure the learner can follow without you. Shared skill: SOPs are also practiced in Network and community.",
         practice:
           "Demonstrate your skill once, narrating your steps. Then have the learner do it while you watch. Give one correction at a time and let them retry between corrections.",
       },
@@ -1895,7 +1873,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Know your walk-away",
         lesson:
-          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers. Shared skill: sponsorship negotiation is also practiced in Community building, with its own stage.",
+          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers. Shared skill: sponsorship negotiation is also practiced in Network and community, with its own stage.",
         practice:
           "Pick one real negotiation ahead of you, small is fine. Write your best alternative if no deal happens, the worst outcome you would accept, and one step that would improve your alternative.",
       },
@@ -1938,68 +1916,6 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "business", short: "Business", icon: '<path d="M3 3v18h18 M7 14l4-4 4 3 5-6"/>',
-    title: "Business operations",
-    tagline: "Goals, numbers, procedures and roles that keep work running",
-    status: "prototype",
-    note:
-      "sanggup does not run your business or give business, tax or legal advice. These are general-purpose organizing tools; how you apply them depends on your actual situation. For regulated decisions, talk to a qualified professional.",
-    sources: [
-      { label: "Objectives and key results (OKR), overview", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results" },
-      { label: "Performance indicator (KPI), overview", url: "https://en.wikipedia.org/wiki/Performance_indicator" },
-      { label: "Standard operating procedure (SOP), overview", url: "https://en.wikipedia.org/wiki/Standard_operating_procedure" },
-      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
-      { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
-    ],
-    stages: [
-      {
-        id: "bu1",
-        kind: "practice",
-        title: "Set goals people can measure",
-        lesson:
-          "An OKR pairs an Objective, a qualitative goal worth chasing, with a few Key Results, numbers that show whether you got there. The format came out of Intel and spread through Google. Vague goals drift; measurable key results force the conversation about what done means. Shared skill: OKRs are also practiced in Community building, for member and sponsor benefits.",
-        practice:
-          "Write one objective for your work, business or community for the next three months, with three key results you can actually measure. Check each: could a stranger tell whether it happened?",
-      },
-      {
-        id: "bu2",
-        kind: "practice",
-        title: "Watch the numbers that matter",
-        lesson:
-          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Community building and Client work.",
-        practice:
-          "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
-      },
-      {
-        id: "bu3",
-        kind: "practice",
-        title: "Write it once, run it many times",
-        lesson:
-          "A standard operating procedure is the written version of a repeated task: steps clear enough that someone else gets the same result without asking you. Start with the tasks you repeat most or hand off first; the test of an SOP is whether it works without its author in the room. Shared skill: SOPs are also practiced in Community building and Teaching and mentoring.",
-        practice:
-          "Write a one-page SOP for one task you repeat. Hand it to someone and watch them run it from the note alone. Fix the two places they stumbled.",
-      },
-      {
-        id: "bu4",
-        kind: "practice",
-        title: "Who does what",
-        lesson:
-          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Community building and Client work.",
-        practice:
-          "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
-      },
-      {
-        id: "bu5",
-        kind: "milestone",
-        title: "Milestone: keep it running",
-        lesson:
-          "Continuity planning is the business version of preparedness: identify the functions that must keep running, plan backups for people, places and systems, mitigate what you can ahead of time, and practice the plan. Ready.gov publishes the standard outline. Shared skill: household-scale preparedness is the Disaster preparedness path.",
-        milestone:
-          "Draft a one-page continuity plan for a real activity you are responsible for: critical functions, one backup each, and a date to rehearse it. Someone who would have to execute it reviews the plan and signs off.",
-      },
-    ],
-  },
-  {
     id: "career", short: "Career", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 17c.6-1.8 1.9-3 3.5-3s2.9 1.2 3.5 3 M15 9h4 M15 13h4"/>',
     title: "Career moves",
     tagline: "Present your work, interview well, choose your next step",
@@ -2026,7 +1942,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Tell achievement stories",
         lesson:
-          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Personal branding and Client work.",
+          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Branding and creator and Client work.",
         practice:
           "Write three STAR stories from your ca1 list: one about delivering, one about a problem you fixed, one about working with people. Say each aloud in under two minutes.",
       },
