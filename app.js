@@ -97,6 +97,8 @@ function renderGroup(track) {
   $("path-view").hidden = true;
   const back = document.createElement("button");
   back.className = "link-btn";
+  back.style.gridColumn = "1 / -1";
+  back.style.justifySelf = "start";
   back.innerHTML = "&larr; all skills";
   back.addEventListener("click", () => { location.hash = ""; renderTracks(); });
   wrap.appendChild(back);
