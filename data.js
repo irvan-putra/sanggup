@@ -360,7 +360,7 @@ window.SANGGUP_TRACKS = [
         practice:
           "Do a ten-minute capture: write down everything on your mind, real or fictional, without organizing. Then take three items and write the next concrete action for each, starting with a verb. Finish by scheduling one weekly review moment.",
         tools: [
-          { label: "intodo", url: "https://github.com/irvan-putra/intodo", note: "Android widget, test build: todos and reminders on your home screen" },
+          { label: "intodo", url: "https://github.com/irvan-putra/intodo/releases/download/v0.5.18/intodo-v0.5.18.apk", note: "Android test build v0.5.18 (APK): todos and reminders on your home screen" },
         ],
       },
       {
@@ -426,7 +426,7 @@ window.SANGGUP_TRACKS = [
         practice:
           "Pick one question you would normally ask a chatbot today, real or fictional. Write your own answer or judgment first, in full sentences. Only then compare with the AI answer, note where yours held up and where it did not, and practice explaining the final answer out loud without looking.",
         tools: [
-          { label: "menit", url: "https://github.com/irvan-putra/menit", note: "Android: estimates your time in AI apps; needs Usage Access, a capability ordinary web pages do not have" },
+          { label: "menit", url: "https://github.com/irvan-putra/menit/releases/download/v0.2.2/menit-v0.2.2.apk", note: "Android test build v0.2.2 (APK): estimates your time in AI apps; needs Usage Access, a capability ordinary web pages do not have" },
         ],
       },
     ],
@@ -1597,7 +1597,7 @@ window.SANGGUP_TRACKS = [
         tools: [
           { label: "nada", url: "https://vanipy.com/nada/", note: "web: turns a small JSON recipe into a .mid you can practice along with" },
           { label: "denting", url: "https://vanipy.com/denting/", note: "web, draft: direct a piece with everyday words, export a real .mid" },
-          { label: "tengok", url: "https://github.com/irvan-putra/tengok", note: "Android: opens .mid and other files offline" },
+          { label: "tengok", url: "https://github.com/irvan-putra/tengok/releases/download/v0.3.2/tengok-v0.3.2.apk", note: "Android test build v0.3.2 (APK): opens .mid and other files offline" },
         ],
       },
       {
@@ -2068,7 +2068,7 @@ window.SANGGUP_TRACKS = [
         practice:
           "For three days, keep a fixed wake-up time and take one 20-minute walk. Note your energy at midday each day.",
         tools: [
-          { label: "kokok", url: "https://github.com/irvan-putra/kokok", note: "Android: alarms that ring fully offline once set; OS alarm scheduling is a capability ordinary web pages do not have" },
+          { label: "kokok", url: "https://github.com/irvan-putra/kokok/releases/download/v0.2.1/kokok-v0.2.1.apk", note: "Android test build v0.2.1 (APK): alarms that ring fully offline once set; OS alarm scheduling is a capability ordinary web pages do not have" },
         ],
       },
       {
