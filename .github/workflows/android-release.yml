@@ -4,7 +4,17 @@ on:
 permissions:
   contents: write
 jobs:
+  consistency:
+    # patuh pre-publish source gate: package, version format, label,
+    # permission/license drift, family icon geometry, badge reads the
+    # candidate version. A failure stops the release before anything builds.
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@v0.2.1
+    with:
+      app: sanggup
+      published: false
+
   release:
+    needs: consistency
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env:
@@ -66,8 +76,44 @@ jobs:
         with:
           name: signed-release-evidence
           path: release-evidence/
+      - name: Upload candidate APK for the byte check
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-apk
+          path: |
+            sanggup-v0.1.1.apk
+            sanggup-v0.1.1.apk.sha256
+          retention-days: 1
+
+  candidate-bytes:
+    # patuh checks the built APK's actual bytes (packaged icon badge) before
+    # anything is published. This is the preventive boundary.
+    needs: release
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@v0.2.1
+    with:
+      app: sanggup
+      published: false
+      candidate_apk_artifact: candidate-apk
+
+  publish:
+    needs: candidate-bytes
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4   # notes-file lives in the repo
+      - uses: actions/download-artifact@v4
+        with: { name: candidate-apk, path: dist }
       - name: Publish test prerelease
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v0.1.1 sanggup-v0.1.1.apk sanggup-v0.1.1.apk.sha256 --title 'Sanggup 0.1.1 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
+          gh release create v0.1.1 dist/sanggup-v0.1.1.apk dist/sanggup-v0.1.1.apk.sha256 --title 'Sanggup 0.1.1 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
+
+  verify:
+    # post-publish: verifies the live release (tag, APK name, checksum,
+    # gallery card, downloaded sha256, packaged icon). Detects, cannot undo.
+    needs: publish
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@v0.2.1
+    with:
+      app: sanggup
+      published: true
