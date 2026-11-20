@@ -60,6 +60,7 @@ function renderTracks() {
   wrap.innerHTML = "";
   $("path-view").hidden = true;
   for (const track of window.SANGGUP_TRACKS) {
+    if (track.parent) continue;
     const planned = track.status === "planned";
     const card = document.createElement("button");
     card.className = "track-card" + (planned ? " planned" : "");
@@ -73,7 +74,10 @@ function renderTracks() {
       `<span class="tt">${track.short || track.title}</span>` +
       (planned ? `<em>soon</em>` : "");
     if (!planned) {
-      card.addEventListener("click", () => { location.hash = track.id; renderPath(track); });
+      card.addEventListener("click", () => {
+        location.hash = track.id;
+        if (track.children) renderGroup(track); else renderPath(track);
+      });
     } else {
       card.disabled = true;
     }
@@ -82,6 +86,34 @@ function renderTracks() {
 }
 
 $("back-to-tracks").addEventListener("click", () => { location.hash = ""; renderTracks(); });
+
+
+// ---------- learner: parent tile chooser (e.g. Work) ----------
+
+function renderGroup(track) {
+  currentTrack = null;
+  const wrap = $("track-list");
+  wrap.innerHTML = "";
+  $("path-view").hidden = true;
+  const back = document.createElement("button");
+  back.className = "link-btn";
+  back.innerHTML = "&larr; all skills";
+  back.addEventListener("click", () => { location.hash = ""; renderTracks(); });
+  wrap.appendChild(back);
+  for (const childId of track.children) {
+    const child = window.SANGGUP_TRACKS.find((t) => t.id === childId);
+    if (!child) continue;
+    const card = document.createElement("button");
+    card.className = "track-card";
+    card.title = child.title + ": " + child.tagline;
+    card.setAttribute("aria-label", child.title + ", " + child.tagline + ", prototype path");
+    card.innerHTML =
+      `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${child.icon}</svg>` +
+      `<span class="tt">${child.short || child.title}</span>`;
+    card.addEventListener("click", () => { location.hash = child.id; renderPath(child); });
+    wrap.appendChild(card);
+  }
+}
 
 // ---------- learner: one path ----------
 
@@ -337,7 +369,9 @@ function applyRoute() {
   const track = (window.SANGGUP_TRACKS || []).find(
     (t) => t.id === id && t.status !== "planned"
   );
-  if (track) {
+  if (track && track.children) {
+    renderGroup(track);
+  } else if (track) {
     renderPath(track);
   } else {
     renderTracks();

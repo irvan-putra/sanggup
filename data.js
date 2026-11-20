@@ -1583,7 +1583,7 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "clientwork", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    id: "clientwork", parent: "work", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
     title: "Client work",
     tagline: "Sell what you know as advice or as delivered work",
     status: "prototype",
@@ -2069,7 +2069,62 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "career", short: "Career", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 17c.6-1.8 1.9-3 3.5-3s2.9 1.2 3.5 3 M15 9h4 M15 13h4"/>',
+    id: "coding", short: "Coding", icon: '<path d="M8 6l-6 6 6 6 M16 6l6 6-6 6"/>',
+    title: "Coding",
+    tagline: "Code and the assumptions that break it",
+    note: "Written exercises only: Sanggup does not run your code. You sketch the example and the fix by hand, then try it in your own tools if you want.",
+    sources: [
+      { label: "Falsehoods programmers believe about time (Noah Sussman)", url: "https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" },
+      { label: "Falsehoods Programmers Believe About Geography", url: "https://ctemm.me/falsehoods/geography/" },
+      { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
+    ],
+    stages: [
+      {
+        id: "cd1",
+        kind: "practice",
+        title: "Break a date with timezones",
+        lesson:
+          "Programmers keep a famous list of falsehoods about time: days always have 24 hours, timezones never change, a minute is always 60 seconds. Real calendars violate all of these, through daylight-saving switches, leap seconds and governments moving offsets. Code that assumes the falsehood works for months, then breaks for one user in one week of the year.",
+        practice:
+          "Write three assumptions about time that feel obviously true. For each, describe a concrete case that breaks it, such as a meeting at 02:30 on the night clocks spring forward. Then write the smallest code sketch that would show the break, and what you would use instead.",
+      },
+      {
+        id: "cd2",
+        kind: "practice",
+        title: "Break a place with geography",
+        lesson:
+          "There are equally famous falsehoods about geography and addresses: every place has one name, streets have numbers, coordinates are enough, countries never change. Real locations violate these constantly, and maps, deliveries and profiles fail where the assumption meets reality.",
+        practice:
+          "Write three assumptions about places or addresses that feel obviously true. For each, find the breaking case, such as a place with no street address or two towns sharing a name in one country. Sketch the smallest example that shows the break and what data you would store instead.",
+      },
+      {
+        id: "cd3",
+        kind: "practice",
+        title: "Write your own failing example",
+        lesson:
+          "The skill under both lists is the same: state the assumption out loud, build the smallest case that falsifies it, and only then fix it. The failing example is the proof you understood the bug; skipping it is how fixes create the next falsehood.",
+        practice:
+          "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
+      },
+      {
+        id: "cd4",
+        kind: "milestone",
+        title: "Milestone: catch one real assumption bug",
+        task: "In real code, yours or a public project, find one place that relies on a false assumption about time or location. Write it up as assumption, failing case, fix, and have your instructor check the reasoning.",
+      },
+    ],
+  },
+  {
+    id: "work", short: "Work", icon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2 M3 13h18"/>',
+    title: "Work",
+    tagline: "Career moves and client work",
+    note: "Two paths: Career moves for employed work, Client work for independent consulting and freelancing.",
+    sources: [],
+    children: ["career", "clientwork"],
+    stages: [],
+  },
+  {
+    id: "career", parent: "work", short: "Career", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 17c.6-1.8 1.9-3 3.5-3s2.9 1.2 3.5 3 M15 9h4 M15 13h4"/>',
     title: "Career moves",
     tagline: "Present your work, interview well, choose your next step",
     status: "prototype",

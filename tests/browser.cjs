@@ -9,6 +9,11 @@ const server = http.createServer((req,res)=>{
  if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
  try {res.setHeader('Content-Type', file.endsWith('.js')?'application/javascript':file.endsWith('.css')?'text/css':file.endsWith('.svg')?'image/svg+xml':'text/html');res.end(fs.readFileSync(file));}catch{res.writeHead(404).end();}
 });
+async function openTile(page,name){
+ const direct=page.getByRole('button',{name});
+ if(await direct.count()===0){ await page.getByRole('button',{name:/^Work,/}).click(); }
+ await page.getByRole('button',{name}).click();
+}
 (async()=>{
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||undefined,headless:true,args:['--no-sandbox']});
@@ -62,9 +67,9 @@ const server = http.createServer((req,res)=>{
  assert.equal(await page.locator('.stage-card.done').count(),5);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,4,/does not apply for jobs/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,4,/does not apply for jobs/],[/^Coding,/,3,/does not run your code/]]) {
   await page.goto(url);
-  await page.getByRole('button',{name}).click();
+  await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
   assert.ok(await page.locator('#path-sources a').count()>=1);
   for(let i=0;i<count;i++) await page.getByRole('button',{name:'I did it',exact:true}).click();
@@ -100,7 +105,7 @@ const server = http.createServer((req,res)=>{
  await page.getByRole('button',{name:/^Decisions and priorities,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),3);
  await page.locator('#back-to-tracks').click();
- await page.getByRole('button',{name:/^Client work,/}).click();
+ await openTile(page,/^Client work,/);
  assert.equal(await page.locator('.stage-card.done').count(),2);
  assert.match(await page.locator('.code-box').innerText(),/MERGE4/);
  await page.getByRole('button',{name:"I'm teaching"}).click();
@@ -109,12 +114,12 @@ const server = http.createServer((req,res)=>{
  await page.getByRole('button',{name:'Sign off',exact:true}).click();
  await page.getByRole('button',{name:"I'm learning"}).click();
  await page.goto(url);
- await page.getByRole('button',{name:/^Client work,/}).click();
+ await openTile(page,/^Client work,/);
  assert.equal(await page.locator('.stage-card.done').count(),3);
  // shared subskills are labeled in both directions on the paths that practice them
  for (const [name,labelRe] of [[/^Decisions and priorities,/,/also practiced in Focus/],[/^Surveying people,/,/also practiced in Branding and creator/],[/^Client work,/,/segment stage in Branding and creator/],[/^Branding and creator,/,/Surveying people path/],[/^Projects and business,/,/Branding and creator, for marketing/],[/^Branding and creator,/,/KPI stage in Projects and business/],[/^Focus and habits,/,/home in Decisions and priorities/],[/^Branding and creator,/,/also practiced in Client work/],[/^Client work,/,/also practiced in Network and community/],[/^Network and community,/,/also practiced in Client work/],[/^Network and community,/,/also practiced in Teaching and mentoring/],[/^Teaching and mentoring,/,/also practiced in Network and community/],[/^Negotiation,/,/also practiced in Network and community/],[/^Network and community,/,/home in the Negotiation path/]]) {
   await page.goto(url);
-  await page.getByRole('button',{name}).click();
+  await openTile(page,name);
   assert.match(await page.locator('#path-detail, #track-detail, main, body').first().innerText(),labelRe);
  }
  for(const width of [320,390,1280]){
