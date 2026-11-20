@@ -91,7 +91,7 @@ class WidgetHostTest {
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
             var ready = false
             for (attempt in 0 until 40) {
-                if (js(scenario, "document.querySelectorAll('.track-card').length") == "20") { ready = true; break }
+                if (js(scenario, "document.querySelectorAll('.track-card').length") == "24") { ready = true; break }
                 Thread.sleep(500)
             }
             assertTrue("Offline learning grid never loaded", ready)

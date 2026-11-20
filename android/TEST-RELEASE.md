@@ -2,7 +2,7 @@
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
-- All 20 starter learning paths are bundled offline. The app requests no Android permissions.
+- All 24 starter learning paths are bundled offline. The app requests no Android permissions.
 - Original Sang frame animation in the native header, plus a home-screen learning-streak widget using native ViewFlipper frames.
 - Local practice logging counts at most one streak day per local calendar day. It does not prove skill competency.
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
@@ -16,7 +16,7 @@ Update over0.1.0 with the same package and release key. Do not uninstall or clea
 
 ## Verification and limits
 
-The debug build loaded all 20 skill tiles on an Android 14 emulator. A test clicked the actual web practice-log button and checked that the native streak and hosted widget became 1 day. A real AppWidgetHostView test observed all six animation frames advancing and saved inspected screenshots.
+The debug build loaded all 24 skill tiles on an Android 14 emulator. A test clicked the actual web practice-log button and checked that the native streak and hosted widget became 1 day. A real AppWidgetHostView test observed all six animation frames advancing and saved inspected screenshots.
 
 This hosted-widget test is not proof of placement or animation on Pixel Launcher, Samsung One UI or every launcher. Widget resizing, long-running power behaviour and different Android versions remain untested. Widget refresh is OS-scheduled, so the displayed streak can lag a date change until its next refresh or app interaction.
 

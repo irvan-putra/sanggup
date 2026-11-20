@@ -1,5 +1,5 @@
 // Skill content for the sanggup prototype.
-// All 20 tracks have starter paths. Each path states its own limits.
+// All 24 tracks have starter paths. Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -1183,6 +1183,220 @@ window.SANGGUP_TRACKS = [
           "Play whole games, then review the moment it went wrong. Even a quick look at where you lost a piece teaches more than another game right away.",
         practice:
           "Play three games. For each, write down the move where the game turned and what you would do differently.",
+      },
+    ],
+  },
+  {
+    id: "branding", short: "Branding", icon: '<path d="m3 11 18-5v12L3 14v-3z M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+    title: "Personal branding",
+    tagline: "Decide what you want to be known for, then show it",
+    status: "prototype",
+    note:
+      "sanggup does not write your profiles, post for you or manage your reputation. A personal brand is what others believe about you when you are not in the room; these exercises shape only the honest input. Nothing here asks you to exaggerate, and no exercise promises jobs, followers or income.",
+    sources: [
+      { label: "Harvard Business Review: A New Approach to Building Your Personal Brand", url: "https://hbr.org/2023/05/a-new-approach-to-building-your-personal-brand" },
+      { label: "Harvard Business Review: How to Define, Develop, and Communicate Your Personal Brand", url: "https://hbr.org/2023/09/how-to-define-develop-and-communicate-your-personal-brand" },
+      { label: "WVU Eberly career center: Personal Branding", url: "https://eberly.wvu.edu/career-center-new/resources/personal-branding" },
+      { label: "Indeed: What Is Personal Branding?", url: "https://www.indeed.com/career-advice/career-development/what-is-personal-branding" },
+    ],
+    stages: [
+      {
+        id: "br1",
+        kind: "practice",
+        title: "Choose what you want to be known for",
+        lesson:
+          "Harvard Business Review's guidance is that a personal brand starts with what you want to be known for, grounded in what you have actually done and can do. Pick an area narrow enough to be believable: 'Android apps' is a brand; 'technology' is too vague to guide anyone.",
+        practice:
+          "Write one sentence: 'I want to be known for ___ because I have ___.' Under it, list three real proofs: projects, talks or work that support it.",
+      },
+      {
+        id: "br2",
+        kind: "practice",
+        title: "Audit your current footprint",
+        lesson:
+          "Your brand already exists: it is what people find when they look you up. Career-center advice, such as West Virginia University's, is to audit that footprint first, before changing anything.",
+        practice:
+          "In a private or logged-out browser window, search your own name. List the first five results and mark each: supports my sentence, neutral, or works against it.",
+      },
+      {
+        id: "br3",
+        kind: "practice",
+        title: "Align one profile",
+        lesson:
+          "HBR describes a brand as something you define, develop and then communicate consistently. Start with the single profile people see first: photo, headline and short bio should all say the same thing as your sentence.",
+        practice:
+          "Pick one public profile and rewrite its headline and about section so they match your br1 sentence. Remove or fix anything there that contradicts it.",
+      },
+      {
+        id: "br4",
+        kind: "practice",
+        title: "Show work instead of claiming it",
+        lesson:
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them.",
+        practice:
+          "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
+      },
+    ],
+  },
+  {
+    id: "consulting", short: "Consulting", icon: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h.01 M12 10h.01 M16 10h.01"/>',
+    title: "Consulting",
+    tagline: "Turn what you know into structured help",
+    status: "prototype",
+    note:
+      "sanggup does not find clients, set your prices or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences; this path covers the working method only and is general education.",
+    sources: [
+      { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
+      { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
+      { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
+    ],
+    stages: [
+      {
+        id: "cs1",
+        kind: "practice",
+        title: "Name the problem you solve",
+        lesson:
+          "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
+        practice:
+          "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
+      },
+      {
+        id: "cs2",
+        kind: "practice",
+        title: "Design one consultation",
+        lesson:
+          "A consultation is a working session with a shape: understand the client's situation, give a recommendation, agree on next steps. Preparing your questions in advance is what separates advice from chat.",
+        practice:
+          "Write a one-page plan for a 60-minute consultation on your cs1 problem: five diagnostic questions, what the client leaves with (verbal advice, a short written summary or a plan), and how you will follow up.",
+      },
+      {
+        id: "cs3",
+        kind: "practice",
+        title: "Set expectations in writing",
+        lesson:
+          "SCORE's guides for independent consultants stress scope and expectations: exactly what is included, what is not, the timeline and the fee. Misunderstandings about scope are a common way a good engagement goes bad.",
+        practice:
+          "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
+      },
+      {
+        id: "cs4",
+        kind: "milestone",
+        title: "Milestone: run one real consultation",
+        lesson:
+          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
+        milestone:
+          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
+      },
+    ],
+  },
+  {
+    id: "freelance", short: "Freelance", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    title: "Freelancing",
+    tagline: "From one skill to your first paid job",
+    status: "prototype",
+    note:
+      "sanggup does not find clients, take payments or hold money for you. This path is general education, not tax, legal or financial advice. Indonesian freelancers have tax duties as pekerja bebas under DJP rules; check the current rules or consult a professional.",
+    sources: [
+      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
+      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
+      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
+    ],
+    stages: [
+      {
+        id: "fr1",
+        kind: "practice",
+        title: "Pick one sellable service",
+        lesson:
+          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
+        practice:
+          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
+      },
+      {
+        id: "fr2",
+        kind: "practice",
+        title: "Assemble proof",
+        lesson:
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive.",
+        practice:
+          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
+      },
+      {
+        id: "fr3",
+        kind: "practice",
+        title: "Decide price and terms before you are asked",
+        lesson:
+          "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
+        practice:
+          "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
+      },
+      {
+        id: "fr4",
+        kind: "milestone",
+        title: "Milestone: deliver one real job",
+        lesson:
+          "A first real job, even a small or free one, teaches what no reading does: quoting, scope creep, delivery and asking to be paid. Indonesian freelancers should also learn their tax duties early; DJP publishes the rules for pekerja bebas.",
+        milestone:
+          "Complete one real freelance job from first message to delivery and payment, or agreed free delivery. The client or a mentor confirms the delivery and signs off.",
+      },
+    ],
+  },
+  {
+    id: "community", short: "Community", icon: '<circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/><path d="M9.3 8.5l1.5 6 M14.7 8.5l-1.5 6 M9.5 7h5"/>',
+    title: "Community building",
+    tagline: "Gather people around an interest, then make it outlast you",
+    status: "prototype",
+    note:
+      "sanggup does not run your community, message members or organize events for you. Communities are real people; growth, conflict and burnout need judgment, not scripts. These exercises are general education drawn from published community-organizing guidance.",
+    sources: [
+      { label: "Open Source Guides: Building Welcoming Communities", url: "https://opensource.guide/building-community/" },
+      { label: "Open Source Guides: Leadership and Governance", url: "https://opensource.guide/leadership-and-governance/" },
+      { label: "The Community Canvas", url: "https://community-canvas.org/" },
+    ],
+    stages: [
+      {
+        id: "cb1",
+        kind: "practice",
+        title: "Gather the interest",
+        lesson:
+          "A community starts from a shared interest, not from a platform or a chat group. The Community Canvas begins with identity: who the community is for and why they would gather. Find where those people already are before creating anything new.",
+        practice:
+          "Name the interest in one sentence. List 5 to 10 real people who care about it and one place they already gather, online or offline. Talk to three of them about what they would want from a community.",
+      },
+      {
+        id: "cb2",
+        kind: "practice",
+        title: "Run a first small event",
+        lesson:
+          "An event is a promise: a time, a place and a reason to come. Small and regular beats big and rare. A first meetup with three people who talk to each other is a success; a big event where nobody talks is not.",
+        practice:
+          "Organize one small gathering, even three people: pick the date, place and a simple format, invite people personally, and afterwards note who came, what worked and what to repeat.",
+      },
+      {
+        id: "cb3",
+        kind: "practice",
+        title: "Do a project together",
+        lesson:
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at.",
+        practice:
+          "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Assign a named owner to each part and finish it.",
+      },
+      {
+        id: "cb4",
+        kind: "practice",
+        title: "Revitalize and delegate",
+        lesson:
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head.",
+        practice:
+          "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
+      },
+      {
+        id: "cb5",
+        kind: "milestone",
+        title: "Milestone: the community runs without you",
+        lesson:
+          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help.",
+        milestone:
+          "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
       },
     ],
   },
