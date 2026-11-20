@@ -400,8 +400,16 @@ function applyRoute() {
   if (track && stageId) {
     const el = document.getElementById("stage-" + stageId);
     if (el) {
-      el.classList.add("jump-target");
-      el.scrollIntoView({ block: "center" });
+      const jump = () => {
+        el.classList.add("jump-target");
+        el.scrollIntoView({ block: "center" });
+      };
+      jump();
+      // A cold load can scroll back to top after subresources finish;
+      // re-assert the target once the page is fully loaded.
+      if (document.readyState !== "complete") {
+        window.addEventListener("load", jump, { once: true });
+      }
     }
   } else if (track) {
     window.scrollTo(0, 0);
