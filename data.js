@@ -607,6 +607,15 @@ window.SANGGUP_TRACKS = [
         practice:
           "Send one message or make one call to a provider with those questions, and put the course date in your calendar.",
       },
+      {
+        id: "a5",
+        kind: "milestone",
+        title: "Milestone: complete hands-on training",
+        lesson:
+          "The Red Cross offers blended and in-person courses where an instructor watches you practice, and PMI runs first aid, CPR and AED training in Indonesia. A course is where theory becomes a skill someone qualified has actually watched you perform.",
+        milestone:
+          "Attend a hands-on first aid or CPR course, for example through PMI, and practice the skills on training equipment. The course instructor confirms you took part and signs off. This records attendance and practice only; it is not a certificate or qualification.",
+      },
     ],
   },
   {
@@ -902,6 +911,15 @@ window.SANGGUP_TRACKS = [
         practice:
           "At your usual water place, find where a rescue ring, pole or floating object is, and where the emergency numbers are posted. If there is none, note that.",
       },
+      {
+        id: "w_5",
+        kind: "milestone",
+        title: "Milestone: take a real beginner lesson",
+        lesson:
+          "The CDC says formal swimming lessons can reduce drowning risk, while stressing they are one of several layers of protection, not a guarantee. A qualified instructor can correct your breathing, floating and kicking in the water in a way no text can.",
+        milestone:
+          "Book and complete a beginner swimming session with a qualified instructor at a supervised pool. The instructor confirms you attended and practiced, and signs off. This records attendance, not swimming ability or safety in water.",
+      },
     ],
   },
   {
@@ -950,6 +968,15 @@ window.SANGGUP_TRACKS = [
           "Plan every trip so you are rested, sober and unhurried, with your phone out of use. Wear a helmet on a motorbike and a seatbelt in a car. These are basic habits that instructors teach and reinforce.",
         practice:
           "Write your personal driving rules and check that you follow them on your next five trips as a passenger or driver.",
+      },
+      {
+        id: "v_5",
+        kind: "milestone",
+        title: "Milestone: supervised practice",
+        lesson:
+          "Korlantas describes practical exam elements such as braking and balance, the U-turn, the S-track and emergency braking, and offers a coaching clinic at Satpas. Supervised practice with a licensed instructor is how vehicle control is actually built.",
+        milestone:
+          "Complete a supervised driving practice session with a licensed instructor or driving school. The instructor confirms what you practiced and signs off. This records practice, not driving competence or licence readiness.",
       },
     ],
   },
@@ -1120,6 +1147,24 @@ window.SANGGUP_TRACKS = [
           "Writing a problem forces you to understand its structure. If you cannot solve a problem, try an easier related one, or draw a picture, as Pólya suggests.",
         practice:
           "Write one problem from your own life (prices, distance, time) with an answer you can check, and solve it with the four phases.",
+      },
+      {
+        id: "a_5",
+        kind: "practice",
+        title: "Reuse the result and the method",
+        lesson:
+          "Pólya's fourth phase goes beyond checking the answer: he urges reflecting on what worked, what did not, and other problems where the same solution or method might be useful. Methods transfer to new problems; answers usually do not.",
+        practice:
+          "Take a problem you solved earlier and find one new problem where the same method applies. Solve it, then write down what transferred and what you had to change.",
+      },
+      {
+        id: "a_6",
+        kind: "milestone",
+        title: "Milestone: a mixed set, reviewed",
+        lesson:
+          "Practicing one problem type at a time hides whether you can choose a strategy yourself. A mixed set forces Pólya's first two phases, understanding the problem and making a plan, to do real work.",
+        milestone:
+          "Solve a mixed set of problems across different topics, with no hint about which method to use. Review every error with a teacher or mentor, who signs off on the review.",
       },
     ],
   },
@@ -1576,6 +1621,15 @@ window.SANGGUP_TRACKS = [
           "Deliver your talk aloud twice, timing both. Record the second on your phone, listen back once, and write the two changes you will make.",
       },
       {
+        id: "sp5",
+        kind: "practice",
+        title: "Open strong, end with a call to action",
+        lesson:
+          "Toastmasters' speech guide says you have about 30 seconds to capture attention before listeners tune out, and recommends opening with a story, especially one with conflict. Its outline advice ends with a conclusion that emphasizes your one message and asks the audience to actually do something with it.",
+        practice:
+          "Rewrite the first 30 seconds and the closing lines of your talk: a vivid opening story and one specific call to action. Test both on one listener and keep what lands.",
+      },
+      {
         id: "sp4",
         kind: "milestone",
         title: "Milestone: speak to real people",
@@ -1624,6 +1678,15 @@ window.SANGGUP_TRACKS = [
           "Slides are for the audience, not a teleprompter for you. One idea per slide, few words, readable from the back; your sentences live in your mouth and your speaker notes. If people read your slides, they are not listening to you.",
         practice:
           "Turn your outline into slides: one idea each, at most a short headline and one image or figure per slide. Delete every slide that only repeats what you will say.",
+      },
+      {
+        id: "pr5",
+        kind: "practice",
+        title: "Rehearse for real, plan for questions",
+        lesson:
+          "Sussex's Skills Hub notes that a presentation rarely ends with the conclusion, because a question-and-answer section usually follows, and that you can practise your delivery several times before the real event. It suggests budgeting slides per section and leaving time for questions.",
+        practice:
+          "Do two full timed run-throughs, aloud and on your feet. Then write down the three questions you would least like to be asked and prepare an honest answer for each.",
       },
       {
         id: "pr4",
@@ -1736,6 +1799,15 @@ window.SANGGUP_TRACKS = [
           "Write down who your survey would reach by default and who it would miss. Add one concrete step that reaches a missed group.",
       },
       {
+        id: "sv5",
+        kind: "practice",
+        title: "Pilot before you launch",
+        lesson:
+          "Pew Research treats pretesting as an essential step: cognitive interviews, focus groups or a small pilot show how real people actually interpret your questions before you spend your real sample. Pew also warns that earlier questions can change how people answer later ones.",
+        practice:
+          "Pilot your questionnaire with three people from your intended audience and watch where they hesitate or misread. Write down every change you make before the real run.",
+      },
+      {
         id: "sv4",
         kind: "milestone",
         title: "Milestone: run one small survey",
@@ -1786,6 +1858,15 @@ window.SANGGUP_TRACKS = [
           "Give feedback on one real attempt using the shape: one thing that worked, one thing to change next, nothing else. If you mentor someone over time, write the goal and the next check-in date.",
       },
       {
+        id: "tm5",
+        kind: "practice",
+        title: "Align goal, practice and check",
+        lesson:
+          "Carnegie Mellon's Eberly Center says effective teaching aligns three components: clear learning objectives, activities that give goal-oriented practice, and assessments that let learners demonstrate the objective and receive targeted feedback. Practicing one thing while checking another is a common way teaching fails.",
+        practice:
+          "For one skill you want to teach, write a single sentence each for the objective, the practice activity and the check. Show all three to a colleague and fix any mismatch they spot.",
+      },
+      {
         id: "tm4",
         kind: "milestone",
         title: "Milestone: teach one real skill",
@@ -1806,6 +1887,7 @@ window.SANGGUP_TRACKS = [
     sources: [
       { label: "Program on Negotiation at Harvard Law School: What is BATNA?", url: "https://www.pon.harvard.edu/daily/batna/translate-your-batna-to-the-current-deal/" },
       { label: "Program on Negotiation at Harvard Law School: Bargaining with Your BATNA in Mind", url: "https://www.pon.harvard.edu/daily/batna/negotiation-and-bargaining-with-your-batna-in-mind/" },
+      { label: "Program on Negotiation at Harvard Law School: Listening skills for maximum success", url: "https://www.pon.harvard.edu/daily/negotiation-skills-daily/listening-skills-for-maximum-success/" },
     ],
     stages: [
       {
@@ -1834,6 +1916,15 @@ window.SANGGUP_TRACKS = [
           "In the conversation, open with a supportable position, ask questions before countering, and trade instead of conceding: 'if you need X, then I need Y'. Silence after an offer is allowed. Any agreement needs a clear write-up of who does what by when, or it is not finished.",
         practice:
           "Rehearse the negotiation aloud once with a friend playing the other side, or write both sides of the likely exchange. End with the one-page write-up you would send after a yes.",
+      },
+      {
+        id: "ng5",
+        kind: "practice",
+        title: "Listen actively: paraphrase and confirm",
+        lesson:
+          "Harvard's Program on Negotiation calls active listening one of the most powerful negotiation skills, and one most people overestimate in themselves. It is dynamic, not silent nodding: paraphrase the other side's points back and ask whether you captured their main concerns, so they can correct you before positions harden.",
+        practice:
+          "In your next real conversation where you want something, paraphrase the other person's position out loud and ask whether you got it right before making your case. Write down one thing you learned that you would otherwise have missed.",
       },
       {
         id: "ng4",
