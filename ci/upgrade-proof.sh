@@ -70,7 +70,10 @@ tap_text "Request sign-off"
 shot seeded-cooking
 scroll_top
 tap_text "all skills"
-tap_text "First aid"
+# the disaster track's tile was renamed between releases: "First aid" on
+# v0.1.x, "Safety" from v0.2.0 on; the stage ids are unchanged, so seeding
+# through either label lands on the same stages
+tap_text "First aid" || tap_text "Safety"
 tap_text "I did it"
 shot seeded-firstaid
 dump seeded-firstaid
