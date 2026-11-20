@@ -118,6 +118,18 @@ async function openTile(page,name){
  await page.locator('#stage-mk7 a[href="#network/n3"]').click();
  await page.locator('#stage-n3.jump-target').waitFor();
  assert.equal(new URL(page.url()).hash,'#network/n3');
+ // whole-skill reference lands on the first stage: Writing's consent link goes to the first survey stage
+ await page.goto(url+'/#write/w9');
+ await page.locator('#stage-w9 a[href="#surveying/sv1"]').click();
+ await page.locator('#stage-sv1.jump-target').waitFor();
+ assert.equal(new URL(page.url()).hash,'#surveying/sv1');
+ // track-level routes reset scroll: from a centered deep link, switching paths must not clamp to the bottom
+ await page.goto(url+'/#write/w9');
+ await page.locator('#stage-w9.jump-target').waitFor();
+ assert.ok((await page.evaluate(()=>window.scrollY))>0);
+ await page.evaluate(()=>{location.hash='decisions';});
+ await page.waitForFunction(()=>document.getElementById('path-title').textContent==='Decisions and priorities');
+ assert.equal(await page.evaluate(()=>window.scrollY),0);
  await page.goto(url+'/#nope');
  await page.locator('.track-card:not(:disabled)').nth(24).waitFor();
  assert.equal(await page.locator('.track-card:not(:disabled)').count(),25);

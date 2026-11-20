@@ -403,6 +403,8 @@ function applyRoute() {
       el.classList.add("jump-target");
       el.scrollIntoView({ block: "center" });
     }
+  } else if (track) {
+    window.scrollTo(0, 0);
   }
 }
 
