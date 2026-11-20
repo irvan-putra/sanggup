@@ -2192,9 +2192,9 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Manage up on purpose",
         lesson:
-          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
+          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job. Keep your progress visible so they never have to guess what you are doing or chase you for it. Tell them important news yourself, early, before they hear it from someone else; bad news travels and the source matters. And do not sit waiting for instructions: show initiative by picking the next useful step inside your authority and doing it, and when a decision needs their approval, bring a recommendation with your reasoning, not an unfiltered choice for them to solve. Flag risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
         practice:
-          "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
+          "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it. Then add two lines: one piece of news you would deliver yourself before it reaches them another way, and one decision where you write your recommendation and reasoning first and ask only for approval.",
       },
       {
         id: "ca9",
