@@ -445,7 +445,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Get ready before an emergency, Indonesia focus",
     status: "prototype",
     note:
-      "Preparedness basics from Indonesian authorities and Ready.gov. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. This path teaches preparedness basics and the safe-rescue principle only; it does not make you a trained rescuer or survival expert.",
+      "Preparedness basics from Indonesian authorities and Ready.gov. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. This path teaches preparedness basics and the safe-rescue principle only; it does not make you a trained rescuer or survival expert. In a disaster, follow official agencies and responders, not a chatbot.",
     sources: [
       { label: "Kemenkes Pusat Krisis: Tas Siaga Bencana (cites BNPB)", url: "https://pusatkrisis.kemkes.go.id/mari-siapkan-tas-siaga-bencana" },
       { label: "BMKG: Petunjuk keselamatan gempabumi dan tsunami", url: "https://content.bmkg.go.id/wp-content/uploads/Large-Prints-Petunjuk-keselamatan-Gempabumi-Tsunami.pdf" },
@@ -1745,7 +1745,8 @@ window.SANGGUP_TRACKS = [
       "sanggup cannot listen to your talk or coach your delivery. Speaking improves by doing it in front of real people; these stages structure that practice. Toastmasters clubs and similar groups give live feedback this app cannot.",
     sources: [
       { label: "Toastmasters International: Public Speaking Tips", url: "https://www.toastmasters.org/en-us/resources/public-speaking-tips" },
-      { label: "Toastmasters International: How to Write and Deliver a Speech", url: "https://www.toastmasters.org/resources/public-speaking-tips/how-to-write-and-deliver-a-speech" },
+      { label: "Toastmasters International: How to Write and Deliver a Speech", url: "https://www.toastmasters.org/resources/public-speaking-tips/how-to-write-and-deliver-a-speech" },      { label: "Toastmasters International: practice and evaluation clubs", url: "https://www.toastmasters.org/" },
+
     ],
     stages: [
       {
@@ -1783,6 +1784,15 @@ window.SANGGUP_TRACKS = [
           "Toastmasters' speech guide says you have about 30 seconds to capture attention before listeners tune out, and recommends opening with a story, especially one with conflict. Its outline advice ends with a conclusion that emphasizes your one message and asks the audience to actually do something with it.",
         practice:
           "Rewrite the first 30 seconds and the closing lines of your talk: a vivid opening story and one specific call to action. Test both on one listener and keep what lands.",
+      },
+      {
+        id: "sp6",
+        kind: "practice",
+        title: "Get a talk reviewed, then try again",
+        lesson:
+          "Speaking improves through a feedback loop: deliver a talk, ask for a review of that specific attempt, apply the feedback, and try again. Reviewers are everywhere once you look: a colleague, a friend, or a club built for this, like Toastmasters, where members practice and evaluate each other. A chatbot can also critique a transcript and is useful for rehearsal, but it cannot hear your delivery, so its review complements a person's assessment rather than replacing it. The milestone sign-off in this path still comes from a human reviewer.",
+        practice:
+          "Record or draft a two-minute talk on any topic. Ask one person to review that specific attempt with two questions: what landed, and what to change first. Optionally ask a chatbot for feedback on the text and compare. Apply one piece of feedback and deliver the talk again.",
       },
       {
         id: "sp4",
@@ -2151,6 +2161,8 @@ window.SANGGUP_TRACKS = [
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
       { label: "StaffEng: Operating at Staff", url: "https://staffeng.com/guides/operating-at-staff/" },
       { label: "US Small Business Administration: Choose a business structure", url: "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" },
+      { label: "Wikipedia: Elevator pitch", url: "https://en.wikipedia.org/wiki/Elevator_pitch" },
+      { label: "Wikipedia: Stock dilution", url: "https://en.wikipedia.org/wiki/Stock_dilution" },
       { label: "StaffEng: the book and stories", url: "https://staffeng.com/book" },
       { label: "Yale Office of Career Strategy: Using AI in your job search", url: "https://ocs.yale.edu/channels/using-ai-job-search/" },
       { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
@@ -2315,6 +2327,42 @@ window.SANGGUP_TRACKS = [
           "Incorporating turns a business into its own legal entity, separate from you: it can sign contracts, own assets and be sued, and your personal risk is usually limited to what you put in. The trade-offs are setup cost, ongoing reporting and tax rules that differ by country. The US SBA walks through choosing a structure (sole proprietorship, LLC, corporation) as one of the first launch decisions; Indonesia has its own forms, like the PT, with its own registration and capital rules. Treat the concept as general and the rules as country-specific: a lawyer or notary who knows your jurisdiction is part of the real cost.",
         practice:
           "Take a fictional two-person software studio. On paper, compare staying unincorporated versus forming a company: what each protects, what each costs in effort, and one situation where you would incorporate and one where you would wait. End with a list of three questions you would ask a local lawyer before filing anything.",
+      },
+      {
+        id: "ca11",
+        kind: "practice",
+        title: "Build an elevator pitch",
+        lesson:
+          "An elevator pitch explains an idea, product or company in thirty seconds to two minutes: who it is for, what it does, why it is needed and how it happens. Its goal is not to close a deal on the spot but to earn the next conversation. A pitch you can say plainly, without jargon, is also the test of whether you understand your own idea.",
+        practice:
+          "Take a fictional company, such as a bike-repair subscription for apartment buildings. Write a pitch of at most eighty words covering who it serves, what it does, why now and how it works. Read it aloud and cut every word that does not help a stranger understand it.",
+      },
+      {
+        id: "ca12",
+        kind: "practice",
+        title: "Sketch a pitch deck",
+        lesson:
+          "A pitch deck is the short slide story behind the pitch: the problem, your solution, who pays and how much, why your team can pull it off, and what you are asking for. Every number on a slide needs a source or an honest label as an estimate, because investors check. A deck supports the conversation; it does not replace it.",
+        practice:
+          "For the same fictional company, outline a ten-slide deck with one line per slide: problem, solution, market size, how it makes money, traction so far, competition, team, financial sketch, the ask, and what the money buys. Mark each number as sourced or estimate.",
+      },
+      {
+        id: "ca13",
+        kind: "practice",
+        title: "Learn how finding investors works",
+        lesson:
+          "Raising money means finding investors whose stage, sector and cheque size match your company, then earning introductions and running meetings, usually over months. Not every business should raise: investment trades ownership and control for speed, and plenty of good businesses grow from revenue instead. Rejection is the default outcome, so a pipeline of many conversations matters more than any single one.",
+        practice:
+          "For the fictional company, list five imaginary investor profiles (for example: a local angel who knows logistics, a seed fund focused on consumer apps) with why each would care. Then write one paragraph on whether the company should raise at all, or fund itself from sales, with your reasoning.",
+      },
+      {
+        id: "ca14",
+        kind: "practice",
+        title: "Spot equity traps before signing",
+        lesson:
+          "Equity deals have traps that only show up later. Dilution shrinks your ownership percentage whenever new shares are issued, and control dilution can cost you the company even while you keep shares. Term sheets carry more than valuation: board seats, veto rights and anti-dilution clauses shift power. Vesting, where founders earn their shares back over years, protects the company but surprises founders who skip the fine print. This is education, not legal advice; a startup lawyer earns their fee before you sign anything.",
+        practice:
+          "A fictional offer: 3 billion rupiah for 25 percent of the company, a board seat for the investor, and four-year founder vesting. List what the founders give up now, what they could give up later, and three questions to ask a lawyer before signing.",
       },
       {
         id: "cs4",
