@@ -370,7 +370,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Watch the numbers that matter",
         lesson:
-          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and the Work path. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and the Career path. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
         practice:
           "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
       },
@@ -388,7 +388,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Who does what",
         lesson:
-          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and the Work path.",
+          "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and the Career path.",
         practice:
           "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
       },
@@ -415,7 +415,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Keep people, tasks and updates in sync",
         lesson:
-          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in the Work path.",
+          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in the Career path.",
         practice:
           "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
       },
@@ -737,7 +737,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in the Work path and in Projects and business.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed. Shared skill: RACI is also practiced in the Career path and in Projects and business.",
         practice:
           "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
@@ -782,7 +782,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Work path and in Projects and business.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Career path and in Projects and business.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1450,7 +1450,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in the Work path, as case studies and for CVs and interviews.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. It works anywhere you present achievements, from profiles to interviews. Shared skill: the same STAR structure is also practiced in the Career path, as case studies and for CVs and interviews.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
@@ -2039,15 +2039,17 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "work", short: "Work", icon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2 M3 13h18"/>',
-    title: "Work",
-    tagline: "Career moves and client work in one path",
+    id: "work", short: "Career", icon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2 M3 13h18"/>',
+    title: "Career",
+    tagline: "Job hunting, growth and client work in one path",
     note: "Sanggup does not apply for jobs, find clients or do the work for you. Every application, client and decision is yours.",
     sources: [
       { label: "University of Pennsylvania Career Services: Write a Resume/CV", url: "https://careerservices.upenn.edu/channels/resume/" },
       { label: "University of Pennsylvania Career Services: Interview", url: "https://careerservices.upenn.edu/channels/interview/" },
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
+      { label: "StaffEng: Operating at Staff", url: "https://staffeng.com/guides/operating-at-staff/" },
+      { label: "StaffEng: the book and stories", url: "https://staffeng.com/book" },
       { label: "Yale Office of Career Strategy: Using AI in your job search", url: "https://ocs.yale.edu/channels/using-ai-job-search/" },
       { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
       { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
@@ -2082,7 +2084,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Tell achievement stories",
         lesson:
-          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Branding and creator and in this Work path, as case studies.",
+          "Interviewers and readers remember stories with shape. STAR gives the shape: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Three well-prepared stories cover most behavioral interview questions. Shared skill: the STAR structure is also practiced in Branding and creator and in this Career path, as case studies.",
         practice:
           "Write three STAR stories from your ca1 list: one about delivering, one about a problem you fixed, one about working with people. Say each aloud in under two minutes.",
       },
@@ -2100,7 +2102,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Assemble proof",
         lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Branding and creator and elsewhere in this Work path.",
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive. Structure each example as a STAR story: the Situation, the Task you owned, the Action you took and the Result. Shared skill: the STAR structure is also practiced in Branding and creator and elsewhere in this Career path.",
         practice:
           "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
@@ -2193,6 +2195,15 @@ window.SANGGUP_TRACKS = [
           "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
         practice:
           "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
+      },
+      {
+        id: "ca9",
+        kind: "practice",
+        title: "Grow toward staff engineer",
+        lesson:
+          "A staff engineer keeps growing on the technical track instead of moving into management. StaffEng's guides describe operating at staff as setting technical direction, mentoring, and unblocking work across teams: the job shifts from writing the most code to making the people and decisions around the code better. Impact is judged by what the whole group ships, not by personal output.",
+        practice:
+          "Take a fictional team of eight engineers with a struggling project. Write a one-page plan a staff engineer would lead: the technical direction in two sentences, two people you would mentor and how, and one cross-team blocker you would unblock first. Mark what you would deliberately not code yourself.",
       },
       {
         id: "cs4",

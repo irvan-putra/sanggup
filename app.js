@@ -88,7 +88,7 @@ function renderTracks() {
 $("back-to-tracks").addEventListener("click", () => { location.hash = ""; renderTracks(); });
 
 
-// ---------- learner: parent tile chooser (e.g. Work) ----------
+// ---------- learner: parent tile chooser (retired; aliases kept) ----------
 
 function renderGroup(track) {
   currentTrack = null;
