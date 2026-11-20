@@ -810,7 +810,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Know what fiscal sponsorship is",
         lesson:
-          "A community project that wants to receive grants or donations sometimes lacks its own legal entity. Fiscal sponsorship is a fee-based arrangement where an established nonprofit lends its legal and tax status to a project that fits its mission, often with administrative help like payroll and bookkeeping. The trade-offs are real: the sponsor keeps legal control of the project and charges a fee, and both sides can face liability if the arrangement is just a money conduit. The concept comes from the US nonprofit system; Indonesia has different structures, such as yayasan, and different tax rules, so the local details need local advice.",
+          "A community project that wants to receive grants or donations sometimes lacks its own legal entity. Fiscal sponsorship is a fee-based arrangement where an established nonprofit lends its legal and tax status to a project that fits its mission, often with administrative help like payroll and bookkeeping. The trade-offs are real: the sponsor keeps legal control of the project and charges a fee, and both sides can face liability if the arrangement is just a money conduit. The concept comes from the US nonprofit system; Indonesia has its own legal forms and tax rules for community organizations, so the local details need local advice.",
         practice:
           "Take a fictional running club that wants a 50,000,000 rupiah grant. Write two plans: one where the club registers its own entity, one where it works under a fiscal sponsor. List what the club gives up and gains in each, and three questions to ask a sponsor before signing.",
       },
@@ -1051,6 +1051,15 @@ window.SANGGUP_TRACKS = [
           "A chatbot can produce a draft in seconds, but the draft is a starting point, not a finished piece. It can state wrong facts confidently, and its default voice is generic. Check every factual claim against a source you trust, and rewrite until the piece sounds like you. What you publish has your name on it, so you own every sentence.",
         practice:
           "A fictional AI draft says: 'The Bandung Book Fair drew 80,000 visitors in 2024 and is the oldest book fair in Asia.' List the claims you would need to check and where you would check them. Then rewrite the sentence as your own opening, keeping only what you could verify.",
+      },
+      {
+        id: "w7",
+        kind: "practice",
+        title: "Get a piece reviewed, then revise",
+        lesson:
+          "Writing improves through review: share a specific piece, ask a reader what confused them and what they remember, then revise and share again. A chatbot can also critique a draft and is always available, but it reads differently from your real audience, so use its notes as a complement, not a verdict. The milestone sign-off in this path still comes from a person.",
+        practice:
+          "Pick a short piece you wrote, real or fictional. Ask one person to read it and answer two questions: where did you stop understanding, and what do you remember? Optionally compare with a chatbot's critique. Revise one section based on the feedback.",
       },
       {
         id: "jr5",
@@ -1298,6 +1307,15 @@ window.SANGGUP_TRACKS = [
           "UT's Center for Music Learning suggests that rather than improving many things at once, you pick one small thing and make it great, like how a single note starts.",
         practice:
           "Pick one small detail in your piece, and spend one session only on it. Record before and after and compare.",
+      },
+      {
+        id: "u_6",
+        kind: "practice",
+        title: "Play for someone, then play it again",
+        lesson:
+          "Music grows through being heard: play a specific piece for one person, ask what came across and what to fix first, practice that, and play it again. A recording of yourself is the next best reviewer when nobody is around. Listening apps and AI tools can comment on a recording's notes and timing, but they cannot judge how the music feels in the room; a person's ear still closes the loop.",
+        practice:
+          "Play one short piece for a person or record yourself playing it. Note two specific comments from the listener or the recording, pick one thing to fix, and play the piece again with that fix in mind.",
       },
       {
         id: "u_5",
@@ -1999,6 +2017,15 @@ window.SANGGUP_TRACKS = [
           "A fictional AI quiz asks: 'What is the capital of Australia?' with the answer key 'Sydney'. Find the error, fix the item, and write one more question with its correct answer. Then note what you would check in a ten-question AI quiz before using it.",
       },
       {
+        id: "tm7",
+        kind: "practice",
+        title: "Teach in front of a reviewer",
+        lesson:
+          "Teaching improves when someone watches: run a short session, ask the observer where learners got lost and what to change, then teach it again differently. Learners themselves are reviewers too, and AI can help you rehearse explanations of a topic, but only the people in the room can tell you whether they actually learned. The milestone sign-off in this path still comes from a person.",
+        practice:
+          "Teach a five-minute explanation of anything to one person. Ask them two questions afterward: what was clear, and where did I lose you? Reteach the weak part in a different way and note which explanation landed better.",
+      },
+      {
         id: "tm4",
         kind: "milestone",
         title: "Milestone: teach one real skill",
@@ -2057,6 +2084,15 @@ window.SANGGUP_TRACKS = [
           "Harvard's Program on Negotiation calls active listening one of the most powerful negotiation skills, and one most people overestimate in themselves. It is dynamic, not silent nodding: paraphrase the other side's points back and ask whether you captured their main concerns, so they can correct you before positions harden.",
         practice:
           "In your next real conversation where you want something, paraphrase the other person's position out loud and ask whether you got it right before making your case. Write down one thing you learned that you would otherwise have missed.",
+      },
+      {
+        id: "ng6",
+        kind: "practice",
+        title: "Rehearse a negotiation with a reviewer",
+        lesson:
+          "Negotiation practice sticks when someone plays the other side: run the conversation, then ask your sparring partner where you gave ground too fast and what landed. A chatbot can role-play the counterpart for rehearsal and is useful for trying different openings, but it does not push back like a real counterpart with real stakes, so treat its sessions as warm-ups. The milestone sign-off in this path still comes from a person.",
+        practice:
+          "Role-play a fictional negotiation, such as splitting a project budget, with a friend or a chatbot as the counterpart. Afterward write what the counterpart said that you did not expect, and one thing you would open with differently next time.",
       },
       {
         id: "ng4",
@@ -2139,6 +2175,15 @@ window.SANGGUP_TRACKS = [
           "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
       },
       {
+        id: "cd8",
+        kind: "practice",
+        title: "Get your code reviewed by a person",
+        lesson:
+          "Code review is the profession's feedback loop: another developer reads your change and questions what you stopped seeing. AI review tools catch mechanical issues quickly, but a human reviewer judges whether the code solves the right problem in a way the team can maintain. Ask for review on a specific change, apply the feedback, and expect the exchange to be normal, not personal.",
+        practice:
+          "Take a small piece of code you wrote, real or a fifty-line fictional script. Ask a person who codes to review that specific piece, or compare against a chatbot's review if nobody is available. List the comments, apply one, and write what the reviewer saw that you had missed.",
+      },
+      {
         id: "cd4",
         kind: "milestone",
         title: "Milestone: catch one real assumption bug",
@@ -2161,6 +2206,7 @@ window.SANGGUP_TRACKS = [
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
       { label: "StaffEng: Operating at Staff", url: "https://staffeng.com/guides/operating-at-staff/" },
       { label: "US Small Business Administration: Choose a business structure", url: "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" },
+      { label: "OSS RBA: Indonesia's risk-based business licensing system", url: "https://oss.go.id/en" },
       { label: "Wikipedia: Elevator pitch", url: "https://en.wikipedia.org/wiki/Elevator_pitch" },
       { label: "Wikipedia: Stock dilution", url: "https://en.wikipedia.org/wiki/Stock_dilution" },
       { label: "StaffEng: the book and stories", url: "https://staffeng.com/book" },
@@ -2324,7 +2370,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Understand creating a corporation",
         lesson:
-          "Incorporating turns a business into its own legal entity, separate from you: it can sign contracts, own assets and be sued, and your personal risk is usually limited to what you put in. The trade-offs are setup cost, ongoing reporting and tax rules that differ by country. The US SBA walks through choosing a structure (sole proprietorship, LLC, corporation) as one of the first launch decisions; Indonesia has its own forms, like the PT, with its own registration and capital rules. Treat the concept as general and the rules as country-specific: a lawyer or notary who knows your jurisdiction is part of the real cost.",
+          "Incorporating turns a business into its own legal entity, separate from you: it can sign contracts, own assets and be sued, and your personal risk is usually limited to what you put in. The trade-offs are setup cost, ongoing reporting and tax rules that differ by country. The US SBA walks through choosing a structure (sole proprietorship, LLC, corporation) as one of the first launch decisions; Indonesia runs its own registration through the OSS risk-based licensing system, with company forms and rules that differ from the US. Treat the concept as general and the rules as country-specific: a lawyer or notary who knows your jurisdiction is part of the real cost.",
         practice:
           "Take a fictional two-person software studio. On paper, compare staying unincorporated versus forming a company: what each protects, what each costs in effort, and one situation where you would incorporate and one where you would wait. End with a list of three questions you would ask a local lawyer before filing anything.",
       },
