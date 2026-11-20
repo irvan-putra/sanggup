@@ -79,12 +79,12 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "tidying", short: "Tidying", icon: '<path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>',
-    title: "Cleaning & tidying",
-    tagline: "Clean safely, then decide what stays",
+    id: "tidying", short: "Home", icon: '<path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>',
+    title: "Home",
+    tagline: "Clean, mend, repair and care for plants",
     status: "prototype",
     note:
-      "Independent practice exercises written for sanggup. This is not an official KonMari course and is not endorsed by Marie Kondo or KonMari Media. Cleaning removes dirt; tidying means deciding what to keep. They are different jobs and this path treats them separately.",
+      "Independent practice exercises written for sanggup. This is not an official KonMari course and is not endorsed by Marie Kondo or KonMari Media. Cleaning removes dirt; tidying means deciding what to keep. They are different jobs and this path treats them separately. The mending, repair and plant stages teach basic hand skills only; they do not cover electrical, plumbing, gas or structural work, which belongs to building maintenance or a licensed professional.",
     sources: [
       { label: "CDC: Cleaning and disinfecting", url: "https://www.cdc.gov/hygiene/cleaning-disinfecting/" },
       { label: "CDC: Cleaning and disinfecting with bleach", url: "https://www.cdc.gov/hygiene/about/cleaning-and-disinfecting-with-bleach.html" },
@@ -92,7 +92,9 @@ window.SANGGUP_TRACKS = [
       { label: "KonMari: Rule 4, tidy by category", url: "https://konmari.com/marie-kondo-rules-of-tidying-category-not-location/" },
       { label: "KonMari: Rule 5, follow the right order", url: "https://konmari.com/marie-kondo-rules-of-tidying-follow-order/" },
       { label: "KonMari: Rule 6, sparks joy", url: "https://konmari.com/marie-kondo-rules-of-tidying-sparks-joy/" },
-      { label: "Swedish death cleaning (döstädning), overview", url: "https://en.wikipedia.org/wiki/Swedish_death_cleaning" },
+      { label: "Swedish death cleaning (döstädning), overview", url: "https://en.wikipedia.org/wiki/Swedish_death_cleaning" },      { label: "Wikipedia: Sewing", url: "https://en.wikipedia.org/wiki/Sewing" },
+      { label: "Wikipedia: Houseplant", url: "https://en.wikipedia.org/wiki/Houseplant" },
+
     ],
     stages: [
       {
@@ -139,6 +141,33 @@ window.SANGGUP_TRACKS = [
           "KonMari's own site contrasts its method with rule-based advice such as discarding anything unused for two years, or getting rid of something old whenever you buy something new. Rules are quick and need less self-knowledge. Feelings-based methods fit you better but take more attention. Neither is the one right way.",
         practice:
           "Pick one shelf. Apply a rule (nothing used in the last year goes into a donate box), then look at what is left and ask the joy question about the rest. Note which approach felt easier and which felt more like you.",
+      },
+      {
+        id: "hm1",
+        kind: "practice",
+        title: "Mend clothes by hand",
+        lesson:
+          "Hand sewing has kept clothes alive for thousands of years and needs almost no equipment: a needle, thread and a few basic stitches fix most everyday damage. Sewing a button back, closing a split seam and hemming an edge cover most repairs, and the same stitches let you make simple accessories like pouches or scrunchies. Mending one thing teaches more than reading about ten.",
+        practice:
+          "Take one item with a small defect, real or fictional: a loose button, a split seam or a fraying hem. Write which repair it needs and the three steps to do it by hand. If you have the item and a needle, do the repair and note what you would do differently next time.",
+      },
+      {
+        id: "hm2",
+        kind: "practice",
+        title: "Handle small apartment repairs",
+        lesson:
+          "Many apartment annoyances are safe beginner fixes: reattaching peeling wallpaper with paste, patching a nail hole, tightening a loose handle or hinge, and clearing a slow drain with basic tools. The boundary is clear: anything electrical, plumbing inside walls, gas or structural belongs to building maintenance or a licensed professional, and renters should check their lease before changing anything permanent. Knowing where DIY ends is part of the skill.",
+        practice:
+          "List three small issues in a home, real or imagined, such as peeling wallpaper, a wobbly hinge and a nail hole. For each, write whether it is a safe DIY fix or a call-maintenance case, and for the DIY ones note the tool and the first step.",
+      },
+      {
+        id: "hm3",
+        kind: "practice",
+        title: "Keep apartment plants alive",
+        lesson:
+          "Houseplants have different needs from outdoor plants, and the most common killer is kindness: overwatering causes root rot, the most common cause of houseplant death. Pots need drainage holes, light matters more than most people think, and many popular houseplants tolerate shade and irregular watering because they evolved as understory plants or succulents. Match the plant to the room, not the other way around.",
+        practice:
+          "Pick one spot in a home, real or imagined, and note its light: bright window, indirect, or dim corner. Choose one plant type suited to that light, write its watering rule of thumb and its drainage setup, and add one sign that would tell you it is being overwatered.",
       },
       {
         id: "t6",
@@ -413,7 +442,9 @@ window.SANGGUP_TRACKS = [
       { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
       { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
       { label: "Wikipedia: Bootstrapping (business)", url: "https://en.wikipedia.org/wiki/Bootstrapping" },
-      { label: "Wikipedia: Project management", url: "https://en.wikipedia.org/wiki/Project_management" },
+      { label: "Wikipedia: Project management", url: "https://en.wikipedia.org/wiki/Project_management" },      { label: "Wikipedia: 3D printing", url: "https://en.wikipedia.org/wiki/3D_printing" },
+      { label: "Precious Plastic: open-source plastic recycling machines and community", url: "https://preciousplastic.com/" },
+
     ],
     stages: [
       {
@@ -514,6 +545,24 @@ window.SANGGUP_TRACKS = [
           "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in the Career path.",
         practice:
           "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
+      },
+      {
+        id: "j5",
+        kind: "practice",
+        title: "Understand 3D printing",
+        lesson:
+          "3D printing builds an object layer by layer from a digital model, most commonly by melting plastic filament (FDM). It shines at prototypes, replacement parts and shapes that are hard to make by hand. The practical route for a beginner is usually a makerspace, library or print service rather than buying a machine. Respect the safety basics: the nozzle and bed get hot, some filaments release fumes so ventilation matters, and printed plastic is not automatically food-safe.",
+        practice:
+          "Pick one object around your home, real or imagined, that could break or go missing, such as a drawer handle or cable clip. Write whether a 3D-printed replacement makes sense, what material you would choose, and where you could get it printed without owning a printer.",
+      },
+      {
+        id: "j6",
+        kind: "practice",
+        title: "Learn how plastic recycling workshops work",
+        lesson:
+          "Precious Plastic, a project from the One Army community, publishes open-source machines and guides so local workshops can shred and press waste plastic into new products like sheets, tiles and furniture. The machines are workshop-scale, not kitchen appliances: shredding and melting plastic involves heat, fumes and moving parts, so this is a community-workshop activity with proper equipment and ventilation, not a home experiment. The accessible first step is learning which plastics can be recycled and finding a local workshop or collection point.",
+        practice:
+          "Look at three plastic items you would normally throw away, real or imagined, and find the recycling code on each. Write which local option, real or fictional, could take each one: regular recycling collection, a Precious Plastic-style workshop, or neither. Then list two questions you would ask a workshop before bringing material.",
       },
       {
         id: "bu5",

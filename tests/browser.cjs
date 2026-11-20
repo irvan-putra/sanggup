@@ -69,7 +69,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),7);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,15,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,16,/does not contact anyone/],[/^Money and FIRE,/,11,/not personal financial/],[/^Writing and journalism,/,12,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,5,/General method/],[/^Music,/,5,/Instrument-neutral/],[/^Math,/,6,/problem-solving method/],[/^Chess,/,6,/Beginner chess/],[/^Branding and creator,/,17,/does not write your profiles/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,5,/cannot listen to your talk/],[/^Presentation,/,5,/does not make your slides/],[/^Surveying people,/,5,/does not run surveys/],[/^Teaching and mentoring,/,6,/does not teach for you/],[/^Negotiation,/,5,/does not negotiate for you/],[/^Coding,/,7,/does not run your code/],[/^Career,/,22,/does not apply for jobs/]]) {
+ for (const [name,count,noteRe] of [[/^Home,/,8,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,15,/Pomodoro/],[/^Projects and business,/,13,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,16,/does not contact anyone/],[/^Money and FIRE,/,11,/not personal financial/],[/^Writing and journalism,/,12,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,5,/General method/],[/^Music,/,5,/Instrument-neutral/],[/^Math,/,6,/problem-solving method/],[/^Chess,/,6,/Beginner chess/],[/^Branding and creator,/,17,/does not write your profiles/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,5,/cannot listen to your talk/],[/^Presentation,/,5,/does not make your slides/],[/^Surveying people,/,5,/does not run surveys/],[/^Teaching and mentoring,/,6,/does not teach for you/],[/^Negotiation,/,5,/does not negotiate for you/],[/^Coding,/,7,/does not run your code/],[/^Career,/,22,/does not apply for jobs/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
@@ -78,11 +78,11 @@ async function openTile(page,name){
   assert.equal(await page.locator('.stage-card.done').count(),count);
  }
  await page.goto(url);
- await page.getByRole('button',{name:/^Cleaning & tidying,/}).click();
- assert.equal(await page.locator('.stage-card.done').count(),5);
+ await page.getByRole('button',{name:/^Home,/}).click();
+ assert.equal(await page.locator('.stage-card.done').count(),8);
  assert.equal(await page.getByRole('button',{name:'Request sign-off',exact:true}).count(),1);
  // every stage card on every path renders real content, never schema gaps like "undefined"
- for (const name of [/^Cooking,/,/^Cleaning & tidying,/,/^Decisions and priorities,/,/^Focus and habits,/,/^Projects and business,/,/^Disaster preparedness,/,/^First aid awareness,/,/^Network and community,/,/^Money and FIRE,/,/^Writing and journalism,/,/^Swimming,/,/^Driving,/,/^Languages,/,/^Music,/,/^Math,/,/^Chess,/,/^Branding and creator,/,/^Self care and calm,/,/^Public speaking,/,/^Presentation,/,/^Surveying people,/,/^Teaching and mentoring,/,/^Negotiation,/,/^Coding,/,/^Career,/]) {
+ for (const name of [/^Cooking,/,/^Home,/,/^Decisions and priorities,/,/^Focus and habits,/,/^Projects and business,/,/^Disaster preparedness,/,/^First aid awareness,/,/^Network and community,/,/^Money and FIRE,/,/^Writing and journalism,/,/^Swimming,/,/^Driving,/,/^Languages,/,/^Music,/,/^Math,/,/^Chess,/,/^Branding and creator,/,/^Self care and calm,/,/^Public speaking,/,/^Presentation,/,/^Surveying people,/,/^Teaching and mentoring,/,/^Negotiation,/,/^Coding,/,/^Career,/]) {
   await page.goto(url);
   await openTile(page,name);
   const cards=await page.locator('.stage-card').allInnerTexts();
