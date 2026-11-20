@@ -368,7 +368,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Watch the numbers that matter",
         lesson:
-          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and Client work.",
+          "A KPI is a number you watch over time to judge the health of an activity. A few honest numbers beat a dashboard of decorations: every KPI needs a target, an owner and a moment you look at it, or it is trivia. Shared skill: KPIs are also practiced in Network and community and Client work. Shared skill: KPIs are also practiced in Branding and creator, for marketing.",
         practice:
           "Pick one activity and choose at most three numbers that would tell you it is healthy. For each, write the target, who looks at it and when.",
       },
@@ -1369,6 +1369,13 @@ window.SANGGUP_TRACKS = [
       { label: "Substack: How to start a newsletter and blog", url: "https://on.substack.com/p/start-a-substack-newsletter" },
       { label: "YouTube for Creators: Start and manage your channel", url: "https://www.youtube.com/creators/get-started/" },
       { label: "Medium Help Center: Write and publish a story", url: "https://help.medium.com/hc/en-us/articles/225168028-Write-and-publish-a-story" },
+      { label: "Wikipedia: Market segmentation (STP)", url: "https://en.wikipedia.org/wiki/Market_segmentation" },
+      { label: "Wikipedia: Positioning (marketing)", url: "https://en.wikipedia.org/wiki/Positioning_(marketing)" },
+      { label: "Wikipedia: Marketing mix", url: "https://en.wikipedia.org/wiki/Marketing_mix" },
+      { label: "Google Search Central: Search Essentials", url: "https://developers.google.com/search/docs/essentials" },
+      { label: "Wikipedia: Search engine marketing", url: "https://en.wikipedia.org/wiki/Search_engine_marketing" },
+      { label: "US FTC: Disclosures 101 for Social Media Influencers", url: "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" },
+      { label: "Wikipedia: Trade show", url: "https://en.wikipedia.org/wiki/Trade_fair" },
     ],
     stages: [
       {
@@ -1442,6 +1449,69 @@ window.SANGGUP_TRACKS = [
           "Early numbers are small and noisy. Watch signals that show real attention: replies, watch time, returning readers. Ask your first readers what helped them. Likes alone tell you almost nothing.",
         practice:
           "After your fourth piece, write down the three most useful signals you saw and one change you will test next month.",
+      },
+      {
+        id: "mk1",
+        kind: "practice",
+        title: "Segment, then choose a target",
+        lesson:
+          "Marketing guidance describes the STP approach: divide a broad market into meaningful sub-groups, called segments, of people with shared needs, then target the segment you can serve best with a tailored strategy. Trying to reach everyone usually reaches no one in particular. Shared skill: asking people in your target group directly is the Surveying people path.",
+        practice:
+          "Write down two or three segments for something you offer, with the need that defines each. Pick one target and describe one real person in it: their situation, their need and where they spend their attention.",
+      },
+      {
+        id: "mk2",
+        kind: "practice",
+        title: "Position against the alternative",
+        lesson:
+          "Positioning is the distinct place your offer occupies in the customer's mind relative to the alternatives they already use. A position can be functional, solving a problem, symbolic, saying something about them, or experiential, feeling a certain way. A clear position is a choice: you give up being for everyone.",
+        practice:
+          "Write one sentence: for your target, your offer is the category that gives one distinct benefit, unlike the alternative they use now. Show it to two people in your target and note what confused them.",
+      },
+      {
+        id: "mk3",
+        kind: "practice",
+        title: "Choose channels and one simple message",
+        lesson:
+          "The marketing mix sorts what you control into product, price, place and promotion. For a personal brand, place and promotion mean choosing the few channels your target actually uses instead of posting everywhere. Shared skill: publishing on a cadence is the creator stages in this path; measuring which channel works, with the numbers that matter, is the KPI stage in Projects and business.",
+        practice:
+          "Pick two channels your target already uses. Write one short message for each, in the words your target uses, and say where each reader should go next.",
+      },
+      {
+        id: "mk4",
+        kind: "practice",
+        title: "Be findable in search (SEO)",
+        lesson:
+          "Google's own Search Essentials say appearing in search results costs nothing, whatever anyone tells you. Its key practices: create helpful, reliable, people-first content; use the words people actually search for in the title, main heading and link text; and keep links crawlable. Tactics that try to trick rankings can get a page ranked lower or omitted entirely under Google's spam policies.",
+        practice:
+          "Pick one page of yours. Rewrite its title and main heading using the exact words your target would type into a search box, then click every link on the page to check it works.",
+      },
+      {
+        id: "mk5",
+        kind: "practice",
+        title: "Paid search ads (SEM), on paper",
+        lesson:
+          "Search engine marketing means paying for visibility in search results, usually pay-per-click: you choose which searches show your ad and pay when someone clicks. Paid clicks that do not lead anywhere useful are pure cost, so campaigns are planned around one action that counts. Shared skill: the words to bid on are the words your target uses, the same words SEO relies on.",
+        practice:
+          "With an imaginary Rp 1,000,000 budget, draft a campaign on paper: five search terms, the page each click should land on, the price per click you would accept, and the one action that counts as a conversion. No real account, no real spend.",
+      },
+      {
+        id: "mk6",
+        kind: "practice",
+        title: "Paying influencers, on paper",
+        lesson:
+          "Paying influencers means paying people with an audience to talk about your offer. Disclosure rules vary by country: the US FTC requires a clear disclosure whenever there is a material connection, which includes payment or free products, and puts that responsibility on the influencer. Judge fit by whether their audience is your target segment, not by follower counts. Shared skill: the creator stages in this path cover building an audience of your own.",
+        practice:
+          "Draft a campaign plan for three imaginary influencers: why their audience matches your target, what they would say, the disclosure you would require and the total mock budget. No real outreach.",
+      },
+      {
+        id: "mk7",
+        kind: "practice",
+        title: "Show up in person: booths and trade shows",
+        lesson:
+          "A trade show is an organized event where companies in an industry showcase and demonstrate what they offer, meet customers and partners, and watch competitors and market trends. A booth is a cost, not a guarantee: it pays off only when the show’s visitors are your target segment and you know what one conversation should lead to. Shared skill: starting and keeping those conversations is the Network and community path; weighing the cost against results is the KPI stage in Projects and business.",
+        practice:
+          "Pick one real event your target visits. On paper, plan a booth: the one thing visitors should remember, a two-sentence demo, how you would collect contacts, and a mock budget with the cost per useful conversation. No booking, no spend.",
       },
       {
         id: "cr5",
@@ -1759,7 +1829,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Start from a decision",
         lesson:
-          "A survey exists to inform a decision: what you will do differently depending on the answers. If no answer would change anything, the survey is decoration. Define the decision, then what you need to learn, then who can tell you.",
+          "A survey exists to inform a decision: what you will do differently depending on the answers. If no answer would change anything, the survey is decoration. Define the decision, then what you need to learn, then who can tell you. Shared skill: surveying an audience for marketing is also practiced in Branding and creator.",
         practice:
           "Pick a real question from your work or community. Write the decision it informs, the one thing you need to learn, and the group of people whose answers would settle it.",
       },
