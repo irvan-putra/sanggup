@@ -415,7 +415,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Keep people, tasks and updates in sync",
         lesson:
-          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next.",
+          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next. Shared skill: updating your manager is the manage up stage in Career moves.",
         practice:
           "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
       },
@@ -2079,6 +2079,7 @@ window.SANGGUP_TRACKS = [
       { label: "University of Pennsylvania Career Services: Write a Resume/CV", url: "https://careerservices.upenn.edu/channels/resume/" },
       { label: "University of Pennsylvania Career Services: Interview", url: "https://careerservices.upenn.edu/channels/interview/" },
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
+      { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
     ],
     stages: [
       {
@@ -2107,6 +2108,15 @@ window.SANGGUP_TRACKS = [
           "Career centers treat interviews as a skill you rehearse: research the organization, answer aloud rather than in your head, and bring your own questions, since you are choosing them too. A mock run with a friend catches the rambling your inner voice forgives.",
         practice:
           "Do one mock interview with a friend playing the interviewer, using your STAR stories. Write down their two sharpest questions and your five questions for a real interviewer.",
+      },
+      {
+        id: "ca5",
+        kind: "practice",
+        title: "Manage up on purpose",
+        lesson:
+          "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
+        practice:
+          "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
       },
       {
         id: "ca4",
