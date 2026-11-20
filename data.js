@@ -316,6 +316,8 @@ window.SANGGUP_TRACKS = [
       { label: "Standard operating procedure (SOP), overview", url: "https://en.wikipedia.org/wiki/Standard_operating_procedure" },
       { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
       { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
+      { label: "Wikipedia: Bootstrapping (business)", url: "https://en.wikipedia.org/wiki/Bootstrapping" },
+      { label: "Wikipedia: Project management", url: "https://en.wikipedia.org/wiki/Project_management" },
     ],
     stages: [
       {
@@ -389,6 +391,33 @@ window.SANGGUP_TRACKS = [
           "Unclear ownership is how shared work dies. RACI names the roles: Responsible does the work, Accountable owns the outcome (exactly one person), Consulted gives input before, Informed hears after. Writing the letters next to names surfaces gaps and double-ownership before they cost you. Shared skill: RACI is also practiced in Network and community and Client work.",
         practice:
           "Take one current project or recurring process. List its five main tasks and write R, A, C or I next to each person involved. Fix any task with no A, or two.",
+      },
+      {
+        id: "bs1",
+        kind: "practice",
+        title: "Start with what you have",
+        lesson:
+          "Bootstrapping in business means starting without external capital: founders survive on internal cash flow and stay very cautious with expenses. Funding typically moves from personal savings, to customer revenue keeping the business afloat, to reinvesting profits for growth, which keeps control with you. Shared skill: the household budgeting that frees money to start is the Money and FIRE path.",
+        practice:
+          "List what you could start this month with only what you already have: skills, tools, contacts and a small amount of savings. Write down the smallest version that a real customer could pay for.",
+      },
+      {
+        id: "bs2",
+        kind: "practice",
+        title: "Cash flow decides",
+        lesson:
+          "A bootstrapped venture lives or dies on cash flow: money from customers must cover day-to-day expenses before anything else. Know your monthly costs, get paid promptly, and treat every expense as a choice against survival; a project that looks profitable on paper can still sink if the money arrives late. Shared skill: winning the first customers is the marketing stages in Branding and creator; watching the numbers that matter is the KPI stage in this path.",
+        practice:
+          "Sketch one month of cash flow for your smallest offer: money in, when; money out, when. Mark the tightest week and write one thing you would cut or delay if it came true.",
+      },
+      {
+        id: "pb9",
+        kind: "practice",
+        title: "Keep people, tasks and updates in sync",
+        lesson:
+          "Projects drift when people hold different pictures of the same work. Project management treats planning and control as its own discipline: one shared task list with owners and dates, a short regular update where everyone hears the same status, and one place where decisions are written down. Syncing is not more meetings; it is making sure nobody has to guess what changed, what is blocked, or what happens next.",
+        practice:
+          "Take any project, real or imaginary, with at least two people in it. Write its one-page sync sheet: the task list with owners and dates, when the regular update happens, and where decisions get recorded. Run one mock update aloud in two minutes.",
       },
       {
         id: "bu5",
@@ -637,6 +666,7 @@ window.SANGGUP_TRACKS = [
       { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
       { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
       { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
+      { label: "Wikipedia: Mentorship", url: "https://en.wikipedia.org/wiki/Mentorship" },
     ],
     stages: [
       {
@@ -734,7 +764,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Find sponsors and partners",
         lesson:
-          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes.",
+          "Sponsors support events that reach people they care about, so the search starts with what you can offer, not with what you need. Partners are different from sponsors: partners contribute work, venues or speakers; sponsors contribute money or goods. Match each candidate to your members: a sponsor whose customers are your members has a reason to say yes. Shared skill: offering ad and sponsor slots in your own work is also practiced in Branding and creator.",
         practice:
           "List five local businesses or organizations whose audience overlaps yours. For each, write one thing you could offer: a logo on materials, a talk slot, a workshop, a product trial or a booth.",
       },
@@ -755,6 +785,15 @@ window.SANGGUP_TRACKS = [
           "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in Client work and in Projects and business.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
+      },
+      {
+        id: "nt14",
+        kind: "practice",
+        title: "Reach out to new people on purpose",
+        lesson:
+          "Reaching out to new people works the same way as the earlier stages here: lead with genuine interest, give before you ask, and keep it small. What is different is the first contact: name why you picked them in one sentence, make one specific small ask, and make it easy to say no. Approaching senior people is the same skill with more preparation: they are busy, so show you did your homework and respect their time. Mentors do not have to be senior, but the good ones have experience you can learn from, and the relationship grows through communication over time, not one ask.",
+        practice:
+          "Pick one imaginary person, either new to you or senior in your field. Write the first message in three sentences: why them, one specific small ask, and an easy out. Do not send anything.",
       },
       {
         id: "cb9",
@@ -790,7 +829,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "See where money goes",
         lesson:
-          "A budget starts with facts. Example: someone earns Rp 8,000,000 a month and spends Rp 7,200,000, but could only name Rp 5,000,000 of it. The missing Rp 2,200,000 is where the budget starts. Tracking is not judging; it is collecting data.",
+          "A budget starts with facts. Example: someone earns Rp 8,000,000 a month and spends Rp 7,200,000, but could only name Rp 5,000,000 of it. The missing Rp 2,200,000 is where the budget starts. Tracking is not judging; it is collecting data. Shared skill: freeing savings to start a venture is bootstrapping, in Projects and business.",
         practice:
           "For one month write down every spend by category on paper or a notes app on your own device. sanggup will not ask for amounts or connect to accounts.",
       },
@@ -1376,6 +1415,7 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Search engine marketing", url: "https://en.wikipedia.org/wiki/Search_engine_marketing" },
       { label: "US FTC: Disclosures 101 for Social Media Influencers", url: "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" },
       { label: "Wikipedia: Trade show", url: "https://en.wikipedia.org/wiki/Trade_fair" },
+      { label: "Wikipedia: Advertising", url: "https://en.wikipedia.org/wiki/Advertising" },
     ],
     stages: [
       {
@@ -1514,6 +1554,24 @@ window.SANGGUP_TRACKS = [
           "Pick one real event your target visits. On paper, plan a booth: the one thing visitors should remember, a two-sentence demo, how you would collect contacts, and a mock budget with the cost per useful conversation. No booking, no spend.",
       },
       {
+        id: "mk8",
+        kind: "practice",
+        title: "Buy advertising, on paper",
+        lesson:
+          "Advertising means paying to bring attention to an offer, and it spans far more than search ads: social feeds, banners, print, radio and out-of-home. Whatever the channel, the discipline is the same: one target, one message, one action, one number that tells you whether it worked. Shared skill: search ads specifically are the SEM stage in this path.",
+        practice:
+          "Choose one channel from your earlier channel stage. Draft an ad buy on paper: the audience definition, the exact message, the page it lands on, the mock budget and the cost per result you would accept. No real spend.",
+      },
+      {
+        id: "mk9",
+        kind: "practice",
+        title: "Sell space in what you make",
+        lesson:
+          "The other side of advertising: if people pay attention to your work, you can offer space in it - a sponsor slot at an event, a logo on a T-shirt, a mention in a project or product. Sponsors pay for access to your audience, so the offer only makes sense once you can say who that audience is. Selling space spends a piece of your audience's trust, so keep what you show them honest. Shared skill: finding sponsors and partners, and negotiating with them, is the Network and community path.",
+        practice:
+          "List what you make that people pay attention to. For one item, draft an offer on paper: the slot, who it would suit, the price you would ask and what you would not allow. No real outreach.",
+      },
+      {
         id: "cr5",
         kind: "milestone",
         title: "Milestone: one month, four pieces",
@@ -1538,6 +1596,8 @@ window.SANGGUP_TRACKS = [
       { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
       { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
       { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
+      { label: "Wikipedia: Cold calling", url: "https://en.wikipedia.org/wiki/Cold_calling" },
+      { label: "VanillaSoft: lead conversion study on follow-up persistency", url: "https://vanillasoft.com/resources/lead-conversion-study-telfer" },
     ],
     stages: [
       {
@@ -1593,6 +1653,24 @@ window.SANGGUP_TRACKS = [
           "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
         practice:
           "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
+      },
+      {
+        id: "fr5",
+        kind: "practice",
+        title: "Find clients: cold outreach, warmed up",
+        lesson:
+          "Cold calling means approaching potential clients who have had no prior contact with you. It reaches new people at low cost, but it is intrusive, has a high rejection rate, and many countries restrict it, for example with Do Not Call registries. Modern practice warms it up: work from a list of people who fit your service and dig to understand their situation before any contact. Shared skill: describing exactly who you serve is the segment stage in Branding and creator; first conversations are the Network and community path.",
+        practice:
+          "Write a list of ten imaginary potential clients who fit your service. For one of them, draft a four-sentence first contact that shows you understand their situation and asks one small question. Do not send anything.",
+      },
+      {
+        id: "fr6",
+        kind: "practice",
+        title: "Follow up without nagging",
+        lesson:
+          "A large study of sales interactions found persistency, structured follow-up, among the strongest predictors of a win, with the best outcomes when the first response came within about an hour and attempts were spaced across the first days. Following up is giving the decision another chance, not repeating the ask: each touch should add something useful. Decide your stop rule before you start.",
+        practice:
+          "Draft a three-touch follow-up plan for your draft contact: what each message adds, when you would send it, and after which attempt you stop and move on.",
       },
       {
         id: "cs4",
