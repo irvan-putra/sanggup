@@ -73,7 +73,7 @@ function renderTracks() {
       `<span class="tt">${track.short || track.title}</span>` +
       (planned ? `<em>soon</em>` : "");
     if (!planned) {
-      card.addEventListener("click", () => renderPath(track));
+      card.addEventListener("click", () => { location.hash = track.id; renderPath(track); });
     } else {
       card.disabled = true;
     }
@@ -81,7 +81,7 @@ function renderTracks() {
   }
 }
 
-$("back-to-tracks").addEventListener("click", renderTracks);
+$("back-to-tracks").addEventListener("click", () => { location.hash = ""; renderTracks(); });
 
 // ---------- learner: one path ----------
 
@@ -325,7 +325,29 @@ $("code-lookup").addEventListener("click", () => {
   }
 });
 
+
+// ---------- hash routing: shareable direct links, e.g. #branding ----------
+
+function applyRoute() {
+  const id = location.hash.replace(/^#/, "");
+  if (!id) {
+    renderTracks();
+    return;
+  }
+  const track = (window.SANGGUP_TRACKS || []).find(
+    (t) => t.id === id && t.status !== "planned"
+  );
+  if (track) {
+    renderPath(track);
+  } else {
+    renderTracks();
+  }
+}
+
+window.addEventListener("hashchange", applyRoute);
+
 // ---------- boot ----------
 
-renderTracks();
+applyRoute();
 setRole("learner");
+
