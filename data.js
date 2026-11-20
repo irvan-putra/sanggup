@@ -79,7 +79,7 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "tidying", short: "Home", icon: '<path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>',
+    id: "tidying", short: "Home", icon: '<path d="M3 11l9-8 9 8 M5 10v10h14V10 M10 20v-6h4v6"/>',
     title: "Home",
     tagline: "Clean, mend, repair and care for plants",
     status: "prototype",

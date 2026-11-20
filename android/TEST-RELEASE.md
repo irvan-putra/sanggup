@@ -1,4 +1,4 @@
-# Sanggup 0.2.1 test APK
+# Sanggup 0.2.2 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
@@ -8,7 +8,11 @@ Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or 
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
 
-## Changes since 0.2.0
+## Changes since 0.2.1
+
+- The Home skill icon is now a house outline instead of a sparkle.
+
+## Changes in 0.2.1 since 0.2.0
 
 Content parity with the web version, 21 commits bundled:
 

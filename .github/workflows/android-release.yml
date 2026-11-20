@@ -41,16 +41,16 @@ jobs:
           printf '%s' "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/sanggup.jks"
           trap 'rm -f "$RUNNER_TEMP/sanggup.jks"' EXIT
           "$BT/zipalign" -p -f 4 android/app/build/outputs/apk/release/app-release-unsigned.apk /tmp/aligned.apk
-          "$BT/apksigner" sign --ks "$RUNNER_TEMP/sanggup.jks" --ks-key-alias sanggup --ks-pass env:STORE_PASSWORD --key-pass env:STORE_PASSWORD --out sanggup-v0.2.1.apk /tmp/aligned.apk
-          "$BT/apksigner" verify --verbose --print-certs sanggup-v0.2.1.apk | tee /tmp/cert.txt
+          "$BT/apksigner" sign --ks "$RUNNER_TEMP/sanggup.jks" --ks-key-alias sanggup --ks-pass env:STORE_PASSWORD --key-pass env:STORE_PASSWORD --out sanggup-v0.2.2.apk /tmp/aligned.apk
+          "$BT/apksigner" verify --verbose --print-certs sanggup-v0.2.2.apk | tee /tmp/cert.txt
           GOT=$(grep -m1 'certificate SHA-256 digest' /tmp/cert.txt | awk '{print toupper($NF)}')
           test "$GOT" = "$EXPECTED_CERT"
-          "$BT/aapt" dump badging sanggup-v0.2.1.apk > /tmp/badging.txt
+          "$BT/aapt" dump badging sanggup-v0.2.2.apk > /tmp/badging.txt
           cat /tmp/badging.txt
-          grep -q "package: name='com.vanipy.sanggup' versionCode='7' versionName='0.2.1'" /tmp/badging.txt
+          grep -q "package: name='com.vanipy.sanggup' versionCode='8' versionName='0.2.2'" /tmp/badging.txt
           grep -q "sdkVersion:'26'" /tmp/badging.txt
           ! grep -q 'uses-permission:' /tmp/badging.txt
-          sha256sum sanggup-v0.2.1.apk > sanggup-v0.2.1.apk.sha256
+          sha256sum sanggup-v0.2.2.apk > sanggup-v0.2.2.apk.sha256
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -63,7 +63,7 @@ jobs:
           target: google_apis
           arch: x86_64
           script: |
-            adb install -r sanggup-v0.2.1.apk
+            adb install -r sanggup-v0.2.2.apk
             adb logcat -c
             adb shell am start -W -n com.vanipy.sanggup/.MainActivity
             sleep 20
@@ -81,8 +81,8 @@ jobs:
         with:
           name: candidate-apk
           path: |
-            sanggup-v0.2.1.apk
-            sanggup-v0.2.1.apk.sha256
+            sanggup-v0.2.2.apk
+            sanggup-v0.2.2.apk.sha256
           retention-days: 1
 
   candidate-bytes:
@@ -107,7 +107,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v0.2.1 dist/sanggup-v0.2.1.apk dist/sanggup-v0.2.1.apk.sha256 --title 'Sanggup 0.2.1 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
+          gh release create v0.2.2 dist/sanggup-v0.2.2.apk dist/sanggup-v0.2.2.apk.sha256 --title 'Sanggup 0.2.2 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
 
   verify:
     # post-publish: verifies the live release (tag, APK name, checksum,
