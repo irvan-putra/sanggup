@@ -583,7 +583,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Prepare, respond safely, know when to call",
     status: "prototype",
     note:
-      "Preparedness and awareness basics from Indonesian authorities, Ready.gov and the Red Cross. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. In a real emergency call 112, or 119 for medical, in Indonesia, or your local number elsewhere. This path does not make you a trained rescuer or survival expert, and reading it does not train or qualify you in first aid: CPR and choking response must be learned hands-on from a qualified instructor. A chatbot is not a responder: in an emergency, call professionals first, not AI.",
+      "Preparedness and awareness basics from Indonesian authorities, Ready.gov and the Red Cross. Local hazards and official instructions differ by area and event, so follow your local disaster agency (BPBD), BMKG and BNPB first. In a real emergency in Indonesia, call 119 for medical help; 112 is the integrated emergency number in the cities and regencies that run it, so check whether yours does. Elsewhere, use your local number. This path does not make you a trained rescuer or survival expert, and reading it does not train or qualify you in first aid: CPR and choking response must be learned hands-on from a qualified instructor. A chatbot is not a responder: in an emergency, call professionals first, not AI.",
     sources: [
       { label: "Kemenkes Pusat Krisis: Tas Siaga Bencana (cites BNPB)", url: "https://pusatkrisis.kemkes.go.id/mari-siapkan-tas-siaga-bencana" },
       { label: "Red Cross: Adult and child choking", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/adult-child-choking" },
@@ -592,6 +592,7 @@ window.SANGGUP_TRACKS = [
       { label: "MedlinePlus: Abdominal thrusts", url: "https://medlineplus.gov/ency/article/000047.htm" },
       { label: "PMI: Pelatihan relawan (first aid, CPR and AED)", url: "https://pmipusat.org/pelatihan-relawan/" },
       { label: "Kemenkes PSC 119: how to make an emergency call", url: "https://psc.kemkes.go.id/web/cara-melakukan-panggilan-emergency-call-119" },
+      { label: "Layanan 112, Indonesia emergency call (Kominfo)", url: "https://layanan112.komdigi.go.id/tentang" },
       { label: "BMKG: Petunjuk keselamatan gempabumi dan tsunami", url: "https://content.bmkg.go.id/wp-content/uploads/Large-Prints-Petunjuk-keselamatan-Gempabumi-Tsunami.pdf" },
       { label: "Ready.gov: Build a kit", url: "https://www.ready.gov/kit" },
       { label: "Ready.gov: Practice your home fire escape plan", url: "https://www.ready.gov/home-fire-escape-plan" },
@@ -617,7 +618,7 @@ window.SANGGUP_TRACKS = [
         lesson:
           "Indonesian regional disaster agencies note that people live in disaster-prone areas, so start by learning which hazards affect your own area, such as earthquakes, floods or tsunami, and where official warnings come from: BMKG, BNPB and your local BPBD.",
         practice:
-          "Find out which hazards your neighborhood faces. Save your local BPBD contact and the numbers 112 and 119 in your phone.",
+          "Find out which hazards your neighborhood faces. Save your local BPBD contact and the medical number 119 in your phone, and check whether 112 operates in your city or regency.",
       },
       {
         id: "s2",
@@ -669,7 +670,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Rescue: reach or throw, don't go",
         lesson:
-          "The first rule of rescue is to avoid becoming a second victim. The Red Cross says drowning is fast and often silent, and a person may last only 20 to 60 seconds before going under. Its advice for bystanders is: call for help, then reach with something or throw something that floats, and do not go into the water yourself. The same thinking applies to collapsed buildings, fire and floods: call 112 or 119 and the authorities, and help from a safe position. Actual rescue techniques need training.",
+          "The first rule of rescue is to avoid becoming a second victim. The Red Cross says drowning is fast and often silent, and a person may last only 20 to 60 seconds before going under. Its advice for bystanders is: call for help, then reach with something or throw something that floats, and do not go into the water yourself. The same thinking applies to collapsed buildings, fire and floods: call 119 or your local emergency number and the authorities, and help from a safe position. Actual rescue techniques need training.",
         practice:
           "Look around your home or a nearby pool, river or beach. Note where you could reach or throw something that floats from dry ground, and where to call for help from.",
       },
@@ -716,7 +717,7 @@ window.SANGGUP_TRACKS = [
         lesson:
           "The US Forest Service says the best survival tool is advance planning: carry enough food, water, layers, a light, a map and compass you know how to use, check for local warnings, and tell someone exactly where you are going, your route and when you will return. Do not rely on a phone signal. If you become lost, use STOP (Stop, Think, Observe, Plan): stop, stay calm and, if it is safe, stay put, because walking farther makes you harder to find. Antara's mountain guidance gives the same advice. Basarnas, Indonesia's search and rescue agency, has said search and rescue emergencies can be reported to 115 (a 2022 statement; Basarnas's own website currently lists 115 and a WhatsApp Rescue 115 chat).",
         practice:
-          "Before your next outing, write a plan for a trusted person: where, route, return time and who is going. Pack a small kit of water, light and layers. Save 112 and Basarnas contact in your phone.",
+          "Before your next outing, write a plan for a trusted person: where, route, return time and who is going. Pack a small kit of water, light and layers. Save 119 and the Basarnas contact in your phone.",
       },
       {
         id: "s14",
@@ -761,7 +762,7 @@ window.SANGGUP_TRACKS = [
         lesson:
           "CPR, called RJP in Indonesia, is emergency care for a person who is unresponsive and not breathing normally. It combines chest compressions and, for trained people, rescue breaths, and is used together with an AED when available. Technique and guidelines differ for adults, children and babies and are updated over time, so only a current course and instructor can teach it properly. PMI's first aid course covers RJP and AED.",
         practice:
-          "Find where an AED is in a building you often visit, and write down the emergency numbers: 112 and 119 in Indonesia.",
+          "Find where an AED is in a building you often visit, and write down the emergency numbers: 119 for medical help in Indonesia, and 112 where your city or regency runs it.",
       },
       {
         id: "a4",
@@ -2023,7 +2024,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Look after your body and mind on purpose",
     status: "prototype",
     note:
-      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. A chatbot is not a therapist or a doctor. If you struggle persistently or are in crisis, contact a health professional or local emergency help. The calm stages are general wellbeing practice, not medical or mental health treatment; if you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (112 or 119 in Indonesia).",
+      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. A chatbot is not a therapist or a doctor. If you struggle persistently or are in crisis, contact a health professional or local emergency help. The calm stages are general wellbeing practice, not medical or mental health treatment; if you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (119 in Indonesia, or 112 in areas that run it).",
     sources: [
       { label: "WHO: Self-care for health and well-being (fact sheet)", url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions" },
       { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
@@ -2094,7 +2095,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Calm when it matters",
         lesson:
-          "In a real emergency, the first job is safety and calling for help, not meditating. A rehearsed reset can help you think. If the emergency is medical or dangerous, call emergency services. In Indonesia 112 is the national emergency number and 119 is for medical emergencies.",
+          "In a real emergency, the first job is safety and calling for help, not meditating. A rehearsed reset can help you think. If the emergency is medical or dangerous, call emergency services. In Indonesia, 119 is for medical emergencies, and 112 operates in the cities and regencies that run it.",
         practice:
           "Write a three-line personal crisis card: your reset, the numbers you would call, and one person you would contact.",
       },
