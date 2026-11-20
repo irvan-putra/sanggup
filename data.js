@@ -902,6 +902,11 @@ window.SANGGUP_TRACKS = [
       { label: "TidyHQ: Succession Planning Guide for Clubs and Associations", url: "https://tidyhq.com/guides/succession-planning-for-community-organisations" },
       { label: "Ditjen AHU (Kemenkumham): Perkumpulan", url: "https://ahu.go.id/perkumpulan" },
       { label: "Klinik Hukumonline: Apa Perbedaan Perkumpulan dan Yayasan?", url: "https://www.hukumonline.com/klinik/a/apa-perbedaan-perkumpulan-dan-yayasan-cl2755/" },
+      { label: "Wikipedia: Farley file", url: "https://en.wikipedia.org/wiki/Farley_file" },
+      { label: "Wikipedia: Rolodex", url: "https://en.wikipedia.org/wiki/Rolodex" },
+      { label: "Monica: the open-source personal CRM", url: "https://www.monicahq.com" },
+      { label: "Mesh (formerly Clay): personal CRM", url: "https://me.sh/" },
+      { label: "Mesh team: Clay is now Mesh", url: "https://library.me.sh/2026/03/25/clay-is-now-mesh/" },
     ],
     stages: [
       {
@@ -1083,6 +1088,15 @@ window.SANGGUP_TRACKS = [
           "Good paperwork is a habit, not a legal project: minutes that record what was decided, and simple money records a treasurer reports regularly, keep a group trustworthy and make handovers possible. In Indonesia, a community can exist informally; Kemenkumham's Ditjen AHU explains that a perkumpulan needs ministerial ratification as a badan hukum to perform civil legal acts as an entity. Whether your group needs that, and what it would change for taxes, bank accounts or contracts, is exactly what to ask a notaris or accountant, because the answer depends on your situation.",
         practice:
           "Write the questions your community would bring to a notaris or accountant: for example whether to register as a badan hukum, what records to keep, and how money should be held and reported.",
+      },
+      {
+        id: "nt21",
+        kind: "practice",
+        title: "Keep a memory file for people",
+        lesson:
+          "Staying thoughtful is a system, not a memory feat. Politicians have long kept a Farley file, named after Franklin Roosevelt's campaign manager James Farley, who noted the family details and past conversations of everyone they met so Roosevelt could greet them personally next time; salespeople relied on the Rolodex, the rotating card file that became shorthand for a person's contacts. The modern version is a personal CRM: apps like Mesh (formerly Clay) do it commercially, while Monica is open source and can be self-hosted. A notebook or spreadsheet works too. Two rules matter more than the tool: keep only the notes you actually use, and remember these are real people's details, so store them as privately and respectfully as you would want your own stored.",
+        practice:
+          "Pick five people you care about. For each, write one line: what is happening in their life right now, and one follow-up you owe. Then act on the oldest follow-up this week.",
       },
       {
         id: "cb9",
