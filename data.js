@@ -6,6 +6,11 @@ window.SANGGUP_TRACKS = [
     title: "Cooking",
     tagline: "From your first dish to a full meal",
     status: "prototype",
+    note:
+      "General home-cooking education, not professional culinary or food-safety training. It does not certify anything. Follow official food-safety guidance such as WHO's Five keys to safer food, and get hands-on help whenever tools or heat are new to you.",
+    sources: [
+      { label: "WHO: Five keys to safer food", url: "https://www.who.int/activities/promoting-safe-food-handling" },
+    ],
     stages: [
       {
         id: "c1",
@@ -221,7 +226,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Work in short, protected blocks",
     status: "prototype",
     note:
-      "Independent practice based on the publicly described Pomodoro Technique by Francesco Cirillo. Not an official course; Pomodoro is a registered mark of its owner. General time-management practice, not advice for attention or health conditions.",
+      "Independent practice based on the publicly described Pomodoro Technique by Francesco Cirillo. Not an official course; Pomodoro is a registered mark of its owner. General time-management practice, not advice for attention or health conditions. The habits stages are independent exercises inspired by ideas in James Clear's Atomic Habits, written in our own words; this is not an official course and is not endorsed by the author or publisher.",
     sources: [
       { label: "Pomodoro Technique: what it is", url: "https://www.pomodorotechnique.com/what-is-the-pomodoro-technique/" },
       { label: "NIH NICHD: The Pomodoro Technique", url: "https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique:+An+Effective+Time+Management+Tool" },
@@ -300,7 +305,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Kanban boards and sprints",
     status: "prototype",
     note:
-      "Independent introduction to Kanban and Scrum sprints based on the public Kanban Guide and Scrum Guide. Not an official course and not a certification path. For team work, adapt to how your team agrees to work.",
+      "Independent introduction to Kanban and Scrum sprints based on the public Kanban Guide and Scrum Guide. Not an official course and not a certification path. For team work, adapt to how your team agrees to work. The business stages are general-purpose organizing tools, not business, tax or legal advice; how you apply them depends on your actual situation, and for regulated decisions you should talk to a qualified professional.",
     sources: [
       { label: "Kanban University: The Official Guide to the Kanban Method", url: "https://kanban.university/kanban-guide/" },
       { label: "Atlassian: What is Kanban", url: "https://www.atlassian.com/agile/kanban" },
@@ -620,7 +625,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Build and keep personal and professional relationships",
     status: "prototype",
     note:
-      "Relationship skills you practice yourself, with real people, at your own pace. sanggup does not contact anyone for you, does not automate outreach and does not store your contacts. Be honest about who you are and what you want.",
+      "Relationship skills you practice yourself, with real people, at your own pace. sanggup does not contact anyone for you, does not automate outreach and does not store your contacts. Be honest about who you are and what you want. The community stages do not run your community, message members, organize events or negotiate with sponsors for you; communities are real people, and growth, conflict and burnout need judgment, not scripts.",
     sources: [
       { label: "Stanford GSB: Eight tips for building, maintaining and leveraging professional relationships", url: "https://www.gsb.stanford.edu/insights/eight-tips-building-maintaining-leveraging-your-professional-relationships" },
       { label: "80,000 Hours: How to network, weak ties and a giving mindset", url: "https://80000hours.org/2015/03/how-to-network/" },
@@ -768,7 +773,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Budgeting, basic accounting and money habits, Indonesia focus",
     status: "prototype",
     note:
-      "General education using made-up example numbers in rupiah. It is not personal financial, tax or investment advice, does not connect to any of your accounts and does not recommend products or providers. Rules and deadlines change; check the official source and a qualified adviser for your situation.",
+      "General education using made-up example numbers in rupiah. It is not personal financial, tax or investment advice, does not connect to any of your accounts and does not recommend products or providers. Rules and deadlines change; check the official source and a qualified adviser for your situation. The FIRE stages are education about an idea, not a plan for you: outcomes are uncertain, past returns do not guarantee future ones, and no withdrawal rate is safe for everyone. They do not recommend investments or providers; for real decisions, talk to a licensed financial planner, and check any adviser is licensed with OJK.",
     sources: [
       { label: "OJK Sikapi Uangmu: financial literacy for the public (Indonesia)", url: "https://sikapiuangmu.ojk.go.id/FrontEnd/CMS/Article/40786" },
       { label: "LPS FAQ: deposit guarantee (Indonesia)", url: "https://lps.go.id/faq/" },
@@ -878,7 +883,7 @@ window.SANGGUP_TRACKS = [
     tagline: "From idea to finished first draft",
     status: "prototype",
     note:
-      "Original exercises for your own writing. sanggup does not write your book for you. Word counts below are examples, not rules; choose a pace you can keep.",
+      "Original exercises for your own writing. sanggup does not write your book for you. Word counts below are examples, not rules; choose a pace you can keep. The journalism stages are general education drawn from published ethics codes and reporting guidance; sanggup does not verify facts, contact sources or review your stories, and publishing carries real legal and ethical duties that vary by country, including defamation and privacy law.",
     sources: [
       { label: "Author Revolution: How to write a first draft in six weeks", url: "https://www.authorrevolution.org/blog/how-to-write-a-first-draft-in-six-weeks" },
       { label: "Writer by Nature: How to write a book, steps and outline", url: "https://writerbynature.com/how-to-write-a-book/" },
@@ -1354,7 +1359,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Decide what you want to be known for, then show it",
     status: "prototype",
     note:
-      "sanggup does not write your profiles, post for you or manage your reputation. A personal brand is what others believe about you when you are not in the room; these exercises shape only the honest input. Nothing here asks you to exaggerate, and no exercise promises jobs, followers or income.",
+      "sanggup does not write your profiles, post for you or manage your reputation. A personal brand is what others believe about you when you are not in the room; these exercises shape only the honest input. Nothing here asks you to exaggerate, and no exercise promises jobs, followers or income. The creator stages do not create content, run your channels or promise an audience or income; growth is slow and uneven, and platform rules and algorithms change without notice.",
     sources: [
       { label: "Harvard Business Review: A New Approach to Building Your Personal Brand", url: "https://hbr.org/2023/05/a-new-approach-to-building-your-personal-brand" },
       { label: "Harvard Business Review: How to Define, Develop, and Communicate Your Personal Brand", url: "https://hbr.org/2023/09/how-to-define-develop-and-communicate-your-personal-brand" },
@@ -1545,7 +1550,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Look after your body and mind on purpose",
     status: "prototype",
     note:
-      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. If you struggle persistently or are in crisis, contact a health professional or local emergency help.",
+      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. If you struggle persistently or are in crisis, contact a health professional or local emergency help. The calm stages are general wellbeing practice, not medical or mental health treatment; if you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (112 or 119 in Indonesia).",
     sources: [
       { label: "WHO: Self-care for health and well-being (fact sheet)", url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions" },
       { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
