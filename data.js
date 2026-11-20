@@ -666,7 +666,8 @@ window.SANGGUP_TRACKS = [
       { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
       { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
       { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
-      { label: "Wikipedia: Mentorship", url: "https://en.wikipedia.org/wiki/Mentorship" },
+      { label: "Wikipedia: Mentorship", url: "https://en.wikipedia.org/wiki/Mentorship" },      { label: "Wikipedia: Fiscal sponsorship", url: "https://en.wikipedia.org/wiki/Fiscal_sponsorship" },
+
     ],
     stages: [
       {
@@ -796,6 +797,15 @@ window.SANGGUP_TRACKS = [
           "Pick one imaginary person, either new to you or senior in your field. Write the first message in three sentences: why them, one specific small ask, and an easy out. Do not send anything.",
       },
       {
+        id: "nt15",
+        kind: "practice",
+        title: "Know what fiscal sponsorship is",
+        lesson:
+          "A community project that wants to receive grants or donations sometimes lacks its own legal entity. Fiscal sponsorship is a fee-based arrangement where an established nonprofit lends its legal and tax status to a project that fits its mission, often with administrative help like payroll and bookkeeping. The trade-offs are real: the sponsor keeps legal control of the project and charges a fee, and both sides can face liability if the arrangement is just a money conduit. The concept comes from the US nonprofit system; Indonesia has different structures, such as yayasan, and different tax rules, so the local details need local advice.",
+        practice:
+          "Take a fictional running club that wants a 50,000,000 rupiah grant. Write two plans: one where the club registers its own entity, one where it works under a fiscal sponsor. List what the club gives up and gains in each, and three questions to ask a sponsor before signing.",
+      },
+      {
         id: "cb9",
         kind: "milestone",
         title: "Milestone: the community runs without you",
@@ -822,6 +832,7 @@ window.SANGGUP_TRACKS = [
       { label: "Vanguard: FIRE investing and the 4% rule", url: "https://investor.vanguard.com/investor-resources-education/retirement/early-retirement" },
       { label: "Saxo: FIRE, key considerations and risks", url: "https://www.home.saxo/learn/guides/trading-strategies/financial-independence-retire-early-fire-a-guide" },
       { label: "Investor.gov: Early retirement seminars and scams", url: "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/early" },
+      { label: "Investor.gov: Compound interest", url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest" },
     ],
     stages: [
       {
@@ -886,6 +897,15 @@ window.SANGGUP_TRACKS = [
           "In Indonesia, individual taxpayers file an annual tax return, the SPT Tahunan, with the tax office (DJP). The DJP employee guide gives 31 March as the filing and payment deadline, with an option to extend by up to two months if conditions are met. Deadlines and rules can be adjusted by government, so check pajak.go.id each year. For your case, ask DJP or a qualified tax consultant.",
         practice:
           "Open the DJP guide for your income type and list the documents you would need, such as your employer's withholding slip.",
+      },
+      {
+        id: "b8",
+        kind: "practice",
+        title: "Learn what investing is",
+        lesson:
+          "Investing means putting money into something, like stocks or bonds, hoping it grows, with the risk that it can also shrink. Two ideas carry most of the weight. Compound interest is interest paid on the principal and on the interest already earned, so growth accelerates over years; starting early matters more than starting big. Diversification means spreading money across different investments so one failure cannot sink the whole amount. Risk and return move together: anything promising high returns with no risk is a red flag, and in Indonesia you can check whether a financial product or adviser is licensed with OJK before trusting it.",
+        practice:
+          "Take a fictional 10,000,000 rupiah. On paper, split it across three imaginary investments with different risk levels and write why you chose the split. Then compute what 10,000,000 becomes in 20 years at a steady fictional 6 percent a year, compounded yearly, and note how much of the final number is interest on interest.",
       },
       {
         id: "r1",
@@ -2049,6 +2069,7 @@ window.SANGGUP_TRACKS = [
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
       { label: "StaffEng: Operating at Staff", url: "https://staffeng.com/guides/operating-at-staff/" },
+      { label: "US Small Business Administration: Choose a business structure", url: "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" },
       { label: "StaffEng: the book and stories", url: "https://staffeng.com/book" },
       { label: "Yale Office of Career Strategy: Using AI in your job search", url: "https://ocs.yale.edu/channels/using-ai-job-search/" },
       { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
@@ -2204,6 +2225,15 @@ window.SANGGUP_TRACKS = [
           "A staff engineer keeps growing on the technical track instead of moving into management. StaffEng's guides describe operating at staff as setting technical direction, mentoring, and unblocking work across teams: the job shifts from writing the most code to making the people and decisions around the code better. Impact is judged by what the whole group ships, not by personal output.",
         practice:
           "Take a fictional team of eight engineers with a struggling project. Write a one-page plan a staff engineer would lead: the technical direction in two sentences, two people you would mentor and how, and one cross-team blocker you would unblock first. Mark what you would deliberately not code yourself.",
+      },
+      {
+        id: "ca10",
+        kind: "practice",
+        title: "Understand creating a corporation",
+        lesson:
+          "Incorporating turns a business into its own legal entity, separate from you: it can sign contracts, own assets and be sued, and your personal risk is usually limited to what you put in. The trade-offs are setup cost, ongoing reporting and tax rules that differ by country. The US SBA walks through choosing a structure (sole proprietorship, LLC, corporation) as one of the first launch decisions; Indonesia has its own forms, like the PT, with its own registration and capital rules. Treat the concept as general and the rules as country-specific: a lawyer or notary who knows your jurisdiction is part of the real cost.",
+        practice:
+          "Take a fictional two-person software studio. On paper, compare staying unincorporated versus forming a company: what each protects, what each costs in effort, and one situation where you would incorporate and one where you would wait. End with a list of three questions you would ask a local lawyer before filing anything.",
       },
       {
         id: "cs4",
