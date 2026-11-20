@@ -39,14 +39,21 @@ tap_text() {
   done
   scroll_top
   dump "last-tap"
-  python3 ci/tap_text.py "$1" upgrade-evidence/last-tap.xml > /tmp/tapxy
-  read X Y < /tmp/tapxy
-  if [ "$X" = "0" ] && [ "$Y" = "0" ]; then
-    echo "could not tap (zero bounds after scrolls): $1" >&2
-    exit 1
+  # tap_text.py exits nonzero when the text is absent; under set -e that
+  # kills the script outright, and under `cmd || fallback` it leaves tapxy
+  # empty so the bare zero-check below misfires and taps stale coordinates.
+  # Guard the lookup, then fail with a normal return so callers can fall
+  # back (set -e still aborts unguarded calls).
+  if python3 ci/tap_text.py "$1" upgrade-evidence/last-tap.xml > /tmp/tapxy; then
+    read X Y < /tmp/tapxy
+    if [ "$X" != "0" ] || [ "$Y" != "0" ]; then
+      adb shell input tap "$X" "$Y"
+      sleep 3
+      return 0
+    fi
   fi
-  adb shell input tap "$X" "$Y"
-  sleep 3
+  echo "could not tap (not found after scrolls): $1" >&2
+  return 1
 }
 launch() {
   adb shell am start -W -n com.vanipy.sanggup/.MainActivity >/dev/null
