@@ -2135,6 +2135,7 @@ window.SANGGUP_TRACKS = [
       { label: "University of Pennsylvania Career Services: Interview", url: "https://careerservices.upenn.edu/channels/interview/" },
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
+      { label: "Yale Office of Career Strategy: Using AI in your job search", url: "https://ocs.yale.edu/channels/using-ai-job-search/" },
     ],
     stages: [
       {
@@ -2172,6 +2173,33 @@ window.SANGGUP_TRACKS = [
           "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job: it is clarifying expectations, learning their priorities and communication style, giving useful updates before you are asked, and flagging risks early, while there is still time to act. Shared skill: the update rhythm is the sync stage in Projects and business.",
         practice:
           "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it.",
+      },
+      {
+        id: "ca6",
+        kind: "practice",
+        title: "Show evidence of your skills",
+        lesson:
+          "Career advisors describe AI fluency as judgment, directing tools, and evaluating what they produce, and note that employers look for it through hackathons, personal projects and communities rather than formal credentials. When drafting tools can polish anyone's document, the evidence behind it is what carries weight: things you built, results you measured, people who saw you do it.",
+        practice:
+          "Pick one skill you want to be hired for. List three concrete proofs you could show for it today, such as a project, a measured result or a person who watched you work. Circle the weakest one and write how you would strengthen it.",
+      },
+      {
+        id: "ca7",
+        kind: "practice",
+        title: "Use AI as editor, then verify every line",
+        lesson:
+          "University career guidance is consistent: start from your own draft, use AI to improve it, and never accept suggestions blindly, because AI tools do not always use authoritative sources and can state things inaccurately. Your name sits on every claim in the application, so each sentence needs to be true and defensible in an interview. Keep identifying details out of tools you do not control.",
+        practice:
+          "Write one resume bullet in your own words. Ask any AI tool to improve it. Then check every sentence against evidence you could actually show, remove anything you cannot defend, and rewrite the final version in your own style.",
+      },
+      {
+        id: "ca8",
+        kind: "practice",
+        title: "Choose what to learn next",
+        lesson:
+          "A useful split for the AI era: some tasks AI tools already do well, some judgments stay with people, and the valuable position is directing one while owning the other. Look at your own field rather than headlines: which of your weekly tasks could a tool draft, and which decisions would you never hand over?",
+        practice:
+          "List one task in your field that AI tools already do well and one judgment you would not hand to a tool. Then write one concrete learning step that moves you toward the judgment side, with a date.",
       },
       {
         id: "ca4",

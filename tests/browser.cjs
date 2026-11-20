@@ -67,7 +67,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),5);
  await page.locator('#back-to-tracks').click();
  // new tracks: every one has notes and sources, practice stages complete in order, state survives reload
- for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,4,/does not apply for jobs/],[/^Coding,/,3,/does not run your code/]]) {
+ for (const [name,count,noteRe] of [[/^Cleaning & tidying,/,5,/not an official KonMari course/],[/^Decisions and priorities,/,8,/does not rank tasks or make decisions/],[/^Focus and habits,/,7,/Pomodoro/],[/^Projects and business,/,11,/[Nn]ot an official course/],[/^Disaster preparedness,/,14,/does not make you a trained rescuer/],[/^First aid awareness,/,4,/does not train or qualify you/],[/^Network and community,/,14,/does not contact anyone/],[/^Money and FIRE,/,10,/not personal financial/],[/^Writing and journalism,/,9,/does not write your book/],[/^Swimming,/,4,/No app can teach you to swim/],[/^Driving,/,4,/Reading cannot make you able to drive/],[/^Languages,/,4,/General method/],[/^Music,/,4,/Instrument-neutral/],[/^Math,/,5,/problem-solving method/],[/^Chess,/,5,/Beginner chess/],[/^Branding and creator,/,16,/does not write your profiles/],[/^Client work,/,8,/does not find clients/],[/^Self care and calm,/,7,/not a medical service/],[/^Public speaking,/,4,/cannot listen to your talk/],[/^Presentation,/,4,/does not make your slides/],[/^Surveying people,/,4,/does not run surveys/],[/^Teaching and mentoring,/,4,/does not teach for you/],[/^Negotiation,/,4,/does not negotiate for you/],[/^Career moves,/,7,/does not apply for jobs/],[/^Coding,/,3,/does not run your code/]]) {
   await page.goto(url);
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
@@ -100,7 +100,7 @@ async function openTile(page,name){
  assert.equal(await page.locator('.stage-card.done').count(),1);
  // pre-merge (25-path) progress and requests survive the merges: stage ids carry done state, old pending sign-off requests resolve and can be signed by code
  await page.goto(url);
- await page.evaluate(()=>localStorage.setItem('sanggup-demo-v1',JSON.stringify({done:{p1:true,p2:true,d1:true,cs1:true,fr1:true,c1:true},archive:[{stageId:'cs1',track:'Consulting',title:'Name the problem you solve',how:'self',note:'',when:new Date().toISOString()}],requests:[{code:'MERGE4',trackId:'consulting',trackTitle:'Consulting',stageId:'cs4',stageTitle:'Milestone: run one real consultation',task:'Run a consultation.',status:'pending',requestedAt:new Date().toISOString()}]})));
+ await page.evaluate(()=>localStorage.setItem('sanggup-demo-v1',JSON.stringify({done:{p1:true,p2:true,d1:true,cs1:true,fr1:true,c1:true,ca1:true},archive:[{stageId:'cs1',track:'Consulting',title:'Name the problem you solve',how:'self',note:'',when:new Date().toISOString()}],requests:[{code:'MERGE4',trackId:'consulting',trackTitle:'Consulting',stageId:'cs4',stageTitle:'Milestone: run one real consultation',task:'Run a consultation.',status:'pending',requestedAt:new Date().toISOString()}]})));
  await page.reload();
  await page.getByRole('button',{name:/^Decisions and priorities,/}).click();
  assert.equal(await page.locator('.stage-card.done').count(),3);
@@ -108,6 +108,11 @@ async function openTile(page,name){
  await openTile(page,/^Client work,/);
  assert.equal(await page.locator('.stage-card.done').count(),2);
  assert.match(await page.locator('.code-box').innerText(),/MERGE4/);
+ await page.goto(url);
+ await openTile(page,/^Career moves,/);
+ assert.equal(await page.locator('.stage-card.done').count(),1);
+ await page.goto(url);
+ await openTile(page,/^Client work,/);
  await page.getByRole('button',{name:"I'm teaching"}).click();
  await page.locator('#code-input').fill('MERGE4');
  await page.getByRole('button',{name:'Find request'}).click();
