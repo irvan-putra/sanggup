@@ -14,8 +14,11 @@ dump() {
   adb shell uiautomator dump /sdcard/uidump.xml >/dev/null
   adb exec-out cat /sdcard/uidump.xml > "upgrade-evidence/$1.xml"
 }
-scroll_down() { adb shell input swipe 540 1600 540 600; sleep 2; }
-scroll_top() { for i in 1 2 3 4 5 6; do adb shell input swipe 540 600 540 1600; sleep 1; done; }
+SW=$(adb shell wm size | grep -o '[0-9]*x[0-9]*' | head -1)
+W=${SW%x*}; H=${SW#*x}; CX=$((W / 2)); YHI=$((H * 3 / 4)); YLO=$((H / 4))
+echo "screen: ${W}x${H}"
+scroll_down() { adb shell input swipe "$CX" "$YHI" "$CX" "$YLO"; sleep 2; }
+scroll_top() { for i in 1 2 3 4 5 6; do adb shell input swipe "$CX" "$YLO" "$CX" "$YHI"; sleep 1; done; }
 
 # WebView nodes that are off-screen report bounds [0,0][0,0]; scroll until the
 # target has real bounds, then tap its center.
