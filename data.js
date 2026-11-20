@@ -49,6 +49,15 @@ window.SANGGUP_TRACKS = [
           "With help if needed, cook tofu or tempeh using a familiar recipe and seasoning you mixed yourself.",
       },
       {
+        id: "c6",
+        kind: "practice",
+        title: "Treat an AI recipe as a draft",
+        lesson:
+          "A chatbot can invent a plausible recipe with wrong quantities, times or temperatures. Treat its output as a draft: cross-check the ratios and cooking times against a trusted recipe for the same dish, and keep the food-safety rules from earlier stages unchanged. An impressive-sounding recipe is not evidence it works.",
+        practice:
+          "A fictional AI recipe for fried rice says to cook 500 grams of rice in 200 milliliters of water for 5 minutes. Write what looks wrong, what you would compare it against, and the corrected quantities you would actually try first.",
+      },
+      {
         id: "c5",
         kind: "milestone",
         title: "Milestone: cook a full meal",
@@ -591,7 +600,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Theory, plus how to get real training",
     status: "prototype",
     note:
-      "Awareness only. Reading this does not train or qualify you, and finishing a stage here is not a certificate. CPR and choking response must be learned hands-on from a qualified instructor. In a real emergency call 119 (medical) or 112 in Indonesia, or your local number elsewhere.",
+      "Awareness only. Reading this does not train or qualify you, and finishing a stage here is not a certificate. CPR and choking response must be learned hands-on from a qualified instructor. In a real emergency call 119 (medical) or 112 in Indonesia, or your local number elsewhere. A chatbot is not a responder: in an emergency, call professionals first, not AI.",
     sources: [
       { label: "Red Cross: Adult and child choking", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/adult-child-choking" },
       { label: "Red Cross: Management of foreign body airway obstruction (guidelines)", url: "https://guidelines.redcross.org/guidelines-database/foreign-body-airway-obstruction/" },
@@ -822,7 +831,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Budgeting, basic accounting and money habits, Indonesia focus",
     status: "prototype",
     note:
-      "General education using made-up example numbers in rupiah. It is not personal financial, tax or investment advice, does not connect to any of your accounts and does not recommend products or providers. Rules and deadlines change; check the official source and a qualified adviser for your situation. The FIRE stages are education about an idea, not a plan for you: outcomes are uncertain, past returns do not guarantee future ones, and no withdrawal rate is safe for everyone. They do not recommend investments or providers; for real decisions, talk to a licensed financial planner, and check any adviser is licensed with OJK.",
+      "General education using made-up example numbers in rupiah. It is not personal financial, tax or investment advice, does not connect to any of your accounts and does not recommend products or providers. Rules and deadlines change; check the official source and a qualified adviser for your situation. The FIRE stages are education about an idea, not a plan for you: outcomes are uncertain, past returns do not guarantee future ones, and no withdrawal rate is safe for everyone. They do not recommend investments or providers; for real decisions, talk to a licensed financial planner, and check any adviser is licensed with OJK. AI chatbots are not financial advisers: expect confident errors and verify everything against official sources.",
     sources: [
       { label: "OJK Sikapi Uangmu: financial literacy for the public (Indonesia)", url: "https://sikapiuangmu.ojk.go.id/FrontEnd/CMS/Article/40786" },
       { label: "LPS FAQ: deposit guarantee (Indonesia)", url: "https://lps.go.id/faq/" },
@@ -1035,6 +1044,15 @@ window.SANGGUP_TRACKS = [
           "Write your own corrections policy in three sentences: how people can report an error to you, what you will do, and how fast.",
       },
       {
+        id: "w6",
+        kind: "practice",
+        title: "Use AI as a drafter, not the author",
+        lesson:
+          "A chatbot can produce a draft in seconds, but the draft is a starting point, not a finished piece. It can state wrong facts confidently, and its default voice is generic. Check every factual claim against a source you trust, and rewrite until the piece sounds like you. What you publish has your name on it, so you own every sentence.",
+        practice:
+          "A fictional AI draft says: 'The Bandung Book Fair drew 80,000 visitors in 2024 and is the oldest book fair in Asia.' List the claims you would need to check and where you would check them. Then rewrite the sentence as your own opening, keeping only what you could verify.",
+      },
+      {
         id: "jr5",
         kind: "milestone",
         title: "Milestone: file one report",
@@ -1213,6 +1231,15 @@ window.SANGGUP_TRACKS = [
           "Arrange a short conversation with a person who speaks the language. Prepare three questions to ask them.",
       },
       {
+        id: "l_6",
+        kind: "practice",
+        title: "Rehearse with AI, then talk to people",
+        lesson:
+          "A chatbot is a patient rehearsal partner: it never gets tired of your third attempt at a dialogue. Use it to practice phrasing, then check its translations against a dictionary or a trusted source, because fluent-sounding output can still be subtly wrong. The goal is still conversation with real people; AI rehearsal prepares you for it, it does not replace it.",
+        practice:
+          "Write a six-line dialogue in a language you are learning, real or imagined, for ordering at a small warung. Rehearse it aloud three times. Then pick two sentences and check their wording against a dictionary or trusted learning source, noting anything you would say differently.",
+      },
+      {
         id: "l_5",
         kind: "milestone",
         title: "Milestone: a five-minute conversation",
@@ -1341,6 +1368,15 @@ window.SANGGUP_TRACKS = [
           "Take a problem you solved earlier and find one new problem where the same method applies. Solve it, then write down what transferred and what you had to change.",
       },
       {
+        id: "a_7",
+        kind: "practice",
+        title: "Check the solver's steps, not just the answer",
+        lesson:
+          "Solver apps and chatbots can show worked steps for a math problem, and the steps can be wrong even when the final answer looks right. Use them to check your own solution or to see a method you missed, not to skip the solving. If you cannot explain each step, you have the answer but not the skill.",
+        practice:
+          "A fictional solver says: '2x + 6 = 20, so 2x = 26, so x = 13.' Find the wrong step, correct it, and solve the equation yourself. Then write one line about how you would check the corrected answer without any tool.",
+      },
+      {
         id: "a_6",
         kind: "milestone",
         title: "Milestone: a mixed set, reviewed",
@@ -1400,6 +1436,15 @@ window.SANGGUP_TRACKS = [
           "Before every move ask: what is my opponent threatening now, and does my move leave a piece unprotected? Most beginner games are decided by pieces left hanging.",
         practice:
           "In your next game, before each move say aloud what the opponent threatens. Count how often it changed your move.",
+      },
+      {
+        id: "x_6",
+        kind: "practice",
+        title: "Analyze with engines after the game",
+        lesson:
+          "Chess engines are the standard tool for post-game analysis: after a game, they show where the evaluation turned and what was missed. Using an engine during a game, online or over the board, is cheating and is treated that way by platforms and federations. The engine's job is to teach you after the fact, not to play for you.",
+        practice:
+          "Take one of your recent games, or a fictional short game, and pick the move you were least sure about. First write down your own analysis of the alternatives, then list two questions you would ask an engine about that position, such as which candidate move it prefers and why the evaluation changed.",
       },
       {
         id: "x_5",
@@ -1592,6 +1637,15 @@ window.SANGGUP_TRACKS = [
           "List what you make that people pay attention to. For one item, draft an offer on paper: the slot, who it would suit, the price you would ask and what you would not allow. No real outreach.",
       },
       {
+        id: "mk10",
+        kind: "practice",
+        title: "Draft marketing with AI, check everything",
+        lesson:
+          "AI can draft posts, taglines and campaign copy in bulk, which makes checking more important, not less. Verify every claim a draft makes about your product, watch for copied or generic phrasing, and keep the disclosures your channels require. Volume is cheap; a false claim in fifty posts is fifty problems.",
+        practice:
+          "A fictional AI draft for a coffee shop says: 'Voted the best coffee in Jakarta, our beans add years to your life.' Mark every claim that needs evidence or removal, then rewrite the post with only claims the shop could actually stand behind.",
+      },
+      {
         id: "cr5",
         kind: "milestone",
         title: "Milestone: one month, four pieces",
@@ -1608,7 +1662,7 @@ window.SANGGUP_TRACKS = [
     tagline: "Look after your body and mind on purpose",
     status: "prototype",
     note:
-      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. If you struggle persistently or are in crisis, contact a health professional or local emergency help. The calm stages are general wellbeing practice, not medical or mental health treatment; if you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (112 or 119 in Indonesia).",
+      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. A chatbot is not a therapist or a doctor. If you struggle persistently or are in crisis, contact a health professional or local emergency help. The calm stages are general wellbeing practice, not medical or mental health treatment; if you feel unsafe, hopeless or overwhelmed, contact a doctor, a mental health professional or the emergency number (112 or 119 in Indonesia).",
     sources: [
       { label: "WHO: Self-care for health and well-being (fact sheet)", url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions" },
       { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
@@ -1790,6 +1844,15 @@ window.SANGGUP_TRACKS = [
           "Do two full timed run-throughs, aloud and on your feet. Then write down the three questions you would least like to be asked and prepare an honest answer for each.",
       },
       {
+        id: "pr6",
+        kind: "practice",
+        title: "Check AI-drafted slides before you present",
+        lesson:
+          "AI tools can draft a whole deck from a prompt, including numbers and sources that may not exist. Before you present, verify every figure and quote against its real source, and rewrite the story so you can defend every slide without notes. The audience holds you responsible for the content, not the tool.",
+        practice:
+          "A fictional AI deck claims: 'Sales grew 340 percent after the redesign, according to a 2025 Nielsen study.' Write down what you would verify before showing it, what you would do if the study cannot be found, and a replacement headline you could stand behind.",
+      },
+      {
         id: "pr4",
         kind: "milestone",
         title: "Milestone: present for real",
@@ -1849,6 +1912,15 @@ window.SANGGUP_TRACKS = [
           "Pilot your questionnaire with three people from your intended audience and watch where they hesitate or misread. Write down every change you make before the real run.",
       },
       {
+        id: "sv6",
+        kind: "practice",
+        title: "Use AI on surveys with checks",
+        lesson:
+          "AI can draft survey questions and summarize answers, and both need checking. Drafted questions can be leading or double-barreled; summaries can drop minority views or invent patterns. Compare every summary against the raw answers, and never paste respondents' personal data into a chatbot.",
+        practice:
+          "Five fictional answers to 'What would improve the park?' are: more lights, more lights, cleaner toilets, a running track, and cheaper parking. An AI summary says 'respondents mainly want better security.' Write what the summary got right, what it dropped, and a fair one-sentence summary of your own.",
+      },
+      {
         id: "sv4",
         kind: "milestone",
         title: "Milestone: run one small survey",
@@ -1906,6 +1978,15 @@ window.SANGGUP_TRACKS = [
           "Carnegie Mellon's Eberly Center says effective teaching aligns three components: clear learning objectives, activities that give goal-oriented practice, and assessments that let learners demonstrate the objective and receive targeted feedback. Practicing one thing while checking another is a common way teaching fails.",
         practice:
           "For one skill you want to teach, write a single sentence each for the objective, the practice activity and the check. Show all three to a colleague and fix any mismatch they spot.",
+      },
+      {
+        id: "tm6",
+        kind: "practice",
+        title: "Draft exercises with AI, verify before teaching",
+        lesson:
+          "AI can draft quiz questions, worked examples and feedback quickly, and a share of them will be wrong: plausible questions with incorrect answer keys. Verify every item before a learner sees it, and keep real learner data out of chatbots; practice with fictional students. Your name is on the lesson, so the checking is yours.",
+        practice:
+          "A fictional AI quiz asks: 'What is the capital of Australia?' with the answer key 'Sydney'. Find the error, fix the item, and write one more question with its correct answer. Then note what you would check in a ten-question AI quiz before using it.",
       },
       {
         id: "tm4",
