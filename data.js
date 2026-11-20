@@ -1,5 +1,5 @@
 // Skill content for the sanggup prototype.
-// All 25 tracks have starter paths. Each path states its own limits.
+// All 30 tracks have starter paths (merges applied). Each path states its own limits.
 window.SANGGUP_TRACKS = [
   {
     id: "cooking", short: "Cooking", icon: '<path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z M2 11h20 M9 7c0-2 2-1 2-3 M14 7c0-2 2-1 2-3"/>',
@@ -128,15 +128,17 @@ window.SANGGUP_TRACKS = [
     ],
   },
   {
-    id: "prioritize", short: "Priorities", icon: '<path d="M9 6h11 M9 12h11 M9 18h11 M4 6h.01 M4 12h.01 M4 18h.01"/>',
-    title: "Prioritizing",
-    tagline: "Decide what comes first and what waits",
+    id: "decisions", short: "Decisions", icon: '<path d="M9 6h11 M9 12h11 M9 18h11 M4 6h.01 M4 12h.01 M4 18h.01"/>',
+    title: "Decisions and priorities",
+    tagline: "Decide what comes first, then choose on purpose",
     status: "prototype",
     note:
-      "General skill practice with your own everyday tasks. It does not rank your tasks for you and is not advice on work, health, money or legal matters.",
+      "General skill practice with your own everyday tasks and low-stakes choices. sanggup does not rank tasks or make decisions for you and is not personal advice. For health, money, legal or safety decisions, talk to a qualified person.",
     sources: [
       { label: "MindTools: Eisenhower's urgent/important principle", url: "https://www.mindtools.com/al1e0k5/eisenhowers-urgentimportant-principle/" },
       { label: "James Clear: The Eisenhower Box", url: "https://jamesclear.com/eisenhower-box" },
+      { label: "Amazon 2015 shareholder letter (one-way and two-way doors)", url: "https://s2.q4cdn.com/299287126/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF" },
+      { label: "Farnam Street: Reversible and irreversible decisions", url: "https://fs.blog/reversible-irreversible-decisions/" },
     ],
     stages: [
       {
@@ -153,7 +155,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Urgent versus important",
         lesson:
-          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals.",
+          "In 1954 Dwight Eisenhower said he had two kinds of problems, the urgent and the important. The Eisenhower box sorts tasks into four groups: urgent and important (do now), important but not urgent (schedule), urgent but not important (delegate or shorten), and neither (drop). Urgent things shout; important things are the ones that matter to your goals. A common shorthand for handling the four groups is the 4D mnemonic: Do the urgent and important now, Delegate what someone else can do, Delay (schedule) what matters but can wait, and Delete the rest.",
         practice:
           "Sort your brain dump into the four groups. Notice how many items felt urgent but did not matter much.",
       },
@@ -166,29 +168,6 @@ window.SANGGUP_TRACKS = [
         practice:
           "Pick at most three tasks for tomorrow and write one thing that is explicitly not happening. Do them tomorrow in order.",
       },
-      {
-        id: "p4",
-        kind: "practice",
-        title: "Review and adjust",
-        lesson:
-          "Priorities change as things happen. A short review shows what you finished, what slipped and why, so your next choice is better informed.",
-        practice:
-          "At the end of tomorrow, write which of your three got done, what got in the way, and what you would change in how you ranked them.",
-      },
-    ],
-  },
-  {
-    id: "deciding", short: "Deciding", icon: '<path d="M12 21v-8 M12 13L6 6 M12 13l6-7 M6 6v4 M6 6h4 M18 6v4 M18 6h-4"/>',
-    title: "Deciding",
-    tagline: "Make everyday choices on purpose",
-    status: "prototype",
-    note:
-      "General skill practice using low-stakes everyday choices. sanggup does not make decisions for you and does not give personal advice. For health, money, legal or safety decisions, talk to a qualified person.",
-    sources: [
-      { label: "Amazon 2015 shareholder letter (one-way and two-way doors)", url: "https://s2.q4cdn.com/299287126/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF" },
-      { label: "Farnam Street: Reversible and irreversible decisions", url: "https://fs.blog/reversible-irreversible-decisions/" },
-    ],
-    stages: [
       {
         id: "d1",
         kind: "practice",
@@ -224,6 +203,15 @@ window.SANGGUP_TRACKS = [
           "A good decision is not the same as a good outcome, because luck is involved. Writing down what you expected lets you learn from the result later without rewriting your memory.",
         practice:
           "Make your choice. Write what you expect to happen and why. Set a reminder to compare with what really happened.",
+      },
+      {
+        id: "p4",
+        kind: "practice",
+        title: "Review and adjust",
+        lesson:
+          "Priorities change as things happen. A short review shows what you finished, what slipped and why, so your next choice is better informed.",
+        practice:
+          "At the end of tomorrow, write which of your three got done, what got in the way, and what you would change in how you ranked them.",
       },
     ],
   },
@@ -434,6 +422,7 @@ window.SANGGUP_TRACKS = [
       { label: "CDC: How to create and store an emergency water supply", url: "https://cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html" },
       { label: "Red Cross: Summer safety, drowning and reach or throw", url: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/summer-safety.html" },
       { label: "BNPB: Buku saku bencana", url: "https://www.bnpb.go.id/storage/app/media/uploads/24/buku-data-bencana/6-buku-saku-cetakan-4-2019.pdf" },
+      { label: "Ready.gov: Business Continuity Planning", url: "https://www.ready.gov/business-continuity-plan" },
       { label: "PMI: Pelatihan relawan", url: "https://pmipusat.org/pelatihan-relawan/" },
       { label: "PSC 119 Kemenkes", url: "https://psc.kemkes.go.id/web/tentang-psc-119" },
     ],
@@ -545,6 +534,15 @@ window.SANGGUP_TRACKS = [
           "The US Forest Service says the best survival tool is advance planning: carry enough food, water, layers, a light, a map and compass you know how to use, check for local warnings, and tell someone exactly where you are going, your route and when you will return. Do not rely on a phone signal. If you become lost, use STOP (Stop, Think, Observe, Plan): stop, stay calm and, if it is safe, stay put, because walking farther makes you harder to find. Antara's mountain guidance gives the same advice. Basarnas, Indonesia's search and rescue agency, has said search and rescue emergencies can be reported to 115 (a 2022 statement; Basarnas's own website currently lists 115 and a WhatsApp Rescue 115 chat).",
         practice:
           "Before your next outing, write a plan for a trusted person: where, route, return time and who is going. Pack a small kit of water, light and layers. Save 112 and Basarnas contact in your phone.",
+      },
+      {
+        id: "s14",
+        kind: "practice",
+        title: "Continuity beyond your household",
+        lesson:
+          "Preparedness scales up. Ready.gov's business continuity planning guidance for organizations: identify the functions that must keep running, plan how to keep them going when people, places or systems are unavailable, reduce what can be reduced ahead of time (mitigation), and practice the plan before you need it.",
+        practice:
+          "Pick one activity you are responsible for, at work or in a community. Write its three most critical functions and one backup for each: another person, another place or another way.",
       },
       {
         id: "s5",
@@ -1198,6 +1196,7 @@ window.SANGGUP_TRACKS = [
       { label: "Harvard Business Review: How to Define, Develop, and Communicate Your Personal Brand", url: "https://hbr.org/2023/09/how-to-define-develop-and-communicate-your-personal-brand" },
       { label: "WVU Eberly career center: Personal Branding", url: "https://eberly.wvu.edu/career-center-new/resources/personal-branding" },
       { label: "Indeed: What Is Personal Branding?", url: "https://www.indeed.com/career-advice/career-development/what-is-personal-branding" },
+      { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
     ],
     stages: [
       {
@@ -1232,23 +1231,26 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Show work instead of claiming it",
         lesson:
-          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them.",
+          "A brand grows through evidence, not adjectives. Publishing real work, small and regular, beats claiming qualities; Indeed's guidance likewise emphasizes demonstrating skills rather than stating them. When you tell the story behind a proof, a common structure is STAR: the Situation, the Task you owned, the Action you took and the Result, ideally with a number. Interviewers and readers both follow that shape.",
         practice:
           "Publish one small piece of real work this week: a repo, a demo page, or a short post explaining something you built or learned. Add its link to the profile you aligned.",
       },
     ],
   },
   {
-    id: "consulting", short: "Consulting", icon: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h.01 M12 10h.01 M16 10h.01"/>',
-    title: "Consulting",
-    tagline: "Turn what you know into structured help",
+    id: "clientwork", short: "Client work", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    title: "Client work",
+    tagline: "Sell what you know as advice or as delivered work",
     status: "prototype",
     note:
-      "sanggup does not find clients, set your prices or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences; this path covers the working method only and is general education.",
+      "sanggup does not find clients, set your prices, take payments or review contracts. Consulting on regulated topics such as legal, tax, medical or financial advice needs proper qualifications and licences, and Indonesian freelancers have tax duties as pekerja bebas under DJP rules. This path covers the working method only and is general education.",
     sources: [
       { label: "Coursera: What Does a Consultant Do?", url: "https://www.coursera.org/articles/what-does-a-consultant-do" },
       { label: "SCORE: Becoming an Independent Consultant", url: "https://www.score.org/ct/western-connecticut/e-guides/becoming-independent-consultant/" },
       { label: "SCORE: Starting a Consulting Business", url: "https://www.score.org/sc/greater-aiken/e-guides/starting-a-consulting-business/" },
+      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
+      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
+      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
     ],
     stages: [
       {
@@ -1259,6 +1261,24 @@ window.SANGGUP_TRACKS = [
           "Coursera's overview describes a consultant as an outside expert hired to analyze a situation and recommend what to do. Consulting starts from a specific problem you already know how to solve, not from a general offer of help.",
         practice:
           "Finish this sentence: 'I help ___ with ___ so they can ___.' Ground it in work you have actually done, and list two real examples as evidence.",
+      },
+      {
+        id: "fr1",
+        kind: "practice",
+        title: "Pick one sellable service",
+        lesson:
+          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
+        practice:
+          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
+      },
+      {
+        id: "fr2",
+        kind: "practice",
+        title: "Assemble proof",
+        lesson:
+          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive.",
+        practice:
+          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
       },
       {
         id: "cs2",
@@ -1279,48 +1299,6 @@ window.SANGGUP_TRACKS = [
           "Draft a one-page scope for your consultation: what you will do, what you will not do, the delivery date, the price (or 'free practice round'), and how changes are handled.",
       },
       {
-        id: "cs4",
-        kind: "milestone",
-        title: "Milestone: run one real consultation",
-        lesson:
-          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
-        milestone:
-          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
-      },
-    ],
-  },
-  {
-    id: "freelance", short: "Freelance", icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
-    title: "Freelancing",
-    tagline: "From one skill to your first paid job",
-    status: "prototype",
-    note:
-      "sanggup does not find clients, take payments or hold money for you. This path is general education, not tax, legal or financial advice. Indonesian freelancers have tax duties as pekerja bebas under DJP rules; check the current rules or consult a professional.",
-    sources: [
-      { label: "Coursera: Freelancer Jobs and How to Get Started", url: "https://www.coursera.org/articles/freelancer" },
-      { label: "US Small Business Administration: 10 steps to start your business", url: "https://www.sba.gov/business-guide/10-steps-start-your-business" },
-      { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
-    ],
-    stages: [
-      {
-        id: "fr1",
-        kind: "practice",
-        title: "Pick one sellable service",
-        lesson:
-          "Freelancers sell specific outcomes, not hours of availability. Coursera's guide to getting started begins with choosing a service: one thing you can deliver well, this month, with proof.",
-        practice:
-          "Choose one service you can deliver this month. Write the offer in one sentence a stranger would understand, for example: 'I build a one-page website in a week.'",
-      },
-      {
-        id: "fr2",
-        kind: "practice",
-        title: "Assemble proof",
-        lesson:
-          "Clients buy evidence. A small portfolio of two or three real examples outperforms a long CV, because it shows the actual deliverable they would receive.",
-        practice:
-          "Put two or three examples of real work in one shareable place: a profile, a public repo list or a single page. If you have no client work yet, make one small sample project and label it as a sample.",
-      },
-      {
         id: "fr3",
         kind: "practice",
         title: "Decide price and terms before you are asked",
@@ -1328,6 +1306,15 @@ window.SANGGUP_TRACKS = [
           "Price by the project or by time, and fix the terms before anyone asks: what is included, how many revision rounds, and when payment is due. The US SBA's startup steps treat written terms as basic protection for both sides.",
         practice:
           "Write down your price for the fr1 service, what it includes, the number of revision rounds and when payment is due. Save it where you can paste it into a reply.",
+      },
+      {
+        id: "cs4",
+        kind: "milestone",
+        title: "Milestone: run one real consultation",
+        lesson:
+          "Method only proves itself with a real person. A first round with someone you know, at no charge, is a normal way to test your plan and collect honest feedback.",
+        milestone:
+          "Run your consultation end to end with a real person who has the problem: preparation, session, summary, follow-up. Your client or a mentor confirms it happened and signs off.",
       },
       {
         id: "fr4",
@@ -1351,6 +1338,8 @@ window.SANGGUP_TRACKS = [
       { label: "Open Source Guides: Building Welcoming Communities", url: "https://opensource.guide/building-community/" },
       { label: "Open Source Guides: Leadership and Governance", url: "https://opensource.guide/leadership-and-governance/" },
       { label: "The Community Canvas", url: "https://community-canvas.org/" },
+      { label: "Responsibility assignment matrix (RACI), overview", url: "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" },
+      { label: "Kurt von Hammerstein-Equord and the officer heuristic, overview", url: "https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord" },
       { label: "NSW Government: Finding sponsors for your event", url: "https://www.nsw.gov.au/departments-and-agencies/premiers-department/community-engagement/event-starter-guide/sponsorship" },
     ],
     stages: [
@@ -1377,9 +1366,9 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Do a project together",
         lesson:
-          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at.",
+          "Communities deepen by making things together, not only by meeting. A shared project with a clear finish line gives members a reason to collaborate and something visible to point at. When several people share the work, name the roles explicitly; a common tool is RACI: who is Responsible for doing the work, who is Accountable for the outcome (exactly one person), who must be Consulted, and who is only Informed.",
         practice:
-          "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Assign a named owner to each part and finish it.",
+          "Run one small shared project with a clear end: a guide, a cleanup, a group repo, a showcase. Name the Responsible and Accountable person for each part, and finish it.",
       },
       {
         id: "cb4",
@@ -1395,7 +1384,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Revitalize and delegate",
         lesson:
-          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head.",
+          "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you.",
         practice:
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
       },
@@ -1422,7 +1411,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Benefits for each group, with proof",
         lesson:
-          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for.",
+          "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
       },
@@ -1431,7 +1420,7 @@ window.SANGGUP_TRACKS = [
         kind: "milestone",
         title: "Milestone: the community runs without you",
         lesson:
-          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help.",
+          "The real test of a community is whether it survives the founder stepping back. Succession is designed, not hoped for: new organizers need standing, documentation and the experience of leading while you are still around to help. A much-retold heuristic attributed to German general Kurt von Hammerstein-Equord sorts officers by bright or dull, lazy or diligent, and calls the dull-and-diligent combination dangerous. Treat it as folklore, not a rule: sorting people into smart and stupid is not how you choose leaders. The kernel worth keeping is to match responsibility to a person's judgment and energy, and not to mistake busyness for contribution.",
         milestone:
           "Step back from one full cycle: the community plans, runs and wraps an event or project without you organizing it. The new organizer confirms how it went and signs off.",
       },
@@ -1497,4 +1486,364 @@ window.SANGGUP_TRACKS = [
       },
     ],
   },
+  {
+    id: "selfcare", short: "Self care", icon: '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/>',
+    title: "Self care",
+    tagline: "Look after your body and mind on purpose",
+    status: "prototype",
+    note:
+      "sanggup is not a medical service and does not diagnose or treat anything. Self care supports everyday wellbeing; it does not replace professional care. If you struggle persistently or are in crisis, contact a health professional or local emergency help.",
+    sources: [
+      { label: "WHO: Self-care for health and well-being (fact sheet)", url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions" },
+      { label: "WHO: Self-care for health and well-being (Q&A)", url: "https://www.who.int/news-room/questions-and-answers/item/self-care-for-health-and-well-being" },
+    ],
+    stages: [
+      {
+        id: "sc1",
+        kind: "practice",
+        title: "Know what self care is",
+        lesson:
+          "The WHO describes self care as the things people do for their own health: daily habits like sleep, food, movement and hygiene, plus knowing when to seek professional help. It is maintenance, not indulgence, and not a substitute for care when something is wrong.",
+        practice:
+          "Write down your current basics: how many hours you slept last night, when you last moved your body for 20 minutes, and when you last drank water. No judgment, just the numbers.",
+      },
+      {
+        id: "sc2",
+        kind: "practice",
+        title: "Protect sleep and movement",
+        lesson:
+          "Sleep and movement are the two levers with the largest everyday effect on mood and focus. Regular hours beat occasional long sleeps; a daily walk beats a weekly heroic workout you skip.",
+        practice:
+          "For three days, keep a fixed wake-up time and take one 20-minute walk. Note your energy at midday each day.",
+      },
+      {
+        id: "sc3",
+        kind: "practice",
+        title: "Notice stress early",
+        lesson:
+          "Stress shows up in the body first: poor sleep, short temper, no appetite for things you usually enjoy. Noticing early lets you act while the fix is still small: a break, a walk, a conversation, a day with fewer commitments.",
+        practice:
+          "Write your three personal early-warning signs. Next to each, one small action that helps you. Share it with someone you trust.",
+      },
+      {
+        id: "sc4",
+        kind: "practice",
+        title: "Ask for help as a skill",
+        lesson:
+          "Self care includes knowing its limit. Talking to a friend, a counselor or a doctor early is strength, not failure. The WHO frames seeking appropriate care as part of self care itself.",
+        practice:
+          "Save the contact of one person and one professional service you would reach out to if things got heavy. Put them somewhere you can find in ten seconds.",
+      },
+    ],
+  },
+  {
+    id: "speaking", short: "Speaking", icon: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0 M12 17v4 M8 21h8"/>',
+    title: "Public speaking",
+    tagline: "From nervous reading to a talk people follow",
+    status: "prototype",
+    note:
+      "sanggup cannot listen to your talk or coach your delivery. Speaking improves by doing it in front of real people; these stages structure that practice. Toastmasters clubs and similar groups give live feedback this app cannot.",
+    sources: [
+      { label: "Toastmasters International: Public Speaking Tips", url: "https://www.toastmasters.org/en-us/resources/public-speaking-tips" },
+      { label: "Toastmasters International: How to Write and Deliver a Speech", url: "https://www.toastmasters.org/resources/public-speaking-tips/how-to-write-and-deliver-a-speech" },
+    ],
+    stages: [
+      {
+        id: "sp1",
+        kind: "practice",
+        title: "One message, one audience",
+        lesson:
+          "Toastmasters' first guidance: know your audience and your material. A talk is not everything you know; it is one message for one group. If you cannot say the message in one sentence, the audience cannot repeat it either.",
+        practice:
+          "Pick a real upcoming occasion or an imagined one. Write: the audience, the one sentence they should remember, and why they should care.",
+      },
+      {
+        id: "sp2",
+        kind: "practice",
+        title: "Structure it",
+        lesson:
+          "The classic shape works: tell them what you will say, say it, tell them what you said. Opening earns attention, body carries two or three points with examples, close returns to the one message.",
+        practice:
+          "Outline your talk on one page: opening line, three points with one example each, closing line. Full sentences only for the first and last lines.",
+      },
+      {
+        id: "sp3",
+        kind: "practice",
+        title: "Practice aloud, not in your head",
+        lesson:
+          "Silent reading hides problems. Practicing aloud reveals the sentence you cannot say and the section that runs long. Recording yourself once is uncomfortable and worth it: you hear your real pace and filler words.",
+        practice:
+          "Deliver your talk aloud twice, timing both. Record the second on your phone, listen back once, and write the two changes you will make.",
+      },
+      {
+        id: "sp4",
+        kind: "milestone",
+        title: "Milestone: speak to real people",
+        lesson:
+          "A talk only exists in front of people. Nerves are normal; Toastmasters notes that even experienced speakers feel them and convert them to energy through preparation.",
+        milestone:
+          "Deliver your talk to a real audience, even three people, in person or on a call. A listener confirms what your one message was and signs off.",
+      },
+    ],
+  },
+  {
+    id: "presenting", short: "Presenting", icon: '<path d="M2 3h20 M4 3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V3 M12 15v3 M9 21l3-3 3 3"/>',
+    title: "Presentation",
+    tagline: "Build a deck that carries your point, not your script",
+    status: "prototype",
+    note:
+      "sanggup does not make your slides or present for you. Tools and templates change; the judgment of what to show and what to cut does not. These stages are general education, not design certification.",
+    sources: [
+      { label: "Sheffield Hallam University: Presentation Skills, Structure and formatting", url: "https://libguides.shu.ac.uk/presentations/Structure" },
+      { label: "University of Sussex Skills Hub: Presentations, seminars and group work", url: "https://www.sussex.ac.uk/skills-hub/presentations-and-group-work" },
+    ],
+    stages: [
+      {
+        id: "pr1",
+        kind: "practice",
+        title: "Purpose before slides",
+        lesson:
+          "University presentation guides start before any software: what should the audience think, know or do afterwards, and how long do you have. The deck exists to serve that purpose; anything that does not is decoration.",
+        practice:
+          "For a real or imagined presentation, write the one action or takeaway you want, the time limit, and three things this audience already knows.",
+      },
+      {
+        id: "pr2",
+        kind: "practice",
+        title: "Story before design",
+        lesson:
+          "Structure guides recommend a clear beginning, middle and end: set up the problem, walk through your points in an order a listener can follow, land on the takeaway. If the story works as bullet points on paper, it will work as slides.",
+        practice:
+          "Write your presentation as a plain outline: problem, three points in order, takeaway. No software yet.",
+      },
+      {
+        id: "pr3",
+        kind: "practice",
+        title: "Slides support, they do not read",
+        lesson:
+          "Slides are for the audience, not a teleprompter for you. One idea per slide, few words, readable from the back; your sentences live in your mouth and your speaker notes. If people read your slides, they are not listening to you.",
+        practice:
+          "Turn your outline into slides: one idea each, at most a short headline and one image or figure per slide. Delete every slide that only repeats what you will say.",
+      },
+      {
+        id: "pr4",
+        kind: "milestone",
+        title: "Milestone: present for real",
+        lesson:
+          "A presentation is finished when it lands with an audience and survives their questions. Rehearsing with the actual slides once, standing, catches most failures cheaply.",
+        milestone:
+          "Rehearse once aloud with your slides, then present to a real audience and take questions. An attendee confirms the takeaway landed and signs off.",
+      },
+    ],
+  },
+  {
+    id: "journalism", short: "Journalism", icon: '<path d="M4 4h14v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z M18 8h2v10a2 2 0 0 1-2 2 M8 8h6 M8 12h6 M8 16h6"/>',
+    title: "Journalism and reporting",
+    tagline: "Verify, gather, and write what actually happened",
+    status: "prototype",
+    note:
+      "sanggup does not verify facts, contact sources or review your stories. Publishing carries real legal and ethical duties that vary by country, including defamation and privacy law, and field reporting has safety considerations. These stages are general education drawn from published ethics codes and newsroom standards.",
+    sources: [
+      { label: "Society of Professional Journalists: Code of Ethics", url: "https://www.spj.org/spj-code-of-ethics/" },
+      { label: "Reuters: Journalistic Standards handbook", url: "https://handbook.reuters.com/" },
+      { label: "UNESCO: Journalism, Fake News and Disinformation handbook", url: "https://www.unesco.org/en/articles/journalism-fake-news-disinformation" },
+    ],
+    stages: [
+      {
+        id: "jr1",
+        kind: "practice",
+        title: "Truth and verification first",
+        lesson:
+          "The SPJ code opens with seeking truth and reporting it: accuracy over speed, verification over assumption. UNESCO's handbook treats disinformation as the core challenge of the craft. Journalism begins when you check something others only repeat.",
+        practice:
+          "Take one claim circulating in your feeds today. Trace it to its original source. Write down whether the original actually says what the claim says.",
+      },
+      {
+        id: "jr2",
+        kind: "practice",
+        title: "Independence and minimizing harm",
+        lesson:
+          "Journalists act independently: first loyalty to the public, conflicts of interest disclosed. They also minimize harm: reporting affects real people, so the public's need to know is weighed against the impact on sources and subjects, especially private and vulnerable people.",
+        practice:
+          "Write your own conflicts list: employers, communities, sponsors, friendships that could bias what you cover. Then take one story idea and note who could be harmed by it and one choice that reduces the harm without hiding the truth.",
+      },
+      {
+        id: "jr3",
+        kind: "practice",
+        title: "Gather from people and documents",
+        lesson:
+          "Reporting starts from a question, not a conclusion, and works from primary material: interviews, documents, data, your own observation. Reuters' standards stress accurate quotes and sourcing. One source is a claim; two independent sources start to be a fact.",
+        practice:
+          "Pick a real question near you. List two people you could interview and two documents or data sources you could read. Do one interview or read one primary document, take dated notes, and verify three facts against independent sources.",
+      },
+      {
+        id: "jr4",
+        kind: "practice",
+        title: "Structure the report and stand behind it",
+        lesson:
+          "A report is structured for the reader: most important facts first, attribution for every claim, context for why it matters. Accountability separates journalism from content: show your evidence where you can and correct errors quickly and visibly.",
+        practice:
+          "Write your own corrections policy in three sentences: how people can report an error to you, what you will do, and how fast.",
+      },
+      {
+        id: "jr5",
+        kind: "milestone",
+        title: "Milestone: file one report",
+        lesson:
+          "A finished piece carries verified facts, named sources and a structure a reader can follow. Short and accurate beats long and impressive.",
+        milestone:
+          "Write and share one short report, 300 to 500 words, answering a real question, with sources named. An editor, mentor or informed reader checks the facts and signs off.",
+      },
+    ],
+  },
+  {
+    id: "surveying", short: "Surveying", icon: '<path d="M9 11l3 3 8-8 M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>',
+    title: "Surveying people",
+    tagline: "Ask questions well and learn what people actually think",
+    status: "prototype",
+    note:
+      "sanggup does not run surveys or collect responses for you. Survey results depend heavily on who you asked and how you asked; small informal polls show direction, not proof. Respect privacy and consent when you collect people's answers.",
+    sources: [
+      { label: "Pew Research Center: Writing survey questions", url: "https://www.pewresearch.org/writing-survey-questions/" },
+      { label: "Pew Research Center: U.S. Surveys methods", url: "https://www.pewresearch.org/our-methods/u-s-surveys/" },
+    ],
+    stages: [
+      {
+        id: "sv1",
+        kind: "practice",
+        title: "Start from a decision",
+        lesson:
+          "A survey exists to inform a decision: what you will do differently depending on the answers. If no answer would change anything, the survey is decoration. Define the decision, then what you need to learn, then who can tell you.",
+        practice:
+          "Pick a real question from your work or community. Write the decision it informs, the one thing you need to learn, and the group of people whose answers would settle it.",
+      },
+      {
+        id: "sv2",
+        kind: "practice",
+        title: "Write questions people can answer",
+        lesson:
+          "Pew Research's guidance: ask one thing at a time, use words your respondents use, and avoid leading phrasing that pushes an answer. A confusing or loaded question measures your wording, not their opinion. Test questions on one or two people before sending them widely.",
+        practice:
+          "Draft five questions for your survey. Read them aloud to one person from your target group and watch where they hesitate. Rewrite the two weakest.",
+      },
+      {
+        id: "sv3",
+        kind: "practice",
+        title: "Who answers matters more than how many",
+        lesson:
+          "A hundred answers from your friends tell you about your friends. Sampling is about reaching the mix of people whose views you claim to describe, and nonresponse bias means the people who skip your survey often differ from those who answer. Report who actually answered, not just the totals.",
+        practice:
+          "Write down who your survey would reach by default and who it would miss. Add one concrete step that reaches a missed group.",
+      },
+      {
+        id: "sv4",
+        kind: "milestone",
+        title: "Milestone: run one small survey",
+        lesson:
+          "A finished survey reports honestly: the question, who answered, how many, what they said, and what it cannot tell you. Direction from thirty honest answers beats false precision from a biased thousand.",
+        milestone:
+          "Run your survey with a real group, collect at least ten responses, and write a short summary: what you asked, who answered, what you learned, and the limits. Someone from the surveyed group reads it and signs off that it represents the answers fairly.",
+      },
+    ],
+  },
+  {
+    id: "teaching", short: "Teaching", icon: '<path d="M22 10L12 5 2 10l10 5 10-5z M6 12.5V17c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/>',
+    title: "Teaching and mentoring",
+    tagline: "Help someone learn to do what you can do",
+    status: "prototype",
+    note:
+      "sanggup does not teach for you or assess your learner. Teaching and mentoring involve real people's time and confidence, so adjust to the learner in front of you. These stages are general education drawn from published university teaching and mentoring guidance.",
+    sources: [
+      { label: "Carnegie Mellon Eberly Center: Teaching Principles", url: "https://www.cmu.edu/teaching/principles/teaching.html" },
+      { label: "UNC Center for Faculty Excellence: Faculty Mentoring Toolkit, Mentor", url: "https://cfe.unc.edu/faculty-mentoring-toolkit/mentor/" },
+    ],
+    stages: [
+      {
+        id: "tm1",
+        kind: "practice",
+        title: "See from the learner's side",
+        lesson:
+          "Carnegie Mellon's Eberly Center starts its teaching principles with prior knowledge: what a learner already knows, and wrongly believes, shapes everything they can absorb. Expertise makes your own steps invisible to you, so teaching begins by recovering what a beginner does not know.",
+        practice:
+          "Pick one skill you do easily. Do it once slowly and write down every step and assumption a beginner would miss. Ask one beginner what they find confusing about it.",
+      },
+      {
+        id: "tm2",
+        kind: "practice",
+        title: "Show, then let them do",
+        lesson:
+          "The Eberly principles tie learning to practice with feedback: people learn skills by doing them, not by watching. A demonstration sets the target, but the learner's own attempt is where the teaching happens.",
+        practice:
+          "Demonstrate your skill once, narrating your steps. Then have the learner do it while you watch. Give one correction at a time and let them retry between corrections.",
+      },
+      {
+        id: "tm3",
+        kind: "practice",
+        title: "Feedback that lands",
+        lesson:
+          "Useful feedback is specific, timely and about the work, not the person: what worked, what to change next, in words the learner can act on. University mentoring guides add the longer arc: agree on goals, check in regularly, and let the learner own their growth.",
+        practice:
+          "Give feedback on one real attempt using the shape: one thing that worked, one thing to change next, nothing else. If you mentor someone over time, write the goal and the next check-in date.",
+      },
+      {
+        id: "tm4",
+        kind: "milestone",
+        title: "Milestone: teach one real skill",
+        lesson:
+          "You have taught something when the learner can do it without you. That is a higher bar than explaining, and it is the bar that matters.",
+        milestone:
+          "Teach one real skill to a real person until they can do it unaided. The learner demonstrates the skill without your help and signs off.",
+      },
+    ],
+  },
+  {
+    id: "negotiation", short: "Negotiation", icon: '<path d="M17 3l4 4-4 4 M21 7H9 M7 21l-4-4 4-4 M3 17h12"/>',
+    title: "Negotiation",
+    tagline: "Reach agreements both sides can keep",
+    status: "prototype",
+    note:
+      "sanggup does not negotiate for you or advise on specific deals. Real negotiations involve money, jobs and relationships; for legal or high-stakes matters, get professional advice. Sponsor and partner negotiation has its own stage in the Community building path; this path is the general skill.",
+    sources: [
+      { label: "Program on Negotiation at Harvard Law School: What is BATNA?", url: "https://www.pon.harvard.edu/daily/batna/translate-your-batna-to-the-current-deal/" },
+      { label: "Program on Negotiation at Harvard Law School: Bargaining with Your BATNA in Mind", url: "https://www.pon.harvard.edu/daily/batna/negotiation-and-bargaining-with-your-batna-in-mind/" },
+    ],
+    stages: [
+      {
+        id: "ng1",
+        kind: "practice",
+        title: "Know your walk-away",
+        lesson:
+          "Harvard's Program on Negotiation centers preparation on the BATNA, your best alternative to a negotiated agreement. Your power in a negotiation is how good your no is: if walking away is fine, you can hold out for a good yes. Decide your BATNA and your walk-away point before you talk numbers.",
+        practice:
+          "Pick one real negotiation ahead of you, small is fine. Write your best alternative if no deal happens, the worst outcome you would accept, and one step that would improve your alternative.",
+      },
+      {
+        id: "ng2",
+        kind: "practice",
+        title: "Prepare interests, not positions",
+        lesson:
+          "A position is what someone demands; an interest is why they want it. Preparation means listing both sides' interests: money, time, risk, reputation, relationship. Trades between different interests are where agreements come from, and guessing the other side's interests beats rehearsing your own arguments.",
+        practice:
+          "For your ng1 negotiation, write your three interests and your honest guess of their three. Mark one thing cheap for you to give that they may value.",
+      },
+      {
+        id: "ng3",
+        kind: "practice",
+        title: "Trade, do not just concede",
+        lesson:
+          "In the conversation, open with a supportable position, ask questions before countering, and trade instead of conceding: 'if you need X, then I need Y'. Silence after an offer is allowed. Any agreement needs a clear write-up of who does what by when, or it is not finished.",
+        practice:
+          "Rehearse the negotiation aloud once with a friend playing the other side, or write both sides of the likely exchange. End with the one-page write-up you would send after a yes.",
+      },
+      {
+        id: "ng4",
+        kind: "milestone",
+        title: "Milestone: close one real negotiation",
+        lesson:
+          "The skill is the whole arc: preparation, conversation, written agreement. A negotiation you both keep is a success even when you got less than your opening ask.",
+        milestone:
+          "Complete one real negotiation, from preparation to a written agreement both sides accept: a price, terms, a split of work or a commitment. Your counterpart or a mentor confirms the agreement and signs off.",
+      },
+    ],
+  }
 ];
