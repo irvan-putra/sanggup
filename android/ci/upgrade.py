@@ -25,6 +25,6 @@ adb('shell','am','force-stop',PKG);adb('shell','am','start','-W','-n',PKG+'/.Mai
 before=text(dump('before-upgrade'));shot('before-upgrade');assert '1 day streak'in before,before
 adb('install','-r','new.apk');adb('shell','am','force-stop',PKG);adb('shell','am','start','-W','-n',PKG+'/.MainActivity');time.sleep(8)
 after=text(dump('after-upgrade'));shot('after-upgrade');assert '1 day streak'in after,after
-assert 'versionName=0.1.2'in adb('shell','dumpsys','package',PKG)
+assert 'versionName=0.1.3'in adb('shell','dumpsys','package',PKG)
 crash=adb('logcat','-d','-b','crash');open('upgrade-evidence/crash.txt','w').write(crash);assert PKG not in crash
-print('PASS: signed0.1.1 to0.1.2 retained synthetic1-day native practice streak, no uninstall/data clear')
+print('PASS: signed0.1.2 to0.1.3 retained synthetic1-day native practice streak, no uninstall/data clear')
