@@ -632,7 +632,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Pack a go-bag",
         lesson:
-          "BNPB describes a Tas Siaga Bencana as a bag with basic needs for the first 3x24 hours when help may not have arrived. Contents listed by Kemenkes include copies of important documents in waterproof cover, first-aid supplies and personal medicines, a whistle, flashlight and batteries, some cash, phone charger, power bank and radio, spare clothes, long-life food and drinking water. Keep it to what you need; don't overload it. Ready.gov likewise says to prepare for several days on your own.",
+          "BNPB describes a Tas Siaga Bencana as a bag with basic needs for the first 3x24 hours when help may not have arrived. Contents listed by Kemenkes include copies of important documents in waterproof cover, first-aid supplies and personal medicines, a whistle, flashlight and batteries, some cash, phone charger, power bank and radio, spare clothes, long-life food and drinking water. Keep it to what you need; don't overload it. Ready.gov likewise says to prepare for several days on your own. Documents and cards can also go missing through theft rather than disaster; the Security basics path's lost-wallet stage covers what to block first and how reporting a loss differs from replacing a document.",
         practice:
           "Assemble a go-bag with what you can. Put in your personal medicines, check expiry dates, and store it where you can grab it quickly.",
       },
@@ -804,6 +804,8 @@ window.SANGGUP_TRACKS = [
       { label: "police.uk: Checklist for securing your home when you leave it", url: "https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/" },
       { label: "CISA: Secure Our World, four core steps", url: "https://www.cisa.gov/secure-our-world" },
       { label: "FTC: How to recognize and avoid phishing scams", url: "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams" },
+      { label: "IdentityTheft.gov: report identity theft and get a recovery plan (US)", url: "https://www.identitytheft.gov/" },
+      { label: "USA.gov: How to replace lost or stolen ID cards (US examples)", url: "https://www.usa.gov/replace-vital-documents" },
       { label: "LockPickingLawyer: $329 smart lock opened in seconds (video)", url: "https://www.youtube.com/watch?v=m_MX96MVD00" },
       { label: "CISA: Recognize and report phishing", url: "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing" },
       { label: "Krebs on Security: Legal threats make powerful phishing lures (2019 case)", url: "https://krebsonsecurity.com/2019/05/legal-threats-make-powerful-phishing-lures/" },
@@ -871,6 +873,15 @@ window.SANGGUP_TRACKS = [
           "CISA's fourth core step is updating software, because updates close the holes attackers use. Plan the bad day before it happens as well: know your bank's official fraud contact, your local emergency number, and where to report. If you suspect a scammer has your details, act quickly through those official channels.",
         practice:
           "Turn on automatic updates on your phone, and save your bank's official contact details taken from its own website or the back of your card.",
+      },
+      {
+        id: "sec9",
+        kind: "practice",
+        title: "Prepare for a lost wallet",
+        lesson:
+          "A lost wallet is two emergencies at different speeds. Money moves fast: a card can be misused within minutes, and the issuer can block it just as fast when you call through the official channel, so cards and accounts come first. Documents move slowly: each one is replaced through its own issuing authority, and the rules vary by document and country. Three different actions are easy to confuse: reporting the loss, blocking what can be blocked, and replacing what can be reissued. Blocking exists for payment cards and accounts; many identity documents cannot be cancelled like a card, so for those you report the loss, request a replacement, and watch for misuse. The US government's IdentityTheft.gov turns misuse into a step-by-step recovery plan, and USA.gov's replacement table shows how each document has its own route. The calm version of all of this is prepared today: a private inventory of what you carry, each item's issuer, and each issuer's official contact taken from its own website or app. Keep that list somewhere private, and never put card numbers or ID photos into sanggup.",
+        practice:
+          "Draft your inventory with three fictional entries, one line each: item, issuer, official contact, first action if lost. Then open one real issuer's official website, find its lost-card instructions, and note where they live. For a fictional identity card, write which authority issued it and where its replacement instructions are, without assuming the document can be blocked like a payment card.",
       },
       {
         id: "sec8",
