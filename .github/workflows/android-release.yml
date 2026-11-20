@@ -8,7 +8,7 @@ jobs:
     # patuh pre-publish source gate: package, version format, label,
     # permission/license drift, family icon geometry, badge reads the
     # candidate version. A failure stops the release before anything builds.
-    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@4e064163e62a3cf677e11de016ffbb6f4041816b
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@609207d9ced14bda0e6eacbd51a98011b0012a3a
     with:
       app: sanggup
       published: false
@@ -41,16 +41,16 @@ jobs:
           printf '%s' "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/sanggup.jks"
           trap 'rm -f "$RUNNER_TEMP/sanggup.jks"' EXIT
           "$BT/zipalign" -p -f 4 android/app/build/outputs/apk/release/app-release-unsigned.apk /tmp/aligned.apk
-          "$BT/apksigner" sign --ks "$RUNNER_TEMP/sanggup.jks" --ks-key-alias sanggup --ks-pass env:STORE_PASSWORD --key-pass env:STORE_PASSWORD --out sanggup-v0.1.4.apk /tmp/aligned.apk
-          "$BT/apksigner" verify --verbose --print-certs sanggup-v0.1.4.apk | tee /tmp/cert.txt
+          "$BT/apksigner" sign --ks "$RUNNER_TEMP/sanggup.jks" --ks-key-alias sanggup --ks-pass env:STORE_PASSWORD --key-pass env:STORE_PASSWORD --out sanggup-v0.2.0.apk /tmp/aligned.apk
+          "$BT/apksigner" verify --verbose --print-certs sanggup-v0.2.0.apk | tee /tmp/cert.txt
           GOT=$(grep -m1 'certificate SHA-256 digest' /tmp/cert.txt | awk '{print toupper($NF)}')
           test "$GOT" = "$EXPECTED_CERT"
-          "$BT/aapt" dump badging sanggup-v0.1.4.apk > /tmp/badging.txt
+          "$BT/aapt" dump badging sanggup-v0.2.0.apk > /tmp/badging.txt
           cat /tmp/badging.txt
-          grep -q "package: name='com.vanipy.sanggup' versionCode='5' versionName='0.1.4'" /tmp/badging.txt
+          grep -q "package: name='com.vanipy.sanggup' versionCode='6' versionName='0.2.0'" /tmp/badging.txt
           grep -q "sdkVersion:'26'" /tmp/badging.txt
           ! grep -q 'uses-permission:' /tmp/badging.txt
-          sha256sum sanggup-v0.1.4.apk > sanggup-v0.1.4.apk.sha256
+          sha256sum sanggup-v0.2.0.apk > sanggup-v0.2.0.apk.sha256
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -63,7 +63,7 @@ jobs:
           target: google_apis
           arch: x86_64
           script: |
-            adb install -r sanggup-v0.1.4.apk
+            adb install -r sanggup-v0.2.0.apk
             adb logcat -c
             adb shell am start -W -n com.vanipy.sanggup/.MainActivity
             sleep 20
@@ -81,15 +81,15 @@ jobs:
         with:
           name: candidate-apk
           path: |
-            sanggup-v0.1.4.apk
-            sanggup-v0.1.4.apk.sha256
+            sanggup-v0.2.0.apk
+            sanggup-v0.2.0.apk.sha256
           retention-days: 1
 
   candidate-bytes:
     # patuh checks the built APK's actual bytes (packaged icon badge) before
     # anything is published. This is the preventive boundary.
     needs: release
-    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@4e064163e62a3cf677e11de016ffbb6f4041816b
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@609207d9ced14bda0e6eacbd51a98011b0012a3a
     with:
       app: sanggup
       published: false
@@ -107,13 +107,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v0.1.4 dist/sanggup-v0.1.4.apk dist/sanggup-v0.1.4.apk.sha256 --title 'Sanggup 0.1.4 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
+          gh release create v0.2.0 dist/sanggup-v0.2.0.apk dist/sanggup-v0.2.0.apk.sha256 --title 'Sanggup 0.2.0 test' --notes-file android/TEST-RELEASE.md --prerelease --target "$GITHUB_SHA"
 
   verify:
     # post-publish: verifies the live release (tag, APK name, checksum,
     # gallery card, downloaded sha256, packaged icon). Detects, cannot undo.
     needs: publish
-    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@4e064163e62a3cf677e11de016ffbb6f4041816b
+    uses: irvan-putra/patuh/.github/workflows/release-gate.yml@609207d9ced14bda0e6eacbd51a98011b0012a3a
     with:
       app: sanggup
       published: true

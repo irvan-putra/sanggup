@@ -1,4 +1,4 @@
-# Sanggup 0.1.4 test APK
+# Sanggup 0.2.0 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
@@ -8,11 +8,21 @@ Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or 
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
 
-## Changes since 0.1.3
+## Changes since 0.1.4
 
-The grid goes from 30 tiles to 25 by merging overlapping paths, with no content cut: FIRE moves into Money; Content creator into Branding; Journalism and reporting into Writing; Community building into Network; Habits into Focus; Calm into Self care; Business operations into Projects. Every stage keeps its id, so existing stage progress and pending sign-off requests carry over. Each merged path keeps both paths' limits notes. A new Career moves path (evidence-based CV, STAR stories, interview practice, a real application loop) and the business frameworks (OKR, KPI, SOP, RACI, continuity) are included for the first time in the APK, as are the bidirectional "Shared skill" labels that name where else a skill is practiced. Nine paths gain deeper stages, including closing hands-on milestones for First aid, Swimming and Driving that record attendance or practice only, never qualification. Cooking gains the limits note and source it lacked. No feature, permission or signing changes; the widget, streak and animation are unchanged from 0.1.3.
+Content parity with the web version, 29 web commits bundled:
 
-Update over 0.1.3 with the same package and release key. Do not uninstall or clear storage, which would remove local progress.
+- Disasters and First aid merge into one Safety and emergencies path, and a new Security basics path (home security, phishing, passwords and 2FA) joins the grid, which stays 5x5.
+- Branding and creator grows to a full path: personal branding, consultation and freelancing stages plus the earlier marketing series.
+- Career moves reorganizes into one direct path with managing-up, staff engineering and AI-era stages; Coding joins as its own tile with falsehoods-style breaking exercises and a code-review stage; investing basics, corporation concepts and fiscal sponsorship stages land in Money and Network.
+- Network gains community-renewal, knowledge handover, paperwork and personal memory-file stages; Home broadens from Tidying with 3D printing and plastic recycling; Self care gains movement stages; Writing gains book interviewing; Cooking gains a food-prep week stage.
+- Emergency numbers are jurisdiction-qualified against Kominfo's 112 page: 112 coverage depends on your city or regency, 119 for medical.
+- Seven stage cards gain an optional "Tools to try" line linking sibling apps (intodo, menit, kokok, tengok APKs; kapan, nada, denting, daya, bedah web prototypes), each marked optional with the manual route stated. The web footer now links this Android test build.
+- Shareable direct skill links via hash routing (#network and friends), with aliases for merged paths.
+
+Every stage keeps its id, so progress and pending sign-off requests carry over. No new permissions, no signing-key change.
+
+Update over 0.1.4 with the same package and release key. Do not uninstall or clear storage, which would remove local progress.
 
 ## Verification and limits
 
