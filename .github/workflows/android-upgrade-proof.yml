@@ -58,7 +58,7 @@ jobs:
           target: google_apis
           arch: x86_64
           script: |
-            set -euo pipefail
+            set -eu
             mkdir -p upgrade-evidence
             OLD="dist/sanggup-${{ inputs.old_tag }}.apk"
             NEW="dist/sanggup-${{ inputs.new_tag }}.apk"
