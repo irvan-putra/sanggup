@@ -8,7 +8,7 @@ Live prototype: https://vanipy.com/sanggup/
 
 ## What this is
 
-A prototype (0.2.0) with working paths and two roles, on a 5x5 grid of 25
+A prototype (0.2.1) with working paths and two roles, on a 5x5 grid of 25
 paths. The paths are Cooking (five stages, with practical milestones),
 Cleaning & tidying (including KonMari and other approaches), Decisions and
 priorities, Focus and habits, Projects and business (Kanban and sprints,
