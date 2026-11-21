@@ -2303,6 +2303,8 @@ window.SANGGUP_TRACKS = [
     sources: [
       { label: "Pew Research Center: Writing survey questions", url: "https://www.pewresearch.org/writing-survey-questions/" },
       { label: "Pew Research Center: U.S. Surveys methods", url: "https://www.pewresearch.org/our-methods/u-s-surveys/" },
+      { label: "PingPolls: documented method and limits (vendor source)", url: "https://pingpolls.com/whitepaper" },
+      { label: "Kaji: conversational surveys, pairwise choice and timing limits", url: "https://vanipy.com/kaji/pingpolls/" },
     ],
     stages: [
       {
@@ -2349,6 +2351,33 @@ window.SANGGUP_TRACKS = [
           "AI can draft survey questions and summarize answers, and both need checking. Drafted questions can be leading or double-barreled; summaries can drop minority views or invent patterns. Compare every summary against the raw answers, and never paste respondents' personal data into a chatbot.",
         practice:
           "Five fictional answers to 'What would improve the park?' are: more lights, more lights, cleaner toilets, a running track, and cheaper parking. An AI summary says 'respondents mainly want better security.' Write what the summary got right, what it dropped, and a fair one-sentence summary of your own.",
+      },
+      {
+        id: "sv7",
+        kind: "practice",
+        title: "Make the next answer easy, not biased",
+        lesson:
+          "PingPolls uses a conversational form: one question at a time, with routing based on earlier answers. Borrow the small-step presentation, not a promise that chat makes answers true. Keep the purpose, consent, skip or exit route and relevant context visible. A friendly tone can still lead people, and hidden earlier answers can make correction harder. Pilot the same wording in a short conventional form and a conversational sequence before claiming one works better.",
+        practice:
+          "Use a fictional library study. Turn 'How satisfied are you with opening hours and the collection?' into two neutral questions. Sketch the next question for a visitor and for someone who has never visited. Include a skip route, a way to correct an earlier answer and no request for a name. Use fictional answers only in this prototype.",
+      },
+      {
+        id: "sv8",
+        kind: "practice",
+        title: "Choose between options without forcing a false choice",
+        lesson:
+          "Pairwise preference questions show two options at a time instead of asking someone to rate everything highly. For three options, the complete set has three pairs; for four, six. That reduces each screen's reading load but can add work overall. Order can change a choice, and A over B plus B over C does not guarantee A over C. Keep a route for neither, equal or unsure when the study needs it, and record raw choices separately from any weighted score. PingPolls describes adaptive pair selection; this lesson does not reproduce or validate its algorithm.",
+        practice:
+          "Compare three fictional library improvements: longer hours, more desks and quieter rooms. Write all three pairs, then make a second version with the sides and sequence changed. Add a neither-or-unsure route. Invent an A-over-B, B-over-C, C-over-A response and explain why reporting a certain overall winner would hide a cycle.",
+      },
+      {
+        id: "sv9",
+        kind: "practice",
+        title: "Treat response time as a clue, not a verdict",
+        lesson:
+          "PingPolls' Certiscore compares each card choice's delay with that respondent's own quicker choices. Its whitepaper calls the constants design choices, not confidence thresholds validated against labelled data. A slow answer may mean uncertainty, careful reading, a screen reader, a hard image, a notification or a slow device. Fast answers can also be careless or automated. Timing is not truth, intelligence, consent or proof of being human. With only one pair, the pick is its own reference so the documented timing adjustment has no effect. Do not exclude people or label them dishonest from speed; report the measure, its limits and sensitivity separately from raw choices.",
+        practice:
+          "Two fictional respondents choose the same option: one after one second, the other after six seconds while interrupted by a call. Write at least three possible explanations before calling one less confident. Then write a methods note that reports the original choices, any optional timing analysis and who the sample misses. No timer, biometric inference, AI analysis or real-response collection is added to sanggup.",
       },
       {
         id: "sv4",
