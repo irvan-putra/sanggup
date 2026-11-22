@@ -2632,6 +2632,15 @@ window.SANGGUP_TRACKS = [
           "Pick one assumption you personally relied on, about time, places or anything else. Write the assumption in one sentence, the smallest example that breaks it, and the fix in one sentence. Keep all three; they are the whole exercise.",
       },
       {
+        id: "cd4",
+        kind: "milestone",
+        title: "Milestone: catch one real assumption bug",
+        lesson:
+          "Paper exercises prove you can spot the pattern. Real code proves you can find it where it hides, in a form field, a date comparison or an address parser that was never questioned.",
+        milestone:
+          "In real code, yours or a public project, find one place that relies on a false assumption about time, location or names. Write it up as assumption, failing case and fix, and have your instructor check the reasoning.",
+      },
+      {
         id: "cd8",
         kind: "practice",
         title: "Get your code reviewed by a person",
@@ -2777,15 +2786,6 @@ window.SANGGUP_TRACKS = [
           "The same talk then turned inward. The speaker showed his own recorded working-time dashboard, long weeks, with a warning label he called over-identification: 'I'm working late again. I'm failing.' His alternative, drawn from Kristin Neff's three elements of self-compassion (mindfulness, common humanity, self-kindness, per the talk's references), was plain observation: see what is hard right now, without ignoring it or making it bigger, and review the record before judging. His demonstration was review by video: an agent had turned one feature into a 16-minute briefing with 22 chapters, which he skimmed in 12 seconds to spot the hard part, a demo from his own DevFest 2026 talk, with the timings specific to that demo rather than general agent performance. Read as a work habit, not medical advice, it transfers directly to engineering: a failing test suite, a slipped estimate or a long week is data about the work, not a verdict on the engineer. The useful question is not 'am I failing?' but 'what exactly is hard, and what would make it smaller?' He closed the segment on common humanity: 'everyone else keeps up, only I can't' is isolation talking, not data; everyone makes mistakes, has limits and needs help sometimes, and asking for review or cover is normal engineering practice, not weakness. He mentioned a community he leads, Vibe From Cafe, as his own example of navigating the AI shift together; that is his project, cited as his claim, not an endorsement here. The segment closed on self-kindness with responsibility kept: when a risky change cannot yet be explained, the answer is not 'catch up tonight, just work harder' but a triage you can say out loud to the team: I handle this today, this can wait, or this needs help to review. A joke about letting even the conference wait for a newly released game made the same point, that some things genuinely can wait. And the closing rule for open work: if you have not checked it, it is not done, so write down what is open, who needs to know, and the next step. His own tool demo (Cukup, Indonesian for 'enough', an open-source recorded-time tracker he self-hosts; the numbers on screen were demo data) came with its limits printed on the slide: recorded working time is only an estimate. It does not measure attention, quality, productivity, burnout or your worth, and reading and thinking away from the machine do not show up at all. His checklist works without any tool: before the next task, ask whether to continue, narrow the scope, ask for help, or stop for this session. Treat every work metric that way: a clue about where to look, never a verdict about you.",
         practice:
           "Pick one thing in your current project that feels hard. Write down only what you can observe: how long it takes, where you get stuck, what you redo. No adjectives about yourself. Then sort it the way you would tell the team: handle today, it can wait, or it needs help to review, and write the next step for the one you picked.",
-      },
-      {
-        id: "cd4",
-        kind: "milestone",
-        title: "Milestone: catch one real assumption bug",
-        lesson:
-          "Paper exercises prove you can spot the pattern. Real code proves you can find it where it hides, in a form field, a date comparison or an address parser that was never questioned.",
-        milestone:
-          "In real code, yours or a public project, find one place that relies on a false assumption about time, location or names. Write it up as assumption, failing case and fix, and have your instructor check the reasoning.",
       },
     ],
   },
