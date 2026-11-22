@@ -992,6 +992,9 @@ window.SANGGUP_TRACKS = [
           "An event is a promise: a time, a place and a reason to come. Small and regular beats big and rare. A first meetup with three people who talk to each other is a success; a big event where nobody talks is not.",
         practice:
           "Organize one small gathering, even three people: pick the date, place and a simple format, invite people personally, and afterwards note who came, what worked and what to repeat.",
+        tools: [
+          { label: "First-meeting agenda template", url: "kit/#first-meeting", note: "community starter kit" },
+        ],
       },
       {
         id: "cb3",
@@ -1046,6 +1049,9 @@ window.SANGGUP_TRACKS = [
           "A community runs on exchanged benefits: organizers get experience and reputation, members get learning and belonging, sponsors get reach and goodwill, partners get shared outcomes. Prove benefits with evidence, not adjectives: attendance numbers, photos, quotes, member growth, and exactly what the sponsorship paid for. Organizations often formalize this: an OKR pairs an Objective with a few measurable Key Results, and a KPI is a number you watch over time. Pick one number per group that would show the benefit is real. Shared skill: KPIs and OKRs are also practiced in the Career path and in <a href='#projects/bu2'>Projects and business</a>.",
         practice:
           "Write a one-paragraph benefit report of your last event for each group: organizers, members, sponsors and partners. Give each paragraph one number or quote as evidence, and send the sponsor paragraph to your sponsor.",
+        tools: [
+          { label: "Member-benefits vs sponsor-benefits worksheet", url: "kit/#benefits", note: "community starter kit" },
+        ],
       },
       {
         id: "nt14",
@@ -1091,6 +1097,9 @@ window.SANGGUP_TRACKS = [
           "The Community Tool Box advises groups to make special efforts to welcome new members and to remove the barriers that keep people from participating. A newcomer stays when three things happen quickly: someone greets them by name, they get a small real task they can finish, and they can see a path from attendee to contributor to organizer.",
         practice:
           "Design the first month for a fictional new member of a community you know: who greets them, which small task they get in week one, and how they would see the next step.",
+        tools: [
+          { label: "Welcome-and-first-action checklist", url: "kit/#welcome", note: "community starter kit" },
+        ],
       },
       {
         id: "nt19",

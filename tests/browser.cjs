@@ -216,6 +216,14 @@ async function openTile(page,name){
  // a malformed plan link shows the readable error, never throws
  await page.goto(url+'/plan/#not-a-plan');
  await page.locator('#bad-link:not([hidden])').waitFor();
+ // community starter kit: page renders with three copyable templates, and network stages link to it
+ await page.goto(url+'/kit/');
+ await page.locator('h1').waitFor();
+ assert.match(await page.locator('h1').innerText(),/Community starter kit/);
+ assert.equal(await page.locator('button.copy').count(),3);
+ await page.goto(url+'/#network');
+ await page.waitForFunction(()=>document.getElementById('path-title').textContent==='Network and community');
+ assert.match(await page.locator('#stage-list').innerText(),/community starter kit/);
  assert.deepEqual(errors,[]);
  assert.equal(await page.evaluate(()=>window.noteExecuted),undefined);
  assert.deepEqual(errors,[]);
