@@ -482,7 +482,8 @@ function showPlanForm(track) {
   maker.innerHTML = "";
   const form = document.createElement("div");
   form.className = "plan-card";
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   form.innerHTML =
     `<label for="plan-name-input">Plan name</label>` +
     `<input id="plan-name-input" maxlength="120" value="${escapeText(track.title)} study group">` +

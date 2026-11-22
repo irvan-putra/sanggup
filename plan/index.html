@@ -90,7 +90,7 @@
     div.className = "week";
     const start = new Date(plan.start + "T00:00:00");
     start.setDate(start.getDate() + w * 7);
-    const iso = start.toISOString().slice(0, 10);
+    const iso = start.getFullYear() + "-" + String(start.getMonth() + 1).padStart(2, "0") + "-" + String(start.getDate()).padStart(2, "0");
     const items = plan.stages.slice(w * plan.perWeek, (w + 1) * plan.perWeek)
       .map((s) => "<li>" + s.title.replace(/</g, "&lt;") + "</li>").join("");
     div.innerHTML = "<h3>Week of " + fmtDate(iso) + "</h3><ul>" + items + "</ul>";

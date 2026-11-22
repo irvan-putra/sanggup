@@ -206,6 +206,9 @@ async function openTile(page,name){
  assert.match(await page.locator('#plan-name').innerText(),/Tuesday cooking group/);
  assert.match(await page.locator('#plan-meta').innerText(),/2 stages per week/);
  assert.equal(await page.locator('.week').count(),4);
+ // week dates are local dates: the first week starts on the chosen start date, never the UTC day before
+ const expectedFirst=await page.evaluate(()=>{const d=new Date();return d.toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'});});
+ assert.match(await page.locator('.week h3').first().innerText(),new RegExp(expectedFirst.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
  await page.getByRole('button',{name:'Import this plan into my sanggup'}).click();
  await page.locator('#import-note a').click();
  await page.waitForFunction(()=>document.getElementById('path-title').textContent==='Cooking');
