@@ -1,4 +1,4 @@
-# Sanggup 0.2.3 test APK
+# Sanggup 0.2.4 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
@@ -7,6 +7,15 @@ Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or 
 - Local practice logging counts at most one streak day per local calendar day. It does not prove skill competency.
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
+
+## Changes since 0.2.3
+
+Content parity with the current web prototype:
+
+- Six new Coding stages from IDSW 2026 talks: honest cost comparison of test approaches, safer CI spend with measured caveats, authorization as explicit permission rather than ownership alone, deterministic race reproduction with an invariant, cross-app call counting in one user journey, and a stateless-scope mapping exercise that separates position calculation from tickets, sessions and issuance.
+- Three new Coding source links (Netflix concurrency-limits, Redis sorted sets, NIST SP 800-38G draft) alongside the two IDSW talk links added earlier.
+- The bundled web content matches the live web version, including the corrected claim labels from today's review pass.
+- No new permissions, no signing-key change.
 
 ## Changes since 0.2.2
 
