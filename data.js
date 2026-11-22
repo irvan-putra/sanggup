@@ -2555,6 +2555,7 @@ window.SANGGUP_TRACKS = [
       { label: "Ilyas et al.: Black-box adversarial attacks with limited queries and information (ICML 2018)", url: "https://proceedings.mlr.press/v80/ilyas18a.html" },
       { label: "Eykholt et al.: Robust physical-world attacks on deep learning visual classification (CVPR 2018)", url: "https://openaccess.thecvf.com/content_cvpr_2018/html/Eykholt_Robust_Physical-World_Attacks_CVPR_2018_paper.html" },
       { label: "Wang et al.: On the Robustness of ChatGPT, an adversarial and out-of-distribution perspective (2023)", url: "https://arxiv.org/abs/2302.12095" },
+      { label: "ProPublica: Machine Bias, the COMPAS risk-assessment investigation (2016)", url: "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" },
     ],
     stages: [
       {
@@ -2688,6 +2689,15 @@ window.SANGGUP_TRACKS = [
           "Why do models fail on inputs that look easy? The same talk drew on a study by Geirhos and colleagues, 'Shortcut learning in deep neural networks' (Nature Machine Intelligence, 2020), which gives the mechanism: a model learns the easiest correlation that separates its training data, not the concept a human would use. A dog detector may really be detecting grass backgrounds; a recogniser may lean on texture instead of shape. The paper shows the gap in both directions: inputs humans group together that models split apart, such as the same object in a new setting, and inputs models group together that no human would. In text the shortcuts are subtler still: the talk's example was a question-answering model that scores well by reading only the last sentence of a passage and ignoring the context. Shortcuts come from correlations in the data and can be extremely subtle, so a high test score and real understanding regularly part ways.",
         practice:
           "Take the classifier from the previous stage. Write one shortcut it might have learned, such as a background, a watermark, a phrasing or a time of day. Design the smallest test that would expose it: one change that keeps the true label but flips the shortcut, like the same dog on snow instead of grass. Run it if you can, imagine it if you cannot, and write what you would change in the training data.",
+      },
+      {
+        id: "cd18",
+        kind: "practice",
+        title: "Audit a model for training bias",
+        lesson:
+          "The same talk moved from accidents to bias: 'AI is sensitive to training bias.' Its example came from US criminal justice, where a commercial risk-scoring system rated two defendants arrested for drug possession, one low risk, one high risk, splitting along racial lines. That example is from ProPublica's 2016 'Machine Bias' investigation of the COMPAS recidivism scores, which found the errors fell unevenly: black defendants were more often falsely labelled high risk, white defendants more often falsely labelled low risk. Keep the claim's scope precise: this is one kind of scoring system in one country, documented by one investigation, and the system's maker disputed ProPublica's method. The transferable lesson needs no generalization: a model trained on historical outcomes learns the biases recorded in those outcomes, 'the algorithm decided' is not an audit, and checking who the errors fall on is part of evaluating any model whose scores touch people's lives.",
+        practice:
+          "Take the classifier from the earlier stages and imagine it making decisions about people, such as screening applications or flagging accounts. Write which groups its training data might under- or over-represent, then one measurable check that would reveal unequal errors, such as comparing false-alarm rates across groups. Finish with one sentence: who should see that check's result before the model is trusted?",
       },
       {
         id: "cd16",
