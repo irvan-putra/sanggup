@@ -2828,6 +2828,8 @@ window.SANGGUP_TRACKS = [
       { label: "Situation, task, action, result (STAR), overview", url: "https://en.wikipedia.org/wiki/Situation%2C_task%2C_action%2C_result" },
       { label: "University of Minnesota HR: Managing Up", url: "https://hr.umn.edu/supervising/news/Managing-Practical-Approach-Working-Your-Supervisor" },
       { label: "StaffEng: Operating at Staff", url: "https://staffeng.com/guides/operating-at-staff/" },
+      { label: "Gordon Training: the four learning stages behind the skill/confidence quadrant", url: "https://www.gordontraining.com/leadership/so-how-are-your-l-e-t-skills-coming-along/" },
+      { label: "Situational Leadership (Hersey), overview", url: "https://situational.com/situational-leadership/" },
       { label: "US Small Business Administration: Choose a business structure", url: "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" },
       { label: "OSS RBA: Indonesia's risk-based business licensing system", url: "https://oss.go.id/en" },
       { label: "Wikipedia: Elevator pitch", url: "https://en.wikipedia.org/wiki/Elevator_pitch" },
@@ -2969,6 +2971,15 @@ window.SANGGUP_TRACKS = [
           "A useful split for the AI era: some tasks AI tools already do well, some judgments stay with people, and the valuable position is directing one while owning the other. Look at your own field rather than headlines: which of your weekly tasks could a tool draft, and which decisions would you never hand over?",
         practice:
           "List one task in your field that AI tools already do well and one judgment you would not hand to a tool. Then write one concrete learning step that moves you toward the judgment side, with a date.",
+      },
+      {
+        id: "ca9",
+        kind: "practice",
+        title: "Place your skill and confidence honestly",
+        lesson:
+          "A lightning talk at IDSW 2026 (speaker not confirmed here; the slide credits the four stages of competence and situational leadership as its inspiration) drew a two-by-two: skill on one axis, confidence on the other. Can't yet but confident: enthusiasm outruns evidence, and you don't know what you don't know. Can't yet and not confident: you have noticed the gap, which is uncomfortable but accurate. Can but not confident: the skill is there and you have not registered it. Can and confident: evidence and self-image agree. The point is not to label yourself once; it is that each square calls for a different next move, and the map is a reflection aid, not a diagnosis or a ladder everyone must climb.",
+        practice:
+          "Pick one skill you are actively learning. Place it in one of the four squares, then write the evidence for that placement: what you have actually finished, and what someone who has seen your work would say. Match the move: can't + confident, seek a real test or feedback before more enthusiasm; can't + not confident, get shown examples and close guidance early, then practice small and track completions; can + not confident, collect proof, have someone ask you 'what do you think?' instead of answering, and repeat real tasks until they feel ordinary; can + confident, teach it or take a harder scope.",
       },
       {
         id: "ca5",
