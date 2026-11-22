@@ -2631,6 +2631,15 @@ window.SANGGUP_TRACKS = [
           "Take one fictional request, for example 'build me a report page'. Write four lines: the one-sentence problem behind it; the decider, the reviewer and two people affected; how you will all know it worked, in one measurable sentence; and a five-box sketch of what the result looks like. Then compare: which of the four changed the request the most?",
       },
       {
+        id: "cd10",
+        kind: "practice",
+        title: "Adapt the four checks to your scale",
+        lesson:
+          "The same IDSW 2026 talk paired each of the four checks with the textbook advice and with what the speaker's team found at bank scale, offered as their experience rather than a universal rule. Problem: the textbook says ask why five times; their reality was that the requester is often not the problem owner and requests pass through layers, so they trace the request to whoever actually feels the pain. People: the textbook says involve stakeholders early; their reality was that inviting everyone produces a twenty-person meeting with no decision, so they map who decides, who reviews and who is informed, and give risk and security a one-page brief first. Proof: the textbook says write acceptance criteria; their reality was that IT's done means deployed while the business's worked means adopted and time saved, so they agree on both Done and Worked up front. Picture: the textbook says write a detailed spec; their reality was that long documents get skimmed and gaps surface at user-acceptance testing, so they agree on a rough wireframe first, then a one-page spec. Their closing observation was counterintuitive: their fastest projects had the slowest first week. Treat the bank-scale column as one large team's lessons to adapt, not as a rule for every team.",
+        practice:
+          "Take your four lines from the previous stage. For each check, write the textbook version of the advice in one line, then the version that fits your own context, such as a school project, a small team or a company, and note what you would drop or add. End with one sentence: what would a slow first week look like for your project?",
+      },
+      {
         id: "cd4",
         kind: "milestone",
         title: "Milestone: catch one real assumption bug",
