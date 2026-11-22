@@ -2840,7 +2840,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Label a claim before you repeat it",
         lesson:
-          "The same talk opened with two numbers: an agent adding 4,000 lines of tests to assert a removed thing stays gone, and a project owner reporting about 1.3 million deleted weak tests with CI twice as fast. The first is widely read as satire, and that reading is an interpretation, not a confirmed result. The second is a self-reported running count; the project later published a measured write-up reporting 417,906 net test-file lines over a defined window, with caveats about differing workloads. Different units, not the same measurement. Big numbers travel; their strength labels do not.",
+          "The same talk opened with two numbers: an agent adding 4,000 lines of tests to assert a removed thing stays gone, and a project owner reporting about 1.3 million deleted weak tests with CI twice as fast. The first can be read as satire, and that reading is one interpretation, not a confirmed result. The second is a self-reported running count; the project later published a measured write-up reporting 417,906 net test-file lines over a defined window, with caveats about differing workloads. Different units, not the same measurement. Big numbers travel; their strength labels do not.",
         practice:
           "Pick one technical claim you recently repeated or believed: a post, a benchmark, a changelog line. Trace it to its owning source and label it - joke or satire, self-reported anecdote, or measured result with caveats. Write one sentence restating it with the label attached, and check whether the units still say what you first thought.",
       },
