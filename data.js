@@ -2549,6 +2549,7 @@ window.SANGGUP_TRACKS = [
       { label: "How to deal with money in software (cs-syd.eu)", url: "https://cs-syd.eu/posts/2022-08-22-how-to-deal-with-money-in-software" },
       { label: "Wikipedia: Mars Climate Orbiter", url: "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" },
       { label: "Awesome Falsehood: the curated falsehoods list", url: "https://github.com/kdeldycke/awesome-falsehood" },
+      { label: "BRI engineering talk at IDSW 2026, Jakarta: the 4P request intake (Problem, People, Proof, Picture)", url: "https://idsw.dev/2026/" },
     ],
     stages: [
       {
@@ -2619,6 +2620,15 @@ window.SANGGUP_TRACKS = [
         tools: [
           { label: "bedah", url: "https://vanipy.com/bedah/", note: "web, prototype: lays a change out on a review canvas you can walk through with your reviewer" },
         ],
+      },
+      {
+        id: "cd9",
+        kind: "practice",
+        title: "Run a request through Problem, People, Proof, Picture",
+        lesson:
+          "A BRI engineering talk at IDSW 2026 in Jakarta described an intake rule the speaker's team adopted after repeated failures: every incoming request passes four checks before work starts, one check for each way they used to fail. Problem: restate the request as the problem to solve, in one sentence, because requests often arrive disguised as solutions and building the asked-for solution can miss the actual need. People: map who decides, who reviews and who is affected, because a key person joining late is how finished work gets reopened. Proof: agree up front how everyone will know it worked, because a done that was never defined cannot be reached. Picture: show a rough sketch or wireframe before the final spec, because everyone pictures the same words differently. Shared skill: naming who decides, who reviews and who is affected is RACI territory in <a href='#projects/bu4'>Projects and business</a>.",
+        practice:
+          "Take one fictional request, for example 'build me a report page'. Write four lines: the one-sentence problem behind it; the decider, the reviewer and two people affected; how you will all know it worked, in one measurable sentence; and a five-box sketch of what the result looks like. Then compare: which of the four changed the request the most?",
       },
       {
         id: "cd4",
