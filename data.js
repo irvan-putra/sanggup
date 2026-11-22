@@ -2757,6 +2757,15 @@ window.SANGGUP_TRACKS = [
           "Take one sentence from a real requirement, ticket or prompt you gave an AI tool. Write two different programs an honest reader could build from it, then add the one line, a default, an example or an edge case, that rules the wrong one out.",
       },
       {
+        id: "cd22",
+        kind: "practice",
+        title: "Choose before you delegate",
+        lesson:
+          "The same talk moved from how readers fill gaps to how workers split attention. Kahneman calls the gap-filling reflex WYSIATI, what you see is all there is: shown 'Will Mindik be a good leader? She is intelligent and strong...', people answer from two adjectives and stop asking what they have not seen; add 'and corrupt and cruel' and the answer flips. The speaker's version for agentic coding: a better setup cannot choose for you, choosing your P0 is still your job, and the question that matters is what evidence would change your mind. A cited social post on the slide (Thariq, @trq212, October 2026) makes the same point about multitasking with agents: most of what is running would not matter at full attention. The follow-up slide's rule: choose before you delegate. Give the right work enough attention, even if some agents sit idle; parallel work is fine when it serves one clear goal; instead of asking 'what else can an agent do?', ask 'what matters, and how can an agent help?', and 'who must handle the result, and do they have room?'. Delegating ten tasks you cannot review is not leverage; it is ten unreviewed results.",
+        practice:
+          "List everything you currently have AI tools or agents running. Pick the one P0. For it, write what evidence would change your mind about the approach, then give that one task your full attention and let the rest wait.",
+      },
+      {
         id: "cd4",
         kind: "milestone",
         title: "Milestone: catch one real assumption bug",
