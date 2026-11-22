@@ -2566,6 +2566,8 @@ window.SANGGUP_TRACKS = [
       { label: "MIT AI Risk Repository", url: "https://airisk.mit.edu/" },
       { label: "Katz, Corso, Moss & Kochenderfer: Algorithms for Validation (MIT Press 2025)", url: "https://mitpress.mit.edu/9780262056014/algorithms-for-validation/" },
       { label: "Swiss cheese model (James Reason, Human Error, 1990)", url: "https://en.wikipedia.org/wiki/Swiss_cheese_model" },
+      { label: "Asch: Forming impressions of personality (1946)", url: "https://gwern.net/doc/psychology/personality/1946-asch.pdf" },
+      { label: "Kahneman: Thinking, Fast and Slow (2011)", url: "https://en.wikipedia.org/wiki/Thinking%2C_Fast_and_Slow" },
     ],
     stages: [
       {
@@ -2744,6 +2746,15 @@ window.SANGGUP_TRACKS = [
           "The same keynote kept a slide of AI incidents as reported in the press, and two of them read like engineering postmortems. In June 2025, BleepingComputer reported EchoLeak, a zero-click data-leak flaw in Microsoft 365 Copilot found by Aim Security: a crafted email could make the assistant leak private data with no user interaction, and Microsoft patched it. In late 2025, The Register reported a Google Antigravity user who asked the agent to clear the project cache and watched it run a delete at the root of the drive instead. Both are reported incidents from the outlets named, not independent audits. The Antigravity account lists what was missing: a gate, a dry run, a backup. The human layer is thinner than it looks: Anthropic's own write-up on Claude Code's auto mode notes that in practice users accept 93% of permission prompts, so 'someone will read the prompt and stop it' is not a control. Design destructive operations as if approval will be clicked: dry run first, deletes behind a gate, backup before anything irreversible.",
         practice:
           "Pick one destructive command your tools or scripts can run (delete, overwrite, drop, force-push). Write down its gate: who or what approves it, its dry-run mode, and the backup or undo path. If any of the three is missing, add it, or move the command somewhere it cannot run unattended.",
+      },
+      {
+        id: "cd21",
+        kind: "practice",
+        title: "Show the spec to two readers",
+        lesson:
+          "A second IDSW 2026 talk the same morning, '(Human) Attention is All You Need' by Zain Fathoni (BookThatApp), identified from the conference agenda and the talk's own slide footers, opened with two psychology classics. Kahneman's 'Thinking, Fast and Slow' redraws two rows that share one middle mark: A-13-C and 12-13-14, where the neighbors decide whether you read a letter or a number, and 'Ann approached the bank' resolves to riverbank or financial bank only from context. Asch's 1946 impression experiment gave people the same trait list in reverse order, intelligent first versus envious first, and first impressions diverged: same traits, different order, different judgment. (The who-would-you-hire questions on that slide were the speaker's room questions, not Asch's experiment.) The coding point: no reader starts from zero. Every reader, human or AI, fills the gaps with context you did not write, and two honest readers can build different programs from one spec, both sure they understood it. If a meaning matters, pin it down: name the defaults, show an example, and let tests carry the interpretation instead of the prose.",
+        practice:
+          "Take one sentence from a real requirement, ticket or prompt you gave an AI tool. Write two different programs an honest reader could build from it, then add the one line, a default, an example or an edge case, that rules the wrong one out.",
       },
       {
         id: "cd4",
