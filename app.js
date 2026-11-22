@@ -11,10 +11,13 @@ function loadState() {
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.done && typeof parsed.done === "object" &&
-          Array.isArray(parsed.archive) && Array.isArray(parsed.requests)) return parsed;
+          Array.isArray(parsed.archive) && Array.isArray(parsed.requests)) {
+        parsed.plans = Array.isArray(parsed.plans) ? parsed.plans : [];
+        return parsed;
+      }
     }
   } catch (e) { /* corrupted state falls through to fresh */ }
-  return { done: {}, archive: [], requests: [] };
+  return { done: {}, archive: [], requests: [], plans: [] };
 }
 
 function saveState(state) {
@@ -55,6 +58,89 @@ function signoffLink(req) {
   return base + "signoff/#" + payload;
 }
 
+// Study group plans: the plan travels inside the share link as readable
+// text (same idea as sign-off links). There is no member list, no group
+// server and no comparing: each member imports the plan onto their own
+// device, tracks their own progress locally, and reports for themselves
+// with the check-in export.
+
+function planLink(plan, track) {
+  const payload = base64urlEncode(JSON.stringify({
+    v: 1,
+    id: plan.id,
+    name: plan.name,
+    path: track.title,
+    pathId: track.id,
+    stages: plan.stageIds.map((id) => {
+      const s = track.stages.find((x) => x.id === id);
+      return { id, title: s ? s.title : id };
+    }),
+    perWeek: plan.perWeek,
+    start: plan.start,
+  }));
+  const base = location.origin + location.pathname.replace(/[^/]*$/, "");
+  return base + "plan/#" + payload;
+}
+
+function planWeekIndex(plan) {
+  const start = new Date(plan.start + "T00:00:00").getTime();
+  return Math.max(0, Math.floor((Date.now() - start) / (7 * 24 * 3600 * 1000)));
+}
+
+function planWeekStages(plan, track, w) {
+  return plan.stageIds
+    .slice(w * plan.perWeek, (w + 1) * plan.perWeek)
+    .map((id) => track.stages.find((s) => s.id === id))
+    .filter(Boolean);
+}
+
+function checkInText(plan, track) {
+  const w = planWeekIndex(plan);
+  const total = Math.ceil(plan.stageIds.length / plan.perWeek);
+  const isDone = (s) => stageState(track, s) === "done";
+  const titles = (arr) => arr.map((s) => s.title).join("; ");
+  const lines = ["Week " + (w + 1) + " of " + total + " - " + plan.name];
+  if (w >= total) {
+    lines.push("Plan finished: all " + plan.stageIds.length + " stages covered.");
+  } else {
+    const target = planWeekStages(plan, track, w);
+    const doneT = target.filter(isDone);
+    const left = target.filter((s) => !isDone(s));
+    lines.push("Target this week: " + titles(target));
+    lines.push("Done: " + (doneT.length ? titles(doneT) : "nothing yet"));
+    if (left.length) lines.push("Still working: " + titles(left));
+    const next = planWeekStages(plan, track, w + 1);
+    if (next.length) lines.push("Next week: " + titles(next));
+  }
+  lines.push("(from my sanggup; everyone reports their own)");
+  return lines.join("\n");
+}
+
+function importIncomingPlan() {
+  let raw = null;
+  try { raw = localStorage.getItem("sanggup-incoming-plan"); } catch (e) { return; }
+  if (!raw) return;
+  localStorage.removeItem("sanggup-incoming-plan");
+  try {
+    const p = JSON.parse(raw);
+    if (p && p.v === 1 && p.id && p.pathId && Array.isArray(p.stages) && p.stages.length) {
+      if (!state.plans.some((x) => x.id === p.id)) {
+        state.plans.push({
+          id: p.id,
+          pathId: p.pathId,
+          name: String(p.name).slice(0, 120),
+          stageIds: p.stages.map((s) => s.id),
+          perWeek: Math.max(1, Math.min(10, parseInt(p.perWeek, 10) || 1)),
+          start: p.start,
+          createdAt: new Date().toISOString(),
+          imported: true,
+        });
+        saveState(state);
+      }
+    }
+  } catch (e) { /* a malformed import is ignored */ }
+}
+
 async function responseCode(code, verdict) {
   const digest = await crypto.subtle.digest(
     "SHA-256",
@@ -67,6 +153,7 @@ async function responseCode(code, verdict) {
 }
 
 let state = loadState();
+importIncomingPlan();
 let currentTrack = null;
 function escapeText(value) {
   return String(value).replace(/[&<>"']/g, (c) => ({
@@ -311,6 +398,118 @@ function renderPath(track) {
   });
 
   renderArchive();
+  renderPlans(track);
+}
+
+function renderPlans(track) {
+  const list = $("plan-list");
+  const maker = $("plan-maker");
+  if (!list || !maker) return;
+  list.innerHTML = "";
+  maker.innerHTML = "";
+  const plans = state.plans.filter((p) => p.pathId === track.id);
+  plans.forEach((plan) => {
+    const card = document.createElement("article");
+    card.className = "plan-card";
+    const w = planWeekIndex(plan);
+    const total = Math.ceil(plan.stageIds.length / plan.perWeek);
+    let html =
+      `<header><h4>${escapeText(plan.name)}</h4>` +
+      `<span class="kind">${plan.perWeek} stage${plan.perWeek === 1 ? "" : "s"}/week</span></header>`;
+    if (w >= total) {
+      html += `<p class="muted">Plan finished: all ${plan.stageIds.length} stages covered.</p>`;
+    } else {
+      const target = planWeekStages(plan, track, w);
+      const items = target
+        .map((s) => `<li>${stageState(track, s) === "done" ? "\u2713" : "\u00b7"} ${escapeText(s.title)}</li>`)
+        .join("");
+      html += `<p class="muted">Week ${w + 1} of ${total}. This week:</p><ul class="plan-week">${items}</ul>`;
+    }
+    html +=
+      `<div class="code-row"><input id="plan-link-${plan.id}" readonly aria-label="Plan share link">` +
+      `<button type="button" data-plan-copy="${plan.id}">Copy link</button></div>` +
+      `<div class="qr-wrap" id="plan-qr-${plan.id}"></div>` +
+      `<p><button type="button" data-plan-week="${plan.id}">Copy my week</button> ` +
+      `<span class="muted">a short text summary of your own progress, to paste into your group's chat</span></p>`;
+    card.innerHTML = html;
+    list.appendChild(card);
+  });
+
+  plans.forEach((plan) => {
+    const link = planLink(plan, track);
+    const input = $("plan-link-" + plan.id);
+    if (input) input.value = link;
+    const qrWrap = $("plan-qr-" + plan.id);
+    if (qrWrap && typeof qrcode === "function") {
+      try {
+        const qr = qrcode(0, "M");
+        qr.addData(link);
+        qr.make();
+        qrWrap.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+      } catch (e) { /* QR is a convenience; the link above still works */ }
+    }
+  });
+
+  list.querySelectorAll("[data-plan-copy]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const plan = plans.find((p) => p.id === btn.getAttribute("data-plan-copy"));
+      navigator.clipboard.writeText(planLink(plan, track)).then(
+        () => { btn.textContent = "Copied"; },
+        () => { btn.textContent = "Copy failed; use the link field."; }
+      );
+    });
+  });
+  list.querySelectorAll("[data-plan-week]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const plan = plans.find((p) => p.id === btn.getAttribute("data-plan-week"));
+      navigator.clipboard.writeText(checkInText(plan, track)).then(
+        () => { btn.textContent = "Copied"; },
+        () => { btn.textContent = "Copy failed"; }
+      );
+    });
+  });
+
+  const btn = document.createElement("button");
+  btn.className = "link-btn";
+  btn.id = "plan-make";
+  btn.textContent = plans.length ? "Make another study group plan" : "Make a study group plan";
+  btn.addEventListener("click", () => showPlanForm(track));
+  maker.appendChild(btn);
+}
+
+function showPlanForm(track) {
+  const maker = $("plan-maker");
+  maker.innerHTML = "";
+  const form = document.createElement("div");
+  form.className = "plan-card";
+  const today = new Date().toISOString().slice(0, 10);
+  form.innerHTML =
+    `<label for="plan-name-input">Plan name</label>` +
+    `<input id="plan-name-input" maxlength="120" value="${escapeText(track.title)} study group">` +
+    `<label for="plan-perweek">Stages per week</label>` +
+    `<input id="plan-perweek" type="number" min="1" max="10" value="1">` +
+    `<label for="plan-start">First week starts</label>` +
+    `<input id="plan-start" type="date" value="${today}">` +
+    `<p class="muted">Covers all ${track.stages.length} stages of this path, in order. ` +
+    `The plan travels inside the share link; anyone holding the link can read it.</p>` +
+    `<button id="plan-create">Create plan</button>`;
+  maker.appendChild(form);
+  $("plan-create").addEventListener("click", () => {
+    const name = $("plan-name-input").value.trim() || `${track.title} study group`;
+    const perWeek = Math.max(1, Math.min(10, parseInt($("plan-perweek").value, 10) || 1));
+    const start = $("plan-start").value || today;
+    state.plans.push({
+      id: makeCode(),
+      pathId: track.id,
+      name,
+      stageIds: track.stages.map((s) => s.id),
+      perWeek,
+      start,
+      createdAt: new Date().toISOString(),
+    });
+    saveState(state);
+    renderPlans(track);
+  });
 }
 
 function completeStage(track, stage, how, extra) {

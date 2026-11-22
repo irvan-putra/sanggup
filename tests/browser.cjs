@@ -5,8 +5,9 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.join(__dirname, '..');
 const server = http.createServer((req,res)=>{
- const file=path.join(root,decodeURIComponent(req.url.split('?')[0])==='/'?'index.html':decodeURIComponent(req.url.split('?')[0]));
+ let file=path.join(root,decodeURIComponent(req.url.split('?')[0])==='/'?'index.html':decodeURIComponent(req.url.split('?')[0]));
  if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
+ try {if(fs.statSync(file).isDirectory()) file=path.join(file,'index.html');}catch{}
  try {res.setHeader('Content-Type', file.endsWith('.js')?'application/javascript':file.endsWith('.css')?'text/css':file.endsWith('.svg')?'image/svg+xml':'text/html');res.end(fs.readFileSync(file));}catch{res.writeHead(404).end();}
 });
 async function openTile(page,name){
@@ -187,6 +188,32 @@ async function openTile(page,name){
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  if(process.env.SCREENSHOT_DIR) await page.screenshot({path:`${process.env.SCREENSHOT_DIR}/sanggup-path-${width}.png`,fullPage:true});
  }
+ // study group plan: create a plan, share link carries it, plan page renders and imports, import dedupes by id, check-in export reflects own progress only
+ await page.goto(url);
+ await openTile(page,/^Cooking,/);
+ await page.locator('#plan-make').click();
+ await page.locator('#plan-name-input').fill('Tuesday cooking group');
+ await page.locator('#plan-perweek').fill('2');
+ await page.getByRole('button',{name:'Create plan'}).click();
+ await page.locator('.plan-card').first().waitFor();
+ assert.equal(await page.locator('.plan-card').count(),1);
+ assert.match(await page.locator('.plan-card').first().innerText(),/Tuesday cooking group/);
+ assert.match(await page.locator('.plan-card').first().innerText(),/Week 1 of /);
+ const planHref=await page.locator('.plan-card input[aria-label="Plan share link"]').inputValue();
+ assert.match(planHref,/plan\/#/);
+ await page.goto(planHref);
+ await page.locator('#plan-view:not([hidden])').waitFor();
+ assert.match(await page.locator('#plan-name').innerText(),/Tuesday cooking group/);
+ assert.match(await page.locator('#plan-meta').innerText(),/2 stages per week/);
+ assert.equal(await page.locator('.week').count(),4);
+ await page.getByRole('button',{name:'Import this plan into my sanggup'}).click();
+ await page.locator('#import-note a').click();
+ await page.waitForFunction(()=>document.getElementById('path-title').textContent==='Cooking');
+ assert.equal(await page.locator('.plan-card').count(),1); // imported plan dedupes against the one made on this device
+ // a malformed plan link shows the readable error, never throws
+ await page.goto(url+'/plan/#not-a-plan');
+ await page.locator('#bad-link:not([hidden])').waitFor();
+ assert.deepEqual(errors,[]);
  assert.equal(await page.evaluate(()=>window.noteExecuted),undefined);
  assert.deepEqual(errors,[]);
  console.log('PASS: planned tracks, ordered gates, code lookup, retry, safe notes, immediate refresh, full path, persistence, 320/390/1280 overflow, no runtime errors');

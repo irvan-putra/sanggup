@@ -231,3 +231,12 @@ footer {
 .sources { margin: 1rem 0; font-size: 0.92rem; }
 .sources summary { cursor: pointer; }
 .sources a { overflow-wrap: anywhere; }
+
+/* Study group plans */
+.plan-section { margin-top: 1.6rem; }
+.plan-card { background: var(--paper, #f5f1ea); border: 1px solid #ddd5c7; border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.55rem 0; }
+.plan-card header { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.plan-card h4 { margin: 0.2rem 0; font-size: 1.02rem; }
+.plan-card label { display: block; margin-top: 0.5rem; font-size: 0.9rem; }
+.plan-card input { width: 100%; max-width: 22rem; padding: 0.35rem 0.5rem; margin-top: 0.15rem; }
+.plan-week { margin: 0.2rem 0 0.4rem; padding-left: 1.2rem; }

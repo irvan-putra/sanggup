@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study group plan — sanggup</title>
+<meta name="description" content="A shared weekly rhythm for a sanggup path. The plan travels inside the link; nothing is sent anywhere.">
+<style>
+  :root { --ink:#1d2b26; --muted:#5f6f68; --paper:#f4f1eb; --accent:#156c60; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 42rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+  h1 { font-size: 1.35rem; margin: 0.75rem 0 0.25rem; }
+  h2 { font-size: 1.05rem; margin: 1.4rem 0 0.4rem; }
+  .muted { color: var(--muted); }
+  .card { background: var(--paper); border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.55rem 0; }
+  .week { border-left: 3px solid var(--accent); padding-left: 0.7rem; margin: 0.6rem 0; }
+  .week h3 { font-size: 0.95rem; margin: 0 0 0.15rem; }
+  .week ul { margin: 0.15rem 0 0.3rem; padding-left: 1.2rem; }
+  button.primary { background: var(--accent); color:#fff; border:0; border-radius:8px; padding: 0.65rem 1.2rem; font-size: 1rem; cursor: pointer; }
+  .honesty { background:#fff7e6; border:1px solid #e8d9a8; border-radius: 10px; padding: 0.6rem 0.9rem; font-size: 0.92rem; margin: 1rem 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+  #import-note { margin-left: 0.6rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted"><a href="../">&larr; sanggup</a></p>
+  <div id="plan-view" hidden>
+    <h1 id="plan-name"></h1>
+    <p class="muted" id="plan-meta"></p>
+    <div class="honesty">
+      This plan travels inside the link you opened. Anyone holding the link can
+      read it, so treat it like a printed handout, not a secret. Nothing is sent
+      anywhere: importing saves the plan only in this browser. sanggup keeps no
+      member list and does not compare people's progress; each person reports
+      for themselves in the group's own chat.
+    </div>
+    <h2>Weekly rhythm</h2>
+    <div id="week-list"></div>
+    <p>
+      <button id="import-btn" class="primary">Import this plan into my sanggup</button>
+      <span id="import-note"></span>
+    </p>
+  </div>
+  <div id="bad-link" hidden>
+    <h1>This plan link is not readable</h1>
+    <p class="muted">The link may be incomplete or edited. Ask the person who
+    made the plan to copy the whole link again from their sanggup.</p>
+  </div>
+  <footer>
+    sanggup prototype · the plan lives in the link and, after import, only on
+    this device. <a href="https://github.com/irvan-putra/sanggup">Source code</a> · AGPL-3.0
+  </footer>
+</main>
+<script>
+(function () {
+  function decodePayload(raw) {
+    const b64 = raw.replace(/-/g, "+").replace(/_/g, "/");
+    const bin = atob(b64);
+    const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+    return JSON.parse(new TextDecoder().decode(bytes));
+  }
+  function fmtDate(iso) {
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
+  }
+  let plan = null;
+  try {
+    const raw = location.hash.replace(/^#/, "");
+    if (!raw) throw new Error("empty");
+    const p = decodePayload(raw);
+    if (p.v !== 1 || !p.name || !Array.isArray(p.stages) || !p.stages.length ||
+        !p.perWeek || !p.start) throw new Error("shape");
+    plan = p;
+  } catch (e) {
+    document.getElementById("bad-link").hidden = false;
+    return;
+  }
+  document.getElementById("plan-view").hidden = false;
+  document.getElementById("plan-name").textContent = plan.name;
+  document.getElementById("plan-meta").textContent =
+    plan.path + " · " + plan.perWeek + " stage" + (plan.perWeek === 1 ? "" : "s") +
+    " per week · starts " + fmtDate(plan.start);
+  const list = document.getElementById("week-list");
+  const weeks = Math.ceil(plan.stages.length / plan.perWeek);
+  for (let w = 0; w < weeks; w++) {
+    const div = document.createElement("div");
+    div.className = "week";
+    const start = new Date(plan.start + "T00:00:00");
+    start.setDate(start.getDate() + w * 7);
+    const iso = start.toISOString().slice(0, 10);
+    const items = plan.stages.slice(w * plan.perWeek, (w + 1) * plan.perWeek)
+      .map((s) => "<li>" + s.title.replace(/</g, "&lt;") + "</li>").join("");
+    div.innerHTML = "<h3>Week of " + fmtDate(iso) + "</h3><ul>" + items + "</ul>";
+    list.appendChild(div);
+  }
+  document.getElementById("import-btn").addEventListener("click", () => {
+    localStorage.setItem("sanggup-incoming-plan", JSON.stringify(plan));
+    const note = document.getElementById("import-note");
+    note.textContent = " Saved on this device. ";
+    const a = document.createElement("a");
+    a.href = "../#" + (plan.pathId || "");
+    a.textContent = "Open my sanggup";
+    note.appendChild(a);
+  });
+})();
+</script>
+</body>
+</html>

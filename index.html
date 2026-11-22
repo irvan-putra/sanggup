@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sanggup — learn by doing</title>
 <meta name="description" content="sanggup: short lessons for real-life skills. Progress means doing the thing, not finishing a quiz.">
-<link rel="stylesheet" href="styles.css?v=0.2.3">
+<link rel="stylesheet" href="styles.css?v=0.2.4">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -33,6 +33,15 @@
       </div>
       <p id="path-note" class="path-note" hidden></p>
       <div id="stage-list"></div>
+      <section id="plan-section" class="plan-section">
+        <h3>Study group plan</h3>
+        <p class="muted">Make a weekly rhythm for this path and share it as a
+        link. The plan travels inside the link; each member imports it on their
+        own device and reports for themselves in the group's own chat. No
+        member list, no chat inside sanggup, no comparing.</p>
+        <div id="plan-list"></div>
+        <div id="plan-maker"></div>
+      </section>
       <details id="path-sources-wrap" class="sources" hidden>
         <summary>Sources for this path</summary>
         <ul id="path-sources"></ul>
@@ -65,13 +74,13 @@
 </main>
 
 <footer>
-  <p>sanggup prototype 0.2.3 · demo data stays on this device, nothing is sent anywhere.</p>
+  <p>sanggup prototype 0.2.4 · demo data stays on this device, nothing is sent anywhere.</p>
   <p><a href="https://github.com/irvan-putra/sanggup">Source code</a> · AGPL-3.0</p>
   <p>Android: <a href="https://github.com/irvan-putra/sanggup/releases/download/v0.2.2/sanggup-v0.2.2.apk">test build v0.2.2 (APK)</a>. The APK bundles the lessons at build time; this web version carries the latest.</p>
 </footer>
 
-<script src="data.js?v=0.2.3"></script>
-<script src="vendor/qrcode.js?v=0.2.3"></script>
-<script src="app.js?v=0.2.3"></script>
+<script src="data.js?v=0.2.4"></script>
+<script src="vendor/qrcode.js?v=0.2.4"></script>
+<script src="app.js?v=0.2.4"></script>
 </body>
 </html>
