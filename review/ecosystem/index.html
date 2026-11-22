@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your ecosystem: feature options for sanggup</title>
+<style>
+  :root { --ink:#241a33; --muted:#6b6480; --paper:#f5f1ea; --accent:#6d3fc0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 44rem; margin: 0 auto; padding: 1rem; }
+  h1 { font-size: 1.4rem; margin: 0.5rem 0 0.25rem; }
+  h2 { font-size: 1.05rem; margin: 1.6rem 0 0.4rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.2rem; }
+  .muted { color: var(--muted); }
+  .card { background: var(--paper); border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.55rem 0; }
+  .card label { display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; }
+  .card input[type=checkbox] { margin-top: 0.3rem; width: 1.1rem; height: 1.1rem; accent-color: var(--accent); flex: none; }
+  .card .body { min-width: 0; }
+  .tag { font-size: 0.78rem; border: 1px solid var(--muted); border-radius: 99px; padding: 0.05rem 0.45rem; color: var(--muted); display: inline-block; line-height: 1.35; overflow-wrap: break-word; }
+  a { color: var(--accent); }
+  button.copy { margin-top: 1.4rem; background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 0.6rem 1.1rem; font-size: 1rem; cursor: pointer; }
+  #copy-note { margin-left: 0.6rem; color: var(--muted); }
+  footer { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Your ecosystem: feature options</h1>
+  <p class="muted">22 November 2026. Spark: at IDSW 2026, a speaker's slide listed the ecosystem that carried their growth: <strong>a mentor, a study group, a community</strong>. The ask is a sanggup feature that helps a learner find or form that support system, not another lesson about it. Nothing here is built yet. Tick what looks right; your ticks stay in this browser. Use the button at the end to copy your review as text.</p>
+
+  <h2>Option 1: mentor sign-off beyond one device</h2>
+  <div class="card"><label><input type="checkbox" data-k="o1"><div class="body">
+    <strong>What it does.</strong> Milestones already end in "Request sign-off", but today the learner and the reviewer must share one device. This option turns a sign-off request into a link (with a QR for showing in person) that the learner sends to their mentor. The request details travel inside the link itself; the mentor's browser opens a review page, and their decision becomes a short code the learner types back to close the loop.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o1b"><div class="body">
+    <strong>What it deliberately does not do.</strong> No accounts, no server, nothing stored off the two devices, and no mentor directory. It is not identity verification: the app's existing honesty notes stay, and the code proves a conversation happened, not who had it.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o1c"><div class="body">
+    <strong>What it touches.</strong> The sign-off flow in app.js, the teacher view, plus one new static review page. Web first; the Android build catches up in a later release. <span class="tag">medium build</span> <span class="tag">no new infrastructure</span>
+  </div></label></div>
+
+  <h2>Option 2: study group rhythm</h2>
+  <div class="card"><label><input type="checkbox" data-k="o2"><div class="body">
+    <strong>What it does.</strong> A plan generator: pick a path and stages, set a weekly cadence, and sanggup produces a shareable plan link. The plan travels inside the link; each member imports it onto their own device and tracks their own progress locally. A "check-in export" writes a short text summary of your own week to paste into the group's existing chat.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o2b"><div class="body">
+    <strong>What it deliberately does not do.</strong> No member list, no group server, no chat inside sanggup, and no automatic comparing of people's progress. The group already has a chat; sanggup hands each person the same plan and lets them report for themselves.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o2c"><div class="body">
+    <strong>What it touches.</strong> One new planner page plus an import step in the learner view; the lesson data itself is unchanged. <span class="tag">medium build</span> <span class="tag">no new infrastructure</span>
+  </div></label></div>
+
+  <h2>Option 3: community starter kit</h2>
+  <div class="card"><label><input type="checkbox" data-k="o3"><div class="body">
+    <strong>What it does.</strong> Turns the existing Network and community path into tools: a first-meeting agenda template, a welcome-and-first-action checklist for new members, and a member-benefits versus sponsor-benefits worksheet, each linking the public community guides the path already cites.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o3b"><div class="body">
+    <strong>What it deliberately does not do.</strong> It does not run a community, message members, or organize events for you; the path's own note already says growth, conflict and burnout need judgment, not scripts.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="o3c"><div class="body">
+    <strong>What it touches.</strong> New template pages plus links from the network stages. Closest to content; no new data model. <span class="tag">small build</span> <span class="tag">no new infrastructure</span>
+  </div></label></div>
+
+  <h2>Not proposed, with the reason</h2>
+  <div class="card"><label><input type="checkbox" data-k="x1"><div class="body">
+    <strong>A public mentor directory or matching.</strong> That means real people's data, moderation and safety obligations, and accounts. Not a prototype feature, and not something to start without an explicit decision. Tick to revisit.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="x2"><div class="body">
+    <strong>Built-in chat or outreach.</strong> sanggup does not contact anyone for you; communities live in the chats they already have. Tick to revisit.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="x3"><div class="body">
+    <strong>Server sync and accounts for real multi-device.</strong> New infrastructure and spend. A separate decision, not folded into any option above. Tick to revisit.
+  </div></label></div>
+
+  <h2>Open questions</h2>
+  <div class="card"><label><input type="checkbox" data-k="q1"><div class="body">
+    Which leg matters first: the mentor loop (option 1), the study group (option 2), or the community kit (option 3)? They combine, but the first one sets the shape.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="q2"><div class="body">
+    Is link-carried data acceptable for crossing devices? It keeps the no-accounts, nothing-sent-anywhere promise, but it is convenience, not security: anyone holding the link can read what it carries.
+  </div></label></div>
+  <div class="card"><label><input type="checkbox" data-k="q3"><div class="body">
+    Web-first with the Android build catching up later, as with recent features?
+  </div></label></div>
+
+  <button class="copy" id="copy-btn">Copy my review as text</button><span id="copy-note"></span>
+
+  <footer>
+    Page source: <a href="https://github.com/irvan-putra/sanggup">github.com/irvan-putra/sanggup</a> under review/ecosystem/. Ticks are stored only in this browser (localStorage); nothing is sent anywhere.
+  </footer>
+</main>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('input[type=checkbox][data-k]');
+  boxes.forEach(function (b) {
+    b.checked = localStorage.getItem('ecosystem-review-' + b.dataset.k) === '1';
+    b.addEventListener('change', function () {
+      localStorage.setItem('ecosystem-review-' + b.dataset.k, b.checked ? '1' : '0');
+    });
+  });
+  document.getElementById('copy-btn').addEventListener('click', function () {
+    var lines = [];
+    boxes.forEach(function (b) {
+      var card = b.closest('.card');
+      var text = card.innerText.replace(/\s+/g, ' ').trim();
+      lines.push((b.checked ? '[x] ' : '[ ] ') + text);
+    });
+    var out = 'Ecosystem feature review:\n' + lines.join('\n');
+    navigator.clipboard.writeText(out).then(function () {
+      document.getElementById('copy-note').textContent = 'Copied.';
+    }, function () {
+      document.getElementById('copy-note').textContent = 'Copy failed; select the text manually.';
+    });
+  });
+})();
+</script>
+</body>
+</html>
