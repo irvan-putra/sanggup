@@ -45,6 +45,11 @@ function base64urlEncode(str) {
   return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
+// Share links must work when the app runs offline in the Android WebView
+// (file:// assets), so they always point at the public web base; the
+// reviewer or group member opens them in a browser.
+const SHARE_BASE = "https://vanipy.com/sanggup/";
+
 function signoffLink(req) {
   const payload = base64urlEncode(JSON.stringify({
     v: 1,
@@ -54,8 +59,7 @@ function signoffLink(req) {
     task: req.task,
     requestedAt: req.requestedAt,
   }));
-  const base = location.origin + location.pathname.replace(/[^/]*$/, "");
-  return base + "signoff/#" + payload;
+  return SHARE_BASE + "signoff/#" + payload;
 }
 
 // Study group plans: the plan travels inside the share link as readable
@@ -78,8 +82,7 @@ function planLink(plan, track) {
     perWeek: plan.perWeek,
     start: plan.start,
   }));
-  const base = location.origin + location.pathname.replace(/[^/]*$/, "");
-  return base + "plan/#" + payload;
+  return SHARE_BASE + "plan/#" + payload;
 }
 
 function planWeekIndex(plan) {

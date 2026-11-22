@@ -11,8 +11,8 @@ android {
         applicationId = "com.vanipy.sanggup"
         minSdk = 26
         targetSdk = 34
-        versionCode = 8
-        versionName = "0.2.2"
+        versionCode = 9
+        versionName = "0.2.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -34,7 +34,8 @@ android {
 // The learning paths are the repo's own web app, bundled so everything works offline.
 val copyWeb = tasks.register<Copy>("copyWeb") {
     from(rootProject.projectDir.parentFile) {
-        include("index.html", "styles.css", "app.js", "data.js", "mascot.svg", "icon.svg", "LICENSE")
+        include("index.html", "styles.css", "app.js", "data.js", "mascot.svg", "icon.svg", "quadrant.svg", "LICENSE")
+        include("vendor/**", "signoff/**", "plan/**", "kit/**")
     }
     into(layout.buildDirectory.dir("webAssets/web"))
 }

@@ -1,4 +1,4 @@
-# Sanggup 0.2.2 test APK
+# Sanggup 0.2.3 test APK
 
 Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or newer. This is not a store release or a claim of production readiness.
 
@@ -7,6 +7,17 @@ Experimental Android build. Package `com.vanipy.sanggup`, Android 8.0/API 26 or 
 - Local practice logging counts at most one streak day per local calendar day. It does not prove skill competency.
 - Browser progress and Android progress are separate. No account, cloud sync or cross-device teacher sign-off. Do not uninstall or clear storage to troubleshoot without backing up anything you need; progress is local.
 - Sang currently appears in both the native header and the bundled web page.
+
+## Changes since 0.2.2
+
+Content parity with web prototype 0.2.5:
+
+- Milestone sign-off requests now share a link to a sign-off web page where the reviewer ticks the checklist and records a sign-off code. The code is a hash-derived conversation record, not identity proof; both the app and the sign-off page say so.
+- New study-group plan page: write a plan, share the link, and members tick their parts locally.
+- New community kit page: starter materials for running a small learning community.
+- Career gains the "Place your skill and confidence honestly" stage with an original four-quadrants diagram adapted from an IDSW 2026 lightning talk (attributed on the diagram).
+- Sign-off and plan share links always point at the public web base, so they open in a browser when tapped from the offline app.
+- No new permissions, no signing-key change.
 
 ## Changes since 0.2.1
 
