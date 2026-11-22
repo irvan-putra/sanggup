@@ -2766,6 +2766,15 @@ window.SANGGUP_TRACKS = [
           "List everything you currently have AI tools or agents running. Pick the one P0. For it, write what evidence would change your mind about the approach, then give that one task your full attention and let the rest wait.",
       },
       {
+        id: "cd23",
+        kind: "practice",
+        title: "Notice what is hard, without a verdict",
+        lesson:
+          "The same talk then turned inward. The speaker showed his own recorded working-time dashboard, long weeks, with a warning label he called over-identification: 'I'm working late again. I'm failing.' His alternative, framed as mindfulness, was plain observation: see what is hard right now, without ignoring it or making it bigger, and review the record (he reviews his work by video) before judging. Read as a work habit, not medical advice, it transfers directly to engineering: a failing test suite, a slipped estimate or a long week is data about the work, not a verdict on the engineer. The useful question is not 'am I failing?' but 'what exactly is hard, and what would make it smaller?'",
+        practice:
+          "Pick one thing in your current project that feels hard. Write down only what you can observe: how long it takes, where you get stuck, what you redo. No adjectives about yourself. Then write one change that would make the observed part smaller.",
+      },
+      {
         id: "cd4",
         kind: "milestone",
         title: "Milestone: catch one real assumption bug",
