@@ -2554,6 +2554,8 @@ window.SANGGUP_TRACKS = [
       { label: "Falsehoods programmers believe about time (Noah Sussman)", url: "https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" },
       { label: "Falsehoods Programmers Believe About Geography", url: "https://ctemm.me/falsehoods/geography/" },
       { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
+      { label: "Ivo: Tokenomics of Testing deck (IDSW 2026, Indonesian)", url: "https://decks.ivokun.com/tokenomics-of-testing-bahasa-indonesia" },
+      { label: "Vincent Koc: Making OpenClaw CI faster and 95% cheaper (measured, caveated follow-up)", url: "https://vincent.build/openclaw-ci-cost-reduction/" },
       { label: "Falsehoods Programmers Believe About Names (Patrick McKenzie)", url: "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" },
       { label: "How to deal with money in software (cs-syd.eu)", url: "https://cs-syd.eu/posts/2022-08-22-how-to-deal-with-money-in-software" },
       { label: "Wikipedia: Mars Climate Orbiter", url: "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" },
@@ -2823,6 +2825,33 @@ window.SANGGUP_TRACKS = [
           "The talk's convention slide showed a typed component contract: a button whose variant may only be 'primary', 'secondary' or 'ghost' and whose size may only be 'sm' or 'md'. A call asking for variant 'danger' at size 'xl' failed before it ever ran: type 'danger' is not assignable. His point was that conventions exist so other engineers, and now assistants, cannot silently misuse your component: the compiler is the first reviewer, and it never gets tired. A convention written as a type is enforced on every call; a convention written in a document is enforced only when someone remembers it.",
         practice:
           "Pick one component or function you own with an unwritten rule (only these labels, only these sizes, never empty here). Write the rule as a type or a validation check so misuse fails immediately, then deliberately write one bad call and watch it get rejected.",
+      },
+      {
+        id: "cd27",
+        kind: "practice",
+        title: "Review tests with evidence first",
+        lesson:
+          "Ivo's IDSW 2026 talk Tokenomics of Testing put a simple rule on screen: tanpa bukti, jangan hapus - without evidence, do not delete. His four questions for any test: What behavior does it protect? What regression would make it fail? What evidence already exists? Does it exist only for the tests? The same questions gate writing too. His closing was not fewer tests but the right tests, paid for deliberately, including what the suite costs an agent to read: budget per read, not per project.",
+        practice:
+          "Take one test in a project you touch, or sketch one from memory. Write the four answers in one line each: the behavior it protects, the regression that would fail it, the existing evidence, and whether it exists only for tests. If you cannot answer the first two, write a verdict: keep it with the gap noted, or propose deletion with the evidence you would gather first.",
+      },
+      {
+        id: "cd28",
+        kind: "practice",
+        title: "Label a claim before you repeat it",
+        lesson:
+          "The same talk opened with two numbers: an agent adding 4,000 lines of tests to assert a removed thing stays gone, and a project owner reporting about 1.3 million deleted weak tests with CI twice as fast. The first is widely read as satire, and that reading is an interpretation, not a confirmed result. The second is a self-reported running count; the project later published a measured write-up reporting 417,906 net test-file lines over a defined window, with caveats about differing workloads. Different units, not the same measurement. Big numbers travel; their strength labels do not.",
+        practice:
+          "Pick one technical claim you recently repeated or believed: a post, a benchmark, a changelog line. Trace it to its owning source and label it - joke or satire, self-reported anecdote, or measured result with caveats. Write one sentence restating it with the label attached, and check whether the units still say what you first thought.",
+      },
+      {
+        id: "cd29",
+        kind: "practice",
+        title: "Ask whose device, whose account, whose permission",
+        lesson:
+          "Another IDSW 2026 talk, Bagas Wastu's Everything Has an API If You're Willing to Prompt, described an agent turning a workout app's local data into a personal dashboard through its private API. That is the speaker's reported account; the slide alone does not establish whose device, account or timing. The part that generalizes is a boundary, not a technique: this kind of access is only legitimate on your own device and your own account, a token copied out of an app is a credential to guard like a password, and private APIs can change or be restricted by the service's terms, so anything built on them is fragile by construction.",
+        practice:
+          "Take one automation idea you have that touches an app or account. Before building anything, write three answers: whose device and account it uses, where any token or session lives and how you would revoke it, and what breaks if the private interface changes or its terms disallow the use. If any answer is not yours, stop at the answers.",
       },
     ],
   },
