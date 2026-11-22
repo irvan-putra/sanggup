@@ -74,8 +74,17 @@ async function openTile(page,name){
   await openTile(page,name);
   assert.match(await page.locator('#path-note').innerText(),noteRe);
   assert.ok(await page.locator('#path-sources a').count()>=1);
-  for(let i=0;i<count;i++) await page.getByRole('button',{name:'I did it',exact:true}).click();
-  assert.equal(await page.locator('.stage-card.done').count(),count);
+  for(let i=0;i<count;i++) {
+   const finish=page.getByRole('button',{name:'I did it',exact:true});
+   if(await finish.count()) { await finish.click(); continue; }
+   // a milestone gates mid-path: complete it through the sign-off flow, then continue
+   await page.getByRole('button',{name:'Request sign-off',exact:true}).click();
+   await page.getByRole('button',{name:"I'm teaching"}).click();
+   await page.locator('.request-row').first().click();
+   await page.getByRole('button',{name:'Sign off',exact:true}).click();
+   await page.getByRole('button',{name:"I'm learning"}).click();
+  }
+  assert.ok((await page.locator('.stage-card.done').count())>=count);
  }
  await page.goto(url);
  await page.getByRole('button',{name:/^Home,/}).click();
