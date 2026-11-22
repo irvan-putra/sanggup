@@ -21,11 +21,49 @@ function saveState(state) {
   localStorage.setItem(STORE_KEY, JSON.stringify(state));
 }
 
+const CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // no easily-confused chars
+
 function makeCode() {
-  const alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // no easily-confused chars
   const buf = new Uint8Array(6);
   crypto.getRandomValues(buf);
-  return Array.from(buf, (b) => alphabet[b % alphabet.length]).join("");
+  return Array.from(buf, (b) => CODE_ALPHABET[b % CODE_ALPHABET.length]).join("");
+}
+
+// Cross-device sign-off: the request travels inside the share link as readable
+// text, and the reviewer's decision comes back as a short code derived from a
+// hash of the request code and the verdict. This is a conversation structure,
+// not security: anyone can recompute a response code, so it is not proof of
+// who reviewed. The honesty notes in the app say the same.
+
+function base64urlEncode(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function signoffLink(req) {
+  const payload = base64urlEncode(JSON.stringify({
+    v: 1,
+    code: req.code,
+    track: req.trackTitle,
+    stage: req.stageTitle,
+    task: req.task,
+    requestedAt: req.requestedAt,
+  }));
+  const base = location.origin + location.pathname.replace(/[^/]*$/, "");
+  return base + "signoff/#" + payload;
+}
+
+async function responseCode(code, verdict) {
+  const digest = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(`sanggup-signoff-v1|${code}|${verdict}`)
+  );
+  const bytes = new Uint8Array(digest);
+  let out = "";
+  for (let i = 0; i < 6; i++) out += CODE_ALPHABET[bytes[i] % CODE_ALPHABET.length];
+  return out;
 }
 
 let state = loadState();
@@ -199,8 +237,25 @@ function renderPath(track) {
       );
       html +=
         `<div class="code-box">Show this code to your instructor: ` +
-        `<strong>${req.code}</strong><br><span class="muted">In this same-device demo, open ` +
-        `the teaching view here. This code does not work on another device.</span></div>`;
+        `<strong>${req.code}</strong><br><span class="muted">Same device: open ` +
+        `the teaching view here. Another device: use the share link below.</span></div>` +
+        `<details class="share-box"><summary>Share with a reviewer on another device</summary>` +
+        `<p class="muted">The link carries this request as readable text: anyone ` +
+        `who has the link can read it, so send it only to your reviewer. The ` +
+        `response code is not proof of who reviewed; it records that a ` +
+        `conversation happened.</p>` +
+        `<div class="code-row">` +
+        `<input id="share-link-${req.code}" readonly aria-label="Share link">` +
+        `<button type="button" data-share-copy="${req.code}">Copy link</button>` +
+        `</div>` +
+        `<div class="qr-wrap" id="share-qr-${req.code}"></div>` +
+        `<label for="resp-${req.code}">Response code from your reviewer</label>` +
+        `<div class="code-row">` +
+        `<input id="resp-${req.code}" inputmode="latin" maxlength="6" placeholder="e.g. Q7KM2P" autocomplete="off">` +
+        `<button type="button" class="primary" data-resp-apply="${req.code}">Apply response</button>` +
+        `</div>` +
+        `<p class="muted" id="resp-msg-${req.code}" role="status"></p>` +
+        `</details>`;
     } else if (st === "done") {
       html += `<p class="done-label">done</p>`;
     } else {
@@ -221,6 +276,38 @@ function renderPath(track) {
         requestSignOff(track, stage);
       }
     });
+  });
+
+  list.querySelectorAll("[data-share-copy]").forEach((btn) => {
+    const code = btn.getAttribute("data-share-copy");
+    const req = state.requests.find(
+      (r) => r.code === code && r.status === "pending"
+    );
+    if (!req) return;
+    const link = signoffLink(req);
+    const input = $("share-link-" + code);
+    if (input) input.value = link;
+    const qrWrap = $("share-qr-" + code);
+    if (qrWrap && typeof qrcode === "function") {
+      try {
+        const qr = qrcode(0, "M");
+        qr.addData(link);
+        qr.make();
+        qrWrap.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+      } catch (e) { /* QR is a convenience; the link above still works */ }
+    }
+    btn.addEventListener("click", () => {
+      navigator.clipboard.writeText(link).then(
+        () => { btn.textContent = "Copied"; },
+        () => { btn.textContent = "Copy failed; long-press the link field."; }
+      );
+    });
+  });
+
+  list.querySelectorAll("[data-resp-apply]").forEach((btn) => {
+    btn.addEventListener("click", () =>
+      applyResponse(btn.getAttribute("data-resp-apply"))
+    );
   });
 
   renderArchive();
@@ -334,10 +421,32 @@ function renderRequestDetail(req) {
   $("practice-btn").addEventListener("click", () => decide(req, "practice"));
 }
 
-function decide(req, verdict) {
+async function applyResponse(code) {
+  const req = state.requests.find(
+    (r) => r.code === code && r.status === "pending"
+  );
+  const input = $("resp-" + code);
+  const msg = $("resp-msg-" + code);
+  if (!req || !input) return;
+  const value = input.value.trim().toUpperCase();
+  const signedCode = await responseCode(req.code, "signed");
+  const practiceCode = await responseCode(req.code, "practice");
+  if (value === signedCode) {
+    resolveRequest(req, "signed", "");
+    if (currentTrack) renderPath(currentTrack); else renderTracks();
+  } else if (value === practiceCode) {
+    resolveRequest(req, "practice", "");
+    if (currentTrack) renderPath(currentTrack); else renderTracks();
+  } else if (msg) {
+    msg.textContent =
+      "That code does not match this request. Check it with your reviewer.";
+  }
+}
+
+function resolveRequest(req, verdict, note) {
   if (req.status !== "pending") return;
   req.status = verdict;
-  req.instructorNote = $("instructor-note").value.trim();
+  req.instructorNote = note || "";
   req.decidedAt = new Date().toISOString();
   if (verdict === "signed") {
     // Paths can be merged between versions, so an older request's trackId may
@@ -360,6 +469,10 @@ function decide(req, verdict) {
     });
   }
   saveState(state);
+}
+
+function decide(req, verdict) {
+  resolveRequest(req, verdict, $("instructor-note").value.trim());
   renderTeacher();
 }
 

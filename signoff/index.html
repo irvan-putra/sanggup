@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sanggup — sign-off review</title>
+<meta name="description" content="Review a sanggup sign-off request shared with you as a link.">
+<style>
+  :root { --ink:#241a33; --muted:#6b6480; --paper:#f5f1ea; --accent:#6d3fc0; --accent-dark:#553098; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:#fff; }
+  main { max-width: 44rem; margin: 0 auto; padding: 1rem; }
+  h1 { font-size: 1.3rem; margin: 0.5rem 0 0.25rem; }
+  .muted { color: var(--muted); }
+  .card { background: var(--paper); border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.55rem 0; }
+  .task { background:#efe9f7; border-left:4px solid var(--accent); padding:0.5rem 0.7rem; border-radius:0 8px 8px 0; }
+  label { display:block; margin:0.8rem 0 0.2rem; }
+  input { width: 100%; padding: 0.45rem 0.6rem; border: 1px solid var(--muted); border-radius: 8px; font-size: 1rem; }
+  .code-row { display:flex; gap:0.5rem; margin:0.6rem 0; flex-wrap:wrap; }
+  .code-row button { flex:none; }
+  button { background:#fff; border:1px solid var(--accent); color:var(--accent); border-radius:8px; padding:0.5rem 0.9rem; font-size:0.95rem; cursor:pointer; }
+  button.primary { border:0; background:var(--accent); color:#fff; }
+  button.primary:hover { background: var(--accent-dark); }
+  .response { font-size: 1.6rem; letter-spacing: 0.15em; font-weight: 700; }
+  .honesty { font-size: 0.9rem; color: var(--muted); border-top: 1px solid #ddd; margin-top: 1.2rem; padding-top: 0.6rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sign-off review</h1>
+  <div id="content"></div>
+  <p class="honesty">A sanggup sign-off records that a reviewer looked at the learner's
+  work and talked with them. It is not identity verification, not a certificate,
+  and not proof of competency. The response code proves a conversation happened,
+  not who had it.</p>
+  <p class="honesty"><a href="../">Back to sanggup</a></p>
+</main>
+<script>
+(function () {
+  var CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  var content = document.getElementById("content");
+
+  function fail(msg) {
+    var p = document.createElement("p");
+    p.className = "muted";
+    p.textContent = msg;
+    content.appendChild(p);
+  }
+
+  function base64urlDecode(str) {
+    var b64 = str.replace(/-/g, "+").replace(/_/g, "/");
+    while (b64.length % 4) b64 += "=";
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+
+  function responseCode(code, verdict, cb) {
+    crypto.subtle.digest("SHA-256",
+      new TextEncoder().encode("sanggup-signoff-v1|" + code + "|" + verdict)
+    ).then(function (digest) {
+      var bytes = new Uint8Array(digest);
+      var out = "";
+      for (var i = 0; i < 6; i++) out += CODE_ALPHABET[bytes[i] % CODE_ALPHABET.length];
+      cb(out);
+    });
+  }
+
+  var req;
+  try {
+    req = JSON.parse(base64urlDecode(location.hash.replace(/^#/, "")));
+  } catch (e) {
+    req = null;
+  }
+  if (!req || req.v !== 1 || typeof req.code !== "string" ||
+      !/^[A-Z2-9]{6}$/.test(req.code) || typeof req.stage !== "string" ||
+      typeof req.task !== "string") {
+    fail("This link does not carry a readable sign-off request. " +
+         "Ask the learner to copy the whole link from their sanggup app again.");
+    return;
+  }
+
+  var card = document.createElement("div");
+  card.className = "card";
+
+  var h = document.createElement("h2");
+  h.style.fontSize = "1.05rem";
+  h.style.margin = "0 0 0.3rem";
+  h.textContent = req.stage;
+  card.appendChild(h);
+
+  var meta = document.createElement("p");
+  meta.className = "muted";
+  meta.style.margin = "0 0 0.3rem";
+  var when = "";
+  if (typeof req.requestedAt === "string") {
+    var d = new Date(req.requestedAt);
+    if (!isNaN(d)) when = " · requested " + d.toLocaleDateString();
+  }
+  meta.textContent = (typeof req.track === "string" ? req.track : "sanggup") +
+    " · request " + req.code + when;
+  card.appendChild(meta);
+
+  var task = document.createElement("p");
+  task.className = "task";
+  var strong = document.createElement("strong");
+  strong.textContent = "The learner had to: ";
+  task.appendChild(strong);
+  task.appendChild(document.createTextNode(req.task));
+  card.appendChild(task);
+
+  var note = document.createElement("p");
+  note.className = "muted";
+  note.textContent = "Review the result the way you normally would: look at it, " +
+    "ask the learner about it, try it. Then decide below.";
+  card.appendChild(note);
+  content.appendChild(card);
+
+  var row = document.createElement("div");
+  row.className = "code-row";
+  var signBtn = document.createElement("button");
+  signBtn.className = "primary";
+  signBtn.textContent = "Sign off";
+  var practiceBtn = document.createElement("button");
+  practiceBtn.textContent = "Ask for more practice";
+  row.appendChild(signBtn);
+  row.appendChild(practiceBtn);
+  content.appendChild(row);
+
+  var outWrap = document.createElement("div");
+
+  function decide(verdict) {
+    signBtn.disabled = true;
+    practiceBtn.disabled = true;
+    responseCode(req.code, verdict, function (code) {
+      outWrap.innerHTML = "";
+      var card2 = document.createElement("div");
+      card2.className = "card";
+      var lead = document.createElement("p");
+      lead.style.margin = "0 0 0.2rem";
+      lead.textContent = verdict === "signed"
+        ? "You signed this off. Send this response code back to the learner:"
+        : "You asked for more practice. Send this response code back to the learner:";
+      card2.appendChild(lead);
+      var codeP = document.createElement("p");
+      codeP.className = "response";
+      codeP.textContent = code;
+      card2.appendChild(codeP);
+      var copyBtn = document.createElement("button");
+      copyBtn.textContent = "Copy code";
+      copyBtn.addEventListener("click", function () {
+        navigator.clipboard.writeText(code).then(function () {
+          copyBtn.textContent = "Copied";
+        }, function () {
+          copyBtn.textContent = "Copy failed";
+        });
+      });
+      card2.appendChild(copyBtn);
+      var how = document.createElement("p");
+      how.className = "muted";
+      how.textContent = "Any message works: chat, call, or in person. The learner " +
+        "types it into their app to close the request.";
+      card2.appendChild(how);
+      outWrap.appendChild(card2);
+    });
+  }
+
+  signBtn.addEventListener("click", function () { decide("signed"); });
+  practiceBtn.addEventListener("click", function () { decide("practice"); });
+  content.appendChild(outWrap);
+})();
+</script>
+</body>
+</html>

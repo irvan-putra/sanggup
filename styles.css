@@ -137,6 +137,11 @@ button.primary:hover { background: var(--accent-dark); }
   padding: 0.2rem 0;
 }
 
+.share-box { margin: 0.2rem 0 0.8rem; }
+.share-box summary { cursor: pointer; color: var(--accent); }
+.qr-wrap { margin: 0.5rem 0; }
+.qr-wrap svg { width: 160px; height: 160px; background: #fff; border-radius: 6px; }
+
 .code-box {
   border: 1px dashed var(--accent);
   border-radius: 10px;
