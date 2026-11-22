@@ -2568,6 +2568,7 @@ window.SANGGUP_TRACKS = [
       { label: "Swiss cheese model (James Reason, Human Error, 1990)", url: "https://en.wikipedia.org/wiki/Swiss_cheese_model" },
       { label: "Asch: Forming impressions of personality (1946)", url: "https://gwern.net/doc/psychology/personality/1946-asch.pdf" },
       { label: "Kahneman: Thinking, Fast and Slow (2011)", url: "https://en.wikipedia.org/wiki/Thinking%2C_Fast_and_Slow" },
+      { label: "Zain Fathoni: How I Shipped More Without Reading My Code (DevFest Jogjakarta 2026 slides)", url: "https://zainf.dev/fest-2026" },
     ],
     stages: [
       {
@@ -2770,7 +2771,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Notice what is hard, without a verdict",
         lesson:
-          "The same talk then turned inward. The speaker showed his own recorded working-time dashboard, long weeks, with a warning label he called over-identification: 'I'm working late again. I'm failing.' His alternative, framed as mindfulness, was plain observation: see what is hard right now, without ignoring it or making it bigger, and review the record (he reviews his work by video) before judging. Read as a work habit, not medical advice, it transfers directly to engineering: a failing test suite, a slipped estimate or a long week is data about the work, not a verdict on the engineer. The useful question is not 'am I failing?' but 'what exactly is hard, and what would make it smaller?'",
+          "The same talk then turned inward. The speaker showed his own recorded working-time dashboard, long weeks, with a warning label he called over-identification: 'I'm working late again. I'm failing.' His alternative, framed as mindfulness, was plain observation: see what is hard right now, without ignoring it or making it bigger, and review the record before judging. His demonstration was review by video: an agent had turned one feature into a 16-minute briefing with 22 chapters, which he skimmed in 12 seconds to spot the hard part, a demo from his own DevFest 2026 talk, with the timings specific to that demo rather than general agent performance. Read as a work habit, not medical advice, it transfers directly to engineering: a failing test suite, a slipped estimate or a long week is data about the work, not a verdict on the engineer. The useful question is not 'am I failing?' but 'what exactly is hard, and what would make it smaller?'",
         practice:
           "Pick one thing in your current project that feels hard. Write down only what you can observe: how long it takes, where you get stuck, what you redo. No adjectives about yourself. Then write one change that would make the observed part smaller.",
       },
