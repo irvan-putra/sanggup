@@ -2556,6 +2556,9 @@ window.SANGGUP_TRACKS = [
       { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
       { label: "Ivo: Tokenomics of Testing deck (IDSW 2026, Indonesian)", url: "https://decks.ivokun.com/tokenomics-of-testing-bahasa-indonesia" },
       { label: "Vincent Koc: Making OpenClaw CI faster and 95% cheaper (measured, caveated follow-up)", url: "https://vincent.build/openclaw-ci-cost-reduction/" },
+      { label: "Netflix concurrency-limits (example library, Java)", url: "https://github.com/Netflix/concurrency-limits" },
+      { label: "Redis sorted sets documentation", url: "https://redis.io/docs/latest/develop/data-types/sorted-sets/" },
+      { label: "NIST SP 800-38G Rev. 1 second public draft (FPE small-domain risks; draft, not certification)", url: "https://csrc.nist.gov/pubs/sp/800/38/g/r1/2pd" },
       { label: "Falsehoods Programmers Believe About Names (Patrick McKenzie)", url: "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" },
       { label: "How to deal with money in software (cs-syd.eu)", url: "https://cs-syd.eu/posts/2022-08-22-how-to-deal-with-money-in-software" },
       { label: "Wikipedia: Mars Climate Orbiter", url: "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" },
@@ -2852,6 +2855,33 @@ window.SANGGUP_TRACKS = [
           "Another IDSW 2026 talk, Bagas Wastu's Everything Has an API If You're Willing to Prompt, described an agent turning a workout app's local data into a personal dashboard through its private API. That is the speaker's reported account; the slide alone does not establish whose device, account or timing. The part that generalizes is a boundary, not a technique: before touching an app's data this way you need explicit permission covering the device, the account, the data and the intended API use - ownership alone does not settle it, and the service's rules still apply. A token copied out of an app is a credential to guard like a password, and private APIs can change or be restricted by the service's terms, so anything built on them is fragile by construction.",
         practice:
           "Take one automation idea you have that touches an app or account. Before building anything, write three answers: whose device, account and data it uses, and whether you have explicit permission for the intended use; where any token or session lives and how you would revoke it; and what breaks if the private interface changes or its terms disallow the use. If any answer involves someone else's device, account or data without their explicit permission, stop at the answers.",
+      },
+      {
+        id: "cd30",
+        kind: "practice",
+        title: "Make the race condition show up",
+        lesson:
+          "Eko Kurniawan Khannedy's IDSW 2026 keynote The Bugs Were Always There opened with a balance diagram: two requests both read Rp100,000, both subtract Rp50,000, and the drawn final balance is Rp50,000. Naming race condition is not proof. The proof is an execution schedule that forces both reads before either write, with an invariant that must always hold: if both withdrawals succeed, the balance must be zero. After a fix, the same schedule must pass, and passing one schedule still does not prove freedom from races under all conditions.",
+        practice:
+          "Sketch the smallest version: a balance of 100 and two operations taking 50 each, where read and write are separate steps. Force both reads first with a synchronization barrier or an explicit interleaving, and record the read/write order, the final balance and each operation's status. Check the invariant. Then apply one fix, re-run the identical schedule, and add an insufficient-funds case. No random sleeps: the reproduction must be repeatable.",
+      },
+      {
+        id: "cd31",
+        kind: "practice",
+        title: "Count the calls in one user journey",
+        lesson:
+          "The same keynote showed a page that fetches a product list and then fetches each product's details one by one: one call plus N more. Reviewing each endpoint on its own looks fine; the journey is where the cost lives. Before reaching for a batch API, a cache or a new response shape, count the calls in one real journey and check response sizes, access rights, the data actually needed and contract-change risk. Fewer calls also does not automatically mean better latency: that needs measurement.",
+        practice:
+          "Take one page you know, or use this synthetic one: a list call plus one detail call for each of ten products, eleven calls in total. Write the trace before any change. Propose exactly one change, write its tradeoffs (response size, access rights, contract risk), and one contract test that would catch a caller breaking. Count the calls before and after, and state what you would measure before claiming it is faster.",
+      },
+      {
+        id: "cd32",
+        kind: "practice",
+        title: "Decide what still needs remembering",
+        lesson:
+          "The keynote's queue example replaced a stored position per person with a repeatable calculation from the registration number and the draw settings, and called that part stateless: the browser can compute a displayed position without a per-person lookup at opening time. Stateless does not describe the whole system. The same slides keep server-signed tickets tied to sessions and registration numbers, and registration, eligibility, ticket validation and duplicate-use prevention remain stored concerns. A unique mapping is not by itself a fair or unmanipulable draw, and a technique's name is not a security guarantee. The slides also leave the step before the mapping open: they do not show who issues the registration numbers or keeps them unique, only a calculation that starts from numbers that already exist.",
+        practice:
+          "With ten synthetic IDs and any fixed mapping rule you define, compare storing a position table against recomputing the position. Then draw a responsibility table: position calculation, draw settings, registration data, signed ticket, session, ticket-use record - and mark each as stored answer, configuration, security data or operational state. Write three mapping tests: all positions valid and unique, stable output for the same input and settings, invalid IDs rejected. Do not implement your own cryptography; treat ticket validation as a contract you test, not a scheme you invent.",
       },
     ],
   },
