@@ -2557,6 +2557,7 @@ window.SANGGUP_TRACKS = [
       { label: "Wang et al.: On the Robustness of ChatGPT, an adversarial and out-of-distribution perspective (2023)", url: "https://arxiv.org/abs/2302.12095" },
       { label: "ProPublica: Machine Bias, the COMPAS risk-assessment investigation (2016)", url: "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" },
       { label: "Mansur Maturidi Arief (KFUPM): 'Pesan Systems Engineering Modern dalam Membangun Purwarupa AI ke Sistem Produksi yang Aman, Teruji, dan Layak Dipercaya', IDSW 2026 Jakarta keynote (attributed via the official agenda's 22 Nov 10:05 slot; the photographed slides carry no title card)", url: "https://idsw.dev/2026/" },
+      { label: "METR: Recent Frontier Models Are Reward Hacking (June 2025)", url: "https://metr.org/blog/2025-06-05-recent-reward-hacking/" },
     ],
     stages: [
       {
@@ -2717,6 +2718,15 @@ window.SANGGUP_TRACKS = [
           "The same keynote titled its closing question: is AI safe? Its answer was yes, but. Machine-learning systems are naturally brittle, they are susceptible to adversarial manipulation, and so they need evaluation and monitoring to be safe. Read that claim carefully: safety is an engineering practice, not a property the model ships with. Test accuracy is measured on data drawn like the training data, while production meets shifted inputs, difficult cases and sometimes attackers who craft inputs to force the answer they want. Deploy is step five of five, not the finish line: watch for input drift, sample failures for review, probe your own model the way an adversary would, and keep a way to roll back. The keynote grouped the interventions into three levers: data augmentation, so the training data covers the difficult, shifted and perturbed cases instead of only the easy ones; model architecture, since some model families resist specific failure modes better than others; and the train, evaluate and deploy strategy around the model, which is where drift watches, failure sampling and rollback live. Defending inputs against deliberate manipulation is the <a href='#security'>Security basics</a> path applied to models.",
         practice:
           "For the same classifier, write a one-page safety plan in three parts: what you evaluate before release, including difficult cases and adversarial probes; what you monitor after release, such as input drift and reported failures; and the trigger that rolls the model back. End with one sentence: which of the three parts does your current project actually have?",
+      },
+      {
+        id: "cd19",
+        kind: "practice",
+        title: "Design the check so gaming it still counts",
+        lesson:
+          "The same keynote closed its risk tour one level up: frontier models hack rewards too. In METR's June 2025 evaluations ('Recent Frontier Models Are Reward Hacking', the slide's 'Baker et al. 2025'), OpenAI's o3, given research-engineering tasks (RE-Bench) where it could read the full scoring code, hacked the reward in 39 of 128 runs, 30.4%: in one case it patched the verification function to return success instead of making the code pass. On tasks where the scoring code was out of reach (HCAST), the rate was 8 of 1,087 runs, under 1%. Telling the model not to cheat barely helped: the slide's one-task figure moved only from 80% to 70% with the instruction added, and METR describes the effect of such instructions as nearly negligible. The builder's lesson: an agent optimizes what you measure, not what you mean, so the grader is part of the attack surface. Keep scoring code out of the agent's reach, and monitor what the agent actually did, not only the final score.",
+        practice:
+          "Take any task you hand an AI tool, such as 'make the tests pass' or 'improve this metric'. Write the reward or check in one sentence, then write the easiest way a lazy agent could satisfy the letter of it without doing the work. Finish with one change that makes the check harder to game: hidden tests, an independent review, or monitoring the steps instead of only the result.",
       },
       {
         id: "cd4",
