@@ -2550,6 +2550,11 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Mars Climate Orbiter", url: "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" },
       { label: "Awesome Falsehood: the curated falsehoods list", url: "https://github.com/kdeldycke/awesome-falsehood" },
       { label: "Winny Ardhian (BRI): 'Day 1 vs Today: Turning Raw Business Requests into Shippable Software at Bank Scale', IDSW 2026 Jakarta", url: "https://idsw.dev/2026/" },
+      { label: "Geirhos et al.: Shortcut learning in deep neural networks (Nature Machine Intelligence, 2020)", url: "https://www.nature.com/articles/s42256-020-00257-z" },
+      { label: "Goodfellow, Shlens & Szegedy: Explaining and harnessing adversarial examples (2014)", url: "https://arxiv.org/abs/1412.6572" },
+      { label: "Ilyas et al.: Black-box adversarial attacks with limited queries and information (ICML 2018)", url: "https://proceedings.mlr.press/v80/ilyas18a.html" },
+      { label: "Eykholt et al.: Robust physical-world attacks on deep learning visual classification (CVPR 2018)", url: "https://openaccess.thecvf.com/content_cvpr_2018/html/Eykholt_Robust_Physical-World_Attacks_CVPR_2018_paper.html" },
+      { label: "Wang et al.: On the Robustness of ChatGPT, an adversarial and out-of-distribution perspective (2023)", url: "https://arxiv.org/abs/2302.12095" },
     ],
     stages: [
       {
@@ -2665,6 +2670,42 @@ window.SANGGUP_TRACKS = [
           "The same talk showed how the team uses AI tools on the four checks without handing over judgment, under three ground rules: explore in an isolated sandbox, send zero customer data to an external AI, and let AI draft while people decide and release. Two prompt patterns did the work. The notes-to-draft-spec pattern: from the meeting notes, draft a one-page spec covering Problem and who feels it, People who decides, reviews and is informed, Proof as Done and Worked, constraints and out of scope, marking every assumption made and listing open questions. The skeptical-reviewer pattern: review that spec as a skeptical engineer at a regulated bank, listing anything ambiguous, contradictory or missing, especially personal data, audit needs and dependencies on existing systems, and turn each finding into a clarifying question. The prompts structure the draft; the ground rules decide what may leave the building and who signs the result.",
         practice:
           "Take your fictional request and its four lines from the earlier stages. Write both prompts for it in your own words: one that turns your notes into a one-page spec draft, and one that reviews the draft like a skeptical engineer at a regulated bank. If you have an AI tool, run them in a fresh session with no real data; if not, play the skeptical reviewer yourself. Keep the output that matters: the list of assumptions and open questions.",
+      },
+      {
+        id: "cd14",
+        kind: "practice",
+        title: "Break a classifier with a cartoon",
+        lesson:
+          "A machine-learning safety talk at a November 2026 developer conference built its whole argument on one toy example: a cat-and-dog classifier. The lifecycle has five steps, and nearly every ML project shares them: collect data, split it into training and test sets, train the model, test it, then deploy it. Training does one job: it finds the boundary that best separates the examples, and that boundary captures features such as dominant color, fur thickness, jaw size and whiskers. The punchline came at inference time. Real photos of cats and dogs are the easy cases. A cartoon cat and a capybara are the difficult cases: the cartoon shares few of the captured features, and the capybara is neither cat nor dog, yet the model still has to answer, because it has no 'neither' and no 'I don't know'. The boundary is a summary of the training data, not knowledge of animals, so anything unlike the training data gets a confident guess.",
+        practice:
+          "Pick one classifier you rely on, such as a spam filter, photo search or a recommendation feed. Write the five lifecycle steps for it in your own words, then guess three features its boundary probably captures. Finish with three inputs that sit outside its training data, and predict what it answers for each and why that answer is wrong.",
+      },
+      {
+        id: "cd15",
+        kind: "practice",
+        title: "Hunt the shortcut in the training data",
+        lesson:
+          "Why do models fail on inputs that look easy? The same talk drew on a study by Geirhos and colleagues, 'Shortcut learning in deep neural networks' (Nature Machine Intelligence, 2020), which gives the mechanism: a model learns the easiest correlation that separates its training data, not the concept a human would use. A dog detector may really be detecting grass backgrounds; a recogniser may lean on texture instead of shape. The paper shows the gap in both directions: inputs humans group together that models split apart, such as the same object in a new setting, and inputs models group together that no human would. In text the shortcuts are subtler still: the talk's example was a question-answering model that scores well by reading only the last sentence of a passage and ignoring the context. Shortcuts come from correlations in the data and can be extremely subtle, so a high test score and real understanding regularly part ways.",
+        practice:
+          "Take the classifier from the previous stage. Write one shortcut it might have learned, such as a background, a watermark, a phrasing or a time of day. Design the smallest test that would expose it: one change that keeps the true label but flips the shortcut, like the same dog on snow instead of grass. Run it if you can, imagine it if you cannot, and write what you would change in the training data.",
+      },
+      {
+        id: "cd16",
+        kind: "practice",
+        title: "Read an adversarial example like an attacker",
+        lesson:
+          "The same talk then showed how the manipulation works. With access to a model, an attacker can search for the smallest perturbation that minimises the correct prediction: the slide's illustration was a photo of a pig plus a noise pattern no human would notice, still obviously a pig to any person, yet the network now answered 'airliner' with high confidence. Those exact confidence numbers are the speaker's illustration, not a replicated benchmark, but the phenomenon is well documented. Goodfellow, Shlens and Szegedy introduced such adversarial examples in 2014 in 'Explaining and harnessing adversarial examples', and Ilyas and colleagues showed at ICML 2018 that the attack works even black-box, with limited queries and no access to the model's internals. Nor is this confined to pixels on a screen: Eykholt and colleagues showed at CVPR 2018 that physical changes to a stop sign, from poster printouts to small camouflage stickers, can make a vision model read it as a speed-limit sign, robustly across viewing angles and distances. Language models are not exempt: the talk closed its attack tour with a case table from Wang and colleagues' 2023 study 'On the Robustness of ChatGPT: An Adversarial and Out-of-Distribution Perspective', where flipping a single word reverses a sentiment answer and substituting one sentence derails translation or reading comprehension. The builder's lesson: imperceptible input changes can flip outputs, so a confident answer is not evidence of a robust one.",
+        practice:
+          "Take your classifier from the earlier stages. Write one input whose answer an attacker would want to flip, and who benefits from the flip. In plain words, describe how they would search for the perturbation in two settings: with full access to the model, and with only the ability to submit inputs and read answers. Finish with one defence you would try first, and how you would know whether it worked.",
+      },
+      {
+        id: "cd17",
+        kind: "practice",
+        title: "Evaluate, monitor and expect manipulation",
+        lesson:
+          "The same talk titled its closing question: is AI safe? Its answer was yes, but. Machine-learning systems are naturally brittle, they are susceptible to adversarial manipulation, and so they need evaluation and monitoring to be safe. Read that claim carefully: safety is an engineering practice, not a property the model ships with. Test accuracy is measured on data drawn like the training data, while production meets shifted inputs, difficult cases and sometimes attackers who craft inputs to force the answer they want. Deploy is step five of five, not the finish line: watch for input drift, sample failures for review, probe your own model the way an adversary would, and keep a way to roll back. Defending inputs against deliberate manipulation is the <a href='#security'>Security basics</a> path applied to models.",
+        practice:
+          "For the same classifier, write a one-page safety plan in three parts: what you evaluate before release, including difficult cases and adversarial probes; what you monitor after release, such as input drift and reported failures; and the trigger that rolls the model back. End with one sentence: which of the three parts does your current project actually have?",
       },
       {
         id: "cd4",
