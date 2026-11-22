@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="560" fill="#f4f1eb"/>
+  <text x="400" y="44" text-anchor="middle" font-size="26" font-weight="600" fill="#202b29">Skill × confidence: four quadrants</text>
+
+  <!-- axes -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#597269"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b3541e"/>
+    </marker>
+  </defs>
+  <line x1="130" y1="470" x2="130" y2="80" stroke="#597269" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="130" y1="470" x2="730" y2="470" stroke="#597269" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="122" y="90" text-anchor="end" font-size="15" fill="#597269">Pede</text>
+  <text x="122" y="466" text-anchor="end" font-size="15" fill="#597269">Nggak pede</text>
+  <text x="104" y="275" text-anchor="middle" font-size="13" fill="#597269" transform="rotate(-90 104 275)">Percaya diri</text>
+  <text x="280" y="496" text-anchor="middle" font-size="15" fill="#597269">Belum bisa</text>
+  <text x="580" y="496" text-anchor="middle" font-size="15" fill="#597269">Bisa</text>
+  <text x="430" y="522" text-anchor="middle" font-size="13" fill="#597269">Skill</text>
+
+  <!-- 1: top-left -->
+  <rect x="150" y="100" width="260" height="160" rx="12" fill="#fffdf8" stroke="#d9dfda"/>
+  <circle cx="176" cy="128" r="13" fill="#156c60"/>
+  <text x="176" y="133" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <text x="197" y="126" font-size="14.5" font-weight="600" fill="#202b29">Belum bisa, tapi pede</text>
+  <text x="197" y="145" font-size="12" font-style="italic" fill="#597269">Can&#8217;t yet, but confident</text>
+  <text x="164" y="180" font-size="13" fill="#3c4a45">Antusias tinggi, tapi cupu.</text>
+  <text x="164" y="200" font-size="13" fill="#3c4a45">Doesn&#8217;t know what they</text>
+  <text x="164" y="218" font-size="13" fill="#3c4a45">don&#8217;t know.</text>
+
+  <!-- 2: bottom-left -->
+  <rect x="150" y="290" width="260" height="160" rx="12" fill="#fffdf8" stroke="#d9dfda"/>
+  <circle cx="176" cy="318" r="13" fill="#156c60"/>
+  <text x="176" y="323" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <text x="197" y="316" font-size="14" font-weight="600" fill="#202b29">Belum bisa, dan nggak pede</text>
+  <text x="197" y="335" font-size="12" font-style="italic" fill="#597269">Can&#8217;t yet, and not confident</text>
+  <text x="164" y="370" font-size="13" fill="#3c4a45">Sudah sadar cupu, antusias</text>
+  <text x="164" y="390" font-size="13" fill="#3c4a45">menurun. Knows the gap</text>
+  <text x="164" y="408" font-size="13" fill="#3c4a45">is real.</text>
+
+  <!-- 3: bottom-right -->
+  <rect x="450" y="290" width="260" height="160" rx="12" fill="#fffdf8" stroke="#d9dfda"/>
+  <circle cx="476" cy="318" r="13" fill="#156c60"/>
+  <text x="476" y="323" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <text x="497" y="316" font-size="14.5" font-weight="600" fill="#202b29">Bisa, tapi nggak pede</text>
+  <text x="497" y="335" font-size="12" font-style="italic" fill="#597269">Can, but not confident</text>
+  <text x="464" y="370" font-size="13" fill="#3c4a45">Actually can, doesn&#8217;t feel it.</text>
+  <text x="464" y="390" font-size="13" fill="#3c4a45">Doesn&#8217;t know that they</text>
+  <text x="464" y="408" font-size="13" fill="#3c4a45">already know.</text>
+
+  <!-- 4: top-right -->
+  <rect x="450" y="100" width="260" height="160" rx="12" fill="#fffdf8" stroke="#d9dfda"/>
+  <circle cx="476" cy="128" r="13" fill="#156c60"/>
+  <text x="476" y="133" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="497" y="126" font-size="14.5" font-weight="600" fill="#202b29">Bisa, dan pede</text>
+  <text x="497" y="145" font-size="12" font-style="italic" fill="#597269">Can, and confident</text>
+  <text x="464" y="180" font-size="13" fill="#3c4a45">Can do it, and knows it.</text>
+
+  <!-- movement arrows 1 -> 2 -> 3 -> 4 -->
+  <line x1="280" y1="265" x2="280" y2="285" stroke="#b3541e" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <line x1="415" y1="370" x2="445" y2="370" stroke="#b3541e" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <line x1="580" y1="285" x2="580" y2="265" stroke="#b3541e" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <text x="400" y="548" text-anchor="middle" font-size="11.5" fill="#597269">A reflection aid per skill, not a diagnosis or a fixed ladder. Adapted from Luthfiyyah Hanifah Amari&#8217;s IDSW 2026 talk.</text>
+</svg>
