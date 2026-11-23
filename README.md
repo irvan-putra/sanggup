@@ -6,6 +6,11 @@ count when a real instructor or mentor signs off.
 
 Live prototype: https://vanipy.com/sanggup/
 
+Android APKs (prereleases): [releases page](https://github.com/irvan-putra/sanggup/releases),
+also listed in the [kaji gallery](https://vanipy.com/kaji/apk/). The trusted
+checksum is GitHub's per-asset digest; older releases carry a `.sha256`
+sidecar, kept but no longer published for new releases.
+
 ## What this is
 
 A prototype (0.2.1) with working paths and two roles, on a 5x5 grid of 25
@@ -85,8 +90,8 @@ GitHub Actions runs the same checks before deploying. Runtime has no dependencie
 bundles this web app offline in a WebView, shows an animated Sang (original
 frame animation from the mascot) and keeps a local learning streak that the
 web app reports when a practice stage is logged. A home-screen widget shows
-Sang and the streak. The app has no internet permission. Debug builds only;
-nothing is signed or released from this repo yet. The widget uses a
+Sang and the streak. The app has no internet permission. Signed prerelease APKs are on the
+releases page (prototype status). The widget uses a
 `ViewFlipper` for its animation, and launcher support for that is being tested.
 
 ## Design notes
