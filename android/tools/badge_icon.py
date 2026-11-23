@@ -2,8 +2,8 @@
 """Rebuild sanggup launcher resources with the com.vanipy family strip.
 
 Pillow12.3.0, CairoSVG2.8.2 and DejaVuSans-Bold are pinned. The source
-head crop is icon.svg, not a new mascot drawing. Android foreground face
-is72dp centred in108dp. Version comes from the Android build config.
+head crop is icon.svg, not a new mascot drawing. The only output is the
+192px family drawable. Version comes from the Android build config.
 """
 from pathlib import Path
 import re,io,hashlib
@@ -32,16 +32,6 @@ ImageDraw.Draw(face).rectangle([0,int(S*.76),S,S],fill=STRIP)
 text=Image.new('RGBA',(S,S));ImageDraw.Draw(text).text((S/2,S*.88),version,font=ImageFont.truetype(FONT,int(S*.115)),fill='white',anchor='mm');face.alpha_composite(text)
 mask=Image.new('L',(S,S));ImageDraw.Draw(mask).rounded_rectangle([0,0,S,S],radius=S*.2,fill=255)
 legacy=face.copy();legacy.putalpha(mask)
-for density,size in {'mdpi':48,'hdpi':72,'xhdpi':96,'xxhdpi':144,'xxxhdpi':192}.items():
- p=RES/f'mipmap-{density}/ic_launcher.png';p.parent.mkdir(exist_ok=True);legacy.resize((size,size),Image.Resampling.LANCZOS).save(p,optimize=True)
-# Remove superseded duplicate names in nodpi. Frame animation assets stay intact.
-for p in [RES/'mipmap-nodpi/ic_launcher.png',RES/'drawable-nodpi/ic_launcher_foreground.png',RES/'drawable-nodpi/ic_launcher_monochrome.png']:
- if p.exists():p.unlink()
-T=864;F=576;I=144
-fg=Image.new('RGBA',(T,T));picture=art.resize((F,F),Image.Resampling.LANCZOS);fg.alpha_composite(picture,(I,I))
-y=I+int(F*.76);ImageDraw.Draw(fg).rectangle([0,y,T,T],fill=STRIP)
-txt=Image.new('RGBA',(T,T));ImageDraw.Draw(txt).text((T/2,I+F*.88),version,font=ImageFont.truetype(FONT,int(F*.115)),fill='white',anchor='mm');fg.alpha_composite(txt)
-a=Image.new('L',(T,T));a.paste(picture.getchannel('A'),(I,I));ImageDraw.Draw(a).rectangle([0,y,T,T],fill=255);a=ImageChops.subtract(a,txt.getchannel('A'));mono=Image.new('RGBA',(T,T),'white');mono.putalpha(a)
-for name,img in [('ic_launcher_foreground.png',fg),('ic_launcher_monochrome.png',mono)]:
- p=RES/'drawable-xxxhdpi'/name;p.parent.mkdir(exist_ok=True);img.resize((432,432),Image.Resampling.LANCZOS).save(p,optimize=True)
+p=RES/'drawable/ic_launcher.png';p.parent.mkdir(exist_ok=True)
+legacy.resize((192,192),Image.Resampling.LANCZOS).save(p,optimize=True)
 print('Generated sanggup',version)
