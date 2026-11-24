@@ -193,6 +193,9 @@ window.SANGGUP_TRACKS = [
       { label: "James Clear: The Eisenhower Box", url: "https://jamesclear.com/eisenhower-box" },
       { label: "Amazon 2015 shareholder letter (one-way and two-way doors)", url: "https://s2.q4cdn.com/299287126/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF" },
       { label: "Farnam Street: Reversible and irreversible decisions", url: "https://fs.blog/reversible-irreversible-decisions/" },
+      { label: "Wikipedia: Thomas-Kilmann Conflict Mode Instrument", url: "https://en.wikipedia.org/wiki/Thomas%E2%80%93Kilmann_Conflict_Mode_Instrument" },
+      { label: "The Myers-Briggs Company: History and validity of the TKI", url: "https://ap.themyersbriggs.com/themyersbriggs-history-validity-tki.aspx" },
+      { label: "Kaji: five conflict modes, explained", url: "https://vanipy.com/kaji/conflict-modes/" },
     ],
     stages: [
       {
@@ -257,6 +260,15 @@ window.SANGGUP_TRACKS = [
           "A good decision is not the same as a good outcome, because luck is involved. Writing down what you expected lets you learn from the result later without rewriting your memory.",
         practice:
           "Make your choice. Write what you expect to happen and why. Set a reminder to compare with what really happened.",
+      },
+      {
+        id: "d5",
+        kind: "practice",
+        title: "Choose a conflict mode on purpose",
+        lesson:
+          "When two people's concerns clash, the Thomas-Kilmann model sorts responses into five modes along two questions: how assertive you are about your own concerns, and how cooperative you are about the other person's. Competing pushes for your own way, collaborating works toward a solution that fully satisfies both sides, compromising splits the difference, avoiding sidesteps the issue for now, and accommodating yields to the other person. No mode is always right: each buys something and costs something, so picking one is a decision like any other in this path. The model is named after Kenneth Thomas and Ralph Kilmann's 1974 questionnaire, which is a paid instrument; you do not need it to use the idea. Shared skill: the same five modes are also practiced in <a href='#work/ca17'>the Career path</a> and in <a href='#network/nt20'>Network and community</a>.",
+        practice:
+          "Take one real low-stakes disagreement you are putting off. Write one sentence for each of the five modes: what it would look like here and what it would cost. Then choose one on purpose, write why it fits, and try it this week.",
       },
       {
         id: "p4",
@@ -925,6 +937,9 @@ window.SANGGUP_TRACKS = [
       { label: "Monica: the open-source personal CRM", url: "https://www.monicahq.com" },
       { label: "Mesh (formerly Clay): personal CRM", url: "https://me.sh/" },
       { label: "Mesh team: Clay is now Mesh", url: "https://library.me.sh/2026/03/25/clay-is-now-mesh/" },
+      { label: "Wikipedia: Thomas-Kilmann Conflict Mode Instrument", url: "https://en.wikipedia.org/wiki/Thomas%E2%80%93Kilmann_Conflict_Mode_Instrument" },
+      { label: "The Myers-Briggs Company: History and validity of the TKI", url: "https://ap.themyersbriggs.com/themyersbriggs-history-validity-tki.aspx" },
+      { label: "Kaji: five conflict modes, explained", url: "https://vanipy.com/kaji/conflict-modes/" },
     ],
     stages: [
       {
@@ -1022,6 +1037,15 @@ window.SANGGUP_TRACKS = [
           "Energy fades when everything depends on one organizer. Open Source Guides' leadership advice is to share ownership early: give people real responsibility with real authority, and write down how things run so knowledge is not trapped in your head. Teams call such a written how-we-run-things note a standard operating procedure, an SOP; it is what lets a new organizer repeat the event without you. Shared skill: writing steps down for a learner, an SOP in small, is also practiced in <a href='#teaching/tm2'>Teaching and mentoring</a> and Projects and business.",
         practice:
           "Identify two members who could lead something. Hand each of them one real responsibility, with the authority to decide, and write a short how-we-run-things note they can use without asking you.",
+      },
+      {
+        id: "nt20",
+        kind: "practice",
+        title: "Handle conflict inside a community",
+        lesson:
+          "Active communities produce friction: members disagree about direction, events or each other, and organizers burn out in the middle. The Thomas-Kilmann model gives five response modes along assertiveness and cooperativeness: competing, collaborating, compromising, avoiding and accommodating. For a community, collaborating fits questions of direction, since people support what they helped build; compromising keeps an event moving when two camps deadlock on details; accommodating fits small things that matter a lot to one member and little to you; avoiding works only as a cooling-off pause with a return time, never as a policy, because unaddressed conflict quietly drives members away; competing is for enforcing a code of conduct, where being uncooperative is the point. Judge which kind of conflict you have before picking a mode. Shared skill: the five conflict modes are also practiced in <a href='#decisions/d5'>Decisions and priorities</a> and in <a href='#work/ca17'>the Career path</a>.",
+        practice:
+          "Recall one disagreement in a community you belong to, real or plausible. Write which mode the organizers used and what it cost. Then write which mode you would pick now, why, and the first sentence you would say to each side.",
       },
       {
         id: "cb6",
@@ -2912,6 +2936,9 @@ window.SANGGUP_TRACKS = [
       { label: "DJP: Kewajiban Perpajakan Freelancer (Indonesia tax duties)", url: "https://www.pajak.go.id/id/artikel/kewajiban-perpajakan-freelancer" },
       { label: "Wikipedia: Cold calling", url: "https://en.wikipedia.org/wiki/Cold_calling" },
       { label: "VanillaSoft: lead conversion study on follow-up persistency", url: "https://vanillasoft.com/resources/lead-conversion-study-telfer" },
+      { label: "Wikipedia: Thomas-Kilmann Conflict Mode Instrument", url: "https://en.wikipedia.org/wiki/Thomas%E2%80%93Kilmann_Conflict_Mode_Instrument" },
+      { label: "The Myers-Briggs Company: History and validity of the TKI", url: "https://ap.themyersbriggs.com/themyersbriggs-history-validity-tki.aspx" },
+      { label: "Kaji: five conflict modes, explained", url: "https://vanipy.com/kaji/conflict-modes/" },
     ],
     stages: [
       {
@@ -3057,6 +3084,15 @@ window.SANGGUP_TRACKS = [
           "Managing up is consciously working with your supervisor to get the best results for you, your manager, and your organization. It is not flattery and not doing their job. Keep your progress visible so they never have to guess what you are doing or chase you for it. Tell them important news yourself, early, before they hear it from someone else; bad news travels and the source matters. And do not sit waiting for instructions: show initiative by picking the next useful step inside your authority and doing it, and when a decision needs their approval, bring a recommendation with your reasoning, not an unfiltered choice for them to solve. Flag risks early, while there is still time to act. Make your contribution tangible: what you moved forward, why it matters, and what is next, so your employer never wonders what they are paying for. Visible results and useful initiative, not looking busy. Shared skill: the update rhythm is the sync stage in <a href='#projects/pb9'>Projects and business</a>.",
         practice:
           "Write a one-page manager brief, real or imaginary: their top three priorities, how they prefer to get updates, and your next update with one risk flagged early plus what you are doing about it. Then add two lines: one piece of news you would deliver yourself before it reaches them another way, and one decision where you write your recommendation and reasoning first and ask only for approval.",
+      },
+      {
+        id: "ca17",
+        kind: "practice",
+        title: "Pick a conflict mode at work",
+        lesson:
+          "Disagreement with a colleague or manager is normal; what you choose next matters more than the friction itself. The Thomas-Kilmann model names five modes along two axes: assertiveness about your own concerns and cooperativeness about the other person's. At work, collaborating fits when the outcome matters to both sides and there is time to dig into the real concerns; compromising fits a deadlock over something reversible; accommodating fits when the issue matters far more to the other person and the relationship is the real asset; avoiding fits only as a pause with a return time, since avoided work conflict usually comes back bigger; competing is reserved for the rare line you will not cross, because it spends trust. Choosing the mode before the conversation keeps the discussion about the problem instead of the people. Shared skill: the five conflict modes are also practiced in <a href='#decisions/d5'>Decisions and priorities</a> and in <a href='#network/nt20'>Network and community</a>.",
+        practice:
+          "Write one current or recent work disagreement in a single line. For each of the five modes, write what it would look like in that situation and what it would cost. Pick the mode you will actually use, and write the first sentence you would say out loud.",
       },
       {
         id: "ca9",
