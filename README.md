@@ -97,3 +97,7 @@ releases page (prototype status). The widget uses a
 ## Design notes
 
 - [Sang mascot similarity review](docs/mascot-similarity.md): limited visual comparisons, source links, provenance and open questions. Not legal clearance.
+
+---
+
+Built with AI assistance (Instinct and others). Not everything has been reviewed by Irvan.
