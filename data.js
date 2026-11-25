@@ -2577,6 +2577,8 @@ window.SANGGUP_TRACKS = [
     tagline: "Code and the assumptions that break it",
     note: "Written exercises only: Sanggup does not run your code. You sketch the example and the fix by hand, then try it in your own tools if you want.",
     sources: [
+      { label: "startup-class/setup: a 2013 EC2 setup script (read, not run)", url: "https://github.com/startup-class/setup" },
+      { label: "Kaji: startup-class/setup, read", url: "https://vanipy.com/kaji/startup-class-setup/" },
       { label: "Falsehoods programmers believe about time (Noah Sussman)", url: "https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" },
       { label: "Falsehoods Programmers Believe About Geography", url: "https://ctemm.me/falsehoods/geography/" },
       { label: "Falsehoods Programmers Believe About Addresses", url: "https://ctemm.me/falsehoods/addresses/" },
@@ -2908,6 +2910,15 @@ window.SANGGUP_TRACKS = [
           "The keynote's queue example replaced a stored position per person with a repeatable calculation from the registration number and the draw settings, and called that part stateless: the browser can compute a displayed position without a per-person lookup at opening time. Stateless does not describe the whole system. The same slides keep server-signed tickets tied to sessions and registration numbers, and registration, eligibility, ticket validation and duplicate-use prevention remain stored concerns. A unique mapping is not by itself a fair or unmanipulable draw, and a technique's name is not a security guarantee. The slides also leave the step before the mapping open: they do not show who issues the registration numbers or keeps them unique, only a calculation that starts from numbers that already exist. In the slides' ticket-war context, handing out unique numbers while the surge arrives is a separate problem from computing positions afterward. An attendee's account of the talk fills it in: registration happens normally before opening time, and the CDN delivers the key at the opening moment - spoken context, not something the photos show.",
         practice:
           "With ten synthetic IDs and any fixed mapping rule you define, compare storing a position table against recomputing the position. Then draw a responsibility table: position calculation, draw settings, registration data, signed ticket, session, ticket-use record - and mark each as stored answer, configuration, security data or operational state. Write three mapping tests: all positions valid and unique, stable output for the same input and settings, invalid IDs rejected. Do not implement your own cryptography; treat ticket validation as a contract you test, not a scheme you invent.",
+      },
+      {
+        id: "cd33",
+        kind: "practice",
+        title: "Write a setup you can run twice",
+        lesson:
+          "A small public repo from a 2013 course, startup-class/setup, rebuilds a fresh cloud machine with one script: it installs git, Node, a linter, an editor and a deploy tool, then links personal config files from a separate dotfiles repo. The habit is worth keeping: tools and config live in a repo, so a lost machine costs minutes. Read from today, the same script shows what ages. It names one operating system release and one Node version from 2013, pipes two downloaded scripts straight into a shell, does not stop when a step fails, and moves old config aside in a way that behaves differently on a second run. It also has no license file, so the lesson is to learn the pattern, not copy the text. This is a reading of the files, not a test run.",
+        practice:
+          "Write a setup script on paper or in your own tools for a machine you use, with five steps: basics, one language runtime, one tool you use daily, your config files, and a final check that prints what worked. For each step note the version you pin and the operating system it assumes. Mark the first error as a stop. Then walk through running it a second time on the same machine and write down each line that would break or duplicate something. Finish by replacing one pipe-into-a-shell line with download, read, then run.",
       },
     ],
   },
