@@ -941,6 +941,7 @@ window.SANGGUP_TRACKS = [
       { label: "The Myers-Briggs Company: History and validity of the TKI", url: "https://ap.themyersbriggs.com/themyersbriggs-history-validity-tki.aspx" },
       { label: "Kaji: five conflict modes, explained", url: "https://vanipy.com/kaji/conflict-modes/" },
       { label: "Wikipedia: DARVO", url: "https://en.wikipedia.org/wiki/DARVO" },
+      { label: "Kaji: DARVO, explained", url: "https://vanipy.com/kaji/darvo/" },
     ],
     stages: [
       {
@@ -2940,6 +2941,8 @@ window.SANGGUP_TRACKS = [
       { label: "Wikipedia: Thomas-Kilmann Conflict Mode Instrument", url: "https://en.wikipedia.org/wiki/Thomas%E2%80%93Kilmann_Conflict_Mode_Instrument" },
       { label: "The Myers-Briggs Company: History and validity of the TKI", url: "https://ap.themyersbriggs.com/themyersbriggs-history-validity-tki.aspx" },
       { label: "Kaji: five conflict modes, explained", url: "https://vanipy.com/kaji/conflict-modes/" },
+      { label: "Wikipedia: DARVO", url: "https://en.wikipedia.org/wiki/DARVO" },
+      { label: "Kaji: DARVO, explained", url: "https://vanipy.com/kaji/darvo/" },
     ],
     stages: [
       {
@@ -3091,7 +3094,7 @@ window.SANGGUP_TRACKS = [
         kind: "practice",
         title: "Pick a conflict mode at work",
         lesson:
-          "Disagreement with a colleague or manager is normal; what you choose next matters more than the friction itself. The Thomas-Kilmann model names five modes along two axes: assertiveness about your own concerns and cooperativeness about the other person's. At work, collaborating fits when the outcome matters to both sides and there is time to dig into the real concerns; compromising fits a deadlock over something reversible; accommodating fits when the issue matters far more to the other person and the relationship is the real asset; avoiding fits only as a pause with a return time, since avoided work conflict usually comes back bigger; competing is reserved for the rare line you will not cross, because it spends trust. Choosing the mode before the conversation keeps the discussion about the problem instead of the people. Shared skill: the five conflict modes are also practiced in <a href='#decisions/d5'>Decisions and priorities</a> and in <a href='#network/nt20'>Network and community</a>.",
+          "Disagreement with a colleague or manager is normal; what you choose next matters more than the friction itself. The Thomas-Kilmann model names five modes along two axes: assertiveness about your own concerns and cooperativeness about the other person's. At work, collaborating fits when the outcome matters to both sides and there is time to dig into the real concerns; compromising fits a deadlock over something reversible; accommodating fits when the issue matters far more to the other person and the relationship is the real asset; avoiding fits only as a pause with a return time, since avoided work conflict usually comes back bigger; competing is reserved for the rare line you will not cross, because it spends trust. Choosing the mode before the conversation keeps the discussion about the problem instead of the people. One reaction pattern is worth naming on its own: DARVO, short for Deny, Attack, Reverse Victim and Offender, a term from psychologist Jennifer Freyd's 1997 work on how perpetrators respond to being held accountable. A colleague confronted about a harmful act may deny it happened, attack the person who raised it, and then claim to be the one wronged, and researchers cite the pattern as common in workplace bullying. The counter is to keep the discussion on the specific behavior and the facts, not to get pulled into defending yourself, and research finds that people who already know the pattern are less swayed by it. Shared skill: the five conflict modes are also practiced in <a href='#decisions/d5'>Decisions and priorities</a> and in <a href='#network/nt20'>Network and community</a>.",
         practice:
           "Write one current or recent work disagreement in a single line. For each of the five modes, write what it would look like in that situation and what it would cost. Pick the mode you will actually use, and write the first sentence you would say out loud.",
       },
